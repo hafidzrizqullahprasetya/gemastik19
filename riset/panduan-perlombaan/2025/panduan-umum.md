@@ -1,73 +1,79 @@
-# PEDOMAN PAGELARAN MAHASISWA NASIONAL BIDANG TIK TAHUN 2022
-
-## TEMA
-
-### TIK UNTUK INDONESIA PULIH LEBIH CEPAT BANGKIT LEBIH KUAT
-
+PEDOMAN PAGELARAN MAHASISWA NASIONAL BIDANG TIK
+TAHUN 2025
 Diterbitkan oleh:
-
-Pusat Prestasi Nasional
-Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
-Kompleks Kemendikbud, Gedung C Lantai 19
-
+Direktorat Pembelajaran dan Kemahasiswaan
+Direktorat Jenderal Pendidikan Tinggi
+Kementerian Pendidikan Tinggi, Sains, dan Teknologi
 Pengarah:
-
-Asep Sukmayadi, M.Si.
-Sugeng Riyadi, MM
-Keri Darwindo, MA
-
+Khairul Munadi
+Berry Juliandi
 Tim Penyusun:
-
-Dr. Ir. Heroe Wijanto, M.T.
-Prof. Dr. Muhammad Zarlis
-Basnendar Herry Prilosadoso, S,Sn., M.Ds
-Ir. Muchammad Husni M.Kom
-Wahyono, S.Kom., Ph.D
-Karyana Hutomo. ST. MM.
-Dr. Asep Sholahuddin, MT
-Daniel Oranova Siahaan, SKom, MSc, PDEng
-Ir. Lukito Edi Nugroho, M.Sc., Ph.D.
-Dana Sulistiyo Kusumo, PhD
-Ir. Andry Chowanda, S.Kom., MM., Ph.D. MBCS., CCP., IPM.
-Dr. Masayu Leylia Khodra, S.T., M.T.
-
-Tim Kontributor:
-
-Staf Pokja Dikti
-
+Heroe Wijanto
+Wahyono
+Muchammad Husni
+Masayu Leylia Khodra
+Dana Sulistiyo Kusumo
+Basnendar Herry Prilosadoso
+Asep Sholahuddin
+Romi Satria Wahono
+Daniel Oranova Siahaan
+Lukito Edi Nugroho
+Andry Chowanda
+Karyana Hutomo
+Sukino
+Charoline Dewi Virasari
 Penyunting:
-
-Luthfia Amalia Dewi
-Topanal Gustiranda
-Dina Fitriani
-Angga Dwi Indrianto
-
-Desain Sampul:
-
-Aurellia Safa Regita
-
-Tata Letak:
-
-Luthfia Amalia Dewi
-Topanal Gustiranda
-
-©2022 Kementerian Pendidikan dan Kebudayaan
-
-Hak Cipta Dilindungi Undang-Undang.
-
+Pj. Pengembangan Karakter dan Kesejahteraan Mahasiswa
+©2025 Kementerian Pendidikan Tinggi, Sains, dan Teknologi
+Hak Cipta Dilindungi Undang-Undang
+All rights reserved
 ---
 
 # BAB I: PENDAHULUAN
 
 ## A. LATAR BELAKANG
 
-GEMASTIK atau Pagelaran Mahasiswa Nasional Bidang Teknologi Informasi dan Komunikasi, merupakan program Balai Pengembangan Talenta Indonesia, Pusat Prestasi Nasional, Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi. Program ini ditujukan untuk meningkatkan kompetensi mahasiswa Indonesia, sehingga mampu mengambil peran sebagai agen perubahan dalam memajukan TIK dan pemanfaatannya, baik ketika masih dalam masa studi maupun kelak sesudah lulus studi. Pada tahun ini GEMASTIK digelar untuk ke-16 kalinya dengan tema "TIK untuk Pembangunan Indonesia Maju dan Berkelanjutan". Pelaksanaan GEMASTIK XVI akan dilaksanakan dengan metode daring sampai dengan babak penyisihan dan metode luring untuk babak final dan puncak acara. Pagelaran ini diselenggarakan bersama salah satu perguruan tinggi yang ditunjuk oleh Balai Pengembangan Talenta Indonesia (BPTI), Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi sebagai penyelenggara.
-
-Melalui GEMASTIK, kompetensi TIK mahasiswa Indonesia akan diuji dengan berbagai studi kasus pada masing-masing cabang/divisi lomba untuk menghasilkan solusi paling efisien dan efektif. Dari tahun ke tahun diharapkan tingkat persaingan di dalam GEMASTIK semakin meningkat yang menunjukkan bahwa di Indonesia terjadi peningkatan literasi TIK, khususnya di lingkungan perguruan tinggi. Pada tahun 2020 tercatat tidak kurang dari 2.869 tim yang berasal dari 171 Perguruan Tinggi se-Indonesia terdaftar pada 11 cabang lomba GEMASTIK XIII. Pada tahun 2021, GEMASTIK XIV terlaksana dengan diikuti oleh 3.164 tim yang berasal dari 235 Perguruan Tinggi se-Indonesia. Peningkatan dari tahun 2020 ke 2021 menunjukkan bahwa pengembangan inovasi TIK di berbagai perguruan tinggi Indonesia tidak mengalami hambatan di masa pandemi Covid-19.
-
-Pada penyelenggaraan tahun 2022, GEMASTIK XV diikuti oleh 2.577 tim yang berasal dari 193 Perguruan Tinggi pada 11 cabang lomba. Sekilas terlihat penurunan dari kepesertaan GEMASTIK 2021 ke GEMASTIK 2022. Namun sebenarnya penurunan tersebut disebabkan oleh pemberlakuan aturan baru pada kepesertaan GEMASTIK 2022 yang membatasi kepesertaan pada masing-masing divisi paling banyak adalah 10 tim terbaik dari setiap perguruan tinggi. Kepesertaan tim-tim terbaik pada masing-masing divisi merupakan hasil dari proses kuratorial dan seleksi internal di perguruan tinggi peserta. Kuratorial dan seleksi tersebut diharapkan merupakan perwujudan dari penjaminan mutu dalam pembinaan kemahasiswaan yang berlangsung secara berkelanjutan di perguruan tinggi, sehingga juga memberikan dampak peningkatan mutu pada penyelenggaraan GEMASTIK.
-
-Pada tahun 2023 ini, GEMASTIK XVI kembali diselenggarakan dengan 11 cabang lomba, diharapkan kepesertaan tim dan perguruan tinggi akan mengalami peningkatan yang berkelanjutan. Meskipun ketentuan kepesertaan tim perguruan tinggi masih mempertahankan perlunya dilakukan proses kuroatorial dan seleksi sebagai upaya penjaminan mutu, sehingga hanya memberangkatkan 10 tim terbaik dari setiap perguruan tinggi pada masing-masing divisi, namun perluasan cakupan perguruan tinggi untuk dapat mengikutsertakan seluruh perguruan tinggi Indonesia yang terdaftar di PDDIKTI, diharapkan GEMASTIK akan menjadi pesta raya literasi TIK seluruh mahasiswa Indonesia yang terus meningkat dari tahun ke tahun.
+GEMASTIK atau Pagelaran Mahasiswa Nasional Bidang Teknologi
+Informasi dan Komunikasi Tahun 2025 dilaksanakan oleh Direktorat
+Pembelajaran dan Kemahasiswaan (Dit. Belmawa), Direktorat Jenderal
+Pendidikan Tinggi (Ditjen Dikti), Kementerian Pendidikan Tinggi, Sains, dan
+Teknologi (Kemendiktisaintek). Program ini ditujukan untuk meningkatkan
+kompetensi mahasiswa Indonesia, sehingga mampu mengambil peran sebagai
+agen perubahan dalam memajukan TIK dan pemanfaatannya, baik ketika
+masih dalam masa studi maupun kelak sesudah lulus studi. Pada tahun ini
+GEMASTIK digelar untuk ke-18 kalinya dengan tema “Pengembangan TIK
+untuk Mendukung Kemandirian Bangsa”. Kemandirian bangsa yang
+dimaksud bisa meliputi dan tidak terbatas pada bidang: swasembada pangan,
+energi, air, ekonomi kreatif, ekonomi hijau dan ekonomi biru.
+Pelaksanaan GEMASTIK XVIII akan dilaksanakan dengan metode daring
+untuk semua kompetisi pada babak penyisihan sedangkan luring untuk babak
+final. Pagelaran ini diselenggarakan bersama salah satu perguruan tinggi yang
+ditunjuk oleh Direktorat Pembelajaran dan Kemahasiswaan sebagai
+penyelenggara.
+Melalui GEMASTIK, kompetensi TIK mahasiswa Indonesia akan diuji
+dengan berbagai studi kasus pada masing-masing kompetisi untuk
+menghasilkan solusi paling efisien dan efektif. Para mahasiswa diharapkan
+selalu antusias untuk tetap menghasilkan karya dan menyalurkan semangat
+inovasi dalam pengembangan TIK untuk kemajuan Indonesia.
+Dari tahun ke tahun, tingkat persaingan Gemastik semakin meningkat,
+pada Gemastik X tahun 2017 tercatat 2.307 tim yang berasal dari 113
+Perguruan Tinggi se- Indonesia terdaftar pada 10 cabang kompetisi. Pada
+Gemastik XI tahun 2018 terlaksana dengan diikuti oleh 2.470 tim yang berasal
+dari 132 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi. Pada
+penyelenggaraan tahun 2019, Gemastik XII diikuti oleh 3.285 tim yang berasal
+dari 133 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi. Pada
+Gemastik XIII tahun 2020 terlaksana dengan diikuti oleh 2.869 tim yang
+berasal dari 171 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi.
+Pada Gemastik XIV tahun 2021 terlaksana dengan diikuti oleh 3.164 tim yang
+berasal dari 210 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi.
+Pada Gemastik XV tahun 2022 terlaksana dengan diikuti oleh 2.577 tim yang
+berasal dari 153 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi.
+Pada Gemastik XVI tahun 2023 terlaksana dengan diikuti oleh 2.781 tim yang
+berasal dari 203 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi.
+Pada Gemastik XVII tahun 2024 terlaksana dengan diikuti oleh 3390 tim yang
+berasal dari 402 Perguruan Tinggi se-Indonesia pada 11 cabang kompetisi.
+Pada tahun 2025 ini, Gemastik XVIII diselenggarakan dengan 11 cabang
+kompetisi.
 
 ## B. DASAR HUKUM
 
@@ -82,12 +88,22 @@ Pada tahun 2023 ini, GEMASTIK XVI kembali diselenggarakan dengan 11 cabang lomba
 ## C. TUJUAN
 
 Tujuan dari GEMASTIK adalah sebagai berikut:
-
-1. Menjadi salah satu wahana penguasaan Teknologi Informasi dan Komunikasi (TIK) untuk menjaga keberlangsungan kehidupan berbangsa dan bernegara serta dalam tatanan kehidupan bermasyarakat, khususnya era Revolusi Industri 4.0 dan menyongsong era Society 5.0,
-2. Sebagai media bagi mahasiswa untuk terus berkarya dan menyalurkan semangat inovasi dalam pengembangan TIK untuk keunggulan daya saing bangsa,
-3. Meningkatkan kepedulian serta kesadaran mahasiswa dalam memanfaatkan IPTEK sehingga menghasilkan produk inovasi yang memiliki daya saing tinggi,
-4. Sebagai sarana pendukung demi terciptanya inovasi dalam teknologi, khususnya teknologi informasi dan komunikasi yang berdampak terhadap lingkungan sekitar,
-5. Memberikan wahana untuk mahasiswa berinovasi dan berkreativitas di bidang TIK serta menjadikan hasil karya mahasiswa sebagai hasil nyata mahasiswa dalam membantu permasalahan di lingkungan keseharian.
+1. Menjadi salah satu wahana penguasaan Teknologi Informasi dan
+Komunikasi (TIK) untuk menjaga keberlangsungan kehidupan berbangsa
+dan bernegara serta dalam tatanan kehidupan bermasyarakat, khususnya
+era Revolusi Industri 4.0 dan menyongsong era Society 5.0.
+2. Sebagai media bagi mahasiswa untuk terus berkarya dan menyalurkan
+semangat inovasi dalam pengembangan TIK untuk keunggulan daya
+saing bangsa.
+3. Meningkatkan kepedulian serta kesadaran mahasiswa dalam
+memanfaatkan IPTEK sehingga menghasilkan produk inovasi yang
+memiliki daya saing tinggi.
+4. Sebagai sarana pendukung demi terciptanya inovasi dalam teknologi,
+khususnya teknologi informasi dan komunikasi yang berdampak
+terhadap lingkungan sekitar.
+5. Memberikan wahana untuk mahasiswa berinovasi dan berkreativitas di
+bidang TIK serta menjadikan hasil karya mahasiswa sebagai hasil nyata
+mahasiswa dalam membantu permasalahan di lingkungan keseharian.
 
 ## D. PENYELENGGARA DAN PELAKSANA
 
@@ -229,17 +245,26 @@ Pendaftaran dapat dilakukan melalui website resmi https://daftar-bpti.kemdikbud.
 
 ## E. KEJUARAAN DAN PENGHARGAAN
 
-Untuk setiap tim finalis pada masing-masing cabang/divisi kompetisi Gemastik akan ditetapkan para juara yang diberikan penghargaan berupa medali (medali "emas" untuk Juara I, medali "perak" untuk Juara II, medali "perunggu" untuk Juara III), sertifikat, dan uang pembinaan, sehingga total disediakan 3 x 11 = 33 medali kejuaraan. Untuk tim finalis peringkat IV diberikan penghargaan Harapan yang bersifat non-medali dan tanpa uang pembinaan, sehingga hanya diberikan sertifikat.
-
-Berdasar perhitungan pengumpulan medali akan ditetapkan Juara Umum Kompetisi Utama Gemastik kepada perguruan tinggi dengan perolehan medali terbanyak menurut sistem olimpiade yang akan dianugerahkan Piala Utama Gemastik "SAMYAKBYA PADESA WIDYA", yang berarti Informasi yang Benar untuk Pengetahuan, berupa piala bergilir dan piala tetap.
-
-Penghargaan lain dalam bentuk sertifikat dan tidak menjadi penentu dalam perhitungan juara umum, antara lain:
-
-- Tim dengan Penghargaan Khusus "The Most Inspiring Team"
-- Penghargaan tim terbaik untuk Regional 1, 2, dan 3 pada Divisi I Pemrograman
-- Penghargaan sebagai The Best Defender dan The Best Attacker pada Divisi II Keamanan Siber
-- Penghargaan makalah terbaik (best paper) untuk masing-masing divisi pada Divisi III sampai X
-- Juara I – II – III Lomba e-Sport
+Untuk setiap tim finalis pada masing-masing cabang kompetisi Gemastik akan
+ditetapkan para juara yang diberikan penghargaan berupa medali (medali “emas”
+untuk Juara I, medali “perak” untuk Juara II, medali “perunggu” untuk Juara III),
+sertifikat, dan uang pembinaan, sehingga total disediakan 3 x 11 = 33 medali
+kejuaraan. Untuk tim finalis peringkat IV diberikan penghargaan Harapan yang
+bersifat non-medali dan tanpa uang pembinaan, sehingga hanya diberikan sertifikat.
+Berdasar perhitungan pengumpulan medali akan ditetapkan Juara Umum
+Kompetisi Utama Gemastik kepada perguruan tinggi dengan perolehan medali
+terbanyak menurut sistem olimpiade yang akan dianugerahkan Piala Utama
+Gemastik ”SAMYAKBYA PADESA WIDYA”, yang berarti Informasi yang Benar
+untuk Pengetahuan, berupa piala bergilir dan piala tetap.
+Penghargaan lain dalam bentuk sertifikat dan tidak menjadi penentu dalam
+perhitungan juara umum, antara lain:
+▪ Tim dengan Penghargaan Khusus “The Most Inspiring Team”;
+▪ Penghargaan tim terbaik untuk Regional 1, 2, dan 3 pada Kompetisi I
+Pemrograman;
+▪ Penghargaan sebagai The Best Defender dan The Best Attacker pada Kompetisi II
+Keamanan Siber; dan
+▪ Penghargaan makalah terbaik (best paper) pada masing - masing Kompetisi IV
+sampai X.
 
 ## F. PENDANAAN
 
@@ -258,170 +283,228 @@ Penghargaan lain dalam bentuk sertifikat dan tidak menjadi penentu dalam perhitu
 
 ---
 
-# BAB III: KETENTUAN LOMBA
-
-## H. PENGEMBANGAN PERANGKAT LUNAK
-
-### 1. Deskripsi
-
-Lomba pengembangan perangkat lunak menguji kemampuan peserta dalam mengembangkan ide kreatif untuk memberikan solusi penyelesaian masalah di Indonesia dalam bentuk perangkat lunak berkualitas tinggi. Fokus pada kategori ini adalah aspek inovasi yang kreatif dan pemanfaatan TIK untuk mencerdaskan masyarakat Indonesia sehingga perangkat yang dihasilkan mampu memberikan dampak untuk kemandirian dan kecerdasan masyarakat umum. Dampak ini harus dibuktikan bukan hanya dalam bentuk argumentasi namun juga harus didukung dengan data.
-
-Produk perangkat lunak yang dihasilkan harus bisa dioperasikan sehingga dampak tersebut dapat terukur. Platform produk perangkat lunak tidak dibatasi.
-
-### 2. Babak Penyisihan
-
-Deliverables babak penyisihan yang harus dikumpulkan adalah proposal pengembangan perangkat lunak, video rancangan perangkat lunak yang sedang dikembangkan, dan dokumen pendukung, dengan rincian sebagai berikut:
-
-a) Proposal pengembangan perangkat lunak yang sedang dikembangkan pada kemajuan sekitar 50%.
-
-b) Executable file atau URL dari aplikasi perangkat lunak.
-
-c) Dokumen teknis mengenai panduan instalasi dan penggunaan perangkat lunak.
-
-d) URL video demo perangkat lunak (tuliskan dalam file berformat TXT atau DOC).
-
-e) Perangkat lunak berbasis web harus menyertakan UTL (Uniform Resource Locator) dari perangkat lunak, sedangkan perangkat lunak berbasis desktop (atau standalone) harus menyertakan executable file.
-
-f) Daftar komponen (atau software library) yang dapat digunakan beserta lisensi dari komponen (atau software library) tersebut.
-
-g) Surat pernyataan keaslian karya perangkat lunak dengan ditandatangani di atas materai oleh ketua tim.
-
-h) Adopsi lisensi.
-
-Deliverables disimpan dengan nama folder "GEMASTIK XVI - Perangkat Lunak - \<ID-Tim\> \<Nama Tim\> - \<Judul Karya\>". Deliverables tersebut harus dikompresi sebagai ZIP/RAR terlebih dahulu dengan format penamaan: "GEMASTIK XVI Perangkat Lunak -\<ID-Tim\> - \<Nama Tim\>-Proposal", diunggah ke https://gemastik.kemdikbud.go.id.
-
-Ketentuan proposal adalah sebagai berikut:
-
-a) Proposal perangkat lunak yang diajukan merupakan ide orisinil dengan tidak menjiplak perangkat lunak yang sudah ada (baik yang telah dikembangkan oleh tim maupun orang lain).
-
-b) Proposal perangkat lunak harus bisa direalisasikan menjadi bentuk aplikasi yang memiliki unsur inovatif, kreatif, dan imajinatif.
-
-c) Proposal perangkat lunak tidak mengandung unsur-unsur yang melanggar atau menghina SARA (Suku Agama Ras dan Antar Golongan).
-
-d) Proposal diharapkan menjelaskan kelebihan perangkat lunak yang dikembangkan dari sudut pandang seluruh kriteria penilaian dan juga kelebihannya jika dibandingkan dengan perangkat lunak lain yang serupa.
-
+## H. Pengembangan Perangkat Lunak
+1. Deskripsi
+Kompetisi pengembangan perangkat lunak menguji kemampuan
+peserta dalam mengembangkan ide kreatif untuk memberikan solusi
+penyelesaian masalah di Indonesia dalam bentuk perangkat lunak
+berkualitas tinggi. Fokus pada cabang ini adalah aspek inovasi yang
+kreatif dan pemanfaatan TIK untuk mencerdaskan masyarakat Indonesia
+sehingga perangkat yang dihasilkan mampu memberikan dampak untuk
+kemandirian dan kecerdasan masyarakat umum. Dampak ini harus
+dibuktikan bukan hanya dalam bentuk argumentasi namun juga harus
+didukung dengan data.
+Produk perangkat lunak yang dihasilkan harus bisa dioperasikan
+sehingga dampak tersebut dapat terukur. Platform produk perangkat
+lunak tidak dibatasi.
+2. Babak Penyisihan
+Berkas diunggah pada laman kompetisi Gemastik paling lambat
+sesuai jadwal kegiatan pada Bab II Penjelasan Umum. Berkas pada babak
+penyisihan terdiri dari:
+1. Surat Pernyataan
+Surat Pernyataan yang berisikan tentang pernyataan bahwa karya
+orisinal, tidak plagiat, tidak melanggar hak cipta dan belum pernah
+dilombakan pada kompetisi lain. Surat ditandatangani oleh ketua tim
+di atas materai dan dikumpulkan dengan format PDF, ukuran file
+maksimal 2 MB.
+2. Video Rancangan Perangkat Lunak
+Ketentuan video rancangan perangkat lunak pada babak penyisihan
+sebagai berikut:
+a) Video mewakili gambaran proses perancangan perangkat lunak
+dan demonstrasi hasil pengembangan pada kemajuan minimal
+50%;
+b) Video harus menggambarkan mengapa perangkat lunak tersebut
+berguna dalam menyelesaikan masalah yang diangkat oleh tim;
+c) Video harus menggambarkan bagaimana penggunaan perangkat
+lunak oleh pengguna;
+d) Perangkat lunak diperbolehkan untuk dijalankan menggunakan
+emulator lalu direkam menggunakan perangkat lunak screen
+recording seperti Camstudio, Camtasia, dan semacamnya;
+e) Demonstrasi juga diperbolehkan menggunakan device asli
+sehingga perekaman dilakukan dengan menggunakan kamera;
+f) g) Durasi video dibatasi maksimal 3 menit;
+Video diunggah ke situs YouTube dengan tautan disertakan saat
+mengunggah proposal ke laman kompetisi Gemastik;
+h) Video YouTube diberi judul GEMASTIK XVIII Perangkat Lunak - <ID-
+Tim> - <Nama Tim> - <Judul Karya>.
+3. Deliverables
+File Deliverables babak penyisihan dikumpulkan dengan format ZIP/RAR
+yang di dalam file tersebut terdiri dari:
+1. Ketentuan Proposal Pengembangan Perangkat Lunak
+a) Proposal pengembangan perangkat lunak yang sedang
+dikembangkan pada kemajuan minimal 50%.
+b) Proposal perangkat lunak yang diajukan merupakan ide
+orisinal dengan tidak menjiplak perangkat lunak yang sudah
+ada (baik yang telah dikembangkan oleh tim maupun orang
+lain).
+c) Proposal perangkat lunak harus bisa direalisasikan menjadi
+bentuk aplikasi yang memiliki unsur inovatif, kreatif, dan
+imajinatif.
+d) Proposal perangkat lunak tidak mengandung unsur-unsur
+yang melanggar atau menghina SARA (Suku Agama Ras dan
+Antar Golongan).
+e) Proposal diharapkan menjelaskan kelebihan perangkat lunak
+yang dikembangkan dari sudut pandang seluruh kriteria
+penilaian dan juga kelebihannya jika dibandingkan dengan
+perangkat lunak lain yang serupa.
 Proposal disusun mengikuti struktur dokumen sebagai berikut:
-
 a) Judul/Nama Perangkat Lunak;
-
 b) Latar Belakang Ide Perangkat Lunak;
-
 c) Tujuan dan Manfaat Dikembangkannya Perangkat Lunak;
-
 d) Batasan Perangkat Lunak yang Dikembangkan;
-
 e) Metodologi Pengembangan Perangkat Lunak;
-
 f) Analisis Kebutuhan dan Desain Solusi Perangkat Lunak;
-
 g) Implementasi Perangkat Lunak;
-
 h) Screenshot Mockup Interface Perangkat Lunak;
-
 i) Dokumentasi Cara Penggunaan Perangkat Lunak.
-
-Proposal ditulis maksimal 30 halaman (total) termasuk lampiran dan kelengkapan lainnya. Apabila proposal mengandung tautan yang berisi informasi terkait aplikasi yang dilombakan, maka konten tautan tersebut termasuk dalam maksimal 30 halaman tersebut.
-
-Proposal dikumpulkan ke https://gemastik.kemdikbud.go.id dalam bentuk PDF dengan format penamaan file "GEMASTIK XVI - Perangkat Lunak - \<ID Tim\> -\<Nama Tim\> - \<Judul Karya\> - Proposal.pdf", dengan ukuran tidak melebihi 8 MB.
-
-Ketentuan video rancangan perangkat lunak pada babak penyisihan sebagai berikut:
-
-a) Video mewakili gambaran proses perancangan perangkat lunak dan demonstrasi hasil pengembangan pada kemajuan minimal 50%;
-
-b) Video harus menggambarkan mengapa perangkat lunak tersebut berguna dalam menyelesaikan masalah yang diangkat oleh tim;
-
-c) Video harus menggambarkan bagaimana penggunaan perangkat lunak oleh pengguna;
-
-d) Perangkat lunak diperbolehkan untuk dijalankan menggunakan emulator lalu direkam menggunakan perangkat lunak screen recording seperti Camstudio, Camtasia, dan semacamnya;
-
-e) Demonstrasi juga diperbolehkan menggunakan device asli sehingga perekaman dilakukan dengan menggunakan kamera;
-
-f) Durasi video dibatasi maksimal 3 menit;
-
-g) Video diunggah ke situs YouTube dengan tautan disertakan saat mengunggah proposal ke https://gemastik.kemdikbud.go.id;
-
-h) Video YouTube diberi judul GEMASTIK XVI Perangkat Lunak - \<ID-Tim\> - \<Nama Tim\> - \<Judul Karya\> - Proposal.
-
-Dokumen teknis ditulis maksimal 30 halaman (total) termasuk lampiran dan kelengkapan lainnya. Struktur dokumen teknis adalah sebagai berikut:
-
+Proposal ditulis maksimal 30 halaman (total) termasuk lampiran
+dan kelengkapan lainnya. Apabila proposal mengandung tautan
+yang berisi informasi terkait aplikasi yang dilombakan, maka
+konten tautan tersebut termasuk dalam maksimal 30 halaman
+tersebut. Proposal dikumpulkan ke laman kompetisi Gemastik
+dalam bentuk PDF dengan format penamaan file “GEMASTIK XVIII
+Perangkat Lunak - <ID Tim> - <Nama Tim> - <Judul Karya> -
+Proposal.pdf”, dengan ukuran tidak melebihi 10 MB.
+Dokumen pendukung, dengan rincian sebagai berikut:
+a) Dokumen teknis mengenai panduan instalasi dan penggunaan
+perangkat lunak. Dokumen teknis ditulis maksimal 30
+halaman (total) termasuk lampiran dan kelengkapan lainnya.
+Struktur dokumen teknis adalah sebagai berikut:
 a) Latar Belakang;
-
 b) Tujuan;
-
-c) Nilai inovasi dan dampak pemanfaatan perangkat lunak tersebut;
-
-d) Deskripsi fungsional perangkat lunak dan penjelasan detail fitur; dan
-
+c) Nilai inovasi dan dampak pemanfaatan perangkat lunak
+tersebut;
+d) Deskripsi fungsional perangkat lunak dan penjelasan
+detail fitur; dan
 e) Beberapa screenshot perangkat lunak.
+b) Executable file atau URL dari aplikasi perangkat lunak.
+c) Perangkat lunak berbasis web harus menyertakan URL
+(Uniform Resource Locator) dari perangkat lunak, sedangkan
+perangkat lunak berbasis desktop (atau stand- alone) harus
+menyertakan executable file.
+d) URL video demo perangkat lunak (tuliskan dalam file
+berformat TXT atau DOCX).
+e) Daftar komponen (atau software library) yang dapat
+digunakan beserta lisensi dari komponen (atau software
+library) tersebut.
+f) Surat pernyataan keaslian karya perangkat lunak dengan
+ditandatangani di atas materai oleh ketua tim.
+g) Adopsi lisensi.
+h) File Deliverables disimpan dengan nama folder “GEMASTIK
+XVIII Perangkat Lunak - <ID-Tim> - <Nama Tim> - <Judul
+Karya>”. Deliverables tersebut harus dikompresi sebagai
+ZIP/RAR terlebih dahulu dengan format penamaan: “GEMASTIK
+XVIII Perangkat Lunak - <ID-Tim> - <Nama Tim> - <Judul
+Karya>”, diunggah ke laman kompetisi Gemastik.
+3. Babak Final
+Pendaftaran ulang kepesertaan babak final dan unggah dokumen
+babak final semua tim finalis pada laman kompetisi Gemastik paling
+lambat sesuai jadwal kegiatan pada Bab II Penjelasan Umum. Berkas pada
+babak final terdiri dari:
+1. Video Profil Karya, mengacu pada Bab II, Persyaratan Umum
+nomor 12
+2. Makalah Gemastik, mengacu pada Bab II, Persyaratan Umum
+nomor 10
+3. Hasil Uji Similaritas Makalah, mengacu pada Bab II, Persyaratan
+Umum nomor 10
+4. Laporan Akhir
+Laporan akhir merupakan bagian lanjutan dan/atau perbaikan dari
+proposal. Bagian yang sudah ada di proposal dapat ditulis kembali di
+laporan akhir dan harus di-highlight perubahan atau perbaikan yang
+terjadi dari bagian proposal. Laporan akhir dikumpulkan dalam
+format PDF.
+5. Hasil Uji Similaritas Laporan Akhir
+Hasil uji periksa similaritas (plagiarism) laporan akhir bisa
+menggunakan Turnitin, iThenticate, atau lainnya, maksimal dengan
+indeks similaritas 25%, dikumpulkan dengan format PDF.
+6. Bukti Pendaftaran Hak Cipta (HKI) Karya
+Mengacu pada Bab II, Persyaratan Umum nomor 11 bukti pendaftaran
+HKI ini bisa berupa screenshot pendaftaran karya pada web DJKI
+(Direktorat Jenderal Kekayaan Intelektual), poin plus jika berhasil
+mengumpulkan bukti pendaftaran HKI berupa sertifikat HKI,
+dikumpulkan dengan format PDF.
+7. File Presentasi
+a) File presentasi karya akhir diunggah ke laman kompetisi Gemastik
+untuk dilakukan kompresi ke dalam format ZIP/RAR.
+b) Kompetisi babak final dilaksanakan dengan dua kegiatan, yaitu
+sesi presentasi dan demo karya serta sesi tanya jawab dengan
+dewan juri dalam ruang pertemuan yang disediakan oleh
+penyelenggara.
+c) Presentasi dilaksanakan secara daring langsung di hadapan
+dewan juri dengan ketentuan sesuai Bab II Penjelasan Umum
+Bagian C.
+d) Peserta wajib mempersiapkan kode sumber dari perangkat lunak
+apabila juri meminta untuk ditampilkan sebagai keperluan juri
+dalam menilai.
+e) Urutan presentasi ditentukan dari undian di technical meeting.
+8. Video Karya Akhir
+Video karya akhir merupakan bagian lanjutan dan/atau perbaikan dari
+video rancangan perangkat lunak babak penyisihaan sebelumnya,
+pada video karya akhir ini progress sudah 100%. Dikumpulkan berupa
+link YouTube sebagai unlisted video (Tidak Publik) dengan format
+judul GEMASTIK XVIII Perangkat Lunak - <ID Tim> - <Nama Tim> -
+<Judul Karya> - Final.
 
-Batas pengumpulan seluruh berkas lomba babak penyisihan oleh tim peserta adalah tanggal 12 Juli 2023.
-
-Tim yang lolos Babak Penyisihan untuk maju ke Babak Final akan diumumkan pada tanggal 2 Agustus 2023.
-
-### 3. Babak Final
-
-Babak final dilaksanakan pada tanggal 12 -16 September 2023 dengan ketentuan berikut:
-
-a) Tim finalis melakukan pendaftaran ulang untuk kepesertaan pada Babak Final.
-
-b) Lomba babak final dilaksanakan dengan dua kegiatan, yaitu sesi presentasi dan demo karya serta sesi tanya jawab dengan dewan juri dalam ruang pertemuan yang disediakan oleh penyelenggara.
-
-c) File presentasi karya akhir diunggah ke aplikasi lomba babak final pada laman https://gemastik.kemdikbud.go.id untuk dilakukan kompresi ke dalam format ZIP/RAR.
-
-d) Presentasi dilaksanakan secara luring langsung di hadapan dewan juri.
-
-e) Babak final dilaksanakan secara luring dengan setiap tim finalis dialokasikan waktu 25 menit (10 menit presentasi dan demo, 15 menit tanya-jawab antara tim peserta dengan tim juri).
-
-f) Peserta wajib mempersiapkan kode sumber dari perangkat lunak apabila juri meminta untuk ditampilkan sebagai keperluan juri dalam menilai.
-
-g) Urutan presentasi ditentukan dari undian pada saat technical meeting.
-
-h) Setiap tim peserta sudah siap di ruang tunggu ruang pertemuan paling lambat 15 menit sebelum jadwal presentasi.
-
-i) Akan diberikan tanda peringatan 2 menit sebelum waktu presentasi habis;
-
-j) Jika waktu presentasi sudah habis, maka akan dihentikan oleh panitia.
-
-### 4. Kriteria Penilaian
-
-#### a. Penilaian Babak Penyisihan
-
-Kriteria umum penilaian babak penyisihan adalah sebagai berikut:
-
-- Aspek inovasi. (Bobot: 20%)
-- Dampak yang diharapkan melalui penggunaan perangkat lunak terhadap pengguna atau masyarakat (lingkungan sekitar pengguna) dan potensi sustainability-nya. (Bobot: 20%)
-- Desain antarmuka perangkat lunak, kemampuan untuk digunakan (usability), dan pengalaman pengguna (user experience) dalam menggunakan perangkat lunak. (Bobot: 20%)
-- Proses pengembangan perangkat lunak yang mengikuti metodologi pengembangan perangkat lunak yang baik. (Bobot: 20%)
-- Kesesuaian ide dengan perangkat lunak yang dibuat. (Bobot: 10%)
-- Urgensi masalah yang diangkat sebagai tema perangkat lunak. (Bobot: 10%).
-
-#### b. Penilaian Babak Final
-
-Penilaian babak final mencakup hal-hal sebagai berikut:
-
-- Penilaian kemampuan presentasi (Bobot: 50%)
-  - Finalis diharuskan melakukan presentasi dan demo di depan juri selama 10 menit dilanjutkan dengan tanya jawab kepada juri.
-- Penilaian tantangan juri (Bobot: 50%)
-  - Kecakapan/kemampuan finalis dalam mewujudkan tantangan yang diberikan juri berdasar pada perangkat lunak yang didemokan.
-
-### 5. Ketentuan Khusus
-
-Beberapa persyaratan khusus yang perlu diperhatikan oleh peserta yaitu sebagai berikut:
-
-a) Setiap tim hanya boleh mengajukan satu buah karya perangkat lunak.
-
-b) Karya perangkat lunak belum pernah dinyatakan sebagai pemenang dalam lomba TIK sebelumnya maupun pada kontes sejenis baik dalam skala nasional, regional, maupun internasional. Tim pengusul wajib membuat pernyataan bermaterai terkait hal ini.
-
-c) Karya perangkat lunak belum pernah terpublikasi baik secara komersial maupun secara nonkomersial kepada khalayak umum.
-
-d) Perangkat lunak dapat dijalankan pada platform umum tanpa tambahan perangkat keras khusus.
-
-e) Karya perangkat lunak yang diajukan merupakan ide orisinil dengan tidak menjiplak aplikasi yang sudah ada.
-
-f) Karya perangkat lunak tidak mengandung unsur SARA (Suku Agama Ras dan Antar Golongan).
-
-g) Jika karya adalah karya incremental atau karya yang dikembangkan dari kontes sebelumnya, peserta harus menjelaskan pada juri mengapa karya tersebut diikutsertakan dan memperlihatkan pembaruan karya tersebut dengan sebelumnya.
-
-h) Keputusan juri bersifat mutlak dan tidak dapat diganggu gugat.
-
-Peraturan yang belum tercantum akan ditambahkan di kemudian hari bila diperlukan.
+4. Kriteria Penilaian
+Babak Penyisihan
+No Kriteria Bobot
+1 Aspek inovasi (Solusi baru untuk permasalahan baru,
+solusi baru untuk masalah lama, atau solusi lama untuk
+masalah baru)
+2 Dampak yang diharapkan melalui penggunaan perangkat
+lunak terhadap pengguna atau masyarakat (lingkungan
+sekitar pengguna) dan potensi sustainability-nya
+3 Desain antarmuka perangkat lunak, kemampuan untuk
+digunakan (usability), dan pengalaman pengguna (user
+experience) dalam menggunakan perangkat
+4 Proses pengembangan perangkat lunak yang mengikuti
+metodologi pengembangan perangkat lunak yang baik
+dan sesuai karakteristik solusi yang dikembangkan.
+5 Kesesuaian ide dengan perangkat lunak yang dibuat 6 Urgensi masalah yang diangkat untuk tema perangkat
+lunak
+20%
+20%
+20%
+20%
+10%
+10%
+Total Skor (Bobot x Nilai)
+Babak Final
+No Kriteria Bobot
+1 Penilaian Kemampuan Presentasi
+Finalis diharuskan melakukan presentasi dan demo di
+depan juri selama 10 menit dilanjutkan dengan tanya jawab
+kepada juri
+2 Penilaian Pertanyaan dan Tantangan Juri
+Kecakapan/kemampuan finalis dalam menjawab
+pertanyaan juri dan mewujudkan tantangan yang
+diberikan juri berdasar pada perangkat lunak yang
+didemokan
+50%
+50%
+Total Skor (Bobot x Nilai)
+5. Ketentuan Khusus
+Beberapa persyaratan khusus yang perlu diperhatikan oleh peserta
+yaitu sebagai berikut.
+a) Setiap tim hanya boleh mengajukan satu buah karya perangkat
+lunak.
+b) Karya perangkat lunak belum pernah dinyatakan sebagai pemenang
+dalam kompetisi TIK sebelumnya maupun pada kontes sejenis baik
+dalam skala nasional, regional, maupun internasional.
+c) Karya perangkat lunak belum pernah terpublikasi baik secara
+komersial maupun secara nonkomersial kepada khalayak umum.
+d) Karya perangkat lunak yang diajukan merupakan ide orisinal dengan
+tidak menjiplak aplikasi yang sudah ada.
+e) Karya perangkat lunak tidak mengandung unsur SARA (Suku Agama
+Ras dan Antar Golongan).
+f) Jika karya adalah karya incremental atau karya yang dikembangkan
+dari kontes sebelumnya, peserta harus menjelaskan pada juri
+mengapa karya tersebut diikutsertakan dan memperlihatkan
+pembaruan karya tersebut dengan sebelumnya.
+g) Perangkat lunak dapat dijalankan pada platform umum tanpa
+tambahan perangkat keras khusus.
+h) Tim pengusul wajib membuat pernyataan bermaterai terkait
+ketentuan khusus point (b) - (f) di atas.
+i) j) Keputusan juri bersifat mutlak dan tidak dapat diganggu gugat.
+Peraturan yang belum tercantum akan ditambahkan di kemudian
+hari bila diperlukan.
