@@ -184,6 +184,131 @@ Output: Skor + Penjelasan
 | **Browser Extension** | Auto-scan lowongan di job portal (JobStreet, Glints, LinkedIn) |
 | **Dashboard Admin** | Analytics pola penipuan, manajemen laporan crowdsourced, heatmap jaringan penipu |
 
+### 3.4 Autonomous Agent Layer (Inovasi Tambahan)
+
+Sistem multi-agent yang bekerja secara otonom untuk mengumpulkan data, memantau pola penipuan baru, dan menjaga database tetap up-to-date.
+
+#### A. Arsitektur Multi-Agent
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  VERIFIN CORE SYSTEM                                        │
+│  (Hybrid LLM + Graph + OCR)                                │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+┌──────────────┐ ┌──────────┐ ┌──────────────┐
+│ Agent Layer  │ │ API      │ │ User Input   │
+│              │ │          │ │              │
+│ • Scraper    │ │ • GPT-4  │ │ • Upload     │
+│ • Monitor    │ │ • Claude │ │ • Paste      │
+│ • Sync       │ │ • DB     │ │ • Forward    │
+└──────────────┘ └──────────┘ └──────────────┘
+```
+
+#### B. Jenis-Jenis Agent
+
+**Agent 1: Job Portal Scraper**
+- **Fungsi:** Scrape lowongan dari JobStreet, Glints, LinkedIn, Kalibrr setiap hari
+- **Output:** Dataset lowongan terlabel (suspicious/legit) untuk training model
+- **Frekuensi:** Harian (100-500 lowongan/hari)
+- **Anti-ban:** Proxy rotation, rate limiting, user-agent spoofing
+
+**Agent 2: WA/Telegram Monitor**
+- **Fungsi:** Monitor grup-grup lowongan kerja (dengan izin) untuk tangkap modus baru
+- **Output:** Early warning untuk scam campaign yang belum ada di job portal
+- **Frekuensi:** Real-time (setiap 5 menit)
+- **Privacy:** Hanya scrape pesan publik, tidak akses chat pribadi
+
+**Agent 3: Government DB Sync**
+- **Fungsi:** Auto-update database resmi dari AHU Online, OSS, BP2MI
+- **Output:** Database PT legal, NIB aktif, penyalur PMI resmi (lokal copy)
+- **Frekuensi:** Mingguan
+- **Fallback:** Jika scraping gagal, admin bisa upload manual
+
+**Agent 4: Pattern Hunter**
+- **Fungsi:** Analisis laporan user untuk deteksi cluster penipuan baru
+- **Output:** Alert admin jika ada pola mencurigakan (misal: nomor X muncul 50 kali dalam 3 hari)
+- **Frekuensi:** Real-time (setiap laporan baru masuk)
+- **Algoritma:** Clustering (DBSCAN) + anomaly detection
+
+**Agent 5: Competitor Watch**
+- **Fungsi:** Monitor platform serupa (CekRekening, LaporScam) untuk cross-reference
+- **Output:** Enrich database Verifin dengan data dari sumber lain
+- **Frekuensi:** Harian
+- **Etika:** Hanya ambil data publik, tidak akses API tanpa izin
+
+#### C. Tech Stack Agent
+
+| Komponen | Teknologi | Alasan |
+|----------|-----------|--------|
+| Agent Framework | LangChain + AutoGen | Multi-agent orchestration, mudah debug |
+| Web Scraping | Playwright (async) | Handle dynamic content (React/Vue), headless browser |
+| Scheduling | Celery + Redis | Run agents periodically, distributed task queue |
+| Proxy Rotation | Bright Data / ScraperAPI | Anti-ban, bypass rate limit, 10K+ IP pool |
+| Data Storage | PostgreSQL + Redis | Persistent storage + cache untuk fast lookup |
+| Monitoring | LangSmith | Track agent performance, debug failures |
+| Alerting | Slack/Discord webhook | Notifikasi admin jika agent gagal atau deteksi anomali |
+
+#### D. Contoh Implementasi Agent
+
+```python
+from langchain.agents import initialize_agent, Tool
+from playwright.async_api import async_playwright
+
+tools = [
+    Tool(
+        name="scrape_jobstreet",
+        func=scrape_jobstreet,
+        description="Scrape lowongan dari JobStreet"
+    ),
+    Tool(
+        name="extract_entities",
+        func=extract_with_ner,
+        description="Extract nama PT, gaji, kontak dari teks lowongan"
+    ),
+    Tool(
+        name="check_red_flags",
+        func=detect_red_flags,
+        description="Deteksi pola mencurigakan (minta DP, gaji tidak masuk akal)"
+    ),
+    Tool(
+        name="save_to_db",
+        func=save_lowongan,
+        description="Simpan lowongan ke database dengan label suspicious/legit"
+    )
+]
+
+agent = initialize_agent(
+    tools=tools,
+    llm=ChatOpenAI(model="gpt-4"),
+    verbose=True
+)
+
+# Agent otomatis: scrape → extract → analyze → save
+agent.run("Scrape 100 lowongan terbaru dari JobStreet, label yang suspicious")
+```
+
+#### E. Keuntungan Agent Layer
+
+| Aspek | Tanpa Agent | Dengan Agent |
+|-------|-------------|--------------|
+| Dataset | Manual scraping (lambat) | Auto-update harian |
+| Modus baru | Telat tahu (user report) | Early detection (monitoring) |
+| Database resmi | Manual update bulanan | Auto-sync mingguan |
+| Skalabilitas | Butuh banyak tenaga | Autonomous, self-healing |
+| Wow factor juri | Standar | **Advanced AI agent** 🔥 |
+
+#### F. Estimasi Biaya Agent
+
+| Item | Biaya/bulan | Keterangan |
+|------|-------------|------------|
+| Proxy service (Bright Data) | Rp 500.000 | 10K IP pool, anti-ban |
+| Server untuk agent (VPS) | Rp 300.000 | 2 vCPU, 4GB RAM |
+| LangSmith monitoring | Rp 200.000 | Free tier + paid features |
+| **Total** | **Rp 1.000.000/bulan** | **Rp 12.000.000/tahun** |
+
 ---
 
 ## 4. Keunggulan Kompetitif
@@ -220,6 +345,17 @@ Output: Skor + Penjelasan
 
 > "LLM bagus untuk analisis linguistik kompleks dan generate penjelasan, tapi mahal dan lambat untuk deteksi real-time. Fine-tuned model kecil cepat dan murah untuk pola eksplisit, tapi kurang fleksibel. Hybrid approach memberikan keseimbangan optimal: kecepatan untuk 70% kasus sederhana, akurasi untuk 30% kasus kompleks. Graph Neural Network menangkap pola jaringan yang tidak bisa ditangani LLM maupun classifier biasa."
 
+### 4.4 Keunggulan Autonomous Agent Layer
+
+**Jawaban untuk juri:** "Kenapa butuh autonomous agents?"
+
+> "Sistem deteksi penipuan butuh data yang selalu fresh. Tanpa agent, dataset cepat basi karena modus penipuan berubah setiap minggu. Agent bekerja 24/7 secara otonom: scrape lowongan baru, monitor grup WA/Telegram untuk modus emerging, sync database pemerintah, dan deteksi cluster penipuan baru sebelum user sadar. Ini bukan cuma automation — ini **self-evolving system** yang makin pintar seiring waktu tanpa intervensi manual."
+
+**Dampak Agent pada Wow Factor:**
+- **Live demo:** Tunjukkan agent sedang scrape JobStreet real-time → extract → label → masuk ke graph
+- **Before/after:** Dataset manual (500 lowongan, 2 minggu lama) vs Agent (10.000 lowongan, auto-update harian)
+- **Network effect:** Semakin banyak user lapor → agent makin pintar deteksi pola → sistem makin akurat
+
 ---
 
 ## 5. Metodologi Pengembangan
@@ -231,7 +367,7 @@ Output: Skor + Penjelasan
 | 1-2 | Riset & Dataset | Kumpulkan dataset lowongan palsu (scraping + crowdsourcing), studi literatur |
 | 2-3 | MVP — LLM API First | Pakai GPT-4/Claude untuk semua analisis (cepat development, validasi konsep) |
 | 3-4 | MVP — OCR + Entity Extraction | Scan screenshot, ekstrak entitas otomatis |
-| 4-5 | MVP — Database Verification | Integrasi AHU/OSS/BP2MI |
+| 4-5 | MVP — Database Verification + Agent Layer | Integrasi AHU/OSS/BP2MI + deploy 5 autonomous agents untuk auto-scraping & monitoring |
 | 5-6 | MVP — Graph + GNN | Heterogeneous graph, propagasi risiko |
 | 6-7 | Optimasi — Fine-tune Model Kecil | Train IndoBERT untuk deteksi cepat, kurangi dependency ke LLM API (hemat 70%) |
 | 7-8 | Testing & Validasi | Uji dengan data real, validasi dengan BP2MI/polisi, ukur akurasi hybrid |
@@ -239,6 +375,7 @@ Output: Skor + Penjelasan
 
 **Strategi Hybrid:**
 - **Bulan 2-6:** Pakai LLM API dulu (GPT-4/Claude) untuk semua analisis → cepat development, fokus ke UI/workflow/graph
+- **Bulan 4-5:** Deploy autonomous agents untuk auto-scraping dataset & monitoring modus baru
 - **Bulan 6-7:** Fine-tune model kecil (IndoBERT) untuk deteksi cepat → LLM hanya dipanggil untuk kasus kompleks (30% waktu)
 - **Hasil:** Sistem production-ready dengan biaya optimal + scientific value tinggi
 
@@ -255,6 +392,10 @@ Output: Skor + Penjelasan
 | XAI | SHAP + LLM untuk generate penjelasan |
 | WhatsApp Bot | Twilio / WhatsApp Business API |
 | Browser Extension | Chrome Extension (Manifest V3) |
+| **Agent Framework** | **LangChain + AutoGen (multi-agent orchestration)** |
+| **Web Scraping** | **Playwright (async) + Bright Data (proxy rotation)** |
+| **Task Scheduling** | **Celery + Redis (distributed task queue)** |
+| **Agent Monitoring** | **LangSmith (track performance & debug)** |
 | Deployment | Docker + Cloudflare Workers |
 
 ### 5.3 Dataset
@@ -299,9 +440,12 @@ Output: Skor + Penjelasan
 | Risiko | Mitigasi |
 |--------|----------|
 | Akses API pemerintah terbatas | Fallback ke database lokal + web scraping + manual update berkala |
-| Dataset lowongan palsu sulit didapat | Crowdsourcing via app + partnership dengan komunitas anti-scam |
+| Dataset lowongan palsu sulit didapat | Crowdsourcing via app + partnership dengan komunitas anti-scam + autonomous agents |
 | OCR kurang akurat untuk screenshot buram | Preprocessing (enhancement) + fallback ke input teks manual |
 | False positive (lowongan asli ditandai palsu) | Threshold skor risiko + mekanisme banding + human review |
+| **Website block agent scraping** | **Proxy rotation (Bright Data), rate limiting, user-agent spoofing, fallback ke manual upload** |
+| **Legal issues scraping job portal** | **Hanya scrape data publik, comply robots.txt, partnership resmi dengan platform jika memungkinkan** |
+| **Agent gagal atau error** | **Monitoring via LangSmith, alerting Slack/Discord, fallback manual, self-healing mechanism** |
 
 ---
 
@@ -314,14 +458,21 @@ Output: Skor + Penjelasan
 | Dataset & Labeling | Rp 3.000.000 |
 | LLM API (GPT-4/Claude, 1 tahun) | Rp 3.000.000 |
 | GPU Training (fine-tune IndoBERT) | Rp 1.500.000 |
+| **Autonomous Agent Layer (1 tahun)** | **Rp 12.000.000** |
 | Transportasi & wawancara validasi | Rp 2.000.000 |
 | Publikasi paper | Rp 2.000.000 |
-| **Total** | **Rp 17.000.000** |
+| **Total** | **Rp 29.000.000** |
 
 **Catatan biaya LLM:**
 - Hybrid approach: LLM API hanya dipanggil untuk 30% kasus kompleks
 - Estimasi 10.000 analisis/bulan × 30% × Rp 1000 = Rp 3 juta/tahun
 - Tanpa hybrid (full LLM): Rp 10 juta/tahun → hemat 70%
+
+**Catatan biaya Agent Layer:**
+- Proxy service (Bright Data): Rp 6 juta/tahun
+- Server VPS untuk agents: Rp 3,6 juta/tahun
+- LangSmith monitoring: Rp 2,4 juta/tahun
+- **ROI:** Dataset auto-update + early detection modus baru = investasi jangka panjang
 
 ---
 
