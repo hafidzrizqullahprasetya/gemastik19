@@ -46,8 +46,10 @@ untuk Mendukung Kemandirian Bangsa”. Kemandirian bangsa yang
 dimaksud bisa meliputi dan tidak terbatas pada bidang: swasembada pangan,
 energi, air, ekonomi kreatif, ekonomi hijau dan ekonomi biru.
 Pelaksanaan GEMASTIK XVIII akan dilaksanakan dengan metode daring
-untuk semua kompetisi pada babak penyisihan sedangkan luring untuk babak
-final. Pagelaran ini diselenggarakan bersama salah satu perguruan tinggi yang
+untuk semua kompetisi pada babak penyisihan. Babak Final dilaksanakan
+secara kombinasi luring dan daring: kompetisi I, II, dan III secara luring
+penuh di Telkom University; kompetisi IV s.d. XI secara daring penuh.
+Pagelaran ini diselenggarakan bersama salah satu perguruan tinggi yang
 ditunjuk oleh Direktorat Pembelajaran dan Kemahasiswaan sebagai
 penyelenggara.
 Melalui GEMASTIK, kompetensi TIK mahasiswa Indonesia akan diuji
@@ -107,8 +109,8 @@ mahasiswa dalam membantu permasalahan di lingkungan keseharian.
 
 ## D. PENYELENGGARA DAN PELAKSANA
 
-1. Penyelenggara Pagelaran Mahasiswa Nasional Bidang TIK (Gemastik) Tahun 2022 adalah Balai Pengembangan Talenta Indonesia (BPTI) Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi;
-2. Panitia Pelaksana Pagelaran Mahasiswa Nasional Bidang TIK (Gemastik) tahun 2022 adalah Universitas Brawijaya.
+1. Penyelenggara Pagelaran Mahasiswa Nasional Bidang TIK (Gemastik) Tahun 2025 adalah Balai Pengembangan Talenta Indonesia (BPTI) Kementerian Pendidikan Tinggi, Sains, dan Teknologi;
+2. Panitia Pelaksana Pagelaran Mahasiswa Nasional Bidang TIK (Gemastik) tahun 2025 adalah Telkom University.
 
 **Alamat Penyelenggara:**
 
@@ -128,9 +130,11 @@ Panitia tidak menyediakan akomodasi, transportasi, dan konsumsi bagi para finali
 
 ## A. CABANG-CABANG LOMBA
 
-Kegiatan perlombaan dalam GEMASTIK XV dilaksanakan dalam 2 (dua) babak lomba untuk semua cabang/divisi lomba, yaitu Babak Penyisihan dan Babak Final. Babak Penyisihan wajib diikuti oleh seluruh peserta pada setiap cabang/divisi lomba. Babak Final diikuti oleh para peserta yang dinyatakan lolos pada Pengumuman Babak Penyisihan masing-masing cabang/divisi lomba. Babak Penyisihan maupun Babak Final GEMASTIK XV dilaksanakan secara daring, dengan penyelenggaraan sesuai yang dijelaskan pada Aturan Pelaksanaan masing-masing cabang/divisi lomba.
+Kegiatan perlombaan dalam GEMASTIK XVIII dilaksanakan dalam 2 (dua) babak lomba untuk semua cabang/divisi lomba, yaitu Babak Penyisihan dan Babak Final. Babak Penyisihan dilaksanakan secara daring penuh untuk keseluruhan kompetisi I s.d. XI, baik untuk tim juri maupun tim finalis. Babak Final dilaksanakan secara kombinasi luring dan daring:
+a. Untuk Kompetisi I, II, dan III, babak final dilaksanakan secara luring penuh di Telkom University, baik untuk tim juri maupun tim finalis.
+b. Untuk Kompetisi IV s.d. XI, babak final dilaksanakan secara daring penuh untuk tim juri maupun tim finalis.
 
-GEMASTIK XV menggelar 11 cabang/divisi lomba dalam bidang TIK (Teknologi Informasi dan Komunikasi), baik dengan format pertandingan maupun kompetisi karya. Berikut ini adalah 11 cabang/divisi lomba GEMASTIK XV, yaitu:
+GEMASTIK XVIII menggelar 11 cabang/divisi lomba dalam bidang TIK (Teknologi Informasi dan Komunikasi), baik dengan format pertandingan maupun kompetisi karya. Berikut ini adalah 11 cabang/divisi lomba GEMASTIK XVIII, yaitu:
 
 1. Divisi I Pemrograman (Programming)
 2. Divisi II Keamanan Siber (Cyber Security)
@@ -154,7 +158,7 @@ GEMASTIK XV menggelar 11 cabang/divisi lomba dalam bidang TIK (Teknologi Informa
 6. Penulisan nama mahasiswa peserta wajib menggunakan nama lengkap tanpa disingkat,
 7. Peserta wajib mengikuti seluruh jadwal dan aturan ketentuan kompetisi sesuai Buku Panduan edisi mutakhir pada setiap kompetisi tahunan,
 8. Untuk lomba berbasis karya kreasi, karya yang diikutsertakan tidak diperkenankan mengandung unsur SARA (suku – agama – ras – antar golongan), radikalisme, asusila dan plagiarisme, serta belum pernah mendapatkan juara pada kompetisi lain,
-9. Babak final dilaksanakan secara luring di Universitas Brawijaya untuk divisi I, divisi II, dan divisi III dan secara daring untuk divisi IV s.d. divisi XI dimungkinkan terbuka (dihadiri oleh peninjau yang bukan finalis pada kategori lomba yang diikuti),
+9. Babak final dilaksanakan secara luring di Telkom University untuk divisi I, II, dan III dan secara daring penuh untuk divisi IV s.d. XI. Presentasi dan demo karya inovasi untuk divisi IV s.d. XI dilaksanakan dalam bentuk rekaman video,
 10. Untuk babak final untuk Divisi IV s.d. XI:
     - i. Karya tulis/laporan akhir dilengkapi hasil uji periksa similaritas (Turnitin, iThenticate, lainnya);
     - ii. Karya finalis telah didaftarkan Hak Cipta (HKI).
@@ -163,7 +167,7 @@ GEMASTIK XV menggelar 11 cabang/divisi lomba dalam bidang TIK (Teknologi Informa
 
 ### 1. Pendaftaran Kepesertaan Perguruan Tinggi
 
-a) Perguruan Tinggi yang mengikutsertakan mahasiswa GEMASTIK XV terlebih dahulu mendaftarkan kepesertaan Perguruan Tinggi secara daring melalui aplikasi pendaftaran pada laman https://pusatprestasinasional.kemdikbud.go.id untuk mendapatkan akun Perguruan Tinggi.
+a) Perguruan Tinggi yang mengikutsertakan mahasiswa GEMASTIK XVIII terlebih dahulu mendaftarkan kepesertaan Perguruan Tinggi secara daring melalui aplikasi pendaftaran pada laman https://pusatprestasinasional.kemdikbud.go.id untuk mendapatkan akun Perguruan Tinggi.
 
 b) Pengantar Perguruan Tinggi ditandatangani oleh Pimpinan Perguruan Tinggi Bidang Kemahasiswaan diunggah ke aplikasi pendaftaran tersebut diatas.
 
@@ -175,7 +179,7 @@ b) Pendaftaran Tim Peserta diwajibkan untuk setiap tim peserta seluruh cabang/di
 
 c) Peserta wajib mengunggah Kartu Tanda Mahasiswa dan Pengantar Perguruan Tinggi yang ditandatangani Pimpinan Perguruan Tinggi Bidang Kemahasiswaan;
 
-d) Untuk setiap karya yang diikutsertakan, peserta wajib melampirkan pernyataan bahwa karya yang diikutsertakan pada GEMASTIK XV belum pernah diikutsertakan pada kompetisi lain dan GEMASTIK tahun sebelumnya, diketahui oleh Pimpinan Fakultas/Departemen/Jurusan Bidang Kemahasiswaan.
+d) Untuk setiap karya yang diikutsertakan, peserta wajib melampirkan pernyataan bahwa karya yang diikutsertakan pada GEMASTIK XVIII belum pernah diikutsertakan pada kompetisi lain dan GEMASTIK tahun sebelumnya, diketahui oleh Pimpinan Fakultas/Departemen/Jurusan Bidang Kemahasiswaan.
 
 e) Karya tulis untuk divisi III penambangan data dan divisi VII karya tulis ilmiah TIK dilengkapi hasil uji periksa similaritas (Turnitin, iThenticate, lainnya).
 
@@ -183,7 +187,7 @@ e) Karya tulis untuk divisi III penambangan data dan divisi VII karya tulis ilmi
 
 a) Pendaftaran Ulang Peserta Babak Final dilakukan secara daring melalui aplikasi pendaftaran pada laman https://pusatprestasinasional.kemdikbud.go.id setelah Pengumuman Hasil Babak Penyisihan;
 
-b) Pendaftaran dilakukan oleh masing-masing Tim Finalis (Mahasiswa) pada semua divisi GEMASTIK XV dengan mengunggah Pengantar Perguruan Tinggi Bidang Kemahasiswaan untuk kepesertaan pada Babak Final;
+b) Pendaftaran dilakukan oleh masing-masing Tim Finalis (Mahasiswa) pada semua divisi GEMASTIK XVIII dengan mengunggah Pengantar Perguruan Tinggi Bidang Kemahasiswaan untuk kepesertaan pada Babak Final;
 
 c) Perguruan Tinggi Bidang Kemahasiswaan melaksanakan pendaftaran kehadiran Pembina dan Pimpinan Perguruan Tinggi di Babak Final;
 
@@ -197,51 +201,51 @@ d) Persyaratan finalis untuk Divisi IV s.d. XI:
 
 Pendaftaran dapat dilakukan melalui website resmi https://daftar-bpti.kemdikbud.go.id/
 
-- Tahap 1, Pendaftaran Perguruan Tinggi: 12 Mei – 10 Juli 2023
-  - khusus Divisi II Keamanan Siber: 12 Mei – 7 Juli 2023
-- Tahap 2, pendaftaran tim untuk semua divisi lomba: 12 Mei – 10 Juli 2023
-  - khusus Divisi II Keamanan Siber: 12 Mei – 7 Juli 2023
+- Tahap 1, Pendaftaran Perguruan Tinggi: 12 Mei – 10 Juli 2025
+  - khusus Divisi II Keamanan Siber: 12 Mei – 7 Juli 2025
+- Tahap 2, pendaftaran tim untuk semua divisi lomba: 12 Mei – 10 Juli 2025
+  - khusus Divisi II Keamanan Siber: 12 Mei – 7 Juli 2025
 
 **Pemanasan Pra-Lomba/Unggah Dokumen**
 
-- Divisi I Pemrograman: 12 Mei – 16 Juli 2023
-- Divisi II Keamanan Siber: 12 Mei – 9 Juli 2023
-- Divisi III Penambangan Data: 12 Mei – 12 Juli 2023
-- Divisi IV Desain Pengalaman Pengguna: 12 Mei – 12 Juli 2023
-- Divisi V Animasi: 12 Mei – 12 Juli 2023
-- Divisi VI Kota Cerdas: 12 Mei – 12 Juli 2023
-- Divisi VII Karya Tulis Ilmiah TIK: 12 Mei – 12 Juli 2023
-- Divisi VIII Pengembangan Perangkat Lunak: 12 Mei – 12 Juli 2023
-- Divisi IX Piranti Cerdas, Sistem Benam & IoT: 12 Mei – 12 Juli 2023
-- Divisi X Pengembangan Aplikasi Permainan: 12 Mei – 12 Juli 2023
-- Divisi XI Pengembangan Bisnis TIK: 12 Mei – 12 Juli 2023
+- Divisi I Pemrograman: 12 Mei – 16 Juli 2025
+- Divisi II Keamanan Siber: 12 Mei – 9 Juli 2025
+- Divisi III Penambangan Data: 12 Mei – 12 Juli 2025
+- Divisi IV Desain Pengalaman Pengguna: 12 Mei – 12 Juli 2025
+- Divisi V Animasi: 12 Mei – 12 Juli 2025
+- Divisi VI Kota Cerdas: 12 Mei – 12 Juli 2025
+- Divisi VII Karya Tulis Ilmiah TIK: 12 Mei – 12 Juli 2025
+- Divisi VIII Pengembangan Perangkat Lunak: 12 Mei – 12 Juli 2025
+- Divisi IX Piranti Cerdas, Sistem Benam & IoT: 12 Mei – 12 Juli 2025
+- Divisi X Pengembangan Aplikasi Permainan: 12 Mei – 12 Juli 2025
+- Divisi XI Pengembangan Bisnis TIK: 12 Mei – 12 Juli 2025
 
 **Penyisihan Daring/Penjurian Penyisihan**
 
-- Divisi Pemrograman: 17 - 23 Juli 2023
-- Divisi Keamanan Siber (penyisihan): 10 - 16 Juli 2023
-- Divisi Keamanan Siber (write-off): 17 - 30 Juli 2023
-- Divisi III Penambangan Data: 15 – 30 Juli 2023
-- Divisi IV Desain Pengalaman Pengguna: 15 – 30 Juli 2023
-- Divisi V Animasi: 15 – 30 Juli 2023
-- Divisi VI Kota Cerdas: 15 – 30 Juli 2023
-- Divisi VII Karya Tulis Ilmiah TIK: 15 – 30 Juli 2023
-- Divisi VIII Pengembangan Perangkat Lunak: 15 – 30 Juli 2023
-- Divisi IX Piranti Cerdas, Sistem Benam & IoT: 15 – 30 Juli 2023
-- Divisi X Pengembangan Aplikasi Permainan: 15 – 30 Juli 2023
-- Divisi XI Pengembangan Bisnis TIK: 15 – 30 Juli 2023
+- Divisi Pemrograman: 17 - 23 Juli 2025
+- Divisi Keamanan Siber (penyisihan): 10 - 16 Juli 2025
+- Divisi Keamanan Siber (write-off): 17 - 30 Juli 2025
+- Divisi III Penambangan Data: 15 – 30 Juli 2025
+- Divisi IV Desain Pengalaman Pengguna: 15 – 30 Juli 2025
+- Divisi V Animasi: 15 – 30 Juli 2025
+- Divisi VI Kota Cerdas: 15 – 30 Juli 2025
+- Divisi VII Karya Tulis Ilmiah TIK: 15 – 30 Juli 2025
+- Divisi VIII Pengembangan Perangkat Lunak: 15 – 30 Juli 2025
+- Divisi IX Piranti Cerdas, Sistem Benam & IoT: 15 – 30 Juli 2025
+- Divisi X Pengembangan Aplikasi Permainan: 15 – 30 Juli 2025
+- Divisi XI Pengembangan Bisnis TIK: 15 – 30 Juli 2025
 
 **Pengumuman Daftar Finalis**
 
-- Pengumuman lolos ke Babak Final semua divisi: 2 Agustus 2023
+- Pengumuman lolos ke Babak Final semua divisi: 2 Agustus 2025
 
 **Pendaftaran Ulang Kepesertaan ke Babak Final**
 
-- Untuk perguruan tinggi dan semua tim finalis: 25 Agustus – 5 September 2023
+- Untuk perguruan tinggi dan semua tim finalis: 25 Agustus – 5 September 2025
 
 **Babak Final**
 
-- Babak Final dan Puncak Acara: 12 – 16 September 2023
+- Babak Final dan Puncak Acara: 12 – 16 September 2025
 
 ## E. KEJUARAAN DAN PENGHARGAAN
 
@@ -397,53 +401,25 @@ ZIP/RAR terlebih dahulu dengan format penamaan: “GEMASTIK
 XVIII Perangkat Lunak - <ID-Tim> - <Nama Tim> - <Judul
 Karya>”, diunggah ke laman kompetisi Gemastik.
 3. Babak Final
-Pendaftaran ulang kepesertaan babak final dan unggah dokumen
-babak final semua tim finalis pada laman kompetisi Gemastik paling
-lambat sesuai jadwal kegiatan pada Bab II Penjelasan Umum. Berkas pada
-babak final terdiri dari:
-1. Video Profil Karya, mengacu pada Bab II, Persyaratan Umum
-nomor 12
-2. Makalah Gemastik, mengacu pada Bab II, Persyaratan Umum
-nomor 10
-3. Hasil Uji Similaritas Makalah, mengacu pada Bab II, Persyaratan
-Umum nomor 10
-4. Laporan Akhir
-Laporan akhir merupakan bagian lanjutan dan/atau perbaikan dari
-proposal. Bagian yang sudah ada di proposal dapat ditulis kembali di
-laporan akhir dan harus di-highlight perubahan atau perbaikan yang
-terjadi dari bagian proposal. Laporan akhir dikumpulkan dalam
-format PDF.
-5. Hasil Uji Similaritas Laporan Akhir
-Hasil uji periksa similaritas (plagiarism) laporan akhir bisa
-menggunakan Turnitin, iThenticate, atau lainnya, maksimal dengan
-indeks similaritas 25%, dikumpulkan dengan format PDF.
-6. Bukti Pendaftaran Hak Cipta (HKI) Karya
-Mengacu pada Bab II, Persyaratan Umum nomor 11 bukti pendaftaran
-HKI ini bisa berupa screenshot pendaftaran karya pada web DJKI
-(Direktorat Jenderal Kekayaan Intelektual), poin plus jika berhasil
-mengumpulkan bukti pendaftaran HKI berupa sertifikat HKI,
-dikumpulkan dengan format PDF.
-7. File Presentasi
-a) File presentasi karya akhir diunggah ke laman kompetisi Gemastik
-untuk dilakukan kompresi ke dalam format ZIP/RAR.
-b) Kompetisi babak final dilaksanakan dengan dua kegiatan, yaitu
-sesi presentasi dan demo karya serta sesi tanya jawab dengan
-dewan juri dalam ruang pertemuan yang disediakan oleh
-penyelenggara.
-c) Presentasi dilaksanakan secara daring langsung di hadapan
-dewan juri dengan ketentuan sesuai Bab II Penjelasan Umum
-Bagian C.
-d) Peserta wajib mempersiapkan kode sumber dari perangkat lunak
-apabila juri meminta untuk ditampilkan sebagai keperluan juri
-dalam menilai.
-e) Urutan presentasi ditentukan dari undian di technical meeting.
-8. Video Karya Akhir
-Video karya akhir merupakan bagian lanjutan dan/atau perbaikan dari
-video rancangan perangkat lunak babak penyisihaan sebelumnya,
-pada video karya akhir ini progress sudah 100%. Dikumpulkan berupa
-link YouTube sebagai unlisted video (Tidak Publik) dengan format
-judul GEMASTIK XVIII Perangkat Lunak - <ID Tim> - <Nama Tim> -
-<Judul Karya> - Final.
+Presentasi dan demo karya inovasi pada Babak Final dilaksanakan tidak secara live, melainkan dalam bentuk rekaman video dengan ketentuan sebagai berikut:
+a) Video dapat mencantumkan intro dan subtitle.
+b) Video dalam format MP4 720p berdurasi maksimum 10 menit, terdiri dari rekaman presentasi dan demo karya inovasi, termasuk intro dan subtitle.
+c) Presentasi dan demo karya inovasi final menggambarkan hasil pengembangan karya inovasi dengan pencapaian 100%.
+d) Video diunggah ke YouTube dengan format judul "GEMASTIK XVIII 2025 - Pengembangan Perangkat Lunak - <ID Tim> - <Nama Tim> - <Judul Karya> - Karya Final".
+e) Link rekaman video presentasi dan demo karya inovasi final diinformasikan kepada penyelenggara melalui aplikasi pendaftaran ulang untuk konfirmasi keikutsertaan tim finalis dalam Babak Final.
+f) Setiap tim peserta sudah siap di ruang tunggu ruang pertemuan paling lambat 30 menit sebelum jadwal presentasi.
+g) Akan diberikan tanda peringatan 2 menit sebelum waktu presentasi habis.
+h) Jika waktu presentasi sudah habis, maka akan dihentikan oleh panitia.
+
+Berkas lain pada babak final terdiri dari:
+1. Video Profil Karya, mengacu pada Bab II, Persyaratan Umum nomor 12
+2. Makalah Gemastik, mengacu pada Bab II, Persyaratan Umum nomor 10
+3. Hasil Uji Similaritas Makalah, mengacu pada Bab II, Persyaratan Umum nomor 10
+4. Laporan Akhir (PDF, perbaikan dari proposal, perubahan di-highlight)
+5. Hasil Uji Similaritas Laporan Akhir (maksimal indeks similaritas 25%)
+6. Bukti Pendaftaran Hak Cipta (HKI) Karya (screenshot pendaftaran atau sertifikat HKI)
+7. File Presentasi (ZIP/RAR, diunggah ke laman kompetisi)
+8. Video Karya Akhir (link YouTube unlisted, judul "GEMASTIK XVIII Perangkat Lunak - <ID Tim> - <Nama Tim> - <Judul Karya> - Final")
 
 4. Kriteria Penilaian
 Babak Penyisihan
