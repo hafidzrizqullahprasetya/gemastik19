@@ -1,7 +1,7 @@
 # PROPOSAL PAGELARAN MAHASISWA NASIONAL BIDANG TEKNOLOGI INFORMASI DAN KOMUNIKASI (GEMASTIK) XIX
 ## DIVISI PENGEMBANGAN PERANGKAT LUNAK
 
-**Nama Tim:** Check IN  
+**Nama Tim:** Saran nama tim hoki 
 **Anggota Tim:**  
 1. Hafidz Rizqullah Prasetya  
 2. Matthew Hayunaji Priantara  
