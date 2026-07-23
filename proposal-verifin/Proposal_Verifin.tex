@@ -1124,53 +1124,8 @@ No Domain & $+$9 poin & Tidak ada domain/website yang bisa diverifikasi; penalti
 \caption{Breakdown XAI untuk contoh lowongan penipuan. Formula: $S_{\text{risiko}} = S_{\text{dasar}} + \sum_i \phi_i = 12 + 81 = 93$. Skala: 0=sangat aman, 100=sangat berbahaya.}
 \end{longtable}
 
-\subsection*{F.5 Biodata Anggota Tim}
-\addcontentsline{toc}{subsection}{F.5 Biodata Anggota Tim}
-
-\subsubsection*{Ketua Tim: Hafidz Rizqullah Prasetya}
-\begin{tabular}{@{}p{5cm}p{9.5cm}@{}}
-\textbf{NIM} & 24/535493/SV/24243 \\
-\textbf{Fakultas/Sekolah} & Sekolah Vokasi \\
-\textbf{Program Studi} & Teknologi Rekayasa Perangkat Lunak (D4) \\
-\textbf{Tanggal Lahir} & 1 Januari 2006 \\
-\textbf{Surel} & \texttt{hafidzrizqullahprasetya@mail.ugm.ac.id} \\
-\textbf{No. HP/WA} & 081325081046 \\
-\textbf{Alamat} & Gondangan Ringinsari RT 006/RW 050, Maguwoharjo, Depok, Sleman, D.I.\ Yogyakarta (55282) \\
-\textbf{Pekerjaan Ortu} & Wiraswasta / Wiraswasta \\
-\textbf{Kontak Ortu (Ibu)} & 081326810312 \\
-\end{tabular}
-
-\vspace{0.5cm}
-\subsubsection*{Anggota Tim 1: Akmal Manggala Putra}
-\begin{tabular}{@{}p{5cm}p{9.5cm}@{}}
-\textbf{NIM} & 24/536182/SV/24402 \\
-\textbf{Fakultas/Sekolah} & Sekolah Vokasi \\
-\textbf{Program Studi} & Teknologi Rekayasa Perangkat Lunak (D4) \\
-\textbf{Tanggal Lahir} & 28 Oktober 2005 \\
-\textbf{Surel} & \texttt{akmalmanggala28@gmail.com} \\
-\textbf{No. HP/WA} & 085870457382 \\
-\textbf{Alamat} & Tambalan RT 05/RW 00, Srimartani, Piyungan, Bantul, D.I.\ Yogyakarta (55792) \\
-\textbf{Pekerjaan Ortu} & Pensiunan PNS / Ibu Rumah Tangga \\
-\textbf{Kontak Ortu} & 085643507464 \\
-\end{tabular}
-
-\vspace{0.5cm}
-\subsubsection*{Anggota Tim 2: Matthew Hayunaji Priantara}
-\begin{tabular}{@{}p{5cm}p{9.5cm}@{}}
-\textbf{NIM} & 24/536179/SV/24400 \\
-\textbf{Fakultas/Sekolah} & Sekolah Vokasi \\
-\textbf{Program Studi} & Teknologi Rekayasa Perangkat Lunak (D4) \\
-\textbf{Tanggal Lahir} & 7 Oktober 2005 \\
-\textbf{Surel} & \texttt{matthewpriantara99@gmail.com} \\
-\textbf{No. HP/WA} & 082223217875 \\
-\textbf{Alamat} & Pundong 2 RT 02/RW 04, Tirtoadi, Mlati, Sleman, D.I.\ Yogyakarta (55284) \\
-\textbf{Pekerjaan Ortu} & PNS / Ibu Rumah Tangga \\
-\textbf{Kontak Ortu} & 082324286886 \\
-\end{tabular}
-
-
-\subsection*{F.6 Evaluasi Model (Dataset EMSCAD)}
-\addcontentsline{toc}{subsection}{F.6 Evaluasi Model (Dataset EMSCAD)}
+\subsection*{F.5 Evaluasi Model (Dataset EMSCAD)}
+\addcontentsline{toc}{subsection}{F.5 Evaluasi Model (Dataset EMSCAD)}
 
 Kinerja model klasifikasi teks (TF-IDF + Logistic Regression, hybrid dengan aturan perilaku)
 diukur pada dataset publik \textbf{EMSCAD} (\textit{Employment Scam Aegean Dataset}) berisi
@@ -1205,42 +1160,126 @@ secara terpisah pada dataset EMSCAD, \textbf{bukan} evaluasi end-to-end terhadap
 lima layer. Evaluasi end-to-end terhadap dataset berlabel Indonesia, serta pengukuran dampak sistem
 terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan bagian dari agenda
 pengembangan lanjutan (lihat Batasan). Selain evaluasi offline ini, sistem juga diuji end-to-end
-pada tiga kanal input nyata
-(teks, gambar poster via OCR, dan tautan) yang seluruhnya menghasilkan verdict konsisten dan
-deterministik (temperature $=0$, seed tetap), termasuk dua kasus negatif yang terklasifikasi
-BAHAYA dengan skor risiko 95.
+pada tiga kanal input nyata (teks, gambar poster via OCR, dan tautan) yang seluruhnya menghasilkan
+verdict konsisten dan deterministik.
 
 
-\section*{G.\quad Mockup Antarmuka (Hasil Uji End-to-End)}
-\addcontentsline{toc}{section}{G. Mockup Antarmuka (Hasil Uji End-to-End)}
-Berikut tangkapan layar antarmuka Verifin dari pengujian end-to-end nyata (input teks, gambar poster via OCR, dan tautan), mencakup modal progres analisis dan halaman hasil verifikasi dengan skor risiko, faktor yang perlu diwaspadai vs.\ yang terlihat baik, rekomendasi tindakan, dan entitas yang terdeteksi. Mode ringkas (untuk pencari kerja) ditampilkan; mode audit forensik tersedia untuk juri.
+\section*{G.\quad Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
+\addcontentsline{toc}{section}{G. Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
+
+Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yang diambil langsung dari pengujian sistem secara \textit{end-to-end} pada berbagai skenario dan kanal input nyata (teks, gambar poster via OCR, dan tautan/URL). Pengujian mencakup alur penuh mulai dari penginputan data, pemrosesan bertahap pada modal loading, visualisasi indikator risiko, bukti digital OSINT, hingga rekomendasi tindakan bagi pengguna.
+
+\subsection*{G.1 Modal Progres Analisis Pipeline}
+\addcontentsline{toc}{subsection}{G.1 Modal Progres Analisis Pipeline}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\linewidth]{images/mockup-loading.png}
-  \caption{Modal progres analisis bertahap (OCR $\to$ OSINT $\to$ Graf $\to$ LLM+XAI) yang menjaga pengguna tetap terinformasi selama pipeline berjalan.}
+  \includegraphics[width=0.88\linewidth]{images/mockup-loading.png}
+  \caption{Modal progres analisis bertahap secara \textit{real-time} (OCR $\to$ OSINT $\to$ Graph DB $\to$ LLM + XAI) yang menjaga transparansi proses verifikasi kepada pengguna.}
   \label{fig:mockup-loading}
 \end{figure}
 
+\subsection*{G.2 Kanal Input 1: Verifikasi Teks Lowongan Kerja}
+\addcontentsline{toc}{subsection}{G.2 Kanal Input 1: Verifikasi Teks Lowongan Kerja}
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\linewidth]{images/mockup-teks.png}
-  \caption{Hasil verifikasi input teks (PT.\ VIS): verdict AMAN, skor risiko 30/100. Web evidence menemukan jejak digital relevan (direktori companieshouse.id, portal loker Instagram), bukan hasil pencarian acak.}
+  \includegraphics[width=0.88\linewidth]{images/tes text.png}
+  \caption{Antarmuka input teks lowongan kerja pada Verifin, memungkinkan pengguna melakukan salin-tempel (\textit{copy-paste}) narasi iklan pekerjaan dari WhatsApp atau media sosial.}
+  \label{fig:tes-text}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil text 1.png}
+  \caption{Hasil verifikasi input teks (Bagian Atas): Menampilkan badge verdict \texttt{AMAN}, Skor Risiko 30/100, ringkasan naratif LLM, serta panduan tindak lanjut.}
+  \label{fig:hasil-text-1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil text 2.png}
+  \caption{Hasil verifikasi input teks (Bagian Detail): rincian kontribusi fitur XAI, validasi reputasi nomor kontak, legalitas badan usaha, dan mitigasi risiko.}
+  \label{fig:hasil-text-2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/mockup-teks.png}
+  \caption{Tampilan menyeluruh dashboard analisis teks (Studi Kasus PT. VIS): penelusuran web evidence menemukan jejak digital relevan pada direktori legalitas dan portal resmi.}
   \label{fig:mockup-teks}
 \end{figure}
 
+\subsection*{G.3 Kanal Input 2: Verifikasi Gambar Poster (OCR)}
+\addcontentsline{toc}{subsection}{G.3 Kanal Input 2: Verifikasi Gambar Poster (OCR)}
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\linewidth]{images/mockup-gambar.png}
-  \caption{Hasil verifikasi input gambar poster (Sushi Yay) via OCR PaddleOCR: verdict AMAN, skor risiko 12/100; kedua alamat outlet tervalidasi OpenStreetMap.}
-  \label{fig:mockup-gambar}
+  \includegraphics[width=0.88\linewidth]{images/tes gambar.png}
+  \caption{Antarmuka unggah gambar poster pamflet lowongan kerja (dukungan format JPG, PNG, WebP) dengan opsi pratinjau sebelum analisis.}
+  \label{fig:tes-gambar}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\linewidth]{images/mockup-link.png}
-  \caption{Hasil verifikasi input tautan Instagram (Indonesia College): verdict AMAN, skor risiko 15/100; website resmi aktif, umur domain tervalidasi Whois, dan 7 jejak digital relevan (hasil tak relevan telah disaring).}
+  \includegraphics[width=0.88\linewidth]{images/hasil gambar 1.png}
+  \caption{Hasil verifikasi gambar poster via OCR (Bagian Atas): penentuan verdict \texttt{AMAN} dan indeks risiko 12/100 berbasis ekstraksi entitas otomatis.}
+  \label{fig:hasil-gambar-1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil gambar 2.png}
+  \caption{Hasil verifikasi gambar poster (Bagian Detail): teks hasil ekstraksi PaddleOCR 2.8 berserta pembuktian OSINT terhadap entitas yang berhasil terekstraksi.}
+  \label{fig:hasil-gambar-2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/mockup-gambar.png}
+  \caption{Dashboard verifikasi gambar poster (Studi Kasus Outlet Sushi Yay): validasi lokasi fisik outlet tervalidasi di geocoding OpenStreetMap.}
+  \label{fig:mockup-gambar}
+\end{figure}
+
+\subsection*{G.4 Kanal Input 3: Verifikasi Tautan / URL Web}
+\addcontentsline{toc}{subsection}{G.4 Kanal Input 3: Verifikasi Tautan / URL Web}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/tes link.png}
+  \caption{Antarmuka verifikasi tautan (URL), mendukung inspeksi halaman Instagram, situs berita loker, maupun website perusahaan.}
+  \label{fig:tes-link}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil link 1.png}
+  \caption{Hasil verifikasi tautan URL (Bagian Atas): verdict \texttt{AMAN} dengan skor risiko 15/100 dan penjelasan faktor mitigasi.}
+  \label{fig:hasil-link-1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil link 2.png}
+  \caption{Hasil verifikasi tautan URL (Bagian Detail): inspeksi keamanan domain Whois, sertifikasi SSL/TLS, serta penyaringan \textit{brand URL noise}.}
+  \label{fig:hasil-link-2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/mockup-link.png}
+  \caption{Dashboard verifikasi tautan (Studi Kasus Indonesia College): validasi keaktifan domain Whois dan 7 jejak digital relevan.}
   \label{fig:mockup-link}
+\end{figure}
+
+\subsection*{G.5 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
+\addcontentsline{toc}{subsection}{G.5 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/hasil test negatif.png}
+  \caption{Hasil pengujian kasus negatif penipuan nyata: sistem mendeteksi sinyal bahaya kuat, menetapkan verdict \texttt{BAHAYA} (Skor Risiko 95/100), menampilkan peringatan alert merah, serta memberikan rekomendasi penolakan dan pelaporan ke komunitas.}
+  \label{fig:hasil-test-negatif}
 \end{figure}
 
 \section*{H.\quad Dokumentasi Cara Penggunaan Perangkat Lunak}
