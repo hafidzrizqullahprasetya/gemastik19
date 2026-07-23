@@ -132,11 +132,11 @@ pengguna \textit{sebelum} mereka memutuskan untuk merespons.
 \subsection*{Inilah celah yang Verifin hadir untuk menutupnya.}
 
 \textbf{Verifin} (\textit{Verifikasi Lowongan Kerja}) adalah platform intelijen berbasis web yang
-menganalisis teks atau URL lowongan kerja secara otomatis menggunakan rantai teknologi berlapis:
-Named Entity Recognition (NER), klasifikasi NLP, investigasi OSINT multi-sumber, sintesis naratif LLM,
-dan penjelasan kausal berbasis Explainable AI (XAI). Keluaran sistem adalah sebuah \textit{Trust Score}
-0--100 beserta verdict tiga tingkat (AMAN/WASPADA/BAHAYA) yang didukung oleh penjelasan berbasis bukti
-yang dapat diverifikasi oleh pengguna awam.
+ menganalisis teks atau URL lowongan kerja secara otomatis menggunakan rantai teknologi berlapis:
+ Named Entity Recognition (NER) hibrida, klasifikasi perilaku teks, investigasi OSINT multi-sumber, sintesis naratif LLM,
+ dan penjelasan kausal berbasis Explainable AI (XAI). Keluaran sistem adalah sebuah \textit{Skor Risiko}
+ 0--100 (0 = sangat aman, 100 = sangat berbahaya) beserta verdict tiga tingkat (AMAN/WASPADA/BAHAYA) yang didukung oleh penjelasan berbasis bukti
+ yang dapat diverifikasi oleh pengguna awam.
 
 \vspace{0.5cm}
 \textbf{Relevansi dengan GEMASTIK XIX --- Divisi Pengembangan Perangkat Lunak:}
@@ -211,12 +211,12 @@ fungsional dengan nilai guna langsung bagi jutaan pencari kerja Indonesia.
 
 \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
 \item Membangun platform web \textbf{Verifin} yang mampu menganalisis teks atau URL lowongan kerja
-      secara otomatis dan menghasilkan \textit{Trust Score} 0--100 beserta verdict AMAN/WASPADA/BAHAYA
+      secara otomatis dan menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict AMAN/WASPADA/BAHAYA
       dalam waktu di bawah 30 detik.
 
 \item Mengimplementasikan pipeline analisis berlapis yang mengintegrasikan Named Entity Recognition
-      (NER) berbahasa Indonesia, klasifikasi NLP berbasis IndoBERT, investigasi OSINT multi-sumber
-      (domain, nomor telepon, perusahaan), sintesis naratif berbasis LLM (GPT-4o-mini via
+      (NER) hibrida berbahasa Indonesia, klasifikasi perilaku teks, investigasi OSINT multi-sumber
+      (domain, nomor telepon, perusahaan), sintesis naratif berbasis LLM (via
       OpenAgentic), dan penjelasan kausal berbasis custom SHAP-inspired XAI.
 
 \item Membangun \textit{Fraud Network Graph} berbasis database PostgreSQL yang dapat mendeteksi
@@ -271,11 +271,11 @@ setara.
 \item \textbf{Sumber OSINT:}
 Investigasi OSINT terbatas pada sumber yang dapat diakses secara publik dan legal:
 \begin{itemize}
-  \item Whois/RDAP untuk domain
-  \item Validasi format dan prefix nomor telepon Indonesia
-  \item Pencarian nama perusahaan di database AHU (Administrasi Hukum Umum) via scraping terbatas
-  \item Pencarian Google Custom Search API dengan kueri terstruktur
-  \item Pengecekan reputasi domain via VirusTotal API (tier gratis)
+  \item Whois/RDAP untuk domain (usia \& registrar domain)
+  \item Validasi reputasi nomor telepon Indonesia via halaman publik Kredibel
+  \item Validasi alamat pada peta via OpenStreetMap (Nominatim)
+  \item Pencarian jejak digital perusahaan via multi-engine web search (DuckDuckGo/Yahoo/Bing) dengan filter relevansi entitas
+  \item Inspeksi formulir/shortlink (Google Form) untuk deteksi phishing
 \end{itemize}
 Sistem \textbf{tidak} mengakses database kepolisian, Dukcapil, atau sistem pemerintah lainnya
 yang memerlukan otorisasi khusus.
@@ -290,10 +290,12 @@ Verifin adalah aplikasi web yang dioptimalkan untuk desktop browser (Chrome, Fir
 Tidak ada aplikasi mobile native dalam cakupan pengembangan ini, meskipun antarmuka bersifat
 responsif untuk mobile.
 
-\item \textbf{Keterbatasan Model NLP:}
-Model NLP berbasis IndoBERT yang digunakan adalah fine-tuned pada dataset lowongan kerja
-sintetis dan publik yang tersedia. Akurasi model pada lowongan dengan pola penipuan yang sangat
-baru atau tidak umum mungkin lebih rendah.
+\item \textbf{Keterbatasan Klasifikasi Teks:}
+Pre-screening teks menggunakan model machine learning TF-IDF + Logistic Regression yang dilatih
+pada dataset EMSCAD berbahasa Inggris, digabung dengan aturan perilaku yang dikalibrasi dari pola
+lowongan penipuan Indonesia (hybrid). Akurasi pada pola penipuan yang sangat baru, sangat spesifik
+konteks lokal, atau tidak umum mungkin lebih rendah; penambahan data latih berbahasa Indonesia
+tercantum pada roadmap.
 
 \item \textbf{Ketergantungan API Eksternal:}
 Pipeline analisis bergantung pada layanan eksternal (OpenAgentic/OpenAI untuk LLM, Supabase
@@ -306,8 +308,9 @@ Pengguna tetap dianjurkan untuk melakukan verifikasi tambahan pada lowongan deng
 perbatasan.
 
 \item \textbf{Privasi dan Anonimisasi:}
-Laporan komunitas disimpan dengan IP yang di-hash, bukan IP asli. Data nomor telepon dan
-informasi pribadi dari teks lowongan yang dianalisis tidak diekspos ke antarmuka publik.
+Laporan komunitas bersifat anonim (tanpa akun); identitas pelapor tidak diekspos. Nomor telepon
+ternormalisasi digunakan untuk pencocokan, dan data pribadi dari teks lowongan yang dianalisis
+tidak ditampilkan ke antarmuka publik.
 
 \end{enumerate}
 
@@ -332,11 +335,11 @@ empat sprint dengan durasi dua minggu per sprint.
 \endhead
 Sprint 0 & Minggu 1--2 & Riset, desain arsitektur, setup repo, konfigurasi Supabase, scaffolding Next.js dan FastAPI \\
 \midrule
-Sprint 1 & Minggu 3--4 & Implementasi pipeline NER + NLP Classifier, integrasi IndoBERT, endpoint FastAPI dasar, UI input form \\
+Sprint 1 & Minggu 3--4 & Implementasi pipeline NER hibrida (regex + LLM) + klasifikasi perilaku teks, endpoint FastAPI dasar, UI input form \\
 \midrule
 Sprint 2 & Minggu 5--6 & Implementasi modul OSINT (domain, phone, company), LLM synthesis via OpenAgentic, Fraud Network Graph, XAI explainer \\
 \midrule
-Sprint 3 & Minggu 7--8 & Trust Score engine, Community Monitoring, riwayat analisis, API publik, UI result dashboard, visualisasi graf \\
+Sprint 3 & Minggu 7--8 & Skor Risiko engine, Community Monitoring, riwayat analisis, API publik, UI result dashboard, visualisasi graf \\
 \midrule
 Sprint 4 & Minggu 9--10 & Pengujian integrasi, optimasi performa, deployment Vercel + Railway, dokumentasi, persiapan demonstrasi \\
 \bottomrule
@@ -353,7 +356,7 @@ Sprint 4 & Minggu 9--10 & Pengujian integrasi, optimasi performa, deployment Ver
 \textbf{Peran} & \textbf{Anggota} & \textbf{Tanggung Jawab Utama} \\
 \midrule
 \endhead
-Tech Lead \& AI Engineer & Hafidz Rizqullah P. & Arsitektur sistem, pipeline NER+NLP, Trust Score engine, XAI, koordinasi tim \\
+Tech Lead \& AI Engineer & Hafidz Rizqullah P. & Arsitektur sistem, pipeline NER+NLP, Skor Risiko engine, XAI, koordinasi tim \\
 \midrule
 Backend \& OSINT Engineer & Akmal Manggala P. & FastAPI backend, modul OSINT, Fraud Network Graph, database schema, API publik \\
 \midrule
@@ -369,7 +372,7 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 \item \textbf{Test-Driven:} Setiap modul pipeline dilengkapi unit test sebelum integrasi.
 \item \textbf{Security by Design:} Validasi input, rate limiting, dan manajemen secret diterapkan
       sejak Sprint 0.
-\item \textbf{Explainability First:} Setiap keputusan Trust Score harus dapat dijelaskan dengan
+\item \textbf{Explainability First:} Setiap keputusan Skor Risiko harus dapat dijelaskan dengan
       kontribusi fitur yang terukur.
 \item \textbf{Progressive Enhancement:} Sistem fungsional minimal tersedia di akhir setiap sprint;
       tidak ada sprint yang berakhir tanpa \textit{working software}.
@@ -414,21 +417,21 @@ FR-01 & Input Teks Lowongan & Pengguna dapat menempelkan teks lowongan kerja (mi
 \midrule
 FR-02 & Input URL Lowongan & Pengguna dapat memasukkan URL halaman lowongan kerja; sistem mengekstrak teks dari halaman tersebut secara otomatis & Tinggi \\
 \midrule
-FR-03 & Ekstraksi Entitas NER & Sistem mengekstrak entitas: nama perusahaan, nomor telepon, email, URL/domain, nama kontak, posisi, gaji, lokasi, dan jenis pekerjaan & Tinggi \\
+FR-03 & Ekstraksi Entitas NER Hibrida & Sistem mengekstrak entitas (nama perusahaan, nomor telepon, email, URL/domain, gaji, lokasi) menggunakan kombinasi regex (entitas struktural) dan LLM (entitas semantik) & Tinggi \\
 \midrule
-FR-04 & Klasifikasi NLP & Sistem mengklasifikasikan teks lowongan ke dalam kategori LEGIT/SUSPICIOUS/SCAM menggunakan model fine-tuned IndoBERT & Tinggi \\
+FR-04 & Klasifikasi Perilaku Teks & Sistem melakukan pre-screening teks lowongan menggunakan model ML TF-IDF + Logistic Regression (terlatih pada dataset EMSCAD) yang digabung aturan perilaku & Tinggi \\
 \midrule
-FR-05 & Investigasi OSINT Domain & Sistem melakukan investigasi terhadap domain/URL yang ditemukan: Whois, usia domain, reputasi VirusTotal & Tinggi \\
+FR-05 & Investigasi OSINT Domain & Sistem melakukan investigasi terhadap domain/URL yang ditemukan: Whois, usia domain, keaktifan website & Tinggi \\
 \midrule
-FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format dan prefix nomor telepon Indonesia; mengecek kemunculan nomor di database laporan komunitas & Tinggi \\
+FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format nomor telepon Indonesia dan mengecek laporan fraud pada halaman publik Kredibel & Tinggi \\
 \midrule
-FR-07 & Investigasi OSINT Perusahaan & Sistem mencari nama perusahaan di sumber publik dan mengidentifikasi inkonsistensi dengan klaim dalam lowongan & Tinggi \\
+FR-07 & Investigasi OSINT Perusahaan & Sistem mencari jejak digital perusahaan via multi-engine web search (dengan filter relevansi entitas) dan mengidentifikasi inkonsistensi dengan klaim dalam lowongan & Tinggi \\
 \midrule
-FR-08 & Sintesis Naratif LLM & Sistem menghasilkan ringkasan narasi berbahasa Indonesia menggunakan LLM (GPT-4o-mini) berdasarkan temuan OSINT & Tinggi \\
+FR-08 & Sintesis Naratif LLM & Sistem menghasilkan ringkasan narasi berbahasa Indonesia menggunakan LLM via OpenAgentic berdasarkan temuan OSINT & Tinggi \\
 \midrule
-FR-09 & Trust Score dan Verdict & Sistem menghasilkan Trust Score integer 0--100 beserta verdict tiga tingkat: AMAN (61--100), WASPADA (31--60), BAHAYA (0--30) & Tinggi \\
+FR-09 & Skor Risiko dan Verdict & Sistem menghasilkan Skor Risiko integer 0--100 (0 = sangat aman, 100 = sangat berbahaya) beserta verdict tiga tingkat: AMAN, WASPADA, BAHAYA (ambang klasifikasi dikalibrasi pada 45 untuk memaksimalkan F1) & Tinggi \\
 \midrule
-FR-10 & Penjelasan XAI & Sistem menghasilkan penjelasan kontribusi fitur terhadap Trust Score menggunakan custom SHAP-inspired additive explainer & Tinggi \\
+FR-10 & Penjelasan XAI & Sistem menghasilkan penjelasan kontribusi fitur terhadap Skor Risiko menggunakan custom SHAP-inspired additive explainer & Tinggi \\
 \midrule
 FR-11 & Visualisasi Graf Jaringan & Sistem menampilkan graf interaktif koneksi entitas lowongan dengan entitas lain di database & Sedang \\
 \midrule
@@ -503,10 +506,10 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \draw[arrow] (llm) -- (xai);
 
 % Labels below
-\node[font=\tiny, below=0.15cm of ner, text=gray] {IndoBERT NER};
-\node[font=\tiny, below=0.15cm of nlp, text=gray] {IndoBERT Cls};
+\node[font=\tiny, below=0.15cm of ner, text=gray] {NER Hibrida};
+\node[font=\tiny, below=0.15cm of nlp, text=gray] {TF-IDF+LogReg Hybrid};
 \node[font=\tiny, below=0.15cm of osint, text=gray] {Whois/Phone/Co.};
-\node[font=\tiny, below=0.15cm of llm, text=gray] {GPT-4o-mini};
+\node[font=\tiny, below=0.15cm of llm, text=gray] {LLM Reasoning};
 \node[font=\tiny, below=0.15cm of xai, text=gray] {SHAP-inspired};
 
 % Input arrow
@@ -517,7 +520,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \node[right=0.5cm of xai, font=\small\bfseries, text=verfingreen, align=center, text width=1.5cm] (output) {Trust\\Score};
 \draw[arrow] (xai) -- (output);
 \end{tikzpicture}
-\caption{Pipeline analisis 5-layer Verifin: dari input teks hingga Trust Score dan XAI}
+\caption{Pipeline analisis 5-layer Verifin: dari input teks hingga Skor Risiko dan XAI}
 \end{figure}
 
 \vspace{0.3cm}
@@ -539,7 +542,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
       at={($(outer.north west)+(2.7cm,-1.7cm)$)}] (osint_box) {};
 \node[font=\bfseries\small, color=verfinblue] at ($(osint_box.north)+(0,-0.3cm)$) {OSINT Engine};
 \node[font=\tiny, align=center] at ($(osint_box.center)+(0,-0.1cm)$)
-      {Domain Whois \\ Phone Validator \\ Company Lookup \\ VirusTotal API};
+      {Domain Whois \\ Phone (Kredibel) \\ Web Search \\ Maps + Form};
 
 % Inner top-right: Fraud Network Graph
 \node[rectangle, draw=verfinred!70, fill=verfinred!10, rounded corners=4pt,
@@ -580,58 +583,58 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[every node/.style={font=\normalsize}]
-% BAHAYA box
-\node[rectangle, draw=verfinred, fill=verfinred!15, line width=2pt, rounded corners=6pt,
-      minimum width=3.5cm, minimum height=2.5cm, text centered] (bahaya) at (0,0) {};
-\node[font=\Large\bfseries, color=verfinred] at ($(bahaya.center)+(0,0.4cm)$) {BAHAYA};
-\node[font=\small, color=verfinred!80!black] at ($(bahaya.center)+(0,-0.1cm)$) {Skor 0--30};
-\node[font=\tiny, color=gray, text width=3cm, align=center] at ($(bahaya.center)+(0,-0.6cm)$)
-      {Indikator kuat penipuan};
+% AMAN box (skor risiko rendah)
+\node[rectangle, draw=verfingreen, fill=verfingreen!15, line width=2pt, rounded corners=6pt,
+      minimum width=3.5cm, minimum height=2.5cm, text centered] (aman) at (0,0) {};
+\node[font=\Large\bfseries, color=verfingreen!80!black] at ($(aman.center)+(0,0.4cm)$) {AMAN};
+\node[font=\small, color=verfingreen!80!black] at ($(aman.center)+(0,-0.1cm)$) {Skor 0--39};
+\node[font=\tiny, color=gray, text width=3cm, align=center] at ($(aman.center)+(0,-0.6cm)$)
+      {Indikator kepercayaan kuat dari OSINT};
 
 % WASPADA box
 \node[rectangle, draw=verfinyellow!80!black, fill=verfinyellow!20, line width=2pt, rounded corners=6pt,
       minimum width=3.5cm, minimum height=2.5cm, text centered] (waspada) at (4.5,0) {};
 \node[font=\Large\bfseries, color=verfinyellow!70!black] at ($(waspada.center)+(0,0.4cm)$) {WASPADA};
-\node[font=\small, color=verfinyellow!70!black] at ($(waspada.center)+(0,-0.1cm)$) {Skor 31--60};
+\node[font=\small, color=verfinyellow!70!black] at ($(waspada.center)+(0,-0.1cm)$) {Skor 40--74};
 \node[font=\tiny, color=gray, text width=3cm, align=center] at ($(waspada.center)+(0,-0.6cm)$)
       {Sinyal meragukan, bukti tidak konklusif};
 
-% AMAN box
-\node[rectangle, draw=verfingreen, fill=verfingreen!15, line width=2pt, rounded corners=6pt,
-      minimum width=3.5cm, minimum height=2.5cm, text centered] (aman) at (9,0) {};
-\node[font=\Large\bfseries, color=verfingreen!80!black] at ($(aman.center)+(0,0.4cm)$) {AMAN};
-\node[font=\small, color=verfingreen!80!black] at ($(aman.center)+(0,-0.1cm)$) {Skor 61--100};
-\node[font=\tiny, color=gray, text width=3cm, align=center] at ($(aman.center)+(0,-0.6cm)$)
-      {Indikator kepercayaan kuat dari OSINT};
+% BAHAYA box (skor risiko tinggi)
+\node[rectangle, draw=verfinred, fill=verfinred!15, line width=2pt, rounded corners=6pt,
+      minimum width=3.5cm, minimum height=2.5cm, text centered] (bahaya) at (9,0) {};
+\node[font=\Large\bfseries, color=verfinred] at ($(bahaya.center)+(0,0.4cm)$) {BAHAYA};
+\node[font=\small, color=verfinred!80!black] at ($(bahaya.center)+(0,-0.1cm)$) {Skor 75--100};
+\node[font=\tiny, color=gray, text width=3cm, align=center] at ($(bahaya.center)+(0,-0.6cm)$)
+      {Indikator kuat penipuan};
 
-% Scale bar below
-\shade[left color=verfinred!60, right color=verfingreen!60]
+% Scale bar below (kiri aman rendah → kanan bahaya tinggi)
+\shade[left color=verfingreen!60, right color=verfinred!60]
       (-1.7cm,-1.8cm) rectangle (10.7cm,-1.4cm);
 \node[font=\tiny, color=white] at (0,-1.6cm) {0};
 \node[font=\tiny, color=white] at (4.5cm,-1.6cm) {50};
 \node[font=\tiny, color=white] at (9cm,-1.6cm) {100};
 \end{tikzpicture}
-\caption{Tiga tingkat verdict Verifin berdasarkan rentang Trust Score}
+\caption{Tiga tingkat verdict Verifin berdasarkan rentang Skor Risiko (0 = sangat aman, 100 = sangat berbahaya)}
 \end{figure}
 
 \vspace{0.3cm}
 
-% ── TRUST SCORE TABLE ─────────────────────────────────────────────────────
+% ── SKOR RISIKO TABLE ─────────────────────────────────────────────────────
 \begin{table}[H]
 \centering
-\caption{Tabel Trust Score dan Interpretasi Verdict}
+\caption{Tabel Skor Risiko dan Interpretasi Verdict}
 \begin{tabular}{@{}p{2.5cm}p{2.5cm}p{8cm}@{}}
 \toprule
 \textbf{Rentang Skor} & \textbf{Verdict} & \textbf{Interpretasi} \\
 \midrule
-\rowcolor{verfinred!20}
-0--30 & \textbf{\color{verfinred}BAHAYA} & Terdapat indikator kuat penipuan dari verifikasi OSINT: domain baru/tidak valid, nomor tidak terdaftar, nama perusahaan tidak ditemukan, pola teks sesuai ciri penipuan. Pengguna sangat disarankan tidak merespons. \\
+\rowcolor{verfingreen!15}
+0--39 & \textbf{\color{verfingreen!70!black}AMAN} & Lowongan memiliki indikator kepercayaan yang kuat dari verifikasi OSINT: domain valid dan berumur, perusahaan terverifikasi, tidak ada laporan penipuan. \\
 \midrule
 \rowcolor{verfinyellow!20}
-31--60 & \textbf{\color{verfinyellow!70!black}WASPADA} & Terdapat beberapa sinyal meragukan namun bukti tidak konklusif. Pengguna disarankan melakukan verifikasi tambahan sebelum merespons. \\
+40--74 & \textbf{\color{verfinyellow!70!black}WASPADA} & Terdapat beberapa sinyal meragukan namun bukti tidak konklusif. Pengguna disarankan melakukan verifikasi tambahan sebelum merespons. \\
 \midrule
-\rowcolor{verfingreen!15}
-61--100 & \textbf{\color{verfingreen!70!black}AMAN} & Lowongan memiliki indikator kepercayaan yang kuat dari verifikasi OSINT: domain valid dan berumur, perusahaan terverifikasi, tidak ada laporan penipuan. \\
+\rowcolor{verfinred!20}
+75--100 & \textbf{\color{verfinred}BAHAYA} & Terdapat indikator kuat penipuan dari verifikasi OSINT: domain baru/tidak valid, nomor tidak terdaftar, nama perusahaan tidak ditemukan, pola teks sesuai ciri penipuan. Pengguna sangat disarankan tidak merespons. \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -660,19 +663,25 @@ Visualisasi Graf & React Flow + D3.js & Graf interaktif Fraud Network \\
 \midrule
 Backend Framework & FastAPI (Python) & REST API async, auto OpenAPI docs \\
 \midrule
-NER Model & IndoBERT (fine-tuned) & Named Entity Recognition Bahasa Indonesia \\
+OCR Engine & PaddleOCR 2.8 + OpenCV & Ekstraksi teks dari poster/screenshot lowongan (pre-processing CLAHE), robust pada layout berantakan \\
 \midrule
-NLP Classifier & IndoBERT (fine-tuned) & Klasifikasi LEGIT/SUSPICIOUS/SCAM \\
+NER Hibrida & Regex + LLM Extraction & Entitas struktural (regex) + semantik (LLM), paralel, fallback regex \\
 \midrule
-LLM Orchestration & OpenAgentic + GPT-4o-mini & Sintesis narasi berbasis bukti OSINT \\
+Klasifikasi Teks & TF-IDF + Logistic Regression (scikit-learn) & Model ML terlatih pada dataset EMSCAD (17.880 lowongan), digabung aturan perilaku (hybrid); ROC-AUC 0,996 \\
+\midrule
+LLM Orchestration & OpenAgentic API (\texttt{kimi-k3-high}) & Ekstraksi entitas semantik + sintesis narasi berbasis bukti OSINT, deterministik (temperature=0, seed tetap) \\
 \midrule
 XAI Engine & Custom SHAP-inspired & Additive feature contribution explainer \\
 \midrule
 OSINT: Domain & python-whois, RDAP & Whois lookup, usia domain \\
 \midrule
-OSINT: Reputasi & VirusTotal API & Cek reputasi domain/IP \\
+OSINT: Nomor HP & Kredibel (scraping) & Cek laporan fraud nomor HP Indonesia dari halaman publik Kredibel \\
 \midrule
-OSINT: Perusahaan & Google Custom Search API & Pencarian nama perusahaan publik \\
+OSINT: Web Evidence & Multi-engine search (DuckDuckGo/Yahoo/Bing) via curl\_cffi + BeautifulSoup; Scrapling untuk fetch halaman & Pencarian jejak digital perusahaan dengan filter relevansi entitas (membuang hasil SERP tak relevan) \\
+\midrule
+OSINT: Alamat \& Form & OpenStreetMap (Nominatim), Google Form inspector & Validasi lokasi pada peta + inspeksi form phishing/shortlink \\
+\midrule
+Analisis Graf & NetworkX & Fraud Network Graph: deteksi entitas yang terhubung ke kasus penipuan \\
 \midrule
 Database & PostgreSQL (Supabase) & Data lowongan, laporan, fingerprint \\
 \midrule
@@ -699,42 +708,39 @@ Testing Frontend & Jest + Vitest & Komponen dan hook test \\
 
 \subsection*{F.1 Implementasi Pipeline Analisis}
 
-\subsubsection*{Layer 1: Named Entity Recognition (NER)}
+\subsubsection*{Layer 1: Named Entity Recognition (NER) Hibrida}
 
-Sistem menggunakan model IndoBERT yang di-\textit{fine-tune} pada dataset lowongan kerja Bahasa
-Indonesia untuk mengekstrak entitas-entitas kunci berikut:
+Sistem mengekstrak entitas kunci dari teks lowongan menggunakan pendekatan \textbf{hibrida}
+yang menggabungkan dua mekanisme komplementer:
 
 \begin{itemize}[leftmargin=*]
-\item \textbf{ORG} --- Nama perusahaan atau organisasi
-\item \textbf{PHONE} --- Nomor telepon/WhatsApp
-\item \textbf{EMAIL} --- Alamat surel
-\item \textbf{URL} --- Alamat website atau domain
-\item \textbf{PERSON} --- Nama kontak person (HRD, rekruter)
-\item \textbf{SALARY} --- Informasi gaji (nominal, range)
-\item \textbf{LOC} --- Lokasi kerja
-\item \textbf{POSITION} --- Posisi/jabatan yang ditawarkan
-\item \textbf{WORKTYPE} --- Jenis kerja (WFH, onsite, hybrid)
+\item \textbf{Regex deterministik} untuk entitas \emph{struktural} yang polanya stabil:
+      nomor telepon/WhatsApp (\texttt{PHONE}), alamat surel (\texttt{EMAIL}), dan URL/domain.
+      Regex cepat, murah, dan presisi-tinggi pada pola yang jelas.
+\item \textbf{Ekstraksi berbasis LLM} untuk entitas \emph{semantik} yang sulit ditangkap pola
+      deterministik pada poster OCR yang berantakan: nama perusahaan/organisasi (\texttt{ORG}),
+      alamat fisik/lokasi kerja (\texttt{LOC}), dan informasi gaji (\texttt{SALARY}).
+      LLM memahami konteks sehingga tidak rapuh terhadap variasi layout.
 \end{itemize}
 
-Model NER diimplementasikan menggunakan pustaka \texttt{transformers} (HuggingFace) dengan
-tokenizer IndoBERT. Output berupa JSON terstruktur yang menjadi input untuk semua layer berikutnya.
+Kedua mekanisme berjalan \textbf{paralel} (asyncio). Hasil digabung dengan strategi per-kategori:
+untuk \texttt{ORG}, output LLM bersifat otoritatif sehingga false-positive regex (frasa deskriptif
+yang kebetulan mirip nama) otomatis tersaring; untuk \texttt{LOC} dan \texttt{SALARY}, keduanya
+digabung secara aditif. Bila LLM tidak tersedia, sistem \emph{fallback} penuh ke regex sehingga
+pipeline tidak pernah terputus. Output berupa JSON terstruktur yang menjadi input untuk semua
+layer berikutnya.
 
-\subsubsection*{Layer 2: NLP Classifier}
+\subsubsection*{Layer 2: Klasifikasi Perilaku Teks}
 
-Model klasifikasi berbasis IndoBERT mengklasifikasikan teks lowongan ke dalam tiga kategori:
-\texttt{LEGIT}, \texttt{SUSPICIOUS}, atau \texttt{SCAM}. Model menggunakan representasi
-\texttt{[CLS]} token dari IndoBERT yang dipetakan ke tiga kelas melalui \textit{classification head}
-linear. Skor probabilitas dari model ini menjadi salah satu fitur utama dalam kalkulasi Trust Score.
-
-Pola-pola yang menjadi sinyal mencurigakan dalam model antara lain:
-\begin{itemize}[leftmargin=*]
-\item Gaji tidak realistis untuk syarat minimal
-\item Permintaan data pribadi (KTP, foto, rekening) di awal proses
-\item Tidak ada informasi kontak perusahaan yang jelas
-\item Janji kerja langsung tanpa proses seleksi
-\item Desakan waktu yang tidak wajar (\textit{limited slot}, \textit{closing soon})
-\item Tidak ada deskripsi pekerjaan yang spesifik
-\end{itemize}
+Layer ini melakukan \emph{pre-screening} awal dengan \textbf{model hybrid TF-IDF + Logistic
+Regression} yang dilatih pada dataset EMSCAD, digabung dengan \textbf{aturan perilaku} yang
+terinspirasi dari daftar fitur perilaku pada penelitian fake-job detection (Liu et al., 2022).
+Komponen ML menangkap pola linguistik dari korpus lowongan nyata, sementara aturan perilaku
+mengekstrak fitur biner seperti permintaan biaya, tawaran kerja luar negeri, apply-via-WA, gaji
+fantastis, dan keberadaan identitas perusahaan. Kombinasi keduanya menghasilkan skor awal dan label
+\texttt{AMAN}/\texttt{WASPADA}/\texttt{BAHAYA}. Bila keyakinan rendah (\emph{gray zone}), sistem
+mendelegasikan penilaian ke LLM pada Layer 4. Skor dan fitur paling berpengaruh dari layer ini
+menjadi salah satu input dalam kalkulasi Skor Risiko.
 
 \subsubsection*{Layer 3: OSINT Engine}
 
@@ -745,28 +751,29 @@ Terdapat tiga sub-modul utama:
 \begin{itemize}[leftmargin=*]
 \item Whois/RDAP lookup untuk mendapatkan tanggal registrasi, registrar, dan informasi pemilik
 \item Domain berumur $< 30$ hari mendapat penalti skor signifikan
-\item Validasi SSL/HTTPS dan kesesuaian nama domain dengan klaim perusahaan
-\item Pengecekan reputasi via VirusTotal API (domain dan IP)
+\item Validasi keaktifan website (HTTP) dan kesesuaian nama domain dengan klaim perusahaan
+\item Inspeksi shortlink/Google Form untuk mendeteksi pola phishing
 \end{itemize}
 
 \textbf{Phone Number Validator:}
 \begin{itemize}[leftmargin=*]
 \item Validasi format nomor telepon Indonesia (08xx, +62xx)
 \item Identifikasi operator berdasarkan prefix (Telkomsel, Indosat, XL, dll.)
-\item Pengecekan apakah nomor pernah dilaporkan di database komunitas Verifin
+\item Pengecekan laporan fraud pada halaman publik Kredibel (scraping nyata)
 \item Flag khusus untuk nomor dengan banyak laporan penipuan
 \end{itemize}
 
 \textbf{Company Lookup:}
 \begin{itemize}[leftmargin=*]
-\item Pencarian nama perusahaan via Google Custom Search API dengan kueri terstruktur
-\item Verifikasi keberadaan website resmi dan kesesuaian domain
+\item Pencarian jejak digital perusahaan via multi-engine web search (DuckDuckGo/Yahoo/Bing) dengan filter relevansi entitas
+\item Verifikasi keberadaan website resmi dan akun media sosial yang sesuai
+\item Validasi alamat pada peta via OpenStreetMap (Nominatim)
 \item Deteksi inkonsistensi antara klaim jabatan/lokasi dengan temuan publik
 \end{itemize}
 
 \subsubsection*{Layer 4: LLM Narrative Synthesis}
 
-Sistem mengirimkan bundle hasil OSINT ke GPT-4o-mini melalui OpenAgentic dengan prompt terstruktur
+Sistem mengirimkan bundle hasil OSINT ke LLM melalui OpenAgentic dengan prompt terstruktur
 yang memerintahkan model untuk:
 \begin{enumerate}[leftmargin=*]
 \item Merangkum temuan OSINT dalam narasi berbahasa Indonesia yang mudah dipahami
@@ -775,13 +782,13 @@ yang memerintahkan model untuk:
 \item Tidak membuat klaim yang tidak didukung oleh data OSINT yang tersedia
 \end{enumerate}
 
-Penggunaan LLM dibatasi hanya untuk sintesis narasi; keputusan Trust Score tidak bergantung
+Penggunaan LLM dibatasi hanya untuk sintesis narasi; keputusan Skor Risiko tidak bergantung
 pada output LLM untuk menghindari halusinasi yang mempengaruhi verdict.
 
 \subsubsection*{Layer 5: XAI Explainer}
 
 Custom SHAP-inspired additive feature explainer menghitung kontribusi setiap fitur terhadap
-Trust Score final. Fitur-fitur yang dipertimbangkan antara lain:
+Skor Risiko final. Fitur-fitur yang dipertimbangkan antara lain:
 
 \begin{longtable}{@{}p{5cm}p{3cm}p{6.5cm}@{}}
 \toprule
@@ -792,9 +799,9 @@ Trust Score final. Fitur-fitur yang dipertimbangkan antara lain:
 \textbf{Fitur} & \textbf{Bobot Dasar} & \textbf{Deskripsi} \\
 \midrule
 \endhead
-NLP Classifier Score & 25\% & Probabilitas LEGIT dari model IndoBERT \\
+Klasifikasi Perilaku Teks & 25\% & Skor pre-screening hybrid TF-IDF+LogReg dan aturan perilaku \\
 Domain Age & 15\% & Usia domain: makin tua makin tinggi skor \\
-Domain Reputation & 15\% & Skor VirusTotal: clean = bonus, malicious = penalti \\
+Domain Reputation & 15\% & Keaktifan website \& umur domain: aktif \& tua = bonus, mati/baru = penalti \\
 Phone Reported & 10\% & Nomor pernah dilaporkan = penalti besar \\
 Company Found & 15\% & Perusahaan terverifikasi di sumber publik \\
 Fraud Network Match & 20\% & Entitas cocok dengan fingerprint penipuan sebelumnya \\
@@ -819,8 +826,9 @@ verifin/
 |   |   |   |- community.py     # GET/POST /community endpoints
 |   |   |   |- history.py       # GET /history endpoint
 |   |   |- services/
-|   |   |   |- ner_service.py   # IndoBERT NER pipeline
-|   |   |   |- nlp_service.py   # IndoBERT classifier
+|   |   |   |- ner.py                # Regex NER (entitas struktural)
+|   |   |   |- llm/entity_extraction.py  # LLM extraction (entitas semantik)
+|   |   |   |- nlp/classifier.py     # TF-IDF + LogReg hybrid (ML + aturan)
 |   |   |   |- osint/
 |   |   |   |   |- domain.py    # Domain/Whois investigator
 |   |   |   |   |- phone.py     # Phone validator
@@ -885,15 +893,18 @@ CREATE TABLE jobs (
 
 \begin{lstlisting}[language=SQL, caption={DDL tabel community\_reports}]
 CREATE TABLE community_reports (
-    id            UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    job_id        UUID REFERENCES jobs(id),
-    reporter_ip   VARCHAR(45),        -- Hashed IP
-    report_text   TEXT,
-    upvotes       INTEGER DEFAULT 0,
-    downvotes     INTEGER DEFAULT 0,
-    created_at    TIMESTAMPTZ DEFAULT NOW(),
-    verified      BOOLEAN DEFAULT FALSE
+    id            SERIAL PRIMARY KEY,
+    company_name  VARCHAR,              -- Nama perusahaan yang dilaporkan
+    phone         VARCHAR,              -- Nomor kontak terlapor (ternormalisasi)
+    email         VARCHAR,              -- Email terlapor
+    url           VARCHAR,              -- URL/domain terlapor
+    report_type   VARCHAR,              -- Kategori laporan (penipuan, biaya, dsb)
+    description   TEXT,
+    reporter_contact VARCHAR,
+    created_at    TIMESTAMPTZ DEFAULT NOW()
 );
+-- Minimal satu entitas (company/phone/email/url) wajib diisi.
+-- Indeks pada company_name, phone, email, url untuk pencocokan cepat.
 \end{lstlisting}
 
 \textbf{Tabel \texttt{fraud\_fingerprints}} --- Indeks deduplikasi:
@@ -924,31 +935,35 @@ Langsung kerja, tidak perlu pengalaman
 Kirim foto dan KTP sekarang
 \end{lstlisting}
 
-\textbf{Layer 1 --- NER Output:}
+\textbf{Layer 1 --- NER Output (Hibrida):}
 
-\begin{lstlisting}[language=Python, caption={Output JSON NER Layer 1}]
+\begin{lstlisting}[language=Python, caption={Output JSON NER Hibrida Layer 1}]
 {
-  "company": "PT Sukses Mandiri",
-  "contact_phone": "0812XXXXXXXX",
-  "contact_name": "Budi",
-  "role": "HRD",
-  "position": "Admin Online",
-  "work_type": "WFH",
-  "salary_min": 8000000,
-  "salary_max": 15000000,
-  "requirements": ["min SMA", "HP Android"],
-  "red_flags_text": ["kirim foto", "KTP sekarang",
-                     "langsung kerja", "tidak perlu pengalaman"]
+  "companies": ["PT Sukses Mandiri"],
+  "phones": ["0812XXXXXXXX"],
+  "emails": [],
+  "urls": [],
+  "addresses": [],
+  "salaries": ["8-15 juta/bulan"],
+  "_ner_meta": {
+    "used": true,
+    "source": "hybrid (regex structural + LLM semantic)"
+  }
 }
 \end{lstlisting}
 
-\textbf{Layer 2 --- NLP Output:}
+\textbf{Layer 2 --- Output Klasifikasi Perilaku Teks:}
 
-\begin{lstlisting}[language=Python, caption={Output JSON NLP Classifier Layer 2}]
+\begin{lstlisting}[language=Python, caption={Output JSON Klasifikasi Layer 2 (hybrid ML)}]
 {
-  "label": "SCAM",
+  "label": "BAHAYA",
   "confidence": 0.87,
-  "probabilities": {"LEGIT": 0.05, "SUSPICIOUS": 0.08, "SCAM": 0.87}
+  "nlp_score": 93.0,
+  "top_features": [
+    {"feature": "Permintaan Biaya/Transfer", "contribution": 40.0, "impact": "risk"},
+    {"feature": "Gaji Fantastis Tidak Realistis", "contribution": 20.0, "impact": "risk"}
+  ],
+  "model_type": "TF-IDF + Logistic Regression (hybrid ML + aturan)"
 }
 \end{lstlisting}
 
@@ -984,7 +999,7 @@ besar. Gaji 8--15 juta untuk posisi Admin Online WFH tanpa pengalaman tidak real
 kerja Indonesia saat ini. Sangat disarankan untuk tidak merespons iklan ini.''}
 \end{quote}
 
-\textbf{Layer 5 --- XAI Output dan Trust Score Final:}
+\textbf{Layer 5 --- XAI Output dan Skor Risiko Final:}
 
 \begin{longtable}{@{}p{5cm}p{2.5cm}p{7cm}@{}}
 \toprule
@@ -995,16 +1010,16 @@ kerja Indonesia saat ini. Sangat disarankan untuk tidak merespons iklan ini.''}
 \textbf{Fitur} & \textbf{Kontribusi} & \textbf{Penjelasan} \\
 \midrule
 \endhead
-NLP Classifier & \textcolor{verfinred}{$-$22 poin} & Model mendeteksi pola teks SCAM (87\% confidence) \\
-Phone Reports & \textcolor{verfinred}{$-$18 poin} & Nomor dilaporkan 3x sebagai penipuan \\
-Company Not Found & \textcolor{verfinred}{$-$15 poin} & Perusahaan tidak ditemukan di sumber publik \\
-No Domain & \textcolor{verfinred}{$-$8 poin} & Tidak ada domain/website yang bisa diverifikasi \\
-Red Flag Text & \textcolor{verfinred}{$-$12 poin} & Permintaan KTP/foto awal + janji langsung kerja \\
-Base Score & $+75$ & Skor dasar sebelum penilaian \\
+Klasifikasi Perilaku Teks & \textcolor{verfinred}{$+$22 poin} & Model hybrid ML mendeteksi pola penipuan (skor 93) \\
+Phone Reports & \textcolor{verfinred}{$+$18 poin} & Nomor dilaporkan 3x sebagai penipuan \\
+Company Not Found & \textcolor{verfinred}{$+$15 poin} & Perusahaan tidak ditemukan di sumber publik \\
+No Domain & \textcolor{verfinred}{$+$8 poin} & Tidak ada domain/website yang bisa diverifikasi \\
+Red Flag Text & \textcolor{verfinred}{$+$12 poin} & Permintaan KTP/foto awal + janji langsung kerja \\
+Base Score & $+$0 & Skor dasar (0 = sangat aman) \\
 \midrule
-\textbf{Trust Score Final} & \textbf{\textcolor{verfinred}{0}} & \textbf{\textcolor{verfinred}{BAHAYA}} \\
+\textbf{Skor Risiko Final} & \textbf{\textcolor{verfinred}{93}} & \textbf{\textcolor{verfinred}{BAHAYA}} \\
 \bottomrule
-\caption{Breakdown XAI untuk contoh lowongan penipuan}
+\caption{Breakdown XAI untuk contoh lowongan penipuan (Skor Risiko: 0=sangat aman, 100=sangat berbahaya)}
 \end{longtable}
 
 \subsection*{F.5 Biodata Anggota Tim}
@@ -1051,6 +1066,67 @@ Base Score & $+75$ & Skor dasar sebelum penilaian \\
 \end{tabular}
 
 
+\section*{G.\quad Evaluasi Model (Dataset EMSCAD)}
+\addcontentsline{toc}{section}{G. Evaluasi Model}
+
+Kinerja model klasifikasi teks (TF-IDF + Logistic Regression, hybrid dengan aturan perilaku)
+diukur pada dataset publik \textbf{EMSCAD} (\textit{Employment Scam Aegean Dataset}) berisi
+17.880 lowongan (866 di antaranya penipuan). Ambang klasifikasi dikalibrasi pada \textbf{45}
+untuk memaksimalkan F1. Hasil evaluasi pada keseluruhan dataset:
+
+\begin{longtable}{@{}p{5cm}p{4cm}@{}}
+\toprule
+\textbf{Metrik} & \textbf{Nilai} \\
+\midrule
+\endhead
+ROC-AUC & \textbf{0,996} \\
+Recall (deteksi penipuan) & \textbf{98,4\%} \\
+Precision & 56,6\% \\
+F1-score & 0,718 \\
+\bottomrule
+\caption{Metrik evaluasi model klasifikasi pada dataset EMSCAD}
+\end{longtable}
+
+Recall tinggi (98,4\%) menjadi prioritas desain: sistem lebih memilih menandai lowongan
+mencurigakan (yang kemudian dapat diverifikasi pengguna) daripada melewatkan kasus penipuan
+nyata. Selain evaluasi offline ini, sistem juga diuji end-to-end pada tiga kanal input nyata
+(teks, gambar poster via OCR, dan tautan) yang seluruhnya menghasilkan verdict konsisten dan
+deterministik (temperature $=0$, seed tetap), termasuk dua kasus negatif yang terklasifikasi
+BAHAYA dengan skor risiko 95.
+
+
+\section*{H.\quad Mockup Antarmuka (Hasil Uji End-to-End)}
+\addcontentsline{toc}{section}{H. Mockup Antarmuka}
+Berikut tangkapan layar antarmuka Verifin dari pengujian end-to-end nyata (input teks, gambar poster via OCR, dan tautan), mencakup modal progres analisis dan halaman hasil verifikasi dengan skor risiko, faktor yang perlu diwaspadai vs.\ yang terlihat baik, rekomendasi tindakan, dan entitas yang terdeteksi. Mode ringkas (untuk pencari kerja) ditampilkan; mode audit forensik tersedia untuk juri.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/mockup-loading.png}
+  \caption{Modal progres analisis bertahap (OCR $\to$ OSINT $\to$ Graf $\to$ LLM+XAI) yang menjaga pengguna tetap terinformasi selama pipeline berjalan.}
+  \label{fig:mockup-loading}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/mockup-teks.png}
+  \caption{Hasil verifikasi input teks (PT.\ VIS): verdict AMAN, skor risiko 30/100. Web evidence menemukan jejak digital relevan (direktori companieshouse.id, portal loker Instagram), bukan hasil pencarian acak.}
+  \label{fig:mockup-teks}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/mockup-gambar.png}
+  \caption{Hasil verifikasi input gambar poster (Sushi Yay) via OCR PaddleOCR: verdict AMAN, skor risiko 12/100; kedua alamat outlet tervalidasi OpenStreetMap.}
+  \label{fig:mockup-gambar}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/mockup-link.png}
+  \caption{Hasil verifikasi input tautan Instagram (Indonesia College): verdict AMAN, skor risiko 15/100; website resmi aktif, umur domain tervalidasi Whois, dan 7 jejak digital relevan (hasil tak relevan telah disaring).}
+  \label{fig:mockup-link}
+\end{figure}
+
 \section*{Daftar Pustaka}
 \addcontentsline{toc}{section}{Daftar Pustaka}
 
@@ -1075,10 +1151,12 @@ Base Score & $+75$ & Skor dasar sebelum penilaian \\
   Approaches,'' \textit{Security and Communication Networks}, 2019,
   doi: \texttt{10.1155/2019/7523043}.
 
-\item G.\ Carvallo and S.\ E.\ Benu, ``Tinjauan Yuridis Penanggulangan Cyber-Recruitment
-  dalam Tindak Pidana Perdagangan Orang: Tinjauan Unsur dan Pembuktian Digital,''
-  \textit{Majelis: Jurnal Hukum Indonesia}, vol.\ 3, no.\ 2, pp.\ 13--22, Mei 2026,
-  doi: \texttt{10.62383/majelis.v3i2.1532}.
+% [DIHAPUS - integritas] Sitasi MAJELIS (Carvallo & Benu) dihapus karena DOI
+% 10.62383/majelis.v3i2.1532 tidak resolve (404) & artikel tidak terverifikasi.
+% Entri [6] sengaja dikosongkan agar penomoran referensi [7]..[49] TIDAK bergeser
+% (menghindari kerusakan referensi silang di seluruh naskah). Referensi TPPO
+% tetap didukung [3] (ILO) dan statistik resmi pada latar belakang.
+\item [dihapus] --- Sitasi tidak terverifikasi (lihat catatan audit kritik-juri).
 
 \item V.\ G.\ Varsha and P.\ A.\ Thomas, ``Explainable AI For Phishing Detection: Techniques,
   Challenges, and Experimental Validation,'' in \textit{Proc.\ IEEE Recent Advances in

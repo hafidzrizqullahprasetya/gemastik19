@@ -1,2 +1,9 @@
 .DS_Store
 verifin-app
+
+# LaTeX build
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

@@ -1,0 +1,10 @@
+{
+  "ran_at": "2026-07-23T04:59:26.620Z",
+  "base": "http://localhost:3000",
+  "catatan": "verdict dikoreksi manual dari screenshot report (regex extractor miss kata 'Aman'). Latency = klik submit s/d /report termuat (didominasi LLM reasoning).",
+  "results": [
+    { "name": "method1-teks", "verdict": "AMAN", "risk": "26", "latency_ms": 86207, "status": "OK" },
+    { "name": "method2-gambar", "verdict": "AMAN", "risk": "12", "latency_ms": 128913, "status": "OK" },
+    { "name": "method3-link", "verdict": "AMAN", "risk": "20", "latency_ms": 151343, "status": "OK" }
+  ]
+}
