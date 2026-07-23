@@ -15,6 +15,8 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc,fit,backgrounds}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 
 \usepackage{listings}
@@ -59,12 +61,21 @@
 
 \begin{document}
 
-\includepdf[pages=1,fitpaper]{cover.pdf}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor=center, inner sep=0pt] at (current page.center) {
+    \includegraphics[width=\paperwidth,height=\paperheight]{cover.jpeg}
+  };
+\end{tikzpicture}
+\end{titlepage}
 
 \newpage
+\pagenumbering{roman}
 \renewcommand{\contentsname}{Daftar Isi}
 \tableofcontents
 \newpage
+\pagenumbering{arabic}
 
 \section*{A.\quad Latar Belakang Ide Perangkat Lunak}
 \addcontentsline{toc}{section}{A. Latar Belakang Ide Perangkat Lunak}
@@ -1158,8 +1169,8 @@ No Domain & $+$9 poin & Tidak ada domain/website yang bisa diverifikasi; penalti
 \end{tabular}
 
 
-\section*{G.\quad Evaluasi Model (Dataset EMSCAD)}
-\addcontentsline{toc}{section}{G. Evaluasi Model}
+\subsection*{F.6 Evaluasi Model (Dataset EMSCAD)}
+\addcontentsline{toc}{subsection}{F.6 Evaluasi Model (Dataset EMSCAD)}
 
 Kinerja model klasifikasi teks (TF-IDF + Logistic Regression, hybrid dengan aturan perilaku)
 diukur pada dataset publik \textbf{EMSCAD} (\textit{Employment Scam Aegean Dataset}) berisi
@@ -1200,8 +1211,8 @@ deterministik (temperature $=0$, seed tetap), termasuk dua kasus negatif yang te
 BAHAYA dengan skor risiko 95.
 
 
-\section*{H.\quad Mockup Antarmuka (Hasil Uji End-to-End)}
-\addcontentsline{toc}{section}{H. Mockup Antarmuka}
+\section*{G.\quad Mockup Antarmuka (Hasil Uji End-to-End)}
+\addcontentsline{toc}{section}{G. Mockup Antarmuka (Hasil Uji End-to-End)}
 Berikut tangkapan layar antarmuka Verifin dari pengujian end-to-end nyata (input teks, gambar poster via OCR, dan tautan), mencakup modal progres analisis dan halaman hasil verifikasi dengan skor risiko, faktor yang perlu diwaspadai vs.\ yang terlihat baik, rekomendasi tindakan, dan entitas yang terdeteksi. Mode ringkas (untuk pencari kerja) ditampilkan; mode audit forensik tersedia untuk juri.
 
 \begin{figure}[H]
