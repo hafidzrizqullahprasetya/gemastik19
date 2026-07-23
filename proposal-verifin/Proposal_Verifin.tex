@@ -101,42 +101,72 @@ Tahun & 2026\\
 \addcontentsline{toc}{section}{A. Latar Belakang Ide Perangkat Lunak}
 
 Tingkat pengangguran terbuka di Indonesia masih menjadi salah satu tantangan ekonomi nasional yang
-signifikan. Berdasarkan data Badan Pusat Statistik (BPS), per Februari 2025 jumlah pengangguran
-terbuka tercatat mencapai 7,28 juta orang, meningkat dibandingkan periode sebelumnya [1]. Di tengah
-tekanan tersebut, jutaan pencari kerja Indonesia setiap harinya menerima tawaran lowongan dari
-berbagai kanal yang tidak terverifikasi: Instagram, WhatsApp, Telegram, grup Facebook, hingga papan
-pengumuman fisik. Platform-platform ini menyebarkan lowongan secara masif, namun \textbf{tidak ada
-satu pun mekanisme yang menjawab pertanyaan mendasar: ``Apakah lowongan ini layak dipercaya?''}
+signifikan. Berdasarkan Berita Resmi Statistik Badan Pusat Statistik (BPS) No.\ 39/05/Th.\ XXVIII,
+per Februari 2025 jumlah pengangguran terbuka tercatat mencapai 7,28 juta orang (TPT 4,76\%),
+meningkat dari 7,20 juta orang pada periode yang sama tahun sebelumnya [1]. Di tengah tekanan
+tersebut, jutaan pencari kerja Indonesia setiap harinya menerima tawaran lowongan dari berbagai
+kanal yang tidak terkurasi: Instagram, WhatsApp, Telegram, grup Facebook, hingga papan pengumuman
+fisik. Laporan \textit{State of Scams in Indonesia} oleh Global Anti-Scam Alliance (GASA) bersama
+Mastercard menunjukkan skala persoalan ini: 66\% orang dewasa di Indonesia terekspos setidaknya
+satu upaya penipuan digital dalam 12 bulan terakhir, dengan total estimasi kerugian finansial
+nasional mencapai Rp49 triliun [2]. Dari seluruh korban penipuan digital, \textbf{49\% di antaranya
+terekspos modus penipuan lowongan kerja (\textit{employment scam})} --- menjadikannya salah satu
+modus paling dominan [2]. Lebih jauh, krisis ini tidak berhenti pada kerugian finansial.
+Kementerian Luar Negeri RI mencatat lebih dari 3.300 WNI diselamatkan dari pusat-pusat
+\textit{online scamming} di Asia Tenggara (Kamboja, Myanmar, Laos, Filipina) pada periode
+2020--2024, yang keseluruhannya berangkat akibat tergiur iklan lowongan kerja palsu di media
+sosial [3]. Temuan ini sejalan dengan laporan UNODC yang menegaskan bahwa penipuan rekrutmen daring
+(\textit{fraudulent job postings}) merupakan metode utama perekrutan korban Tindak Pidana
+Perdagangan Orang (TPPO) untuk dipekerjakan paksa di \textit{cyber scam centers} [4].
 
-Akibatnya, pencari kerja harus melakukan investigasi manual secara mandiri: mencari nama perusahaan
-di Google, mengecek nomor HP di direktori, melihat lokasi di Maps, menelusuri ulasan di media
-sosial. Proses ini melelahkan, tidak sistematis, dan sering kali terlambat karena korban baru
-menyadari penipuan setelah menyerahkan data pribadi atau uang. Menurut laporan \textit{Global State
-of Scams} oleh Global Anti-Scam Alliance (GASA), Indonesia menempati salah satu peringkat kerentanan
-tertinggi di Asia Tenggara dengan \textbf{49\% penduduk mengalami kerugian akibat penipuan} [2].
-Lebih jauh, krisis ini tidak hanya berujung pada kerugian finansial, melainkan telah bergeser menjadi
-pintu masuk Tindak Pidana Perdagangan Orang (TPPO): ribuan pencari kerja terjebak iklan pekerjaan
-palsu di luar negeri dan dipaksa bekerja sebagai operator penipuan siber (\textit{scam center}) [3].
+Di balik fakta-fakta tersebut, terdapat satu persoalan mendasar yang dialami langsung oleh setiap
+pencari kerja. \textbf{Pencari kerja yang menerima tawaran melalui kanal digital informal harus
+melakukan proses verifikasi keaslian tawaran secara mandiri} --- mengumpulkan informasi dari
+berbagai sumber yang tersebar: mencari nama perusahaan di mesin pencari, mengecek reputasi nomor
+kontak, memvalidasi alamat di peta digital, menelusuri ulasan di media sosial, hingga memeriksa
+legalitas badan usaha. Proses ini memerlukan waktu, pengetahuan teknis, dan literasi digital yang
+memadai, sehingga dalam praktiknya sering kali tidak dilakukan secara memadai sebelum pengguna
+mengambil keputusan awal --- merespons, mengirimkan data pribadi, atau bahkan mentransfer sejumlah
+uang. Kondisi ini menciptakan \textbf{kesenjangan informasi (\textit{information asymmetry})} yang
+tajam antara pembuat tawaran dan penerima tawaran, tepat pada momen ketika penerima tawaran berada
+dalam posisi paling rentan secara finansial dan psikologis.
 
-Celah yang ada saat ini bukan sekadar permasalahan teknologi---melainkan kegagalan ekosistem. Platform
-media sosial tidak bertanggung jawab atas konten lowongan yang disebarkan di dalamnya. Job board
-berbayar memiliki proses verifikasi terbatas. Adapun platform gratis sama sekali tidak memiliki
-mekanisme kuratif. Akibatnya, \textbf{beban pembuktian jatuh sepenuhnya kepada individu yang paling
-rentan}: pencari kerja yang sedang dalam kondisi terdesak secara finansial.
+Solusi yang sudah ada belum menjawab kesenjangan ini pada titik yang dibutuhkan. Platform media
+sosial hanya menyediakan fitur pelaporan yang bersifat reaktif --- baru berjalan setelah korban
+melapor. Job board formal memang melakukan kurasi, namun jangkauannya terbatas pada perusahaan
+yang membayar dan tidak menjangkau kanal informal tempat modus penipuan justru paling banyak
+beroperasi. Imbauan pemerintah bersifat umum dan tetap menyerahkan proses verifikasi kepada
+individu. \textbf{Tidak ada mekanisme verifikasi yang terintegrasi pada kanal tempat lowongan
+diterima}, yang mampu menganalisis sebuah tawaran kerja dan memberikan penilaian berbasis bukti
+kepada pengguna \textit{sebelum} mereka merespons. Verifin dirancang untuk mengisi celah tersebut.
 
-Solusi yang sudah ada---seperti fitur pelaporan di platform media sosial atau imbauan dari Kementerian
-Ketenagakerjaan---bersifat reaktif, lambat, dan bergantung pada pelaporan manual. Tidak ada sistem yang
-mampu menganalisis sebuah teks lowongan secara real-time dan memberikan penilaian berbasis bukti kepada
-pengguna \textit{sebelum} mereka memutuskan untuk merespons.
+\subsection*{Posisi dan Ruang Lingkup Verifin}
 
-\subsection*{Inilah celah yang Verifin hadir untuk menutupnya.}
+\textbf{Verifin} (\textit{Verifikasi Lowongan Kerja}) adalah sebuah \textbf{\textit{Explainable
+AI-powered Decision Support System} (DSS)} untuk verifikasi awal tawaran kerja pada kanal digital
+informal. Sistem menganalisis teks atau URL lowongan kerja secara otomatis menggunakan rantai
+teknologi berlapis: Named Entity Recognition (NER) hibrida, klasifikasi perilaku teks, investigasi
+OSINT multi-sumber, sintesis naratif LLM, dan penjelasan kausal berbasis Explainable AI (XAI).
+Keluaran sistem adalah sebuah \textit{Skor Risiko} 0--100 (0 = sangat aman, 100 = sangat berbahaya)
+beserta verdict tiga tingkat (AMAN/WASPADA/BAHAYA) yang didukung penjelasan berbasis bukti yang
+dapat diverifikasi oleh pengguna awam.
 
-\textbf{Verifin} (\textit{Verifikasi Lowongan Kerja}) adalah platform intelijen berbasis web yang
- menganalisis teks atau URL lowongan kerja secara otomatis menggunakan rantai teknologi berlapis:
- Named Entity Recognition (NER) hibrida, klasifikasi perilaku teks, investigasi OSINT multi-sumber, sintesis naratif LLM,
- dan penjelasan kausal berbasis Explainable AI (XAI). Keluaran sistem adalah sebuah \textit{Skor Risiko}
- 0--100 (0 = sangat aman, 100 = sangat berbahaya) beserta verdict tiga tingkat (AMAN/WASPADA/BAHAYA) yang didukung oleh penjelasan berbasis bukti
- yang dapat diverifikasi oleh pengguna awam.
+Secara ringkas, kontribusi utama Verifin dapat dinyatakan dalam satu kalimat:
+
+\begin{quote}
+\itshape ``Kami mengembangkan \textit{Explainable AI-powered Decision Support System} yang
+mengintegrasikan OSINT dan analisis linguistik untuk mengurangi kesenjangan informasi
+(\textit{information asymmetry}) pada tahap verifikasi awal tawaran kerja di kanal informal.''
+\end{quote}
+
+Penting ditegaskan sejak awal \textbf{batas intervensi} sistem ini. \textbf{Verifin tidak dirancang
+untuk menghilangkan seluruh risiko penipuan, bukan pula mengatasi faktor psikologis korban}
+(seperti desakan ekonomi, bias otoritas, atau \textit{fear of missing out}) yang juga berperan
+dalam keputusan korban. Verifin mengintervensi satu penyebab yang memang dapat diselesaikan melalui
+rekayasa perangkat lunak, yaitu \textit{information asymmetry} pada tahap verifikasi awal. Sebagai
+\textit{decision support system}, keputusan akhir tetap berada di tangan pengguna; Verifin
+bertugas memastikan keputusan tersebut diambil dengan informasi yang lengkap, transparan, dan
+dapat diaudit.
 
 \vspace{0.5cm}
 \textbf{Relevansi dengan GEMASTIK XIX --- Divisi Pengembangan Perangkat Lunak:}
@@ -192,7 +222,7 @@ fungsional dengan nilai guna langsung bagi jutaan pencari kerja Indonesia.
   xmin=0, xmax=70,
   nodes near coords,
   nodes near coords align={horizontal},
-  title={\textbf{49\% Penduduk Indonesia Pernah Terekspos Penipuan (GASA 2024)}},
+  title={\textbf{49\% Korban Penipuan Digital Terekspos Modus Lowongan Kerja (GASA 2024)}},
   title style={font=\bfseries\small},
   tick label style={font=\small},
   grid=major, grid style={dashed,gray!30},
@@ -200,7 +230,7 @@ fungsional dengan nilai guna langsung bagi jutaan pencari kerja Indonesia.
 \addplot[fill=verfinred!80,draw=verfinred] coordinates {(49,Terekspos Penipuan Lowongan)};
 \end{axis}
 \end{tikzpicture}
-\caption{49\% penduduk Indonesia mengalami kerugian akibat penipuan (Global Anti-Scam Alliance, 2024) [2]}
+\caption{49\% korban penipuan digital di Indonesia terekspos modus penipuan lowongan kerja (\textit{employment scam}) --- modus paling dominan menurut Global Anti-Scam Alliance (GASA) \& Mastercard, 2024 [2]}
 \end{figure}
 
 
@@ -210,14 +240,16 @@ fungsional dengan nilai guna langsung bagi jutaan pencari kerja Indonesia.
 \subsection*{B.1 Tujuan}
 
 \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
-\item Membangun platform web \textbf{Verifin} yang mampu menganalisis teks atau URL lowongan kerja
-      secara otomatis dan menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict AMAN/WASPADA/BAHAYA
-      dalam waktu di bawah 30 detik.
+\item Membangun platform web \textbf{Verifin} sebagai \textit{Explainable AI-powered Decision
+      Support System} yang mampu menganalisis teks atau URL lowongan kerja secara otomatis dan
+      menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict
+      AMAN/WASPADA/BAHAYA dan penjelasan berbasis bukti --- menggantikan proses verifikasi manual
+      yang tersebar di banyak sumber menjadi satu analisis terpadu dalam hitungan menit.
 
 \item Mengimplementasikan pipeline analisis berlapis yang mengintegrasikan Named Entity Recognition
       (NER) hibrida berbahasa Indonesia, klasifikasi perilaku teks, investigasi OSINT multi-sumber
       (domain, nomor telepon, perusahaan), sintesis naratif berbasis LLM (via
-      OpenAgentic), dan penjelasan kausal berbasis custom SHAP-inspired XAI.
+      OpenAgentic), dan penjelasan kausal berbasis XAI hibrida (model + evidence).
 
 \item Membangun \textit{Fraud Network Graph} berbasis database PostgreSQL yang dapat mendeteksi
       penggunaan ulang entitas-entitas mencurigakan (nomor telepon, domain, nama perusahaan) lintas
@@ -310,7 +342,28 @@ perbatasan.
 \item \textbf{Privasi dan Anonimisasi:}
 Laporan komunitas bersifat anonim (tanpa akun); identitas pelapor tidak diekspos. Nomor telepon
 ternormalisasi digunakan untuk pencocokan, dan data pribadi dari teks lowongan yang dianalisis
-tidak ditampilkan ke antarmuka publik.
+tidak ditampilkan ke antarmuka publik. Sebelum dikirim ke LLM eksternal, sistem menerapkan
+\textbf{penyamaran data pribadi (\textit{PII masking})} --- nomor telepon, alamat email, dan
+identitas personal pada teks lowongan disamarkan --- dan menerapkan kebijakan \textbf{tanpa
+retensi (\textit{no retention})}: teks yang dianalisis tidak disimpan setelah analisis selesai.
+
+\item \textbf{Batas Intervensi Sistem (Faktor Manusia):}
+Verifin secara eksplisit \textbf{tidak dirancang untuk menghilangkan seluruh risiko penipuan
+maupun mengatasi faktor psikologis dan sosial korban} --- seperti desakan ekonomi, bias otoritas,
+\textit{fear of missing out}, maupun teknik \textit{social engineering} --- yang juga berperan
+dalam keputusan seseorang merespons tawaran. Intervensi Verifin terbatas pada \textbf{satu penyebab
+yang dapat diselesaikan melalui rekayasa perangkat lunak}, yaitu mengurangi
+\textit{information asymmetry} pada tahap verifikasi awal. Pengguna yang tetap merespons meskipun
+sistem memberi peringatan berada di luar ruang lingkup desain sistem ini.
+
+\item \textbf{Agenda Pengembangan Lanjutan (\textit{Future Work}):}
+Terdapat tiga agenda pengembangan yang direncanakan setelah versi kompetisi, yakni:
+(i) \textbf{fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia} untuk
+menggantikan ketergantungan pada EMSCAD berbahasa Inggris; (ii) \textbf{studi pengguna
+(\textit{user study})} untuk mengukur dampak nyata Verifin terhadap kemampuan pengguna
+mengidentifikasi lowongan palsu (desain kontrol--perlakuan); dan (iii) \textbf{integrasi kanal}
+melalui bot WhatsApp dan ekstensi peramban untuk menurunkan hambatan penggunaan
+(\textit{friction}) lebih jauh.
 
 \end{enumerate}
 
@@ -455,7 +508,7 @@ FR-14 & API Publik & Sistem menyediakan REST API terdokumentasi via FastAPI auto
 \textbf{ID} & \textbf{Nama} & \textbf{Deskripsi} \\
 \midrule
 \endhead
-NFR-01 & Performa & Pipeline analisis lengkap (NER $\to$ NLP $\to$ OSINT $\to$ LLM $\to$ XAI) selesai maksimal 30 detik untuk 90\% permintaan. Modul OSINT dijalankan paralel. \\
+NFR-01 & Performa & Pipeline analisis lengkap (NER $\to$ NLP $\to$ OSINT $\to$ LLM $\to$ XAI) ditargetkan selesai dalam 2--3 menit untuk 90\% permintaan (latensi didominasi sintesis LLM). Modul OSINT dijalankan paralel untuk meminimalkan waktu tunggu, dan pengguna diberi indikator progres bertahap selama analisis berjalan. \\
 \midrule
 NFR-02 & Ketersediaan & Uptime minimal 95\% selama periode demonstrasi dan evaluasi. \\
 \midrule
@@ -510,14 +563,14 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \node[font=\tiny, below=0.15cm of nlp, text=gray] {TF-IDF+LogReg Hybrid};
 \node[font=\tiny, below=0.15cm of osint, text=gray] {Whois/Phone/Co.};
 \node[font=\tiny, below=0.15cm of llm, text=gray] {LLM Reasoning};
-\node[font=\tiny, below=0.15cm of xai, text=gray] {SHAP-inspired};
+\node[font=\tiny, below=0.15cm of xai, text=gray] {Hybrid Explanation};
 
 % Input arrow
 \node[left=0.5cm of ner, font=\small\itshape, text=verifindark, align=center, text width=1.5cm] (input) {Input\\Lowongan};
 \draw[arrow] (input) -- (ner);
 
 % Output arrow
-\node[right=0.5cm of xai, font=\small\bfseries, text=verfingreen, align=center, text width=1.5cm] (output) {Trust\\Score};
+\node[right=0.5cm of xai, font=\small\bfseries, text=verfingreen, align=center, text width=1.5cm] (output) {Skor\\Risiko};
 \draw[arrow] (xai) -- (output);
 \end{tikzpicture}
 \caption{Pipeline analisis 5-layer Verifin: dari input teks hingga Skor Risiko dan XAI}
@@ -531,10 +584,10 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \begin{tikzpicture}[
   every node/.style={font=\small},
 ]
-% Outer box — Job Trust Infrastructure
+% Outer box — Decision Support System
 \node[rectangle, draw=verfinblue, line width=2pt, rounded corners=8pt,
       minimum width=12cm, minimum height=6.5cm,
-      label={[font=\bfseries\normalsize,color=verfinblue]above:Job Trust Infrastructure}] (outer) {};
+      label={[font=\bfseries\normalsize,color=verfinblue]above:Decision Support System Verifin}] (outer) {};
 
 % Inner top-left: OSINT Engine
 \node[rectangle, draw=verfinblue!60, fill=verfinblue!10, rounded corners=4pt,
@@ -556,7 +609,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \node[rectangle, draw=verfinyellow!80, fill=verfinyellow!10, rounded corners=4pt,
       minimum width=4.5cm, minimum height=2.2cm, text centered,
       at={($(outer.south west)+(2.7cm,1.7cm)$)}] (trust_box) {};
-\node[font=\bfseries\small, color=verfinyellow!80!black] at ($(trust_box.north)+(0,-0.3cm)$) {Trust Scoring Engine};
+\node[font=\bfseries\small, color=verfinyellow!80!black] at ($(trust_box.north)+(0,-0.3cm)$) {Risk Scoring Engine};
 \node[font=\tiny, align=center] at ($(trust_box.center)+(0,-0.1cm)$)
       {Weighted Aggregation \\ NLP + OSINT + Community \\ Verdict Assignment \\ 0--100 Integer Score};
 
@@ -566,7 +619,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
       at={($(outer.south east)+(-2.7cm,1.7cm)$)}] (xai_box) {};
 \node[font=\bfseries\small, color=verfingreen!70!black] at ($(xai_box.north)+(0,-0.3cm)$) {XAI Explainer};
 \node[font=\tiny, align=center] at ($(xai_box.center)+(0,-0.1cm)$)
-      {SHAP-inspired Additive \\ Feature Contribution \\ Human-readable Output \\ LLM Narrative Synthesis};
+      {Hybrid Explanation \\ Model + Evidence Contribution \\ Human-readable Output \\ LLM Narrative Synthesis};
 
 % Arrows connecting components
 \draw[-{Stealth}, color=verfinblue!60, line width=1pt] (osint_box) -- (trust_box);
@@ -574,7 +627,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \draw[-{Stealth}, color=verfinyellow!80, line width=1pt] (trust_box) -- (xai_box);
 \draw[-{Stealth}, color=verfinblue!60, dashed, line width=1pt] (osint_box) -- (fraud_box);
 \end{tikzpicture}
-\caption{Job Trust Infrastructure: komponen inti sistem Verifin}
+\caption{Decision Support System Verifin: komponen inti sistem}
 \end{figure}
 
 \vspace{0.3cm}
@@ -742,6 +795,28 @@ fantastis, dan keberadaan identitas perusahaan. Kombinasi keduanya menghasilkan 
 mendelegasikan penilaian ke LLM pada Layer 4. Skor dan fitur paling berpengaruh dari layer ini
 menjadi salah satu input dalam kalkulasi Skor Risiko.
 
+\textbf{Justifikasi pemilihan model.} Pemilihan TF-IDF + Logistic Regression adalah keputusan
+rekayasa (\textit{engineering trade-off}) yang disengaja, bukan klaim superioritas algoritmik.
+Model ini dipilih karena: (i) \textbf{interpretabilitas tinggi} --- koefisien model langsung
+menunjukkan kontribusi setiap fitur kata, yang menjadi fondasi penjelasan hibrida pada Layer 5;
+(ii) \textbf{inferensi sangat cepat} ($<10$ ms), sesuai untuk sistem interaktif; dan
+(iii) \textbf{kebutuhan komputasi rendah} sehingga dapat dijalankan pada infrastruktur sederhana.
+Fokus penelitian ini bukan pada kompetisi akurasi antar-algoritma klasifikasi, melainkan pada
+\textbf{integrasi end-to-end} sinyal linguistik dengan bukti OSINT dalam sebuah sistem verifikasi
+yang utuh. Demikian pula pada komponen NER, pendekatan hibrida regex+LLM dipilih sebagai
+\textit{baseline} pragmatis untuk Bahasa Indonesia, dengan fokus pada robustness pipeline
+(\textit{fallback} otomatis), bukan pada perbandingan antar-arsitektur NER.
+
+\textbf{Penetapan ambang klasifikasi.} Ambang klasifikasi model dikalibrasi pada \textbf{45}
+berdasarkan analisis kurva ROC pada dataset EMSCAD, dipilih untuk \textbf{memaksimalkan F1-score}
+dengan prioritas pada \textit{recall} tinggi --- dalam domain deteksi penipuan, \textit{false
+negative} (kasus penipuan yang lolos) jauh lebih berbahaya dan merugikan daripada \textit{false
+positive} (lowongan legitimate yang tertandai dan masih dapat diverifikasi lebih lanjut oleh
+pengguna). Untuk ambang verdict akhir (AMAN $<40$, WASPADA $40$--$74$, BAHAYA $\geq 75$), nilai
+ditetapkan secara heuristik berbasis \textit{expert judgement} yang berorientasi konservatif
+(meminimalkan \textit{false negative}); kalibrasi ulang ambang verdict terhadap data Indonesia
+tercantum pada agenda pengembangan lanjutan.
+
 \subsubsection*{Layer 3: OSINT Engine}
 
 Modul OSINT dijalankan secara paralel menggunakan \texttt{asyncio} untuk meminimalkan latensi.
@@ -787,8 +862,15 @@ pada output LLM untuk menghindari halusinasi yang mempengaruhi verdict.
 
 \subsubsection*{Layer 5: XAI Explainer}
 
-Custom SHAP-inspired additive feature explainer menghitung kontribusi setiap fitur terhadap
-Skor Risiko final. Fitur-fitur yang dipertimbangkan antara lain:
+Verifin menerapkan pendekatan \textbf{penjelasan hibrida (\textit{hybrid explanation})} yang
+menggabungkan dua mekanisme: (i) \textit{model explainability} dari koefisien model klasifikasi
+(yang memang terinterpretasi secara \textit{by design}), dan (ii) \textit{evidence explanation}
+dari pembobotan berbasis aturan untuk faktor-faktor OSINT. Pendekatan ini dipilih secara sadar:
+tidak semua penjelasan harus berasal dari metode post-hoc seperti SHAP/LIME --- yang terpenting
+adalah pengguna dapat \textbf{mengaudit kontribusi setiap faktor} secara transparan. Setiap fitur
+diberi bobot dasar yang ditentukan berdasarkan \textit{expert judgement} terhadap kekuatan bukti
+masing-masing faktor, dengan prinsip: bukti objektif eksternal (jejak digital, laporan komunitas)
+diberi bobot lebih tinggi daripada sinyal linguistik internal. Berikut bobot dasar setiap fitur:
 
 \begin{longtable}{@{}p{5cm}p{3cm}p{6.5cm}@{}}
 \toprule
@@ -810,7 +892,15 @@ Fraud Network Match & 20\% & Entitas cocok dengan fingerprint penipuan sebelumny
 \end{longtable}
 
 Output XAI berupa daftar fitur beserta nilai kontribusinya (positif/negatif) dan penjelasan
-dalam bahasa Indonesia yang dapat dipahami pengguna awam.
+dalam bahasa Indonesia yang dapat dipahami pengguna awam. Skor akhir merupakan agregasi
+penjumlahan terbobot (\textit{weighted additive}) dari seluruh kontribusi fitur, yang dipetakan
+ke rentang 0--100. Perlu ditegaskan bahwa \textbf{Skor Risiko adalah \textit{risk index}, bukan
+probabilitas}: angka 82 tidak berarti ``82\% kemungkinan penipuan'', melainkan indikator tingkat
+risiko berdasarkan agregasi bukti. Skala 0--100 dipilih untuk granularitas (membedakan tingkat
+risiko antar kasus) dan kemudahan penyetelan ambang, yang kemudian disederhanakan menjadi verdict
+kategorikal AMAN/WASPADA/BAHAYA agar tetap mudah dipahami pengguna awam. Untuk menghindari
+penghitungan ganda (\textit{double counting}), setiap kontribusi dihitung sekali per faktor dan
+bukti yang berasal dari sumber yang sama digabungkan dalam satu kategori kontribusi.
 
 \subsection*{F.2 Struktur Kode}
 
@@ -1087,9 +1177,22 @@ F1-score & 0,718 \\
 \caption{Metrik evaluasi model klasifikasi pada dataset EMSCAD}
 \end{longtable}
 
-Recall tinggi (98,4\%) menjadi prioritas desain: sistem lebih memilih menandai lowongan
-mencurigakan (yang kemudian dapat diverifikasi pengguna) daripada melewatkan kasus penipuan
-nyata. Selain evaluasi offline ini, sistem juga diuji end-to-end pada tiga kanal input nyata
+Recall tinggi (98,4\%) menjadi prioritas desain karena karakteristik domain deteksi penipuan:
+\textit{false negative} (penipuan yang lolos) berpotensi menyebabkan kerugian finansial hingga
+menjadi pintu masuk TPPO, sehingga jauh lebih berbahaya daripada \textit{false positive} (lowongan
+legitimate yang tertandai dan masih dapat diverifikasi lebih lanjut). Dengan kata lain, metrik yang
+paling relevan bagi sistem ini bukanlah akurasi keseluruhan, melainkan \textbf{tingkat penipuan
+yang berhasil ditangkap (recall)} dan implisit di dalamnya \textit{false negative rate} yang
+rendah. Konsekuensinya, precision yang lebih rendah (56,6\%) adalah trade-off yang diterima secara
+sadar --- sistem lebih memilih menandai lowongan mencurigakan (yang kemudian dapat diverifikasi
+pengguna) daripada melewatkan kasus penipuan nyata.
+
+Perlu dicatat bahwa evaluasi di atas adalah evaluasi \textbf{Layer 2 (model klasifikasi teks)}
+secara terpisah pada dataset EMSCAD, \textbf{bukan} evaluasi end-to-end terhadap seluruh pipeline
+lima layer. Evaluasi end-to-end terhadap dataset berlabel Indonesia, serta pengukuran dampak sistem
+terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan bagian dari agenda
+pengembangan lanjutan (lihat Batasan). Selain evaluasi offline ini, sistem juga diuji end-to-end
+pada tiga kanal input nyata
 (teks, gambar poster via OCR, dan tautan) yang seluruhnya menghasilkan verdict konsisten dan
 deterministik (temperature $=0$, seed tetap), termasuk dua kasus negatif yang terklasifikasi
 BAHAYA dengan skor risiko 95.
@@ -1136,12 +1239,17 @@ Berikut tangkapan layar antarmuka Verifin dari pengujian end-to-end nyata (input
   Berita Resmi Statistik No.\ 39/05/Th.\ XXVIII, Mei 2025.
   \url{https://www.bps.go.id}
 
-\item Global Anti-Scam Alliance (GASA) \& GS Lab, ``Global State of Scams 2024,''
+\item Global Anti-Scam Alliance (GASA) \& Mastercard, ``State of Scams in Indonesia 2024,''
   GASA Annual Report, 2024.
   \url{https://www.gasa.org}
 
-\item Komnas Perempuan, ``Laporan Tahunan Tindak Pidana Perdagangan Orang (TPPO) 2024,''
-  Jakarta: Komnas Perempuan, 2024.
+\item Kementerian Luar Negeri Republik Indonesia (Kemenlu RI), ``Penanganan WNI Korban
+  \textit{Online Scamming} dan TPPO di Asia Tenggara,'' Direktorat Perlindungan WNI dan BHI,
+  2024. (Lebih dari 3.300 WNI diselamatkan dari pusat \textit{online scam} di Kamboja, Myanmar,
+  Laos, dan Filipina pada 2020--2024.)
+
+\item United Nations Office on Drugs and Crime (UNODC), ``Casinos, Cyber Fraud, and Trafficking
+  in Persons for Forced Criminality in Southeast Asia,'' UNODC Regional Report, 2023.
 
 \item S.\ Shalini, R.\ Lokesh, and S.\ Priya, ``Fake Job Posting Detection Using Machine
   Learning,'' \textit{International Journal of Computer Applications}, vol.\ 183, no.\ 52,
@@ -1150,13 +1258,6 @@ Berikut tangkapan layar antarmuka Verifin dari pengujian end-to-end nyata (input
 \item T.\ Alwafi and R.\ Abdulrahman, ``Detection of Recruitment Fraud Using Semantic
   Approaches,'' \textit{Security and Communication Networks}, 2019,
   doi: \texttt{10.1155/2019/7523043}.
-
-% [DIHAPUS - integritas] Sitasi MAJELIS (Carvallo & Benu) dihapus karena DOI
-% 10.62383/majelis.v3i2.1532 tidak resolve (404) & artikel tidak terverifikasi.
-% Entri [6] sengaja dikosongkan agar penomoran referensi [7]..[49] TIDAK bergeser
-% (menghindari kerusakan referensi silang di seluruh naskah). Referensi TPPO
-% tetap didukung [3] (ILO) dan statistik resmi pada latar belakang.
-\item [dihapus] --- Sitasi tidak terverifikasi (lihat catatan audit kritik-juri).
 
 \item V.\ G.\ Varsha and P.\ A.\ Thomas, ``Explainable AI For Phishing Detection: Techniques,
   Challenges, and Experimental Validation,'' in \textit{Proc.\ IEEE Recent Advances in
