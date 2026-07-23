@@ -1167,27 +1167,46 @@ verdict konsisten dan deterministik.
 \section*{G.\quad Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
 \addcontentsline{toc}{section}{G. Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
 
-Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yang diambil langsung dari pengujian sistem secara \textit{end-to-end} pada berbagai skenario dan kanal input nyata (teks, gambar poster via OCR, dan tautan/URL). Pengujian mencakup alur penuh mulai dari penginputan data, pemrosesan bertahap pada modal loading, visualisasi indikator risiko, bukti digital OSINT, hingga rekomendasi tindakan bagi pengguna.
+Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yang disusun sesuai alur pengalaman pengguna (\textit{end-to-end user journey}): dimulai dari **tahap input data** (teks, gambar poster via OCR, dan tautan), **tahap pemrosesan real-time** pada modal loading pipeline, hingga **tahap hasil analisis** (verdict, skor risiko, breakdown XAI, dan bukti digital OSINT) serta pengujian kasus negatif penipuan.
 
-\subsection*{G.1 Modal Progres Analisis Pipeline}
-\addcontentsline{toc}{subsection}{G.1 Modal Progres Analisis Pipeline}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/mockup-loading.png}
-  \caption{Modal progres analisis bertahap secara \textit{real-time} (OCR $\to$ OSINT $\to$ Graph DB $\to$ LLM + XAI) yang menjaga transparansi proses verifikasi kepada pengguna.}
-  \label{fig:mockup-loading}
-\end{figure}
-
-\subsection*{G.2 Kanal Input 1: Verifikasi Teks Lowongan Kerja}
-\addcontentsline{toc}{subsection}{G.2 Kanal Input 1: Verifikasi Teks Lowongan Kerja}
+\subsection*{G.1 Antarmuka Form Input Multi-Kanal}
+\addcontentsline{toc}{subsection}{G.1 Antarmuka Form Input Multi-Kanal}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.88\linewidth]{images/tes text.png}
-  \caption{Antarmuka input teks lowongan kerja pada Verifin, memungkinkan pengguna melakukan salin-tempel (\textit{copy-paste}) narasi iklan pekerjaan dari WhatsApp atau media sosial.}
+  \caption{Antarmuka input teks lowongan kerja pada Verifin, memungkinkan pengguna melakukan salin-tempel (\textit{copy-paste}) narasi iklan pekerjaan dari WhatsApp, Telegram, atau media sosial.}
   \label{fig:tes-text}
 \end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/tes gambar.png}
+  \caption{Antarmuka unggah gambar poster/pamflet lowongan kerja (dukungan format JPG, PNG, WebP) dengan opsi pratinjau sebelum analisis.}
+  \label{fig:tes-gambar}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/tes link.png}
+  \caption{Antarmuka verifikasi tautan (URL), mendukung inspeksi langsung halaman Instagram, portal loker, maupun website perusahaan.}
+  \label{fig:tes-link}
+\end{figure}
+
+\subsection*{G.2 Modal Progres Pemrosesan Pipeline Real-Time}
+\addcontentsline{toc}{subsection}{G.2 Modal Progres Pemrosesan Pipeline Real-Time}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.88\linewidth]{images/mockup-loading.png}
+  \caption{Modal progres analisis bertahap secara \textit{real-time} (OCR $\to$ OSINT $\to$ Graph DB $\to$ LLM + XAI) yang memberikan transparansi proses verifikasi kepada pengguna.}
+  \label{fig:mockup-loading}
+\end{figure}
+
+\subsection*{G.3 Hasil Verifikasi \& Dashboard Analisis Per-Kanal}
+\addcontentsline{toc}{subsection}{G.3 Hasil Verifikasi \& Dashboard Analisis Per-Kanal}
+
+\subsubsection*{G.3.1 Skenario Input Teks (Studi Kasus PT. VIS)}
 
 \begin{figure}[H]
   \centering
@@ -1210,15 +1229,7 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
   \label{fig:mockup-teks}
 \end{figure}
 
-\subsection*{G.3 Kanal Input 2: Verifikasi Gambar Poster (OCR)}
-\addcontentsline{toc}{subsection}{G.3 Kanal Input 2: Verifikasi Gambar Poster (OCR)}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/tes gambar.png}
-  \caption{Antarmuka unggah gambar poster pamflet lowongan kerja (dukungan format JPG, PNG, WebP) dengan opsi pratinjau sebelum analisis.}
-  \label{fig:tes-gambar}
-\end{figure}
+\subsubsection*{G.3.2 Skenario Input Gambar Poster / OCR (Studi Kasus Outlet Sushi Yay)}
 
 \begin{figure}[H]
   \centering
@@ -1230,7 +1241,7 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.88\linewidth]{images/hasil gambar 2.png}
-  \caption{Hasil verifikasi gambar poster (Bagian Detail): teks hasil ekstraksi PaddleOCR 2.8 berserta pembuktian OSINT terhadap entitas yang berhasil terekstraksi.}
+  \caption{Hasil verifikasi gambar poster (Bagian Detail): teks hasil ekstraksi PaddleOCR 2.8 beserta pembuktian OSINT terhadap entitas yang berhasil terekstraksi.}
   \label{fig:hasil-gambar-2}
 \end{figure}
 
@@ -1241,15 +1252,7 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
   \label{fig:mockup-gambar}
 \end{figure}
 
-\subsection*{G.4 Kanal Input 3: Verifikasi Tautan / URL Web}
-\addcontentsline{toc}{subsection}{G.4 Kanal Input 3: Verifikasi Tautan / URL Web}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/tes link.png}
-  \caption{Antarmuka verifikasi tautan (URL), mendukung inspeksi halaman Instagram, situs berita loker, maupun website perusahaan.}
-  \label{fig:tes-link}
-\end{figure}
+\subsubsection*{G.3.3 Skenario Input Tautan / URL Web (Studi Kasus Indonesia College)}
 
 \begin{figure}[H]
   \centering
@@ -1272,8 +1275,8 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
   \label{fig:mockup-link}
 \end{figure}
 
-\subsection*{G.5 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
-\addcontentsline{toc}{subsection}{G.5 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
+\subsection*{G.4 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
+\addcontentsline{toc}{subsection}{G.4 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
 
 \begin{figure}[H]
   \centering
