@@ -378,7 +378,7 @@ Sprint 2 & Minggu 5--6 & Implementasi modul OSINT (domain, phone, company), LLM 
 \midrule
 Sprint 3 & Minggu 7--8 & Skor Risiko engine, Community Monitoring, riwayat analisis, API publik, UI result dashboard, visualisasi graf \\
 \midrule
-Sprint 4 & Minggu 9--10 & Pengujian integrasi, optimasi performa, deployment Vercel + Railway, dokumentasi, persiapan demonstrasi \\
+Sprint 4 & Minggu 9--10 & Pengujian integrasi, optimasi performa, deployment Vercel + Dokploy (Home Server), dokumentasi, persiapan demonstrasi \\
 \bottomrule
 \end{longtable}
 
@@ -695,9 +695,9 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \textbf{Komponen} & \textbf{Teknologi} & \textbf{Keterangan} \\
 \midrule
 \endhead
-Frontend Framework & Next.js 14 (App Router) & React SSR/SSG, routing berbasis file, TypeScript \\
+Frontend Framework & Next.js 16 (App Router) & React SSR/SSG, routing berbasis file, TypeScript \\
 \midrule
-UI Styling & Tailwind CSS 3 & Utility-first CSS, kustomisasi penuh \\
+UI Styling & Tailwind CSS 4 & Utility-first CSS, kustomisasi penuh \\
 \midrule
 Animasi UI & motion/react & Animasi deklaratif, transisi halaman \\
 \midrule
@@ -733,9 +733,9 @@ ORM & SQLAlchemy + Alembic & Query ORM, migrasi schema \\
 \midrule
 Auth & Supabase Auth & JWT-based, opsional untuk komunitas \\
 \midrule
-Deployment Frontend & Vercel & CDN global, preview deployments \\
+Deployment Frontend & Vercel & CDN global, live deployment (\url{https://frontend-kohl-one-32.vercel.app}) \\
 \midrule
-Deployment Backend & Railway & Container Python, auto-scaling \\
+Deployment Backend & Dokploy (Home Server) & Self-hosted container Python via Cloudflare Tunnel (\url{https://verifin.pempekasliwongkito.my.id}) \\
 \midrule
 CI/CD & GitHub Actions & Lint, test, deploy otomatis \\
 \midrule
@@ -779,7 +779,7 @@ layer berikutnya.
 
 Layer ini melakukan \emph{pre-screening} awal dengan \textbf{model hybrid TF-IDF + Logistic
 Regression} yang dilatih pada dataset EMSCAD, digabung dengan \textbf{aturan perilaku} yang
-terinspirasi dari daftar fitur perilaku pada penelitian fake-job detection (Liu et al., 2022).
+terinspirasi dari daftar fitur perilaku pada penelitian deteksi penipuan lowongan kerja [5], [6].
 Komponen ML menangkap pola linguistik dari korpus lowongan nyata, sementara aturan perilaku
 mengekstrak fitur biner seperti permintaan biaya, tawaran kerja luar negeri, apply-via-WA, gaji
 fantastis, dan keberadaan identitas perusahaan. Kombinasi keduanya menghasilkan skor awal dan label
@@ -811,7 +811,7 @@ tercantum pada agenda pengembangan lanjutan.
 
 \subsubsection*{Layer 3: OSINT Engine}
 
-Modul OSINT dijalankan secara paralel menggunakan \texttt{asyncio} untuk meminimalkan latensi.
+Modul OSINT dijalankan secara paralel menggunakan \texttt{asyncio} untuk meminimalkan latensi, memanfaatkan potensi sumber informasi terbuka (OSINT) [8].
 Terdapat tiga sub-modul utama:
 
 \textbf{Domain/URL Investigator:}
@@ -854,7 +854,7 @@ pada output LLM untuk menghindari halusinasi yang mempengaruhi verdict.
 
 \subsubsection*{Layer 5: XAI Explainer}
 
-Verifin menerapkan pendekatan \textbf{penjelasan hibrida (\textit{hybrid explanation})} yang
+Verifin menerapkan pendekatan \textbf{penjelasan hibrida (\textit{hybrid explanation})} [7] yang
 menggabungkan dua mekanisme: (i) \textit{model explainability} dari koefisien model klasifikasi
 (yang memang terinterpretasi secara \textit{by design}), dan (ii) \textit{evidence explanation}
 dari pembobotan berbasis aturan untuk faktor-faktor OSINT. Pendekatan ini dipilih secara sadar:
