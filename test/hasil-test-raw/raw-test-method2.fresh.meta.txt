@@ -1,4 +1,4 @@
 http_code=200
-time_total_s=139.831408
-time_starttransfer_s=139.830484
-size_download_bytes=22204
+time_total_s=40.131743
+time_starttransfer_s=40.131527
+size_download_bytes=18526

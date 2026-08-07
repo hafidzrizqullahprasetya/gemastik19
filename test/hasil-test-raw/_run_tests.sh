@@ -30,7 +30,7 @@ PAYLOAD_M1=$(python3 -c "import json,sys;print(json.dumps({'text':open('$TESTDIR
 run "raw-test-method1" -X POST "$BASE/verify/text" -H "Content-Type: application/json" -d "$PAYLOAD_M1"
 
 # --- METHOD 2: Poster gambar via OCR (Sushi Yay) ---
-run "raw-test-method2" -X POST "$BASE/verify/image" -F "file=@$TESTDIR/method 2.webp"
+run "raw-test-method2" -X POST "$BASE/verify/image" -F "file=@$TESTDIR/method 2.webp;type=image/webp"
 
 # --- METHOD 3: Link Instagram (Indonesia College) ---
 PAYLOAD_M3=$(python3 -c "import json;print(json.dumps({'url':'https://www.instagram.com/p/DbCm1OLzZTq/','additional_text':open('$TESTDIR/method 2 link.md').read()}))")
