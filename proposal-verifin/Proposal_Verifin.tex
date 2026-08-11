@@ -2,6 +2,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+% ── Istilah caption Bahasa Indonesia ──────────────────────────────────────
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\tablename}{Tabel}
+\renewcommand{\contentsname}{Daftar Isi}
+
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headheight=14pt]{geometry}
 \usepackage{mathptmx}
 \usepackage{indentfirst}
@@ -32,6 +37,7 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{colortbl}
+\usepackage[most]{tcolorbox}
 
 \definecolor{verfinblue}{RGB}{30,64,175}
 \definecolor{verifindark}{RGB}{15,23,42}
@@ -47,7 +53,7 @@
 \newcommand{\thead}[1]{\textcolor{white}{\textbf{#1}}}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.16}
 
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,pdfauthor={Tim Verifin UGM},pdftitle={Proposal GEMASTIK XIX 2026 -- Verifin}}
 
@@ -62,10 +68,30 @@
 \titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
 \titleformat{\subsection}{\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{6pt}{3pt}
 
-\lstset{basicstyle=\small\ttfamily,breaklines=true,backgroundcolor=\color{codebg},frame=single,framesep=4pt,rulecolor=\color{gray!40},xleftmargin=10pt,xrightmargin=10pt,keywordstyle=\bfseries,commentstyle=\color{gray},stringstyle=\color{verfingreen},numbers=left,numberstyle=\tiny\color{gray},numbersep=6pt,showstringspaces=false}
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true,backgroundcolor=\color{codebg},frame=single,framesep=3pt,rulecolor=\color{gray!40},xleftmargin=8pt,xrightmargin=8pt,keywordstyle=\bfseries,commentstyle=\color{gray},stringstyle=\color{verfingreen},numbers=left,numberstyle=\tiny\color{gray},numbersep=5pt,showstringspaces=false,aboveskip=6pt,belowskip=6pt}
+\renewcommand{\lstlistingname}{Kode}
 
-\onehalfspacing
+% ── Kompresi tata letak agar ringkas (target ≤30 halaman) ─────────────────
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{1.2em}
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{2pt}
+% Daftar (bullet & bernomor): label rata margin kiri paragraf, isi teks menjorok
+% dengan hanging indent yang rapat dan sejajar (tampilan formal yang rapi).
+\setlist{nosep, topsep=2pt}
+\setlist[itemize,1]{label=\textbullet, leftmargin=1.2em, labelsep=0.4em, align=left, labelwidth=0.8em}
+\setlist[itemize,2]{label=--, leftmargin=1.1em, labelsep=0.4em, align=left, labelwidth=0.7em}
+\setlist[enumerate,1]{label=\arabic*., leftmargin=1.3em, labelsep=0.4em, align=left, labelwidth=0.9em}
+\setlist[enumerate,2]{label=\alph*., leftmargin=1.2em, labelsep=0.4em, align=left, labelwidth=0.8em}
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+
+\setstretch{1.05}
 
 \begin{document}
 
@@ -98,7 +124,7 @@ fisik. Laporan \textit{State of Scams in Indonesia} oleh Global Anti-Scam Allian
 Mastercard menunjukkan skala persoalan ini: 66\% orang dewasa di Indonesia terekspos setidaknya
 satu upaya penipuan digital dalam 12 bulan terakhir, dengan total estimasi kerugian finansial
 nasional mencapai Rp49 triliun [2]. Dari seluruh korban penipuan digital, \textbf{49\% di antaranya
-terekspos modus penipuan lowongan kerja (\textit{employment scam})} --- menjadikannya salah satu
+terekspos modus penipuan lowongan kerja (\textit{employment scam})}, menjadikannya salah satu
 modus paling dominan [2]. Lebih jauh, krisis ini tidak berhenti pada kerugian finansial.
 Kementerian Luar Negeri RI mencatat lebih dari 3.300 WNI diselamatkan dari pusat-pusat
 \textit{online scamming} di Asia Tenggara (Kamboja, Myanmar, Laos, Filipina) pada periode
@@ -109,46 +135,69 @@ Perdagangan Orang (TPPO) untuk dipekerjakan paksa di \textit{cyber scam centers}
 
 Di balik fakta-fakta tersebut, terdapat satu persoalan mendasar yang dialami langsung oleh setiap
 pencari kerja. \textbf{Pencari kerja yang menerima tawaran melalui kanal digital informal harus
-melakukan proses verifikasi keaslian tawaran secara mandiri} --- mengumpulkan informasi dari
+melakukan proses verifikasi keaslian tawaran secara mandiri}, mulai dari mengumpulkan informasi dari
 berbagai sumber yang tersebar: mencari nama perusahaan di mesin pencari, mengecek reputasi nomor
 kontak, memvalidasi alamat di peta digital, menelusuri ulasan di media sosial, hingga memeriksa
 legalitas badan usaha. Proses ini memerlukan waktu, pengetahuan teknis, dan literasi digital yang
 memadai, sehingga dalam praktiknya sering kali tidak dilakukan secara memadai sebelum pengguna
-mengambil keputusan awal --- merespons, mengirimkan data pribadi, atau bahkan mentransfer sejumlah
-uang. Kondisi ini menciptakan \textbf{kesenjangan informasi (\textit{information asymmetry})} yang
+mengambil keputusan awal (merespons, mengirimkan data pribadi, atau bahkan mentransfer sejumlah
+uang). Kondisi ini menciptakan \textbf{kesenjangan informasi (\textit{information asymmetry})} yang
 tajam antara pembuat tawaran dan penerima tawaran, tepat pada momen ketika penerima tawaran berada
 dalam posisi paling rentan secara finansial dan psikologis.
 
 \vspace{0.3cm}
 \textbf{Ilustrasi Skenario Pengguna.} Untuk membumikan persoalan di atas, perhatikan dua persona
-representatif berikut:
+representatif pada Gambar~\ref{fig:persona} berikut.
 
-\begin{quote}
-\itshape
-\textbf{Andri (22), fresh graduate di Yogyakarta.} Menerima broadcast WhatsApp: ``Dibutuhkan Admin
-Online WFH, gaji 8--15 juta/bulan, tanpa pengalaman, langsung kerja. Kirim foto KTP \& data diri ke
-nomor ini.'' Desakan ekonomi membuat Andri ingin segera merespons. Untuk memverifikasi, ia harus:
-mencari nama ``perusahaan'' di Google, mengecek nomor penghubung, memvalidasi alamat kantor, dan
-memastikan legalitas --- proses yang tidak ia kuasai dan memakan waktu. Tanpa alat bantu, Andri
-berisiko menyerahkan KTP-nya (pintu pencurian identitas) dalam hitungan menit setelah menerima
-pesan.
-\end{quote}
+\begin{figure}[H]
+\centering
+\begin{tcbraster}[raster columns=2, raster equal height=rows, raster column skip=4mm,
+  enhanced, colback=verfinblue!4, colframe=verfinblue!55, colbacktitle=verfinblue!85,
+  coltitle=white, fonttitle=\bfseries\footnotesize, left=2mm, right=2mm, top=1.2mm,
+  bottom=1.2mm, boxrule=0.6pt, arc=1.5mm, title filled]
+\begin{tcolorbox}[title={Persona 1 \,\textbullet\, Andri (22)}]
+\footnotesize
+\textit{Fresh graduate di Yogyakarta.}
+\smallskip
 
-\begin{quote}
-\itshape
-\textbf{Sari (27), pencari kerja paruh waktu.} Menemukan poster lowongan menarik di Instagram
-dengan tautan pendaftaran Google Form yang meminta data pribadi lengkap dan nomor HP aktif. Sari
-tidak tahu bahwa formulir tersebut bukan milik perusahaan resmi, dan tidak ada cara baginya
-memastikan apakah jejak digital ``perusahaan'' itu asli atau baru dibuat kemarin.
-\end{quote}
+Menerima \textit{broadcast} WhatsApp:
+\begin{tcolorbox}[colback=white, colframe=verfinblue!25, boxrule=0.4pt, arc=1mm,
+  left=1.5mm, right=1.5mm, top=0.8mm, bottom=0.8mm]
+\itshape\footnotesize ``Dibutuhkan Admin Online WFH, gaji 8--15 juta/bulan, tanpa pengalaman,
+langsung kerja. Kirim foto KTP \& data diri ke nomor ini.''
+\end{tcolorbox}
+Desakan ekonomi membuat Andri ingin segera merespons. Untuk memverifikasi, ia harus mencari nama
+``perusahaan'' di Google, mengecek nomor penghubung, memvalidasi alamat kantor, dan memastikan
+legalitas; proses yang tidak ia kuasai dan memakan waktu. Tanpa alat bantu, Andri berisiko
+menyerahkan KTP-nya (pintu pencurian identitas) dalam hitungan menit setelah menerima pesan.
+\end{tcolorbox}
+\begin{tcolorbox}[title={Persona 2 \,\textbullet\, Sari (27)}]
+\footnotesize
+\textit{Pencari kerja paruh waktu.}
+\smallskip
 
-Kedua skenario di atas --- yang dihimpun dari pola nyata laporan penipuan lowongan --- menunjukkan
-titik kritis yang sama: \textbf{pengguna dipaksa mengambil keputusan sebelum memiliki informasi
-yang cukup, dan tidak ada alat yang melakukan verifikasi terintegrasi atas nama mereka.}
-Kesenjangan inilah yang menjadi titik intervensi Verifin.
+Menemukan poster lowongan menarik di Instagram:
+\begin{tcolorbox}[colback=white, colframe=verfinblue!25, boxrule=0.4pt, arc=1mm,
+  left=1.5mm, right=1.5mm, top=0.8mm, bottom=0.8mm]
+\itshape\footnotesize ``Isi Google Form berikut untuk mendaftar. Cantumkan data pribadi lengkap
+dan nomor HP aktif.''
+\end{tcolorbox}
+Sari tidak tahu bahwa formulir tersebut bukan milik perusahaan resmi. Tidak ada cara baginya
+memastikan apakah jejak digital ``perusahaan'' itu asli atau baru dibuat kemarin, sehingga data
+pribadinya berisiko masuk ke basis phishing.
+\end{tcolorbox}
+\end{tcbraster}
+\caption{Dua persona pengguna yang merepresentasikan titik kritis pengambilan keputusan pada
+lowongan di kanal informal, dihimpun dari pola nyata laporan penipuan lowongan.}
+\label{fig:persona}
+\end{figure}
+
+Kedua skenario di atas menunjukkan titik kritis yang sama: \textbf{pengguna dipaksa mengambil
+keputusan sebelum memiliki informasi yang cukup, dan tidak ada alat yang melakukan verifikasi
+terintegrasi atas nama mereka.} Kesenjangan inilah yang menjadi titik intervensi Verifin.
 
 Solusi yang sudah ada belum menjawab kesenjangan ini pada titik yang dibutuhkan. Platform media
-sosial hanya menyediakan fitur pelaporan yang bersifat reaktif --- baru berjalan setelah korban
+sosial hanya menyediakan fitur pelaporan yang bersifat reaktif, yang baru berjalan setelah korban
 melapor. Job board formal memang melakukan kurasi, namun jangkauannya terbatas pada perusahaan
 yang membayar dan tidak menjangkau kanal informal tempat modus penipuan justru paling banyak
 beroperasi. Imbauan pemerintah bersifat umum dan tetap menyerahkan proses verifikasi kepada
@@ -191,7 +240,7 @@ dapat diaudit.
 
 Untuk menegaskan orisinalitas dan posisi Verifin, berikut perbandingan dengan solusi yang saat ini
 tersedia bagi pencari kerja Indonesia. Tidak satu pun solusi eksisting yang melakukan
-\textbf{verifikasi proaktif berbasis bukti pada titik penerimaan lowongan} --- celah yang diisi
+\textbf{verifikasi proaktif berbasis bukti pada titik penerimaan lowongan}; celah inilah yang diisi
 Verifin.
 
 \begin{table}[H]
@@ -199,21 +248,21 @@ Verifin.
 \caption{Perbandingan Verifin dengan solusi verifikasi lowongan yang sudah ada}
 \label{tab:perbandingan}
 \renewcommand{\arraystretch}{1.3}
-\begin{tabularx}{\textwidth}{@{}p{3.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
-\rowcolor{verfingray}
-\textbf{Solusi} & \textbf{Cara Kerja} & \textbf{Keterbatasan vs.\ Verifin} \\
+\rowcolor{verfinhead}
+\thead{Solusi} & \thead{Cara Kerja} & \thead{Keterbatasan vs.\ Verifin} \\
 \midrule
+\rowcolor{verfinrow}
 \textbf{Job board formal} (Jobstreet, Glints, LinkedIn) & Mengkurasi lowongan dari perusahaan yang mendaftar/membayar & Hanya menjangkau perusahaan formal; \textbf{tidak menyentuh kanal informal} (WA/Telegram/IG) tempat penipuan justru paling banyak terjadi \\
-\midrule
-\textbf{Fitur ``Lapor'' platform} (WA, IG, Telegram) & Meninjau konten setelah dilaporkan pengguna & \textbf{Reaktif} --- baru berjalan setelah ada korban; tidak memberi penilaian sebelum pengguna merespons \\
-\midrule
+\textbf{Fitur ``Lapor'' platform} (WA, IG, Telegram) & Meninjau konten setelah dilaporkan pengguna & \textbf{Reaktif}, yakni baru berjalan setelah ada korban; tidak memberi penilaian sebelum pengguna merespons \\
+\rowcolor{verfinrow}
 \textbf{Kredibel / cek nomor} & Mengecek reputasi satu nomor telepon & Hanya satu dimensi (nomor); tidak menganalisis teks lowongan, domain, alamat, atau form phishing secara terpadu \\
-\midrule
 \textbf{Imbauan pemerintah/NGO} (GASA, Kemenlu) & Edukasi dan daftar ciri penipuan & Bersifat umum; tetap \textbf{menyerahkan proses verifikasi kepada individu} \\
 \midrule
-\rowcolor{verfinblue!8}
-\textbf{Verifin (usulan)} & Verifikasi multi-sinyal terintegrasi: NER + aturan teks + OSINT (domain/HP/alamat/form/sosial) + penalaran LLM + XAI, dalam satu klik & \textbf{Proaktif sebelum respons}, multi-dimensi, berbasis bukti, dapat diaudit (XAI), dan menjangkau kanal informal \\
+\rowcolor{verfingreen!12}
+\textbf{Verifin (usulan)} & Verifikasi multi-sinyal terintegrasi: NER, aturan teks, OSINT (domain/HP/alamat/form/sosial), penalaran LLM, dan XAI, dalam satu klik & \textbf{Proaktif sebelum respons}, multi-dimensi, berbasis bukti, dapat diaudit (XAI), dan menjangkau kanal informal \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -224,13 +273,13 @@ sosial, form) menjadi satu penilaian holistik yang \emph{dapat dioperasikan peng
 pada momen pengambilan keputusan.
 
 \vspace{0.5cm}
-\textbf{Relevansi dengan GEMASTIK XIX 2026 --- Divisi VIII Pengembangan Perangkat Lunak:}
+\textbf{Relevansi dengan GEMASTIK XIX 2026 (Divisi VIII Pengembangan Perangkat Lunak):}
 
 Verifin secara langsung menjawab tema GEMASTIK 2026, \textit{``Berdampak, Inklusif, dan
 Berkelanjutan menuju Masyarakat Cerdas''}, dengan memanfaatkan kombinasi mutakhir teknologi AI
 yang relevan: NER berbahasa Indonesia, OSINT otomatis, penalaran LLM API, dan XAI untuk
 transparansi. Sistem ini menjawab permasalahan nyata pada bidang \textbf{pemberdayaan masyarakat
-dan ekonomi kreatif} --- melindungi jutaan pencari kerja dari penipuan lowongan --- dan bukan
+dan ekonomi kreatif}, yaitu melindungi jutaan pencari kerja dari penipuan lowongan, dan bukan
 sekadar demonstrasi teknologi, melainkan perangkat lunak fungsional yang \textbf{dapat
 dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 
@@ -239,59 +288,59 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 % Infografis: Statistik Kerentanan
 \begin{figure}[H]
 \centering
+\begin{subfigure}[t]{0.58\linewidth}
+\centering
 \begin{tikzpicture}
 \begin{axis}[
   ybar,
-  width=11.5cm, height=5.6cm,
-  bar width=0.85cm,
-  xlabel={Kanal Penyebaran Lowongan Palsu},
-  ylabel={Persentase (\%)},
-  symbolic x coords={WhatsApp,Instagram,Telegram,Facebook,Email,Lainnya},
+  width=\linewidth, height=4.6cm,
+  bar width=0.45cm,
+  ylabel={\footnotesize Persentase (\%)},
+  symbolic x coords={WA,IG,Telegram,FB,Email,Lain},
   xtick=data,
-  x tick label style={font=\footnotesize, rotate=12, anchor=east},
+  x tick label style={font=\scriptsize, rotate=20, anchor=east},
   ymin=0, ymax=70,
-  nodes near coords,
-  nodes near coords align={vertical},
-  every node near coord/.append style={font=\footnotesize},
-  title={\textbf{Distribusi Kanal Penyebaran Lowongan Penipuan di Indonesia}},
-  title style={font=\bfseries\small},
-  tick label style={font=\footnotesize},
-  label style={font=\small},
+  nodes near coords, nodes near coords align={vertical},
+  every node near coord/.append style={font=\scriptsize},
+  tick label style={font=\scriptsize},
+  label style={font=\scriptsize},
   grid=major, grid style={dashed,gray!30},
   axis background/.style={fill=verfingray!30},
 ]
 \addplot[fill=verfinblue!80,draw=verfinblue] coordinates {
-  (WhatsApp,58) (Instagram,52) (Telegram,38) (Facebook,34) (Email,18) (Lainnya,12)
+  (WA,58) (IG,52) (Telegram,38) (FB,34) (Email,18) (Lain,12)
 };
 \end{axis}
 \end{tikzpicture}
-\caption{Distribusi kanal penyebaran lowongan penipuan berdasarkan survei GS Lab \& GASA 2024 [2]}
-\end{figure}
-
-\begin{figure}[H]
+\caption{Distribusi kanal penyebaran lowongan penipuan (GS Lab \& GASA 2024 [2]). WhatsApp dan Instagram mendominasi.}
+\label{fig:kanal}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.38\linewidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[
   xbar,
-  width=10.5cm, height=3.4cm,
-  bar width=0.7cm,
-  xlabel={Persentase Korban Penipuan Digital (\%)},
+  width=\linewidth, height=3.2cm,
+  bar width=0.5cm,
+  xlabel={\scriptsize \% Korban Penipuan Digital},
   symbolic y coords={Terekspos},
   ytick=data,
   xmin=0, xmax=60,
-  nodes near coords,
-  nodes near coords align={horizontal},
-  title={\textbf{49\% Korban Penipuan Digital Terekspos Modus Lowongan Kerja}},
-  title style={font=\bfseries\footnotesize},
-  tick label style={font=\footnotesize},
-  label style={font=\small},
+  nodes near coords, nodes near coords align={horizontal},
+  every node near coord/.append style={font=\scriptsize},
+  tick label style={font=\scriptsize},
+  label style={font=\scriptsize},
   grid=major, grid style={dashed,gray!30},
   axis background/.style={fill=verfingray!30},
 ]
 \addplot[fill=verfinred!80,draw=verfinred] coordinates {(49,Terekspos)};
 \end{axis}
 \end{tikzpicture}
-\caption{49\% korban penipuan digital di Indonesia terekspos modus penipuan lowongan kerja (\textit{employment scam}) --- modus paling dominan menurut Global Anti-Scam Alliance (GASA) \& Mastercard, 2024 [2]}
+\caption{49\% korban penipuan digital terekspos modus lowongan kerja, modus paling dominan (GASA \& Mastercard, 2024 [2]).}
+\label{fig:empatsembilan}
+\end{subfigure}
+\caption{Statistik urgensi penipuan lowongan kerja di Indonesia.}
+\label{fig:statistik-urgensi}
 \end{figure}
 
 
@@ -301,17 +350,17 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 \subsection*{B.1 Tujuan}
 \addcontentsline{toc}{subsection}{B.1 Tujuan}
 
-\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+\begin{enumerate}[label=\textbf{\arabic*.}]
 \item Membangun platform web \textbf{Verifin} sebagai \textit{Explainable AI-powered Decision
       Support System} yang mampu menganalisis teks atau URL lowongan kerja secara otomatis dan
       menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict
-      AMAN/WASPADA/BAHAYA dan penjelasan berbasis bukti --- menggantikan proses verifikasi manual
+      AMAN/WASPADA/BAHAYA dan penjelasan berbasis bukti, sehingga menggantikan proses verifikasi manual
       yang tersebar di banyak sumber menjadi satu analisis terpadu dalam hitungan menit.
 
 \item Mengimplementasikan pipeline analisis berlapis yang mengintegrasikan Named Entity Recognition
       (NER) hibrida berbahasa Indonesia, aturan perilaku teks, investigasi OSINT multi-sumber
       (domain, nomor telepon, perusahaan, alamat, media sosial), penalaran naratif dan verdict
-      berbasis LLM (via OpenAgentic), serta penjelasan kontribusi bukti berbasis XAI hibrida.
+      berbasis LLM, serta penjelasan kontribusi bukti berbasis XAI hibrida.
 
 \item Membangun \textit{Fraud Network Graph} berbasis database PostgreSQL yang dapat mendeteksi
       penggunaan ulang entitas-entitas mencurigakan (nomor telepon, domain, nama perusahaan) lintas
@@ -327,7 +376,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 \subsection*{B.2 Manfaat}
 \addcontentsline{toc}{subsection}{B.2 Manfaat}
 
-\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+\begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Bagi Pencari Kerja:} Mendapat alat verifikasi gratis, cepat, dan berbasis bukti yang
       mengurangi risiko menjadi korban penipuan lowongan. Tidak perlu lagi melakukan investigasi
       manual yang melelahkan.
@@ -337,7 +386,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
       entitas mencurigakan untuk melindungi pengguna berikutnya.
 
 \item \textbf{Bagi Masyarakat Luas:} Berkontribusi dalam penanggulangan TPPO berbasis
-      \textit{cyber-recruitment} dengan memutus rantai penipuan di tahap paling awal: sebelum
+      rekrutmen siber dengan memutus rantai penipuan di tahap paling awal, yaitu sebelum
       korban merespons iklan.
 
 \item \textbf{Bagi Pengembang dan Peneliti:} API publik memungkinkan integrasi ke dalam platform
@@ -346,9 +395,9 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 
 \item \textbf{Bagi Kemajuan NLP Bahasa Indonesia:} Data laporan komunitas yang terkumpul dari
       penggunaan nyata berpotensi menjadi salah satu korpus berlabel pertama untuk domain lowongan
-      penipuan berbahasa Indonesia --- menjawab kelangkaan sumber daya yang selama ini menghambat
-      riset NLP Indonesia [9] --- dan menjadi dasar \textit{fine-tuning} model NER/klasifikasi
-      Indonesia di masa depan.
+      penipuan berbahasa Indonesia. Korpus ini menjawab kelangkaan sumber daya yang selama ini
+      menghambat riset NLP Indonesia [9], sekaligus menjadi dasar \textit{fine-tuning} model
+      NER/klasifikasi Indonesia di masa depan.
 \end{enumerate}
 
 \subsection*{B.3 Estimasi Dampak Kuantitatif}
@@ -357,7 +406,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 Sesuai aspek penilaian bahwa dampak \emph{harus dibuktikan dengan data} dan produk harus
 \emph{dapat dioperasikan sehingga dampak terukur}, kami menyusun estimasi dampak kuantitatif
 berikut. Estimasi ini bersifat \textbf{proyeksi konservatif berbasis data sekunder resmi}
-(bukan hasil pengukuran pengguna aktual --- studi pengguna merupakan agenda pengembangan lanjutan),
+(bukan hasil pengukuran pengguna aktual; studi pengguna merupakan agenda pengembangan lanjutan),
 dengan asumsi yang dinyatakan secara eksplisit agar dapat diaudit.
 
 \textbf{(1) Populasi yang dapat dilayani.} Dengan 7,28 juta pengangguran terbuka [1] dan fakta
@@ -373,7 +422,7 @@ mentransfer uang atau menyerahkan data pribadi}. Mengacu pada rata-rata kerugian
 per korban pada laporan GASA [2], setiap kasus yang berhasil dicegah setara dengan penghindaran
 kerugian finansial yang nyata. Sebagai ilustrasi konservatif: pada 1.000 verifikasi dengan
 asumsi 20\% terindikasi berisiko dan 30\% pengguna yang diperingatkan memilih tidak melanjutkan,
-sekitar \textbf{60 calon korban} terlindungi dalam satu siklus awal --- angka yang akan divalidasi
+sekitar \textbf{60 calon korban} terlindungi dalam satu siklus awal, angka yang akan divalidasi
 melalui studi pengguna.
 
 \textbf{(3) Dampak kolektif melalui Fraud Network Graph.} Setiap entitas mencurigakan yang
@@ -384,7 +433,7 @@ superlinier} terhadap jumlah pengguna, bukan linier.
 
 \textbf{(4) Kontribusi pada penanggulangan TPPO.} Mengingat penipuan rekrutmen daring adalah
 metode utama perekrutan korban TPPO ke \textit{cyber scam centers} [3], [4], intervensi Verifin
-pada tahap paling awal --- sebelum korban merespons iklan --- berpotensi \textbf{memutus rantai}
+pada tahap paling awal, yaitu sebelum korban merespons iklan, berpotensi \textbf{memutus rantai}
 perdagangan orang pada titik yang paling murah dan paling dapat diotomatisasi oleh perangkat lunak.
 
 \textbf{(5) Keberlanjutan (\textit{sustainability}).} Model dampak di atas berkelanjutan karena
@@ -400,20 +449,23 @@ nyata pasca-peluncuran dirinci pada agenda pengembangan lanjutan (Batasan C10).
 Untuk memastikan sistem dapat dibangun, diuji, dan didemonstrasikan secara nyata dalam kerangka
 kompetisi, Verifin menetapkan batasan-batasan berikut:
 
-\begin{enumerate}[leftmargin=*, label=\textbf{C\arabic*.}]
+\begin{enumerate}[label=\textbf{C\arabic*.}]
 
 \item \textbf{Bahasa Input:}
 Sistem dioptimalkan untuk memproses teks lowongan dalam Bahasa Indonesia. Input dalam bahasa
-lain (Inggris, campuran) dapat diterima --- aturan perilaku dan penalaran LLM bersifat toleran
-bahasa --- namun akurasi NER dan kelengkapan bukti OSINT tidak dijamin setara.
+lain (Inggris, campuran) dapat diterima karena aturan perilaku dan penalaran LLM bersifat toleran
+bahasa, namun akurasi NER dan kelengkapan bukti OSINT tidak dijamin setara.
 
 \item \textbf{Sumber OSINT:}
 Investigasi OSINT terbatas pada sumber yang dapat diakses secara publik dan legal:
 \begin{itemize}
   \item Whois/RDAP untuk domain (usia \& registrar domain) serta keamanan email (SPF/DMARC)
-  \item Reputasi nomor telepon Indonesia via \textbf{Kaspersky Who Calls} dan agregasi SERP \textbf{Kredibel}
+  \item Reputasi nomor telepon Indonesia via \textbf{Kaspersky Who Calls} dan agregasi
+        SERP \textbf{Kredibel}
   \item Validasi alamat fisik dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim} dan \textbf{Overpass API})
-  \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine (DuckDuckGo/Mojeek/Startpage/Brave) dengan filter relevansi entitas, ditunjang peramban ringan Lightpanda sebagai cadangan
+  \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine
+        (DuckDuckGo, Mojeek, Startpage, Brave) dengan filter relevansi entitas, ditunjang
+        peramban ringan Lightpanda sebagai cadangan
   \item Inspeksi formulir/shortlink (Google Form) untuk deteksi phishing dan permintaan dokumen sensitif
   \item Penelusuran media sosial publik (Instagram, Facebook, LinkedIn) dengan filter profil-resmi
 \end{itemize}
@@ -434,7 +486,7 @@ responsif untuk mobile.
 Pra-penilaian teks menggunakan kombinasi \textbf{aturan perilaku} yang dikalibrasi dari pola
 penipuan lowongan kerja Indonesia dan \textbf{penalaran LLM berbasis bukti} yang bersifat
 agnostik-bahasa. Keputusan ini diambil secara sadar karena \textbf{dataset berlabel lowongan
-penipuan berbahasa Indonesia belum tersedia secara publik} --- keterbatasan yang juga menjadi
+penipuan berbahasa Indonesia belum tersedia secara publik}, keterbatasan yang juga menjadi
 temuan utama IndoNLU bahwa riset NLP Bahasa Indonesia terhambat oleh kelangkaan sumber daya
 data berlabel [9]. Daripada memaksakan model yang dilatih pada korpus berbahasa Inggris (yang
 tidak representatif terhadap ragam informal lowongan Indonesia), Verifin memprioritaskan bukti
@@ -442,7 +494,7 @@ objektif OSINT dan penalaran LLM. \textit{Fine-tuning} model klasifikasi pada da
 tercantum pada agenda pengembangan lanjutan.
 
 \item \textbf{Ketergantungan API Eksternal:}
-Pipeline analisis bergantung pada layanan eksternal (OpenAgentic/OpenAI untuk LLM, Supabase
+Pipeline analisis bergantung pada layanan eksternal (API LLM untuk penalaran dan Supabase
 untuk database). Gangguan pada layanan ini akan mempengaruhi ketersediaan sistem.
 
 \item \textbf{Bukan Layanan Hukum:}
@@ -455,14 +507,14 @@ perbatasan.
 Laporan komunitas bersifat anonim (tanpa akun); identitas pelapor tidak diekspos. Nomor telepon
 ternormalisasi digunakan untuk pencocokan, dan data pribadi dari teks lowongan yang dianalisis
 tidak ditampilkan ke antarmuka publik. Sebelum dikirim ke LLM eksternal, sistem menerapkan
-\textbf{penyamaran data pribadi (\textit{PII masking})} --- nomor telepon, alamat email, dan
-identitas personal pada teks lowongan disamarkan --- dan menerapkan kebijakan \textbf{tanpa
+\textbf{penyamaran data pribadi (\textit{PII masking})}, di mana nomor telepon, alamat email, dan
+identitas personal pada teks lowongan disamarkan, serta menerapkan kebijakan \textbf{tanpa
 retensi (\textit{no retention})}: teks yang dianalisis tidak disimpan setelah analisis selesai.
 
 \item \textbf{Batas Intervensi Sistem (Faktor Manusia):}
 Verifin secara eksplisit \textbf{tidak dirancang untuk menghilangkan seluruh risiko penipuan
-maupun mengatasi faktor psikologis dan sosial korban} --- seperti desakan ekonomi, bias otoritas,
-\textit{fear of missing out}, maupun teknik \textit{social engineering} --- yang juga berperan
+maupun mengatasi faktor psikologis dan sosial korban}, seperti desakan ekonomi, bias otoritas,
+\textit{fear of missing out}, maupun teknik \textit{social engineering}, yang juga berperan
 dalam keputusan seseorang merespons tawaran. Intervensi Verifin terbatas pada \textbf{satu penyebab
 yang dapat diselesaikan melalui rekayasa perangkat lunak}, yaitu mengurangi
 \textit{information asymmetry} pada tahap verifikasi awal. Pengguna yang tetap merespons meskipun
@@ -504,7 +556,7 @@ Sprint 0 & Minggu 1--2 & Riset, desain arsitektur, setup repo, konfigurasi Supab
 \midrule
 Sprint 1 & Minggu 3--4 & Implementasi pipeline NER hibrida (regex + LLM) + aturan perilaku teks, endpoint FastAPI dasar, UI input form \\
 \midrule
-Sprint 2 & Minggu 5--6 & Implementasi modul OSINT (domain, phone, company), LLM synthesis via OpenAgentic, Fraud Network Graph, XAI explainer \\
+Sprint 2 & Minggu 5--6 & Implementasi modul OSINT (domain, phone, company), sintesis penalaran LLM, Fraud Network Graph, XAI explainer \\
 \midrule
 Sprint 3 & Minggu 7--8 & Skor Risiko engine, Community Monitoring, riwayat analisis, API publik, UI result dashboard, visualisasi graf \\
 \midrule
@@ -538,7 +590,7 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 \subsection*{D.3 Prinsip Pengembangan}
 \addcontentsline{toc}{subsection}{D.3 Prinsip Pengembangan}
 
-\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+\begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{API-First:} Backend dirancang sebagai API murni sehingga frontend dan pihak ketiga
       dapat mengintegrasikan layanan dengan mudah.
 \item \textbf{Test-Driven:} Setiap modul pipeline dilengkapi unit test sebelum integrasi.
@@ -554,6 +606,7 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 \addcontentsline{toc}{subsection}{D.4 Tools dan Platform Pengembangan}
 
 \rowcolors{2}{verfinrow}{white}
+\small
 \begin{longtable}{@{}p{4cm}p{4cm}p{6.5cm}@{}}
 \toprule
 \rowcolor{verfinhead}\thead{Kategori} & \thead{Tool} & \thead{Penggunaan} \\
@@ -582,7 +635,8 @@ Testing & pytest + Jest & Unit test backend (pytest) dan frontend (Jest/Vitest) 
 \addcontentsline{toc}{subsection}{E.1 Analisis Kebutuhan Fungsional}
 
 \rowcolors{2}{verfinrow}{white}
-\begin{longtable}{@{}p{1.4cm}p{3.9cm}p{8.3cm}p{1.5cm}@{}}
+\small
+\begin{longtable}{@{}p{1.2cm}p{3.7cm}p{8.0cm}p{1.4cm}@{}}
 \toprule
 \rowcolor{verfinhead}\thead{ID} & \thead{Nama} & \thead{Deskripsi} & \thead{Prioritas} \\
 \midrule
@@ -605,7 +659,7 @@ FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format nomor telepon Indo
 \midrule
 FR-07 & Investigasi OSINT Perusahaan & Sistem mencari jejak digital perusahaan via multi-engine web search (dengan filter relevansi entitas) dan mengidentifikasi inkonsistensi dengan klaim dalam lowongan & Tinggi \\
 \midrule
-FR-08 & Penalaran Naratif \& Verdict LLM & Sistem menghasilkan verdict AMAN/WASPADA/BAHAYA dan ringkasan narasi berbahasa Indonesia menggunakan LLM via OpenAgentic, secara ketat berbasis bukti OSINT (dilarang mengarang fakta di luar evidence) & Tinggi \\
+FR-08 & Penalaran Naratif \& Verdict LLM & Sistem menghasilkan verdict AMAN/WASPADA/BAHAYA dan ringkasan narasi berbahasa Indonesia menggunakan LLM, secara ketat berbasis bukti OSINT (dilarang mengarang fakta di luar evidence) & Tinggi \\
 \midrule
 FR-09 & Skor Risiko dan Verdict & Sistem menghasilkan Skor Risiko integer 0--100 (0 = sangat aman, 100 = sangat berbahaya) melalui agregasi kontribusi bukti XAI, beserta verdict tiga tingkat: AMAN, WASPADA, BAHAYA & Tinggi \\
 \midrule
@@ -627,6 +681,7 @@ FR-14 & API Publik & Sistem menyediakan REST API terdokumentasi via FastAPI auto
 \addcontentsline{toc}{subsection}{E.2 Analisis Kebutuhan Non-Fungsional}
 
 \rowcolors{2}{verfinrow}{white}
+\small
 \begin{longtable}{@{}p{1.6cm}p{3.4cm}p{9.4cm}@{}}
 \toprule
 \rowcolor{verfinhead}\thead{ID} & \thead{Nama} & \thead{Deskripsi} \\
@@ -854,7 +909,7 @@ NER Hibrida & Regex + LLM Extraction & Entitas struktural (regex) + semantik (LL
 \midrule
 Analisis Perilaku Teks & Aturan perilaku berbasis domain knowledge (Python) & Deteksi sinyal penipuan Indonesia: permintaan biaya, kerja luar negeri, apply-via-WA, gaji fantastis, dokumen sensitif; agnostik-bahasa, tanpa model terlatih \\
 \midrule
-LLM Orchestration & OpenAgentic API (\texttt{kimi-k3-high}) & Ekstraksi entitas semantik + penalaran verdict berbasis bukti OSINT, deterministik (temperature=0, seed tetap), dengan guard anti-halucination \\
+LLM Orchestration & API LLM (\texttt{kimi-k3}) & Ekstraksi entitas semantik + penalaran verdict berbasis bukti OSINT, deterministik (temperature=0, seed tetap), dengan guard anti-halucination \\
 \midrule
 XAI Engine & Custom SHAP-inspired & Additive feature contribution explainer \\
 \midrule
@@ -900,7 +955,7 @@ Testing Frontend & Jest + Vitest & Komponen dan hook test \\
 Sistem mengekstrak entitas kunci dari teks lowongan menggunakan pendekatan \textbf{hibrida}
 yang menggabungkan dua mekanisme komplementer:
 
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
 \item \textbf{Regex deterministik} untuk entitas \emph{struktural} yang polanya stabil:
       nomor telepon/WhatsApp (\texttt{PHONE}), alamat surel (\texttt{EMAIL}), dan URL/domain.
       Regex cepat, murah, dan presisi-tinggi pada pola yang jelas.
@@ -938,7 +993,7 @@ didokumentasikan sebagai hambatan utama riset pada IndoNLU [9]. Memaksakan model
 korpus Inggris berisiko menghasilkan \textit{false confidence} yang menyesatkan pada domain
 Indonesia. Oleh karena itu Verifin mengambil pendekatan yang lebih \textbf{jujur dan robust}:
 (i) aturan perilaku yang transparan dan dapat diaudit, dikalibrasi langsung dari pola penipuan
-lokal; dan (ii) penalaran LLM yang secara inheren \textbf{agnostik-bahasa} --- mampu memahami
+lokal; dan (ii) penalaran LLM yang secara inheren \textbf{agnostik-bahasa}, yaitu mampu memahami
 konteks lowongan berbahasa Indonesia tanpa memerlukan korpus pelatihan khusus. Ke depan, ketika
 dataset Indonesia terkumpul (melalui laporan komunitas Verifin), agenda \textit{fine-tuning}
 model klasifikasi/NER Indonesia (mis.\ berbasis IndoBERT [9]) menjadi pengembangan lanjutan yang
@@ -956,7 +1011,7 @@ Modul OSINT dijalankan secara paralel menggunakan \texttt{asyncio} untuk meminim
 Terdapat tiga sub-modul utama:
 
 \textbf{Domain/URL Investigator:}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
 \item Whois/RDAP lookup untuk mendapatkan tanggal registrasi, registrar, dan informasi pemilik
 \item Domain berumur $< 30$ hari mendapat penalti skor signifikan
 \item Validasi keaktifan website (HTTP) dan kesesuaian nama domain dengan klaim perusahaan
@@ -964,7 +1019,7 @@ Terdapat tiga sub-modul utama:
 \end{itemize}
 
 \textbf{Phone Number Validator:}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
 \item Validasi format nomor telepon Indonesia (08xx, +62xx) dengan whitelist prefix operator
 \item Identifikasi operator berdasarkan prefix (Telkomsel, Indosat, XL, dll.)
 \item Pengecekan reputasi dan laporan fraud via \textbf{Kaspersky Who Calls} dan SERP \textbf{Kredibel}
@@ -972,7 +1027,7 @@ Terdapat tiga sub-modul utama:
 \end{itemize}
 
 \textbf{Company Lookup:}
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
 \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine dengan filter relevansi entitas (arsitektur satu query yang didistribusikan ke banyak validator, meminimalkan \textit{rate-limit})
 \item Verifikasi keberadaan website resmi dan profil media sosial resmi (filter profil, bukan postingan)
 \item Validasi alamat dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim} + \textbf{Overpass})
@@ -981,11 +1036,11 @@ Terdapat tiga sub-modul utama:
 
 \subsubsection*{Layer 4: LLM Reasoning \& Verdict}
 
-Sistem mengirimkan bundle hasil OSINT (beserta fitur teks dari Layer 2) ke LLM melalui OpenAgentic
+Sistem mengirimkan bundle hasil OSINT (beserta fitur teks dari Layer 2) ke LLM
 dengan prompt terstruktur. Berbeda dari penggunaan LLM konvensional yang sekadar merangkum, pada
 Verifin LLM berperan sebagai \textbf{mesin penalaran (\textit{reasoning engine})} yang menimbang
 seluruh bukti dan menghasilkan verdict. Model diinstruksikan untuk:
-\begin{enumerate}[leftmargin=*]
+\begin{enumerate}
 \item Menilai tingkat kepercayaan lowongan dan menetapkan verdict AMAN/WASPADA/BAHAYA beserta Skor Risiko
 \item Merangkum temuan OSINT dalam narasi berbahasa Indonesia yang mudah dipahami
 \item Menyebutkan fakta-fakta spesifik yang mendukung atau melemahkan kepercayaan
@@ -1004,16 +1059,17 @@ Explainer pada Layer 5 sehingga pengguna dapat mengaudit alasan di balik verdict
 \subsubsection*{Layer 5: XAI Explainer}
 
 Verifin menerapkan pendekatan \textbf{penjelasan hibrida (\textit{hybrid explanation})} [7] yang
-berpusat pada \textit{evidence explanation}: setiap sinyal bukti --- baik dari aturan perilaku
-teks maupun temuan OSINT --- diberi bobot kontribusi yang transparan dan dapat diaudit. Pendekatan
+berpusat pada \textit{evidence explanation}: setiap sinyal bukti, baik dari aturan perilaku
+teks maupun temuan OSINT, diberi bobot kontribusi yang transparan dan dapat diaudit. Pendekatan
 ini dipilih secara sadar: tidak semua penjelasan harus berasal dari metode post-hoc seperti
-SHAP/LIME --- yang terpenting adalah pengguna dapat \textbf{mengaudit kontribusi setiap faktor}
+SHAP/LIME; yang terpenting adalah pengguna dapat \textbf{mengaudit kontribusi setiap faktor}
 secara transparan. Setiap fitur diberi bobot dasar yang ditentukan berdasarkan \textit{expert
 judgement} terhadap kekuatan bukti masing-masing faktor, dengan prinsip: bukti objektif eksternal
 (jejak digital, laporan komunitas) diberi bobot lebih tinggi daripada sinyal linguistik internal.
 Berikut bobot dasar setiap fitur:
 
 \rowcolors{2}{verfinrow}{white}
+\small
 \begin{longtable}{@{}p{4.4cm}p{2.2cm}p{7.8cm}@{}}
 \toprule
 \rowcolor{verfinhead}\thead{Fitur} & \thead{Bobot Dasar} & \thead{Deskripsi} \\
@@ -1024,7 +1080,7 @@ Berikut bobot dasar setiap fitur:
 \midrule
 \endhead
 Analisis Perilaku Teks & 25\% & Skor pra-penilaian dari aturan perilaku (permintaan biaya, kerja luar negeri, apply-via-WA, gaji fantastis, dokumen sensitif, kata kunci penipuan) \\
-\quad\textit{--- sub-komponen:} & & \\
+\quad\textit{(sub-komponen):} & & \\
 \quad Sinyal Red Flag Teks & \textit{(bagian dari 25\%)} & Deteksi frasa spesifik bermodus tinggi: permintaan dokumen sensitif (KTP/foto) di awal rekrutmen, janji langsung kerja tanpa seleksi formal, atau instruksi mendesak yang memanipulasi calon pelamar \\
 Domain Age & 15\% & Usia domain: makin tua makin dipercaya; domain $<$90 hari mendapat penalti penuh \\
 Domain Reputation & 15\% & Keaktifan website \& reputasi domain: aktif \& tidak terindikasi phishing = sinyal aman; tidak dapat diakses = penalti. \textbf{Penanganan fitur tidak tersedia (\textit{missing})}: jika lowongan tidak mencantumkan domain/website sama sekali, bobot gabungan Domain Age + Domain Reputation (30\%) didistribusikan sebagai penalti tetap sebesar \textbf{8 poin} untuk mencerminkan ketiadaan transparansi digital perekrut \\
@@ -1063,113 +1119,72 @@ bukti yang berasal dari sumber yang sama digabungkan dalam satu kategori kontrib
 \subsection*{F.2 Struktur Kode}
 \addcontentsline{toc}{subsection}{F.2 Struktur Kode}
 
-Repositori Verifin diorganisasikan sebagai monorepo dengan struktur berikut:
+Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambaran komponen utamanya dirangkum pada Tabel~\ref{tab:struktur-kode}.
 
-\begin{lstlisting}[language=bash, caption={Struktur direktori repositori Verifin}]
-verifin/
-|- backend/
-|   |- app/
-|   |   |- main.py              # FastAPI entry point
-|   |   |- api/v1/
-|   |   |   |- verify/          # POST /verify (text/image/url) + pipeline orchestration
-|   |   |   |- community/       # GET/POST /community endpoints + moderasi
-|   |   |   |- health/          # GET /health + status pipeline
-|   |   |- services/
-|   |   |   |- ner.py                # Regex NER (entitas struktural)
-|   |   |   |- ocr.py                # PaddleOCR wrapper (pre-processing CLAHE)
-|   |   |   |- llm/entity_extraction.py  # LLM extraction (entitas semantik)
-|   |   |   |- llm/verifin_reasoning.py  # LLM reasoning engine (verdict)
-|   |   |   |- nlp/classifier.py     # Aturan perilaku teks (stub, nonaktif)
-|   |   |   |- osint/
-|   |   |   |   |- runner.py       # Orchestrator probe OSINT paralel
-|   |   |   |   |- whois_handler.py # Domain/Whois + keamanan email
-|   |   |   |   |- phone_validator.py  # Phone (Kaspersky/Kredibel)
-|   |   |   |   |- company_validator.py # Company lookup
-|   |   |   |   |- address_validator.py # Alamat (Nominatim/Overpass)
-|   |   |   |   |- searxng_client.py   # Metasearch multi-engine
-|   |   |   |   |- gform_inspector.py  # Inspeksi Google Form
-|   |   |   |   |- social.py        # Penelusuran media sosial
-|   |   |   |   |- web_evidence.py  # Agregasi web evidence
-|   |   |   |- xai/shap_explainer.py   # SHAP-inspired additive explainer
-|   |   |   |- graph/fraud_network.py  # Fraud Network Graph (NetworkX)
-|   |   |- database/models.py   # SQLAlchemy JobCase, CommunityReport
-|   |   |- database.py          # PostgreSQL connection
-|   |- tests/                   # pytest unit & integration tests
-|   |- requirements.txt
-|- frontend/
-|   |- src/
-|   |   |- app/
-|   |   |   |- page.tsx         # Halaman utama / landing
-|   |   |   |- analyze/page.tsx # Halaman analisis
-|   |   |   |- result/[id]/page.tsx  # Halaman hasil analisis
-|   |   |   |- community/page.tsx    # Halaman komunitas
-|   |   |- components/
-|   |   |   |- AnalysisForm.tsx       # Form input teks/URL
-|   |   |   |- VerdictBadge.tsx       # AMAN/WASPADA/BAHAYA badge
-|   |   |   |- TrustScoreGauge.tsx    # Visualisasi skor 0-100
-|   |   |   |- OsintBreakdown.tsx     # Detail hasil per modul OSINT
-|   |   |   |- XaiExplainer.tsx       # Breakdown kontribusi fitur
-|   |   |   |- FraudNetworkGraph.tsx  # Visualisasi graf interaktif
-|   |   |   |- CommunityFeed.tsx      # Feed laporan komunitas
-|   |   |- lib/
-|   |   |   |- api.ts           # API client functions
-|   |   |   |- types.ts         # TypeScript type definitions
-|   |- package.json
-|   |- tailwind.config.ts
-|- README.md
-\end{lstlisting}
+\begin{table}[H]
+\centering
+\caption{Struktur kode dan tanggung jawab komponen utama Verifin}
+\label{tab:struktur-kode}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{4.9cm}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\rowcolor{verfinhead}\thead{Modul / Berkas} & \thead{Tanggung Jawab} \\
+\midrule
+\rowcolor{verfinrow}
+\texttt{backend/app/main.py} & \textit{Entry point} FastAPI \\
+\texttt{backend/app/api/v1/} & Endpoint \texttt{/verify} (teks/gambar/URL), \texttt{/community}, \texttt{/health} \\
+\rowcolor{verfinrow}
+\texttt{services/ner.py}, \texttt{ocr.py} & NER regex (entitas struktural) dan pembungkus PaddleOCR (pra-proses CLAHE) \\
+\texttt{services/llm/} & Ekstraksi entitas semantik dan \textit{reasoning engine} verdict \\
+\rowcolor{verfinrow}
+\texttt{services/nlp/classifier.py} & Aturan perilaku teks (stub, nonaktif) \\
+\texttt{services/osint/} & Orkestrasi probe OSINT paralel: Whois/domain, telepon, perusahaan, alamat, SearXNG, Google Form, media sosial, web evidence \\
+\rowcolor{verfinrow}
+\texttt{services/xai/} \texttt{shap\_explainer.py} & Penjelasan kontribusi bukti aditif (SHAP-inspired) \\
+\texttt{services/graph/} \texttt{fraud\_network.py} & Fraud Network Graph (NetworkX) \\
+\rowcolor{verfinrow}
+\texttt{backend/database/} \texttt{models.py} & Model SQLAlchemy: \texttt{JobCase}, \texttt{CommunityReport} \\
+\texttt{frontend/src/app/} & Halaman: utama, analisis, hasil, komunitas \\
+\rowcolor{verfinrow}
+\texttt{frontend/src/} \texttt{components/} & AnalysisForm, VerdictBadge, TrustScoreGauge, OsintBreakdown, XaiExplainer, FraudNetworkGraph, CommunityFeed \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 \subsection*{F.3 Skema Database PostgreSQL}
 \addcontentsline{toc}{subsection}{F.3 Skema Database PostgreSQL}
 
-\textbf{Tabel \texttt{jobs}} --- Menyimpan data lowongan dan hasil analisis:
+Skema terdiri atas tiga tabel inti berikut.
 
-\begin{lstlisting}[language=SQL, caption={DDL tabel jobs}]
+\begin{lstlisting}[language=SQL, caption={DDL tiga tabel inti Verifin (ringkas)}]
+-- Hasil analisis lowongan
 CREATE TABLE jobs (
-    id            UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    input_text    TEXT NOT NULL,
-    input_url     TEXT,
-    created_at    TIMESTAMPTZ DEFAULT NOW(),
-    status        VARCHAR(20) DEFAULT 'pending', -- pending|processing|done|error
-    trust_score   INTEGER,                        -- 0-100
-    verdict       VARCHAR(10),                    -- AMAN|WASPADA|BAHAYA
-    fingerprint   VARCHAR(64),                    -- SHA-256 hash entitas kunci
-    entities      JSONB,                          -- Hasil ekstraksi NER
-    text_signals  JSONB,                          -- Fitur aturan perilaku teks
-    osint_bundle  JSONB,                          -- Hasil seluruh modul OSINT
-    llm_summary   TEXT,                           -- Narasi & verdict LLM berbasis bukti
-    xai_factors   JSONB                           -- Kontribusi fitur XAI
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    input_text TEXT NOT NULL, input_url TEXT,
+    created_at TIMESTAMPTZ DEFAULT NOW(),
+    status VARCHAR(20) DEFAULT 'pending',   -- pending|processing|done|error
+    trust_score INTEGER,                    -- 0-100
+    verdict VARCHAR(10),                    -- AMAN|WASPADA|BAHAYA
+    fingerprint VARCHAR(64),                -- SHA-256 hash entitas kunci
+    entities JSONB, text_signals JSONB,     -- NER + fitur aturan perilaku
+    osint_bundle JSONB,                     -- hasil seluruh modul OSINT
+    llm_summary TEXT, xai_factors JSONB     -- narasi LLM + kontribusi XAI
 );
-\end{lstlisting}
 
-\textbf{Tabel \texttt{community\_reports}} --- Menyimpan laporan pengguna:
-
-\begin{lstlisting}[language=SQL, caption={DDL tabel community\_reports}]
+-- Laporan komunitas (>= 1 entitas wajib diisi; diindeks utk pencocokan cepat)
 CREATE TABLE community_reports (
-    id            SERIAL PRIMARY KEY,
-    company_name  VARCHAR,              -- Nama perusahaan yang dilaporkan
-    phone         VARCHAR,              -- Nomor kontak terlapor (ternormalisasi)
-    email         VARCHAR,              -- Email terlapor
-    url           VARCHAR,              -- URL/domain terlapor
-    report_type   VARCHAR,              -- Kategori laporan (penipuan, biaya, dsb)
-    description   TEXT,
-    reporter_contact VARCHAR,
-    created_at    TIMESTAMPTZ DEFAULT NOW()
+    id SERIAL PRIMARY KEY,
+    company_name VARCHAR, phone VARCHAR, email VARCHAR, url VARCHAR,
+    report_type VARCHAR, description TEXT,
+    reporter_contact VARCHAR, created_at TIMESTAMPTZ DEFAULT NOW()
 );
--- Minimal satu entitas (company/phone/email/url) wajib diisi.
--- Indeks pada company_name, phone, email, url untuk pencocokan cepat.
-\end{lstlisting}
 
-\textbf{Tabel \texttt{fraud\_fingerprints}} --- Indeks deduplikasi:
-
-\begin{lstlisting}[language=SQL, caption={DDL tabel fraud\_fingerprints}]
+-- Indeks deduplikasi lintas kasus
 CREATE TABLE fraud_fingerprints (
-    fingerprint   VARCHAR(64) PRIMARY KEY,
-    first_seen    TIMESTAMPTZ DEFAULT NOW(),
-    last_seen     TIMESTAMPTZ DEFAULT NOW(),
-    occurrence    INTEGER DEFAULT 1,
-    avg_score     FLOAT,
-    entity_hash   JSONB  -- Komponen hash per entitas
+    fingerprint VARCHAR(64) PRIMARY KEY,
+    first_seen TIMESTAMPTZ DEFAULT NOW(), last_seen TIMESTAMPTZ DEFAULT NOW(),
+    occurrence INTEGER DEFAULT 1, avg_score FLOAT, entity_hash JSONB
 );
 \end{lstlisting}
 
@@ -1189,65 +1204,22 @@ Langsung kerja, tidak perlu pengalaman
 Kirim foto dan KTP sekarang
 \end{lstlisting}
 
-\textbf{Layer 1 --- NER Output (Hibrida):}
+\textbf{Layer 1--3: NER, Analisis Perilaku Teks, dan OSINT (ringkas):}
 
-\begin{lstlisting}[language=Python, caption={Output JSON NER Hibrida Layer 1}]
-{
-  "companies": ["PT Sukses Mandiri"],
-  "phones": ["0812XXXXXXXX"],
-  "emails": [],
-  "urls": [],
-  "addresses": [],
-  "salaries": ["8-15 juta/bulan"],
-  "_ner_meta": {
-    "used": true,
-    "source": "hybrid (regex structural + LLM semantic)"
-  }
-}
+\begin{lstlisting}[language=Python, caption={Output ringkas Layer 1--3 (NER hibrida, aturan perilaku, OSINT)}]
+// Layer 1 NER (hibrida: regex struktural + LLM semantik)
+{ "companies": ["PT Sukses Mandiri"], "phones": ["0812XXXXXXXX"],
+  "salaries": ["8-15 juta/bulan"], "emails": [], "urls": [], "addresses": [] }
+// Layer 2 Aturan Perilaku Teks -> label BAHAYA, sinyal teratas:
+//   Permintaan Biaya/Transfer, Permintaan Dokumen Sensitif (KTP/foto), Gaji Fantastis
+// Layer 3 OSINT
+{ "domain": null,
+  "phone":   { "operator": "Telkomsel", "community_reports": 3, "last_report": "2026-06-15" },
+  "company": { "name": "PT Sukses Mandiri", "found_public": false, "website_found": false,
+               "inconsistencies": ["Nama generik, tidak ditemukan di sumber publik"] } }
 \end{lstlisting}
 
-\textbf{Layer 2 --- Output Analisis Perilaku Teks:}
-
-\begin{lstlisting}[language=Python, caption={Output JSON Analisis Perilaku Teks Layer 2 (aturan perilaku)}]
-{
-  "label": "BAHAYA",
-  "behavioral_features": {
-    "has_fee_request": true,
-    "has_whatsapp_apply": true,
-    "salary_no_company": true,
-    "requests_sensitive_doc": true
-  },
-  "top_signals": [
-    {"feature": "Permintaan Biaya/Transfer", "impact": "risk"},
-    {"feature": "Permintaan Dokumen Sensitif (KTP/foto)", "impact": "risk"},
-    {"feature": "Gaji Fantastis Tidak Realistis", "impact": "risk"}
-  ],
-  "method": "Behavioral rules (bahasa-agnostik, dikalibrasi pola penipuan Indonesia)"
-}
-\end{lstlisting}
-
-\textbf{Layer 3 --- OSINT Output:}
-
-\begin{lstlisting}[language=Python, caption={Output JSON OSINT Layer 3}]
-{
-  "domain": null,
-  "phone": {
-    "number": "0812XXXXXXXX",
-    "operator": "Telkomsel",
-    "format_valid": true,
-    "community_reports": 3,
-    "last_report": "2026-06-15"
-  },
-  "company": {
-    "name": "PT Sukses Mandiri",
-    "found_public": false,
-    "website_found": false,
-    "inconsistencies": ["Nama terlalu generik, tidak ditemukan di sumber publik"]
-  }
-}
-\end{lstlisting}
-
-\textbf{Layer 4 --- LLM Narrative:}
+\textbf{Layer 4: LLM Narrative:}
 
 \begin{quote}
 \textit{``Lowongan ini menunjukkan beberapa pola yang sangat umum pada penipuan rekrutmen. Nomor
@@ -1258,7 +1230,7 @@ besar. Gaji 8--15 juta untuk posisi Admin Online WFH tanpa pengalaman tidak real
 kerja Indonesia saat ini. Sangat disarankan untuk tidak merespons iklan ini.''}
 \end{quote}
 
-\textbf{Layer 5 --- XAI Output dan Skor Risiko Final:}
+\textbf{Layer 5: XAI Output dan Skor Risiko Final:}
 
 \begin{longtable}{@{}p{5cm}p{2.5cm}p{7cm}@{}}
 \toprule
@@ -1297,7 +1269,7 @@ bersih (Kaspersky Who Calls / Kredibel), serta alamat bisnis nyata vs.\ fiktif (
 Modul diverifikasi mengembalikan status yang benar untuk setiap kasus uji.
 
 \textbf{(2) Pengujian end-to-end tiga kanal input.} Sistem diuji menyeluruh pada tiga kanal input
-nyata --- teks, gambar poster (via OCR), dan tautan --- serta satu kasus negatif penipuan. Hasilnya
+nyata (teks, gambar poster via OCR, dan tautan) serta satu kasus negatif penipuan. Hasilnya
 menunjukkan verdict yang konsisten dan deterministik (\texttt{temperature=0}, seed tetap):
 lowongan legitimate menghasilkan verdict \texttt{AMAN}, sedangkan lowongan penipuan nyata
 terdeteksi \texttt{BAHAYA} (lihat Bagian G).
@@ -1311,7 +1283,7 @@ dokumen sensitif.
 \textbf{Mengapa bukan evaluasi model pada EMSCAD.} Pada iterasi awal, kami mengevaluasi model
 klasifikasi TF-IDF + Logistic Regression pada dataset EMSCAD (17.880 lowongan berbahasa Inggris).
 Namun kami kemudian \textbf{secara sadar tidak menggunakannya dalam sistem produksi} karena korpus
-tersebut tidak representatif terhadap ragam bahasa Indonesia --- keputusan yang konsisten dengan
+tersebut tidak representatif terhadap ragam bahasa Indonesia; keputusan yang konsisten dengan
 temuan IndoNLU mengenai kelangkaan sumber daya data berlabel Bahasa Indonesia [9]. Kami menilai
 lebih bertanggung jawab membangun sistem yang jujur atas keterbatasan datanya daripada mengklaim
 akurasi tinggi pada domain yang berbeda. Evaluasi kuantitatif terhadap dataset berlabel Indonesia,
@@ -1328,16 +1300,16 @@ pada \textbf{kebenaran perilaku setiap komponen} dan \textbf{konsistensi hasil a
 satu metrik akurasi.
 
 \textbf{(1) Unit testing per komponen.} Setiap modul diuji secara terpisah menggunakan
-\texttt{pytest}: (a) NER --- ekstraksi entitas dari berbagai layout teks/OCR termasuk kasus
+\texttt{pytest}: (a) NER, yaitu ekstraksi entitas dari berbagai layout teks/OCR termasuk kasus
 tepati (nomor dengan separator, email hasil OCR yang keliru, nama perusahaan ambigu); (b) aturan
-perilaku teks --- deteksi permintaan biaya, dokumen sensitif, gaji fantastis; (c) normalisasi dan
+perilaku teks, yaitu deteksi permintaan biaya, dokumen sensitif, gaji fantastis; (c) normalisasi dan
 validasi nomor telepon Indonesia (whitelist prefix operator, anti false-positive pada ID numerik);
-(d) XAI explainer --- konsistensi agregasi kontribusi bukti terhadap Skor Risiko final.
+(d) XAI explainer, yaitu konsistensi agregasi kontribusi bukti terhadap Skor Risiko final.
 
 \textbf{(2) Integration testing antar-modul.} Orchestrator OSINT diuji untuk memastikan eksekusi
 paralel (\texttt{asyncio.gather}) berjalan benar, arsitektur \emph{satu query terdistribusi} tidak
 memicu pencarian ganda, dan kegagalan satu sumber (mis.\ \textit{rate-limit} mesin pencari) tidak
-menghentikan pipeline --- melainkan menghasilkan status \texttt{UNAVAILABLE} yang jujur pada
+menghentikan pipeline, melainkan menghasilkan status \texttt{UNAVAILABLE} yang jujur pada
 komponen tersebut.
 
 \textbf{(3) Pengujian end-to-end.} Pipeline penuh diuji pada tiga kanal input nyata (teks, gambar
@@ -1359,30 +1331,30 @@ pengembangan lanjutan, sejalan dengan prinsip \textit{Test-Driven} yang kami anu
 \section*{G.\quad Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
 \addcontentsline{toc}{section}{G. Screenshot Mockup Antarmuka dan Hasil Uji End-to-End}
 
-Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yang disusun sesuai alur pengalaman pengguna (\textit{end-to-end user journey}): dimulai dari **tahap input data** (teks, gambar poster via OCR, dan tautan), **tahap pemrosesan real-time** pada modal loading pipeline, hingga **tahap hasil analisis** (verdict, skor risiko, breakdown XAI, dan bukti digital OSINT) serta pengujian kasus negatif penipuan.
+Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yang disusun sesuai alur pengalaman pengguna (\textit{end-to-end user journey}): dimulai dari \textbf{tahap input data} (teks, gambar poster via OCR, dan tautan), \textbf{tahap pemrosesan real-time} pada modal loading pipeline, hingga \textbf{tahap hasil analisis} (verdict, skor risiko, breakdown XAI, dan bukti digital OSINT) serta pengujian kasus negatif penipuan.
 
 \subsection*{G.1 Antarmuka Form Input Multi-Kanal}
 \addcontentsline{toc}{subsection}{G.1 Antarmuka Form Input Multi-Kanal}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/tes text.png}
-  \caption{Antarmuka input teks lowongan kerja pada Verifin, memungkinkan pengguna melakukan salin-tempel (\textit{copy-paste}) narasi iklan pekerjaan dari WhatsApp, Telegram, atau media sosial.}
-  \label{fig:tes-text}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/tes gambar.png}
-  \caption{Antarmuka unggah gambar poster/pamflet lowongan kerja (dukungan format JPG, PNG, WebP) dengan opsi pratinjau sebelum analisis.}
-  \label{fig:tes-gambar}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/tes link.png}
-  \caption{Antarmuka verifikasi tautan (URL), mendukung inspeksi langsung halaman Instagram, portal loker, maupun website perusahaan.}
-  \label{fig:tes-link}
+  \begin{subfigure}[t]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{images/tes text.png}
+    \caption{Input teks lowongan (salin-tempel dari WA/Telegram/medsos).}
+    \label{fig:tes-text}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{images/tes gambar.png}
+    \caption{Unggah gambar poster/pamflet (JPG/PNG/WebP) dengan pratinjau.}
+    \label{fig:tes-gambar}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.32\linewidth}
+    \includegraphics[width=\linewidth]{images/tes link.png}
+    \caption{Verifikasi tautan (URL): inspeksi halaman Instagram/portal loker/situs perusahaan.}
+    \label{fig:tes-link}
+  \end{subfigure}
+  \caption{Antarmuka form input multi-kanal Verifin: teks, gambar (OCR), dan tautan.}
+  \label{fig:form-input}
 \end{figure}
 
 \subsection*{G.2 Modal Progres Pemrosesan Pipeline Real-Time}
@@ -1390,7 +1362,7 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/mockup-loading.png}
+  \includegraphics[width=0.55\linewidth]{images/mockup-loading.png}
   \caption{Modal progres analisis bertahap secara \textit{real-time} (OCR $\to$ OSINT $\to$ Graph DB $\to$ LLM + XAI) yang memberikan transparansi proses verifikasi kepada pengguna.}
   \label{fig:mockup-loading}
 \end{figure}
@@ -1398,73 +1370,58 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
 \subsection*{G.3 Hasil Verifikasi \& Dashboard Analisis Per-Kanal}
 \addcontentsline{toc}{subsection}{G.3 Hasil Verifikasi \& Dashboard Analisis Per-Kanal}
 
-\subsubsection*{G.3.1 Skenario Input Teks (Studi Kasus PT. VIS)}
+\subsubsection*{G.3.1 Skenario Input Teks (Studi Kasus The Biker Shop)}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil text 1.png}
-  \caption{Hasil verifikasi input teks (Bagian Atas): Menampilkan badge verdict \texttt{AMAN}, Skor Risiko 30/100, ringkasan naratif LLM, serta panduan tindak lanjut.}
-  \label{fig:hasil-text-1}
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil text 1.png}
+    \caption{Bagian Atas: badge verdict \texttt{AMAN}, Skor Risiko 10/100, ringkasan naratif LLM, faktor penilaian, dan rekomendasi tindak lanjut.}
+    \label{fig:hasil-text-1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil text 2.png}
+    \caption{Bagian Detail: identitas perusahaan dan titik lokasi yang terverifikasi pada peta digital serta kontak terverifikasi.}
+    \label{fig:hasil-text-2}
+  \end{subfigure}
+  \caption{Hasil verifikasi input teks (Studi Kasus The Biker Shop, lowongan nyata terverifikasi).}
+  \label{fig:hasil-text}
 \end{figure}
 
+\subsubsection*{G.3.2 Skenario Input Gambar Poster / OCR (Studi Kasus VinFast Yogyakarta)}
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil text 2.png}
-  \caption{Hasil verifikasi input teks (Bagian Detail): rincian kontribusi fitur XAI, validasi reputasi nomor kontak, legalitas badan usaha, dan mitigasi risiko.}
-  \label{fig:hasil-text-2}
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil gambar 1.png}
+    \caption{Bagian Atas: verdict \texttt{AMAN}, Skor Risiko 25/100 berbasis ekstraksi entitas otomatis dari poster.}
+    \label{fig:hasil-gambar-1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil gambar 2.png}
+    \caption{Bagian Detail: teks hasil ekstraksi PaddleOCR dan pembuktian OSINT atas entitas terekstraksi (nomor WhatsApp bersih, jejak publik merek kuat).}
+    \label{fig:hasil-gambar-2}
+  \end{subfigure}
+  \caption{Hasil verifikasi gambar poster via OCR (Studi Kasus VinFast Yogyakarta).}
+  \label{fig:hasil-gambar}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/mockup-teks.png}
-  \caption{Tampilan menyeluruh dashboard analisis teks (Studi Kasus PT. VIS): penelusuran web evidence menemukan jejak digital relevan pada direktori legalitas dan portal resmi.}
-  \label{fig:mockup-teks}
-\end{figure}
-
-\subsubsection*{G.3.2 Skenario Input Gambar Poster / OCR (Studi Kasus Outlet Sushi Yay)}
+\subsubsection*{G.3.3 Skenario Input Tautan / URL Web (Studi Kasus Fox and Bunny)}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil gambar 1.png}
-  \caption{Hasil verifikasi gambar poster via OCR (Bagian Atas): penentuan verdict \texttt{AMAN} dan indeks risiko 12/100 berbasis ekstraksi entitas otomatis.}
-  \label{fig:hasil-gambar-1}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil gambar 2.png}
-  \caption{Hasil verifikasi gambar poster (Bagian Detail): teks hasil ekstraksi PaddleOCR 2.8 beserta pembuktian OSINT terhadap entitas yang berhasil terekstraksi.}
-  \label{fig:hasil-gambar-2}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/mockup-gambar.png}
-  \caption{Dashboard verifikasi gambar poster (Studi Kasus Outlet Sushi Yay): validasi lokasi fisik outlet tervalidasi di geocoding OpenStreetMap.}
-  \label{fig:mockup-gambar}
-\end{figure}
-
-\subsubsection*{G.3.3 Skenario Input Tautan / URL Web (Studi Kasus Indonesia College)}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil link 1.png}
-  \caption{Hasil verifikasi tautan URL (Bagian Atas): verdict \texttt{AMAN} dengan skor risiko 15/100 dan penjelasan faktor mitigasi.}
-  \label{fig:hasil-link-1}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil link 2.png}
-  \caption{Hasil verifikasi tautan URL (Bagian Detail): inspeksi keamanan domain Whois, sertifikasi SSL/TLS, serta penyaringan \textit{brand URL noise}.}
-  \label{fig:hasil-link-2}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.88\linewidth]{images/mockup-link.png}
-  \caption{Dashboard verifikasi tautan (Studi Kasus Indonesia College): validasi keaktifan domain Whois dan 7 jejak digital relevan.}
-  \label{fig:mockup-link}
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil link 1.png}
+    \caption{Bagian Atas: verdict \texttt{AMAN}, Skor Risiko 12/100, dan penjelasan faktor mitigasi.}
+    \label{fig:hasil-link-1}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/hasil link 2.png}
+    \caption{Bagian Detail: inspeksi konten tautan Instagram, jejak digital di marketplace dan media sosial, serta catatan proteksi email (SPF/DMARC).}
+    \label{fig:hasil-link-2}
+  \end{subfigure}
+  \caption{Hasil verifikasi tautan URL (Studi Kasus Fox and Bunny, postingan Instagram lowongan nyata).}
+  \label{fig:hasil-link}
 \end{figure}
 
 \subsection*{G.4 Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
@@ -1472,7 +1429,7 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.88\linewidth]{images/hasil test negatif.png}
+  \includegraphics[width=0.55\linewidth]{images/hasil test negatif.png}
   \caption{Hasil pengujian kasus negatif penipuan nyata: sistem mendeteksi sinyal bahaya kuat, menetapkan verdict \texttt{BAHAYA} (Skor Risiko 95/100), menampilkan peringatan alert merah, serta memberikan rekomendasi penolakan dan pelaporan ke komunitas.}
   \label{fig:hasil-test-negatif}
 \end{figure}
@@ -1483,24 +1440,20 @@ Berikut adalah dokumentasi tangkapan layar antarmuka perangkat lunak Verifin yan
 Selain alur verifikasi utama, Verifin menyediakan dua halaman pendukung yang memperkuat aspek
 \textit{community monitoring} dan keberlanjutan penggunaan.
 
-% TODO: ganti \fbox placeholder ini dengan \includegraphics{images/mockup-community.png}
-% setelah tangkapan layar halaman komunitas tersedia.
 \begin{figure}[H]
   \centering
-  % \includegraphics[width=0.88\linewidth]{images/mockup-community.png}
-  \fbox{\parbox[c][6cm][c]{0.85\linewidth}{\centering\itshape Screenshot Halaman Komunitas\\(formulir pelaporan entitas + umpan laporan termoderasi)}}
-  \caption{Halaman Komunitas: formulir pelaporan entitas mencurigakan (nama perusahaan, nomor HP, email, atau URL) beserta umpan laporan komunitas yang telah terverifikasi moderator, yang terintegrasi ke dalam Fraud Network Graph.}
-  \label{fig:mockup-community}
-\end{figure}
-
-% TODO: ganti \fbox placeholder ini dengan \includegraphics{images/mockup-riwayat.png}
-% setelah tangkapan layar halaman riwayat tersedia.
-\begin{figure}[H]
-  \centering
-  % \includegraphics[width=0.88\linewidth]{images/mockup-riwayat.png}
-  \fbox{\parbox[c][6cm][c]{0.85\linewidth}{\centering\itshape Screenshot Halaman Riwayat Verifikasi\\(daftar verifikasi: badge verdict, Skor Risiko, waktu pemeriksaan)}}
-  \caption{Halaman Riwayat Verifikasi: daftar verifikasi yang pernah dilakukan beserta badge verdict, Skor Risiko, dan waktu pemeriksaan, memungkinkan pengguna membandingkan dan merujuk kembali hasil analisis sebelumnya.}
-  \label{fig:mockup-riwayat}
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/mockup-community.png}
+    \caption{Halaman Komunitas: formulir pelaporan entitas mencurigakan (nama perusahaan, jenis modus, kronologi, bukti) yang termoderasi admin dan terintegrasi ke Fraud Network Graph.}
+    \label{fig:mockup-community}
+  \end{subfigure}\hfill
+  \begin{subfigure}[t]{0.49\linewidth}
+    \includegraphics[width=\linewidth]{images/mockup-riwayat.png}
+    \caption{Halaman Riwayat: daftar verifikasi beserta badge verdict, Skor Risiko, sumber input (teks/gambar/URL), dan waktu pemeriksaan untuk merujuk kembali hasil analisis.}
+    \label{fig:mockup-riwayat}
+  \end{subfigure}
+  \caption{Halaman pendukung Verifin: Komunitas dan Riwayat Verifikasi.}
+  \label{fig:halaman-pendukung}
 \end{figure}
 
 \section*{H.\quad Dokumentasi Cara Penggunaan Perangkat Lunak}
@@ -1511,7 +1464,7 @@ Verifin dapat diakses melalui antarmuka web tanpa memerlukan instalasi perangkat
 \subsection*{H.1 Persyaratan Akses}
 \addcontentsline{toc}{subsection}{H.1 Persyaratan Akses}
 
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
   \item Perangkat dengan browser modern (Chrome, Firefox, Edge, Safari versi terkini)
   \item Koneksi internet untuk menjalankan pipeline OSINT dan LLM
   \item Tidak diperlukan akun atau registrasi untuk verifikasi dasar
@@ -1527,10 +1480,10 @@ Buka browser dan navigasikan ke URL aplikasi Verifin. Halaman utama menampilkan 
 
 Verifin mendukung tiga kanal input:
 
-\begin{enumerate}[leftmargin=*]
-  \item \textbf{Input Teks} --- Salin dan tempel seluruh teks iklan lowongan kerja (dari WhatsApp, media sosial, atau platform lainnya) ke dalam kotak teks yang tersedia. Semakin lengkap teks yang disertakan (nama perusahaan, nomor kontak, alamat, deskripsi pekerjaan), semakin akurat hasil verifikasi.
-  \item \textbf{Input Gambar/Foto} --- Unggah gambar poster lowongan (format JPG, PNG, atau WebP). Sistem secara otomatis menjalankan OCR menggunakan PaddleOCR untuk mengekstrak teks dari gambar sebelum dianalisis. Cocok untuk lowongan yang tersebar dalam format pamflet atau screenshot.
-  \item \textbf{Input Tautan (URL)} --- Masukkan URL halaman lowongan (misalnya tautan dari Instagram, Jobstreet, atau situs perusahaan). Sistem akan mengambil dan menganalisis konten halaman tersebut, termasuk inspeksi domain dan keamanan infrastruktur web.
+\begin{enumerate}
+  \item \textbf{Input Teks}. Salin dan tempel seluruh teks iklan lowongan kerja (dari WhatsApp, media sosial, atau platform lainnya) ke dalam kotak teks yang tersedia. Semakin lengkap teks yang disertakan (nama perusahaan, nomor kontak, alamat, deskripsi pekerjaan), semakin akurat hasil verifikasi.
+  \item \textbf{Input Gambar/Foto}. Unggah gambar poster lowongan (format JPG, PNG, atau WebP). Sistem secara otomatis menjalankan OCR menggunakan PaddleOCR untuk mengekstrak teks dari gambar sebelum dianalisis. Cocok untuk lowongan yang tersebar dalam format pamflet atau screenshot.
+  \item \textbf{Input Tautan (URL)}. Masukkan URL halaman lowongan (misalnya tautan dari Instagram, Jobstreet, atau situs perusahaan). Sistem akan mengambil dan menganalisis konten halaman tersebut, termasuk inspeksi domain dan keamanan infrastruktur web.
 \end{enumerate}
 
 \subsubsection*{Langkah 3 — Mulai Analisis}
@@ -1540,17 +1493,17 @@ Klik tombol \textbf{``Verifikasi Sekarang''} (atau tombol submit yang tersedia).
 
 Halaman hasil menampilkan komponen berikut secara berurutan:
 
-\begin{enumerate}[leftmargin=*]
-  \item \textbf{Verdict dan Skor Risiko} --- Badge berwarna menampilkan putusan final (\texttt{AMAN} / \texttt{WASPADA} / \texttt{BAHAYA}) disertai Skor Risiko (0--100). Skor ini bukan probabilitas, melainkan indeks risiko berbasis agregasi bukti.
-  \item \textbf{Ringkasan Naratif LLM} --- Penjelasan singkat berbahasa Indonesia yang merangkum temuan utama OSINT dan alasan di balik verdict yang diberikan.
-  \item \textbf{Breakdown XAI} --- Daftar faktor yang berkontribusi terhadap skor risiko (positif = meningkatkan risiko, negatif = menurunkan risiko), beserta penjelasan per-faktor yang dapat dipahami pengguna awam.
-  \item \textbf{Detail OSINT} --- Ringkasan temuan dari setiap modul investigasi: status domain/website, reputasi nomor telepon, jejak digital perusahaan, dan validasi alamat fisik.
-  \item \textbf{Graf Jaringan Penipuan} --- Visualisasi interaktif menampilkan apakah entitas (nomor HP, email, nama perusahaan) dalam lowongan ini pernah muncul di kasus penipuan lain yang tersimpan dalam database.
+\begin{enumerate}
+  \item \textbf{Verdict dan Skor Risiko}. Badge berwarna menampilkan putusan final (\texttt{AMAN} / \texttt{WASPADA} / \texttt{BAHAYA}) disertai Skor Risiko (0--100). Skor ini bukan probabilitas, melainkan indeks risiko berbasis agregasi bukti.
+  \item \textbf{Ringkasan Naratif LLM}. Penjelasan singkat berbahasa Indonesia yang merangkum temuan utama OSINT dan alasan di balik verdict yang diberikan.
+  \item \textbf{Breakdown XAI}. Daftar faktor yang berkontribusi terhadap skor risiko (positif = meningkatkan risiko, negatif = menurunkan risiko), beserta penjelasan per-faktor yang dapat dipahami pengguna awam.
+  \item \textbf{Detail OSINT}. Ringkasan temuan dari setiap modul investigasi: status domain/website, reputasi nomor telepon, jejak digital perusahaan, dan validasi alamat fisik.
+  \item \textbf{Graf Jaringan Penipuan}. Visualisasi interaktif menampilkan apakah entitas (nomor HP, email, nama perusahaan) dalam lowongan ini pernah muncul di kasus penipuan lain yang tersimpan dalam database.
 \end{enumerate}
 
 \subsubsection*{Langkah 5 — Tindak Lanjut}
 
-\begin{itemize}[leftmargin=*]
+\begin{itemize}
   \item Jika verdict \texttt{AMAN}: lowongan memiliki indikator kepercayaan yang terverifikasi. Pengguna tetap dianjurkan untuk memverifikasi secara mandiri sebelum memberikan data pribadi.
   \item Jika verdict \texttt{WASPADA}: terdapat beberapa sinyal yang belum dapat dikonfirmasi. Pengguna disarankan melakukan verifikasi lanjutan sebelum merespons lowongan.
   \item Jika verdict \texttt{BAHAYA}: sistem mendeteksi pola penipuan yang kuat. Pengguna disarankan untuk tidak merespons dan dapat melaporkan ke fitur komunitas Verifin atau ke pihak berwenang.
@@ -1569,7 +1522,10 @@ Seluruh verifikasi yang pernah dilakukan dapat diakses kembali melalui halaman \
 \section*{Daftar Pustaka}
 \addcontentsline{toc}{section}{Daftar Pustaka}
 
-\begin{enumerate}[leftmargin=*, label={[\arabic*]}]
+\begingroup
+\footnotesize
+\setlength{\itemsep}{0pt}
+\begin{enumerate}[label={[\arabic*]}, itemsep=0pt, parsep=0pt, topsep=2pt]
 
 \item Badan Pusat Statistik (BPS), ``Keadaan Ketenagakerjaan Indonesia Februari 2025,''
   Berita Resmi Statistik No.\ 39/05/Th.\ XXVIII, Mei 2025.
@@ -1609,5 +1565,6 @@ Seluruh verifikasi yang pernah dilakukan dapat diakses kembali melalui halaman \
   ACL (AACL)}, Dec.\ 2020, pp.\ 843--857.
 
 \end{enumerate}
+\endgroup
 
 \end{document}
