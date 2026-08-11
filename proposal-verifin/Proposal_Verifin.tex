@@ -528,7 +528,8 @@ sistem memberi peringatan berada di luar ruang lingkup desain sistem ini.
 \item \textbf{Agenda Pengembangan Lanjutan (\textit{Future Work}):}
 Terdapat tiga agenda pengembangan yang direncanakan setelah versi kompetisi, yakni:
 (i) \textbf{fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia} untuk
-menggantikan ketergantungan pada EMSCAD berbahasa Inggris; (ii) \textbf{studi pengguna
+melengkapi penalaran LLM dengan model terlatih yang representatif terhadap domain Indonesia;
+(ii) \textbf{studi pengguna
 (\textit{user study})} untuk mengukur dampak nyata Verifin terhadap kemampuan pengguna
 mengidentifikasi lowongan palsu (desain kontrol--perlakuan); dan (iii) \textbf{integrasi kanal}
 melalui bot WhatsApp dan ekstensi peramban untuk menurunkan hambatan penggunaan
@@ -542,7 +543,8 @@ melalui bot WhatsApp dan ekstensi peramban untuk menurunkan hambatan penggunaan
 
 Verifin dikembangkan menggunakan metodologi \textbf{Agile Scrum} yang diadaptasi untuk tim kecil
 (3 orang) dalam konteks kompetisi dengan \textit{time-box} ketat. Pengembangan dibagi menjadi
-empat sprint dengan durasi dua minggu per sprint.
+satu sprint persiapan (Sprint 0) dan empat sprint pengembangan (Sprint 1--4), masing-masing
+berdurasi dua minggu.
 
 \subsection*{D.1 Struktur Sprint}
 \addcontentsline{toc}{subsection}{D.1 Struktur Sprint}
@@ -721,7 +723,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 
 \vspace{0.5cm}
 
-% ── DIAGRAM PIPELINE 5-LAYER ──────────────────────────────────────────────
+% ── DIAGRAM PIPELINE 4-LAYER ──────────────────────────────────────────────
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
@@ -799,7 +801,7 @@ LLM pada Layer 3, bukan modul klasifikasi terpisah.}
       at={($(outer.south west)+(2.7cm,1.7cm)$)}] (trust_box) {};
 \node[font=\bfseries\small, color=verfinyellow!80!black] at ($(trust_box.north)+(0,-0.3cm)$) {LLM Reasoning Engine};
 \node[font=\tiny, align=center] at ($(trust_box.center)+(0,-0.1cm)$)
-      {Verdict berbasis bukti \\ OSINT + Teks + Community \\ Anti-halucination Guard \\ AMAN/WASPADA/BAHAYA};
+      {Verdict berbasis bukti \\ OSINT + Teks + Community \\ Pembatasan Halusinasi \\ AMAN/WASPADA/BAHAYA};
 
 % Inner bottom-right: XAI Explainer
 \node[rectangle, draw=verfingreen!70, fill=verfingreen!10, rounded corners=4pt,
@@ -912,7 +914,7 @@ NER Hibrida & Regex + LLM Extraction & Entitas struktural (regex) + semantik (LL
 \midrule
 Penilaian Perilaku Teks & Penalaran LLM berpandu domain knowledge (tanpa model terlatih) & Deteksi sinyal penipuan Indonesia: permintaan biaya, kerja luar negeri, apply-via-WA, gaji fantastis, dokumen sensitif; agnostik-bahasa \\
 \midrule
-LLM Orchestration & API LLM (\texttt{kimi-k3}) & Ekstraksi entitas semantik + penalaran verdict berbasis bukti OSINT, deterministik (temperature=0, seed tetap), dengan guard anti-halucination \\
+LLM Orchestration & API LLM (\texttt{kimi-k3}) & Ekstraksi entitas semantik + penalaran verdict berbasis bukti OSINT, deterministik (temperature=0, seed tetap), dengan pembatasan halusinasi \\
 \midrule
 XAI Engine & Custom SHAP-inspired & Additive feature contribution explainer \\
 \midrule
@@ -1140,7 +1142,7 @@ Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambar
 \texttt{services/ner.py}, \texttt{ocr.py} & NER regex (entitas struktural) dan pembungkus PaddleOCR (pra-proses CLAHE) \\
 \texttt{services/llm/} & Ekstraksi entitas semantik dan \textit{reasoning engine} verdict \\
 \rowcolor{verfinrow}
-\texttt{services/nlp/classifier.py} & Aturan perilaku teks (stub, nonaktif) \\
+\texttt{services/nlp/classifier.py} & Placeholder nonaktif (\texttt{status: STUB}); penilaian perilaku teks dilakukan oleh reasoning engine LLM, bukan modul ini \\
 \texttt{services/osint/} & Orkestrasi probe OSINT paralel: Whois/domain, telepon, perusahaan, alamat, SearXNG, Google Form, media sosial, web evidence \\
 \rowcolor{verfinrow}
 \texttt{services/xai/} \texttt{shap\_explainer.py} & Penjelasan kontribusi bukti aditif (SHAP-inspired) \\
@@ -1303,8 +1305,8 @@ satu metrik akurasi.
 
 \textbf{(1) Unit testing per komponen.} Setiap modul diuji secara terpisah menggunakan
 \texttt{pytest}: (a) NER, yaitu ekstraksi entitas dari berbagai layout teks/OCR termasuk kasus
-tepati (nomor dengan separator, email hasil OCR yang keliru, nama perusahaan ambigu); (b) aturan
-perilaku teks, yaitu deteksi permintaan biaya, dokumen sensitif, gaji fantastis; (c) normalisasi dan
+tepati (nomor dengan separator, email hasil OCR yang keliru, nama perusahaan ambigu); (b) penilaian
+sinyal perilaku teks oleh LLM, yaitu deteksi permintaan biaya, dokumen sensitif, gaji fantastis; (c) normalisasi dan
 validasi nomor telepon Indonesia (whitelist prefix operator, anti false-positive pada ID numerik);
 (d) XAI explainer, yaitu konsistensi agregasi kontribusi bukti terhadap Skor Risiko final.
 
@@ -1317,7 +1319,7 @@ komponen tersebut.
 \textbf{(3) Pengujian end-to-end.} Pipeline penuh diuji pada tiga kanal input nyata (teks, gambar
 poster via OCR, tautan) serta kasus negatif penipuan, dengan verifikasi bahwa verdict deterministik
 (\texttt{temperature=0}, seed tetap) dan seluruh klaim LLM merujuk pada bukti yang tersedia
-(anti-halucination guard aktif).
+(pembatasan halusinasi aktif).
 
 \textbf{(4) Pengujian API.} Endpoint publik (\texttt{/verify}, \texttt{/community}, \texttt{/health})
 diuji untuk skenario sukses, input tidak valid, dan ketiadaan entitas, memastikan kode status HTTP
