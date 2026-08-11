@@ -464,10 +464,10 @@ bahasa, namun akurasi NER dan kelengkapan bukti OSINT tidak dijamin setara.
 \item \textbf{Sumber OSINT:}
 Investigasi OSINT terbatas pada sumber yang dapat diakses secara publik dan legal:
 \begin{itemize}
-  \item Whois/RDAP untuk domain (usia \& registrar domain) serta keamanan email (SPF/DMARC)
+  \item Whois lookup untuk domain (usia \& registrar domain) serta keamanan email (SPF/DMARC)
   \item Reputasi nomor telepon Indonesia via \textbf{Kaspersky Who Calls} dan pencarian
         laporan penipuan pada \textbf{SERP publik}
-  \item Validasi alamat fisik dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim} dan \textbf{Overpass API})
+  \item Validasi alamat fisik dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim})
   \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine
         (DuckDuckGo, Mojeek, Startpage, Brave) dengan filter relevansi entitas, ditunjang
         peramban ringan Lightpanda sebagai cadangan
@@ -509,12 +509,14 @@ Pengguna tetap dianjurkan untuk melakukan verifikasi tambahan pada lowongan deng
 perbatasan.
 
 \item \textbf{Privasi dan Anonimisasi:}
-Laporan komunitas bersifat anonim (tanpa akun); identitas pelapor tidak diekspos. Nomor telepon
-ternormalisasi digunakan untuk pencocokan, dan data pribadi dari teks lowongan yang dianalisis
-tidak ditampilkan ke antarmuka publik. Sebelum dikirim ke LLM eksternal, sistem menerapkan
-\textbf{penyamaran data pribadi (\textit{PII masking})}, di mana nomor telepon, alamat email, dan
-identitas personal pada teks lowongan disamarkan, serta menerapkan kebijakan \textbf{tanpa
-retensi (\textit{no retention})}: teks yang dianalisis tidak disimpan setelah analisis selesai.
+Laporan komunitas bersifat anonim (tanpa akun); identitas pelapor tidak diekspos ke antarmuka
+publik. Nomor telepon ternormalisasi digunakan untuk pencocokan lintas kasus. Perlu dicatat
+secara terbuka bahwa pada versi kompetisi ini teks lowongan yang dianalisis \textbf{dikirim ke
+API LLM eksternal apa adanya} (belum menerapkan \textit{PII masking}), dan hasil analisis beserta
+entitas yang terekstrak (nomor kontak, alamat) \textbf{disimpan ke basis data} untuk mendukung
+fitur Fraud Network dan riwayat verifikasi. Penerapan \textit{PII masking} sebelum pengiriman ke
+LLM serta kebijakan retensi data yang lebih ketat merupakan bagian dari agenda pengembangan
+lanjutan (C10).
 
 \item \textbf{Batas Intervensi Sistem (Faktor Manusia):}
 Verifin secara eksplisit \textbf{tidak dirancang untuk menghilangkan seluruh risiko penipuan
@@ -918,21 +920,21 @@ LLM Orchestration & API LLM (\texttt{kimi-k3}) & Ekstraksi entitas semantik + pe
 \midrule
 XAI Engine & Custom SHAP-inspired & Additive feature contribution explainer \\
 \midrule
-OSINT: Domain & python-whois, RDAP & Whois lookup, usia domain \\
+OSINT: Domain & python-whois (+ Wayback CDX) & Whois lookup usia domain; fallback ke Wayback Machine CDX bila Whois gagal \\
 \midrule
 OSINT: Nomor HP & Kaspersky Who Calls + SERP publik & Cek reputasi langsung via Kaspersky Who Calls dan pencarian laporan fraud pada hasil web publik \\
 \midrule
 OSINT: Web Evidence & Metasearch SearXNG (DDG/Mojeek/ Startpage/Brave); Scrapling + curl\_cffi; Lightpanda cadangan & Pencarian jejak digital perusahaan dengan filter relevansi entitas; arsitektur satu query terdistribusi (anti \textit{rate-limit}) \\
 \midrule
-OSINT: Alamat \& Form & OpenStreetMap (Nominatim + Overpass API), Google Form inspector & Validasi lokasi dan keberadaan bisnis pada peta + inspeksi form phishing/permintaan dokumen sensitif \\
+OSINT: Alamat \& Form & OpenStreetMap (Nominatim), Google Form inspector & Validasi lokasi dan keberadaan bisnis pada peta + inspeksi form phishing/permintaan dokumen sensitif \\
 \midrule
 Analisis Graf & NetworkX & Fraud Network Graph: deteksi entitas yang terhubung ke kasus penipuan \\
 \midrule
 Database & PostgreSQL (Supabase) & Data lowongan, laporan, fingerprint \\
 \midrule
-ORM & SQLAlchemy + Alembic & Query ORM, migrasi schema \\
+ORM & SQLAlchemy & Akses data ORM; evolusi skema dilakukan via migrasi SQL manual (\texttt{ALTER TABLE ... IF NOT EXISTS}) \\
 \midrule
-Auth & Supabase Auth & JWT-based, opsional untuk komunitas \\
+Auth & --- (belum ada) & Endpoint komunitas bersifat anonim tanpa autentikasi; identitas pelapor tidak diekspos \\
 \midrule
 Deployment Frontend & Vercel & CDN global, live deployment (\url{https://frontend-kohl-one-32.vercel.app}) \\
 \midrule
@@ -1012,7 +1014,7 @@ Terdapat tiga sub-modul utama:
 
 \textbf{Domain/URL Investigator:}
 \begin{itemize}
-\item Whois/RDAP lookup untuk mendapatkan tanggal registrasi, registrar, dan informasi pemilik
+\item Whois lookup untuk mendapatkan tanggal registrasi, registrar, dan informasi pemilik (dengan fallback ke Wayback Machine CDX bila Whois gagal)
 \item Domain berumur $< 30$ hari mendapat penalti skor signifikan
 \item Validasi keaktifan website (HTTP) dan kesesuaian nama domain dengan klaim perusahaan
 \item Inspeksi shortlink/Google Form untuk mendeteksi pola phishing
@@ -1030,7 +1032,7 @@ Terdapat tiga sub-modul utama:
 \begin{itemize}
 \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine dengan filter relevansi entitas (arsitektur satu query yang didistribusikan ke banyak validator, meminimalkan \textit{rate-limit})
 \item Verifikasi keberadaan website resmi dan profil media sosial resmi (filter profil, bukan postingan)
-\item Validasi alamat dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim} + \textbf{Overpass})
+\item Validasi alamat dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim})
 \item Deteksi inkonsistensi antara klaim jabatan/lokasi dengan temuan publik
 \end{itemize}
 
@@ -1159,36 +1161,35 @@ Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambar
 \subsection*{F.3 Skema Database PostgreSQL}
 \addcontentsline{toc}{subsection}{F.3 Skema Database PostgreSQL}
 
-Skema terdiri atas tiga tabel inti berikut.
+Skema terdiri atas dua tabel inti berikut. Deduplikasi lintas kasus dilakukan lewat pencocokan
+entitas ternormalisasi (kolom \texttt{phones}, \texttt{emails}, \texttt{company\_name}) dan hash
+konten (\texttt{raw\_text\_hash}), tanpa tabel fingerprint terpisah.
 
-\begin{lstlisting}[language=SQL, caption={DDL tiga tabel inti Verifin (ringkas)}]
--- Hasil analisis lowongan
-CREATE TABLE jobs (
+\begin{lstlisting}[language=SQL, caption={DDL dua tabel inti Verifin (ringkas)}]
+-- Riwayat analisis lowongan (case memory, exact-match entitas)
+CREATE TABLE job_cases (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    input_text TEXT NOT NULL, input_url TEXT,
-    created_at TIMESTAMPTZ DEFAULT NOW(),
-    status VARCHAR(20) DEFAULT 'pending',   -- pending|processing|done|error
-    trust_score INTEGER,                    -- 0-100
-    verdict VARCHAR(10),                    -- AMAN|WASPADA|BAHAYA
-    fingerprint VARCHAR(64),                -- SHA-256 hash entitas kunci
-    entities JSONB, text_signals JSONB,     -- NER + sinyal perilaku dari LLM
-    osint_bundle JSONB,                     -- hasil seluruh modul OSINT
-    llm_summary TEXT, xai_factors JSONB     -- narasi LLM + kontribusi XAI
+    raw_text_hash VARCHAR(64) UNIQUE NOT NULL,  -- SHA-256 dedup konten
+    source VARCHAR(16),                          -- text | image
+    raw_text_preview TEXT,
+    company_name VARCHAR(255),
+    companies JSONB, phones JSONB, emails JSONB,
+    urls JSONB, addresses JSONB, salaries JSONB, entities JSONB,
+    verdict VARCHAR(10) NOT NULL,                -- AMAN|WASPADA|BAHAYA
+    risk_score INTEGER NOT NULL,                 -- 0-100
+    llm_output JSONB, osint_summary JSONB,       -- narasi LLM + hasil OSINT
+    created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Laporan komunitas (>= 1 entitas wajib diisi; diindeks utk pencocokan cepat)
+-- Laporan komunitas (anonim, >= 1 entitas terisi; dimoderasi)
 CREATE TABLE community_reports (
-    id SERIAL PRIMARY KEY,
-    company_name VARCHAR, phone VARCHAR, email VARCHAR, url VARCHAR,
-    report_type VARCHAR, description TEXT,
-    reporter_contact VARCHAR, created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Indeks deduplikasi lintas kasus
-CREATE TABLE fraud_fingerprints (
-    fingerprint VARCHAR(64) PRIMARY KEY,
-    first_seen TIMESTAMPTZ DEFAULT NOW(), last_seen TIMESTAMPTZ DEFAULT NOW(),
-    occurrence INTEGER DEFAULT 1, avg_score FLOAT, entity_hash JSONB
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    company_name VARCHAR(255), phone VARCHAR(32),
+    email VARCHAR(255), url VARCHAR(512),
+    report_type VARCHAR(24) DEFAULT 'penipuan',  -- penipuan|biaya_ilegal|tppo|lainnya
+    description TEXT, reporter_contact VARCHAR(255),
+    status VARCHAR(12) DEFAULT 'pending',        -- pending|verified|rejected
+    created_at TIMESTAMPTZ DEFAULT NOW()
 );
 \end{lstlisting}
 

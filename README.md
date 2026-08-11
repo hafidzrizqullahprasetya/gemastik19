@@ -1,10 +1,12 @@
 # Gemastik XIX — Dokumen Pendamping Verifin (Divisi PPL)
 
 > Repo ini berisi **dokumen, proposal, riset, dan analisis kesiapan** untuk proyek **Verifin**
-> (anti-penipuan lowongan kerja). Kode aplikasi ada di repo terpisah: [`verifin-app`](../verifin-app).
+> (anti-penipuan lowongan kerja). Kode aplikasi ada di folder [`verifin-app/`](verifin-app/)
+> (frontend + backend, masing-masing punya README sendiri).
 
-**Status:** ✅ **SIAP dikumpulkan tahap awal** — skor kesiapan internal **~92/100**.
-Ringkasan penilaian lengkap: [`kritik-juri/status-kesiapan-tahap-awal.md`](kritik-juri/status-kesiapan-tahap-awal.md)
+**Status:** proposal & kode sudah **disinkronkan** — klaim teknis diverifikasi silang
+terhadap implementasi nyata (lihat catatan integritas di bawah).
+Ringkasan penilaian: [`kritik-juri/status-kesiapan-tahap-awal.md`](kritik-juri/status-kesiapan-tahap-awal.md)
 
 ---
 
@@ -12,10 +14,9 @@ Ringkasan penilaian lengkap: [`kritik-juri/status-kesiapan-tahap-awal.md`](kriti
 
 | Folder / File | Isi |
 |---------------|-----|
-| **`proposal-verifin/`** | Proposal resmi: `Proposal_Verifin.tex` (sumber LaTeX), `.md` (versi Markdown), **`.pdf` (hasil compile, 27 hal)**, `images/` (mockup E2E) |
-| **`kritik-juri/`** | Analisis kesiapan oleh "juri" — status, verifikasi OSINT, daftar perbaikan, skor akhir |
-| **`test/`** | Input uji (`method 1.md`, `method 2.webp`, `method 2 link.md`) + `hasil-test-raw/` (JSON mentah, `evaluasi-emscad.json`, `e2e-results.json`) |
-| **`riset/`** | Analisis 20 pemenang Gemastik sebelumnya (referensi framing & gaya) |
+| **`proposal-verifin/`** | Proposal resmi: `Proposal_Verifin.tex` (sumber LaTeX) + **`.pdf` (hasil compile, 29 hal)** |
+| **`verifin-app/`** | Aplikasi: `backend/` (FastAPI) + `frontend/` (Next.js 16) |
+| **`kritik-juri/`** | Analisis kesiapan oleh "juri" — status, verifikasi OSINT, daftar perbaikan |
 | **`panduan-dan-pemenang-sebelumnya/`** | Panduan resmi lomba + naskah pemenang terdahulu |
 
 ---
@@ -23,7 +24,7 @@ Ringkasan penilaian lengkap: [`kritik-juri/status-kesiapan-tahap-awal.md`](kriti
 ## 2. Proposal (yang dikumpulkan)
 
 - **Sumber:** `proposal-verifin/Proposal_Verifin.tex`
-- **PDF siap cetak:** `proposal-verifin/Proposal_Verifin.pdf` (27 halaman)
+- **PDF siap cetak:** `proposal-verifin/Proposal_Verifin.pdf` (**29 halaman**)
 
 ### Cara compile ulang PDF
 ```bash
@@ -31,46 +32,49 @@ cd proposal-verifin
 pdflatex -interaction=nonstopmode Proposal_Verifin.tex
 pdflatex -interaction=nonstopmode Proposal_Verifin.tex   # 2x agar TOC & referensi rapi
 ```
-`pdflatex` tersedia via MacTeX/TeX Live (`/Library/TeX/texbin`). File build (`.aux .log .toc`) tidak perlu di-commit.
+File build (`.aux .log .toc`) tidak perlu di-commit.
 
-### Sinkronisasi proposal ↔ kode
-Proposal kini **100% sinkron** dengan implementasi nyata:
-- Model LLM: **kimi-k3-high** via OpenAgentic (bukan Grok/VirusTotal/Google CSE — klaim itu sudah dihapus).
-- Layer 2: **TF-IDF + Logistic Regression hybrid** (bukan rule-based murni).
-- OCR: **PaddleOCR**; pencarian web: **multi-engine DuckDuckGo/Yahoo/Bing + relevance filter**.
-- Bagian **G. Evaluasi Model** berisi metrik EMSCAD nyata (ROC-AUC 0,996, Recall 98,4%, F1 0,718).
-- Bagian **H. Mockup Antarmuka** berisi screenshot E2E asli (3 kanal + modal loading).
+### Arsitektur (sesuai kode nyata)
+Verifin adalah **Decision Support System berbasis bukti** dengan pipeline 4 layer:
+1. **NER Hibrida** — regex struktural + ekstraksi LLM (paralel, fallback regex)
+2. **OSINT Engine** — Whois (fallback Wayback CDX), Kaspersky Who Calls + SERP publik,
+   Nominatim (OSM), SearXNG (Bing+Brave), Google Form inspector, media sosial
+3. **LLM Reasoning** — verdict AMAN/WASPADA/BAHAYA, deterministik (temperature=0, seed=42)
+4. **XAI Explainer** — *SHAP-inspired* additive scoring (custom rule-based, bukan library `shap`)
 
-> ⚠️ Jika mengubah kode/stack, **selalu sinkronkan** `.tex` DAN `.md`, lalu compile ulang PDF.
+> ⚠️ **Integritas:** proposal kini **jujur** soal batasan. Tidak ada klaim PII masking /
+> no-retention (data disimpan, dikirim ke LLM eksternal apa adanya); tidak ada Alembic /
+> Supabase Auth; tidak ada tabel `fraud_fingerprints`. Detail lengkap di README backend.
+> Jika mengubah kode/stack, **selalu sinkronkan** `.tex`, lalu compile ulang PDF.
 
 ---
 
-## 3. Hasil Uji (bukti integritas)
+## 3. Hasil Uji End-to-End
 
-| Kanal | Input | Verdict | Skor Risiko |
-|-------|-------|---------|:---:|
-| Teks | PT. VIS (`test/method 1.md`) | AMAN | 30 |
-| Gambar (OCR) | Poster Sushi Yay (`test/method 2.webp`) | AMAN | 12 |
-| Tautan | IG Indonesia College (`test/method 2 link.md`) | AMAN | 15 |
-| Negatif ×2 | kasus penipuan jelas | BAHAYA | 95 |
+| Kanal | Input | Verdict |
+|-------|-------|---------|
+| Teks | Lowongan legitimate | AMAN |
+| Gambar (OCR) | Poster lowongan | AMAN |
+| Tautan | Postingan lowongan | AMAN |
+| Negatif | Kasus penipuan jelas | BAHAYA |
 
-- Deterministik (temperature=0): input sama → hasil identik.
-- SERP relevance filter aktif → tidak ada lagi URL noise (krafton/ezpassnh) tercatat.
+Deterministik (temperature=0, seed=42): input sama → hasil identik.
+Dokumentasi screenshot ada di Bagian G proposal.
 
 ---
 
 ## 4. Yang Masih Jadi PR Tim (di luar kode)
 
-- [ ] **Format administratif panduan** — font Times New Roman, batas halaman, **anonimitas** (tanpa nama/identitas tim di naskah), dan **Pakta Integritas**.
+- [ ] **Cover proposal:** ganti placeholder `Dosen Pembimbing: [Nama Dosen + NIP]` dengan data asli.
+- [ ] **Format administratif panduan** — anonimitas naskah, batas halaman, Pakta Integritas.
 - [ ] Cek ulang ketentuan unggah portal Gemastik (format file, ukuran maks).
-
-> Semua yang berbau kode & data sudah beres; sisa pekerjaan bersifat administratif naskah.
 
 ---
 
 ## 5. Untuk Teman Tim
 
-- Branch kerja: **`hafidz`** · branch utama: **`main`**.
-- Repo ini = **dokumen**. Jangan taruh kode aplikasi di sini (itu di `verifin-app`).
-- Folder `verifin-app/` di-ignore di repo ini (lihat `.gitignore`) supaya tidak tercampur.
-- Bila ragu "apakah klaim X di proposal benar?", cek dulu `kritik-juri/status-kesiapan-tahap-awal.md` — semua klaim sudah diverifikasi di sana.
+- Branch utama: **`main`**.
+- Aplikasi ada di `verifin-app/` — baca `verifin-app/backend/README.md` dan
+  `verifin-app/frontend/README.md` untuk cara menjalankan.
+- Bila ragu "apakah klaim X di proposal benar?", cek `kritik-juri/status-kesiapan-tahap-awal.md`
+  dan bagian *Catatan Integritas* di README backend.
