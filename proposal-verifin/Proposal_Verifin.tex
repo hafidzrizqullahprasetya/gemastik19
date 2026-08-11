@@ -465,8 +465,8 @@ bahasa, namun akurasi NER dan kelengkapan bukti OSINT tidak dijamin setara.
 Investigasi OSINT terbatas pada sumber yang dapat diakses secara publik dan legal:
 \begin{itemize}
   \item Whois/RDAP untuk domain (usia \& registrar domain) serta keamanan email (SPF/DMARC)
-  \item Reputasi nomor telepon Indonesia via \textbf{Kaspersky Who Calls} dan agregasi
-        SERP \textbf{Kredibel}
+  \item Reputasi nomor telepon Indonesia via \textbf{Kaspersky Who Calls} dan pencarian
+        laporan penipuan pada \textbf{SERP publik}
   \item Validasi alamat fisik dan keberadaan bisnis pada peta via OpenStreetMap (\textbf{Nominatim} dan \textbf{Overpass API})
   \item Pencarian jejak digital perusahaan via metasearch \textbf{SearXNG} multi-engine
         (DuckDuckGo, Mojeek, Startpage, Brave) dengan filter relevansi entitas, ditunjang
@@ -662,7 +662,7 @@ FR-04 & Penilaian Sinyal Perilaku Teks & Sistem menilai sinyal perilaku teks low
 \midrule
 FR-05 & Investigasi OSINT Domain & Sistem melakukan investigasi terhadap domain/URL yang ditemukan: Whois, usia domain, keaktifan website & Tinggi \\
 \midrule
-FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format nomor telepon Indonesia dan mengecek laporan fraud pada halaman publik Kredibel & Tinggi \\
+FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format nomor telepon Indonesia dan mengecek laporan fraud via Kaspersky Who Calls serta pencarian SERP publik & Tinggi \\
 \midrule
 FR-07 & Investigasi OSINT Perusahaan & Sistem mencari jejak digital perusahaan via multi-engine web search (dengan filter relevansi entitas) dan mengidentifikasi inkonsistensi dengan klaim dalam lowongan & Tinggi \\
 \midrule
@@ -785,7 +785,7 @@ LLM pada Layer 3, bukan modul klasifikasi terpisah.}
       at={($(outer.north west)+(2.7cm,-1.7cm)$)}] (osint_box) {};
 \node[font=\bfseries\small, color=verfinblue] at ($(osint_box.north)+(0,-0.3cm)$) {OSINT Engine};
 \node[font=\tiny, align=center] at ($(osint_box.center)+(0,-0.1cm)$)
-      {Domain Whois \\ Phone (Kredibel) \\ Web Search \\ Maps + Form};
+      {Domain Whois \\ Phone (Kaspersky) \\ Web Search \\ Maps + Form};
 
 % Inner top-right: Fraud Network Graph
 \node[rectangle, draw=verfinred!70, fill=verfinred!10, rounded corners=4pt,
@@ -920,7 +920,7 @@ XAI Engine & Custom SHAP-inspired & Additive feature contribution explainer \\
 \midrule
 OSINT: Domain & python-whois, RDAP & Whois lookup, usia domain \\
 \midrule
-OSINT: Nomor HP & Kaspersky Who Calls + Kredibel SERP & Cek reputasi dan laporan fraud nomor HP Indonesia dari sumber publik \\
+OSINT: Nomor HP & Kaspersky Who Calls + SERP publik & Cek reputasi langsung via Kaspersky Who Calls dan pencarian laporan fraud pada hasil web publik \\
 \midrule
 OSINT: Web Evidence & Metasearch SearXNG (DDG/Mojeek/ Startpage/Brave); Scrapling + curl\_cffi; Lightpanda cadangan & Pencarian jejak digital perusahaan dengan filter relevansi entitas; arsitektur satu query terdistribusi (anti \textit{rate-limit}) \\
 \midrule
@@ -1022,7 +1022,7 @@ Terdapat tiga sub-modul utama:
 \begin{itemize}
 \item Validasi format nomor telepon Indonesia (08xx, +62xx) dengan whitelist prefix operator
 \item Identifikasi operator berdasarkan prefix (Telkomsel, Indosat, XL, dll.)
-\item Pengecekan reputasi dan laporan fraud via \textbf{Kaspersky Who Calls} dan SERP \textbf{Kredibel}
+\item Pengecekan reputasi dan laporan fraud via \textbf{Kaspersky Who Calls} dan pencarian \textbf{SERP publik}
 \item \textit{Cross-check} nomor kontak lowongan terhadap nomor resmi bisnis yang ditemukan pada jejak publik (netral-note bila berbeda)
 \end{itemize}
 
@@ -1086,7 +1086,7 @@ Sinyal Perilaku Teks (via LLM) & 25\% & Penilaian penalaran LLM atas teks lowong
 \quad Sinyal Red Flag Teks & \textit{(bagian dari 25\%)} & Deteksi frasa spesifik bermodus tinggi: permintaan dokumen sensitif (KTP/foto) di awal rekrutmen, janji langsung kerja tanpa seleksi formal, atau instruksi mendesak yang memanipulasi calon pelamar \\
 Domain Age & 15\% & Usia domain: makin tua makin dipercaya; domain $<$90 hari mendapat penalti penuh \\
 Domain Reputation & 15\% & Keaktifan website \& reputasi domain: aktif \& tidak terindikasi phishing = sinyal aman; tidak dapat diakses = penalti. \textbf{Penanganan fitur tidak tersedia (\textit{missing})}: jika lowongan tidak mencantumkan domain/website sama sekali, bobot gabungan Domain Age + Domain Reputation (30\%) didistribusikan sebagai penalti tetap sebesar \textbf{8 poin} untuk mencerminkan ketiadaan transparansi digital perekrut \\
-Phone Reported & 10\% & Nomor pernah dilaporkan di Kredibel.id = penalti besar; tidak dicantumkan = kontribusi 0 \\
+Phone Reported & 10\% & Nomor terlapor fraud pada Kaspersky Who Calls atau ditemukan pada laporan penipuan di SERP publik = penalti besar; tidak dicantumkan = kontribusi 0 \\
 Company Found & 15\% & Perusahaan terverifikasi di sumber publik (web/SERP); tidak ditemukan = penalti \\
 Fraud Network Match & 20\% & Entitas (nomor HP/email/nama PT) cocok dengan fingerprint penipuan yang tersimpan di graf jaringan fraud \\
 \midrule
@@ -1269,7 +1269,7 @@ dapat direduksi menjadi satu angka akurasi model. Validasi Verifin dilakukan pad
 
 \textbf{(1) Validasi komponen OSINT.} Setiap modul OSINT diuji terhadap entitas yang ground
 truth-nya diketahui: domain berumur vs.\ domain baru (Whois), nomor telepon yang dilaporkan vs.\
-bersih (Kaspersky Who Calls / Kredibel), serta alamat bisnis nyata vs.\ fiktif (OpenStreetMap).
+bersih (Kaspersky Who Calls / SERP publik), serta alamat bisnis nyata vs.\ fiktif (OpenStreetMap).
 Modul diverifikasi mengembalikan status yang benar untuk setiap kasus uji.
 
 \textbf{(2) Pengujian end-to-end tiga kanal input.} Sistem diuji menyeluruh pada tiga kanal input
