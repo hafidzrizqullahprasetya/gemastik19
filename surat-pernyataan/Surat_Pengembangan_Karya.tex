@@ -5,6 +5,8 @@
 \setmainfont{Calibri}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{graphicx}
 \usepackage{setspace}
 \setstretch{1.1}
 \pagenumbering{gobble}
@@ -12,6 +14,7 @@
 \setlength{\parskip}{3pt}
 
 \newcommand{\dotline}[1]{\makebox[#1]{\dotfill}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \begin{document}
 
@@ -30,12 +33,12 @@ Yang bertandatangan di bawah ini:
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Nama Ketua Tim & : \dotline{9.5cm} \\[3pt]
-Nomor Induk Mahasiswa & : \dotline{9.5cm} \\[3pt]
-Nama Tim & : \dotline{9.5cm} \\[3pt]
-Program Studi & : \dotline{9.5cm} \\[3pt]
-Nama Dosen Pembimbing & : \dotline{9.5cm} \\[3pt]
-Perugruan Tinggi & : \dotline{9.5cm} \\
+Nama Ketua Tim & : Hafidz Rizqullah Prasetya \\[3pt]
+Nomor Induk Mahasiswa & : 24/535493/SV/24243 \\[3pt]
+Nama Tim & : Verifin \\[3pt]
+Program Studi & : Teknologi Rekayasa Perangkat Lunak \\[3pt]
+Nama Dosen Pembimbing & : Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. \\[3pt]
+Perugruan Tinggi & : Universitas Gadjah Mada \\
 \end{tabularx}
 
 \vspace{0.5em}
@@ -45,25 +48,49 @@ Dengan ini menyatakan bahwa karya tim kami, yang diikutsertakan dalam GEMASTIK X
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Judul Karya & : \dotline{9.5cm} \\[3pt]
-Cabang Kompetisi & : \dotline{9.5cm} \\
+Judul Karya & : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI \\[3pt]
+Cabang Kompetisi GEMASTIK & : Pengembangan Perangkat Lunak \\
 \end{tabularx}
 
-\vspace{0.5em}
+\vspace{0.8em}
 
-bahwa karya yang kami unggah:
+% ===== CHECKBOX =====
+\underline{Centang dan lengkapi isian jika dilakukan:}
+
+\vspace{0.3em}
+
+$\square$~~Sebelumnya \textbf{tidak}/sudah* (coret salah satu) pernah meraih penghargaan Juara \dotline{3cm} pada kompetisi [nama kompetisi Sebelumnya] yang merupakan kompetisi tingkat [nasional/internasional] pada tahun [Tahun].
 
 \vspace{0.3em}
 
-% ===== PERNYATAAN =====
-\begin{enumerate}
-  \item Merupakan karya \textbf{baru} yang dikembangkan secara mandiri oleh tim kami dan \textbf{bukan} merupakan pengembangan dari karya yang telah diikutsertakan dalam kompetisi sebelumnya;
-  \item Apabila di kemudian hari karya ini dikembangkan lebih lanjut, pengembangan tersebut akan menambahkan unsur pengembangan minimal 50\% dari substansi karya awal;
-  \item Karya ini belum pernah diikutsertakan dalam GEMASTIK atau kompetisi sejenis lainnya pada tahun-tahun sebelumnya;
-  \item Seluruh komponen karya (kode program, arsitektur sistem, desain antarmuka, dan naskah proposal) merupakan hasil rancangan mandiri tim kami;
-\end{enumerate}
+$\square$~~Tahun ini \textbf{tidak}/sedang* (coret salah satu) diikutsertakan dalam pada kompetisi [nama kompetisi lain] yang merupakan kompetisi tingkat [nasional/internasional] atau GEMASTIK pada cabang lain, yaitu: \dotline{4cm}
+
+\vspace{0.8em}
+
+% ===== TABEL PENGEMBANGAN =====
+\underline{Lengkapi isian jika pernah meraih penghargaan atau/atau juga sedang diikutsertakan dalam pada kompetisi lain:}
+
+Namun, karya tersebut telah mengalami pengembangan substansi lebih dari 50\% dibanding versi sebelumnya. Pengembangan yang dilakukan meliputi aspek-aspek sebagai berikut:
 
 \vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{|C{0.6cm}|p{2.8cm}|X|X|C{2.2cm}|}
+\hline
+\textbf{No.} & \textbf{Aspek / Komponen} & \textbf{Versi Karya Sesuai Pilihan yang Dicentang} & \textbf{Versi Baru (Setelah Pengembangan)} & \textbf{Persentase Perubahan (\%)} \\
+\hline
+1 & \ldots & \ldots & \ldots & \ldots \\[4pt]
+\hline
+2 & \ldots & \ldots & \ldots & \ldots \\[4pt]
+\hline
+3 & \ldots & \ldots & \ldots & \ldots \\[4pt]
+\hline
+4 & Dst. & Dst. & Dst. & Dst. \\[4pt]
+\hline
+\multicolumn{4}{|l|}{\textbf{Total estimasi pengembangan mencapai:}} & \ldots \\
+\hline
+\end{tabularx}
+
+\vspace{0.8em}
 
 % ===== PENUTUP =====
 Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemudian hari ditemukan bahwa pernyataan ini tidak benar, saya bersedia menerima sanksi sesuai ketentuan yang berlaku pada kompetisi GEMASTIK XIX Tahun 2026.
@@ -72,10 +99,11 @@ Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemu
 
 % ===== TANDA TANGAN =====
 \begin{tabularx}{\textwidth}{@{}X X X@{}}
-Mengetahui, & & Kota/Kab.\dotline{2cm}, Tanggal-Bulan-Tahun \\[3pt]
-Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Ketua Tim \\[45pt]
-Nama Lengkap & Nama Lengkap & Nama Lengkap \\[2pt]
-NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM/NPM \dotline{2.2cm} \\
+Mengetahui, & & Kota/Kab., Tanggal-Bulan-Tahun \\[3pt]
+Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Yang Menyatakan \\[3pt]
+& & \raisebox{-0.5\height}{\includegraphics[height=1.8cm]{ttd-hafidz.jpeg}} \\[20pt]
+Nama Lengkap & Nama Lengkap & Hafidz Rizqullah Prasetya \\[2pt]
+NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM 24/535493/SV/24243 \\
 \end{tabularx}
 
 \end{document}
