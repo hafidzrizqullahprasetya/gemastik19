@@ -1,0 +1,121 @@
+% Compile: xelatex
+\documentclass[10pt]{article}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{setspace}
+\setstretch{1.1}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\newcommand{\dotline}[1]{\makebox[#1]{\dotfill}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\begin{document}
+
+% ===== JUDUL =====
+\begin{center}
+{\fontsize{13}{15}\selectfont\bfseries
+PERNYATAAN TRANSPARANSI\\
+PENGGUNAAN KECERDASAN ARTIFISIAL\\
+GEMASTIK XIX TAHUN 2026}
+\end{center}
+
+\vspace{0.8em}
+
+% ===== IDENTITAS =====
+Yang bertandatangan di bawah ini:
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
+Nama Ketua Tim & : \dotline{9.5cm} \\[3pt]
+Nomor Induk Mahasiswa & : \dotline{9.5cm} \\[3pt]
+Nama Tim & : \dotline{9.5cm} \\[3pt]
+Program Studi & : \dotline{9.5cm} \\[3pt]
+Nama Dosen Pembimbing & : \dotline{9.5cm} \\[3pt]
+Perugruan Tinggi & : \dotline{9.5cm} \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+Dengan ini menyatakan bahwa karya tim kami, yang diikutsertakan dalam GEMASTIK XIX Tahun 2026:
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
+Judul Karya & : \dotline{9.5cm} \\[3pt]
+Cabang Kompetisi GEMASTIK & : \dotline{9.5cm} \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+% ===== PARAGRAF TRANSPARANSI =====
+Dengan ini kami menyampaikan pernyataan transparansi penggunaan Kecerdasan Artifisial (KA)/\textit{Artificial Intelligence} (AI) dan Kecerdasan Artifisial Generatif (KA-Gen)/\textit{Generative Artificial Intelligence} (Gen-AI), sebagai berikut:
+
+\vspace{0.3em}
+
+% ===== CHECKBOX 1: CLOUD AI =====
+$\square$~Karya inovasi menggunakan sumber daya KA/AI berbasis awan (\textit{Cloud AI}) atau API pihak ketiga sebagai komponen fungsionalitas operasional perangkat, dengan arsitektur sistem, tingkat integrasi, rekayasa instruksi/\textit{prompting}, dan kustomisasinya adalah murni hasil rancangan mandiri tim kami, meliputi:
+
+\vspace{0.3em}
+
+% ===== TABEL 1: AI/API =====
+\begin{tabularx}{\textwidth}{|C{0.6cm}|p{3.2cm}|X|X|}
+\hline
+\textbf{No.} & \textbf{Nama Aplikasi AI/API} & \textbf{Fungsi yang Didukung dalam Inovasi} & \textbf{Kustomisasi/Pengaturan} \\
+\hline
+1 & & & \\[6pt]
+\hline
+2 & & & \\[6pt]
+\hline
+3 & & & \\[6pt]
+\hline
+4 & Dst\ldots. & & \\[6pt]
+\hline
+\end{tabularx}
+
+\vspace{0.5em}
+
+% ===== CHECKBOX 2: NASKAH =====
+$\square$~Naskah dokumen yang kami unggah dan/atau karya kreasi kami telah disusun sesuai kaidah akademik dan menjunjung integritas ilmiah serta bukan merupakan hasil \textit{generating} oleh Kecerdasan Artifisial Generatif (Gen-AI) secara sepenuhnya, yaitu dengan menggunakan aplikasi deteksi \dotline{2.5cm} yang memberikan hasil deteksi tingkat penggunaan Gen-AI sebesar \dotline{1.2cm}\%, sesuai bukti \textit{AI writing detection} terlampir, yaitu dengan penjelasan dan argumentasi berikut:
+
+\vspace{0.3em}
+
+% ===== TABEL 2: GEN-AI =====
+\begin{tabularx}{\textwidth}{|C{0.6cm}|X|}
+\hline
+\textbf{No.} & \multicolumn{1}{c|}{\textbf{Penjelasan dan Argumentasi Penggunaan Gen-AI}} \\
+\hline
+1 & \\[6pt]
+\hline
+2 & \\[6pt]
+\hline
+3 & \\[6pt]
+\hline
+4 & \\[6pt]
+\hline
+5 & Dst\ldots. \\[6pt]
+\hline
+\end{tabularx}
+
+\vspace{0.8em}
+
+% ===== PENUTUP =====
+Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemudian hari ditemukan bahwa pernyataan ini tidak benar, saya bersedia menerima sanksi sesuai ketentuan yang berlaku pada kompetisi GEMASTIK XIX Tahun 2026.
+
+\vspace{1em}
+
+% ===== TANDA TANGAN =====
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+Mengetahui, & & Kota/Kab., Tanggal-Bulan-Tahun \\[3pt]
+Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Yang Menyatakan \\[45pt]
+Nama Lengkap & Nama Lengkap & Nama Lengkap \\[2pt]
+NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM/NPM \dotline{2.2cm} \\
+\end{tabularx}
+
+\end{document}
