@@ -4,7 +4,7 @@ Yang bertandatangan di bawah ini:
 
 Nama Ketua Tim : Hafidz Rizqullah Prasetya
 Nomor Induk Mahasiswa : 24/535493/SV/24243
-Nama Tim : Verifin
+Nama Tim : Three Achilles
 Program Studi : Teknologi Rekayasa Perangkat Lunak
 Nama Dosen Pembimbing : Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng.
 Perguruan Tinggi : Universitas Gadjah Mada
