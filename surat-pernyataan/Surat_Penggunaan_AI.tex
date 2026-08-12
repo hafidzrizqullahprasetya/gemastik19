@@ -6,6 +6,7 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{amssymb}
+\usepackage{graphicx}
 \usepackage{setspace}
 \setstretch{1.1}
 \pagenumbering{gobble}
@@ -33,12 +34,12 @@ Yang bertandatangan di bawah ini:
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Nama Ketua Tim & : \dotline{9.5cm} \\[3pt]
-Nomor Induk Mahasiswa & : \dotline{9.5cm} \\[3pt]
-Nama Tim & : \dotline{9.5cm} \\[3pt]
-Program Studi & : \dotline{9.5cm} \\[3pt]
-Nama Dosen Pembimbing & : \dotline{9.5cm} \\[3pt]
-Perugruan Tinggi & : \dotline{9.5cm} \\
+Nama Ketua Tim & : Hafidz Rizqullah Prasetya \\[3pt]
+Nomor Induk Mahasiswa & : 24/535493/SV/24243 \\[3pt]
+Nama Tim & : Verifin \\[3pt]
+Program Studi & : Teknologi Rekayasa Perangkat Lunak \\[3pt]
+Nama Dosen Pembimbing & : Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. \\[3pt]
+Perugruan Tinggi & : Universitas Gadjah Mada \\
 \end{tabularx}
 
 \vspace{0.5em}
@@ -48,8 +49,8 @@ Dengan ini menyatakan bahwa karya tim kami, yang diikutsertakan dalam GEMASTIK X
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Judul Karya & : \dotline{9.5cm} \\[3pt]
-Cabang Kompetisi GEMASTIK & : \dotline{9.5cm} \\
+Judul Karya & : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI \\[3pt]
+Cabang Kompetisi GEMASTIK & : Pengembangan Perangkat Lunak \\
 \end{tabularx}
 
 \vspace{0.5em}
@@ -60,7 +61,7 @@ Dengan ini kami menyampaikan pernyataan transparansi penggunaan Kecerdasan Artif
 \vspace{0.3em}
 
 % ===== CHECKBOX 1: CLOUD AI =====
-$\square$~Karya inovasi menggunakan sumber daya KA/AI berbasis awan (\textit{Cloud AI}) atau API pihak ketiga sebagai komponen fungsionalitas operasional perangkat, dengan arsitektur sistem, tingkat integrasi, rekayasa instruksi/\textit{prompting}, dan kustomisasinya adalah murni hasil rancangan mandiri tim kami, meliputi:
+$\blacksquare$~Karya inovasi menggunakan sumber daya KA/AI berbasis awan (\textit{Cloud AI}) atau API pihak ketiga sebagai komponen fungsionalitas operasional perangkat, dengan arsitektur sistem, tingkat integrasi, rekayasa instruksi/\textit{prompting}, dan kustomisasinya adalah murni hasil rancangan mandiri tim kami, meliputi:
 
 \vspace{0.3em}
 
@@ -69,20 +70,20 @@ $\square$~Karya inovasi menggunakan sumber daya KA/AI berbasis awan (\textit{Clo
 \hline
 \textbf{No.} & \textbf{Nama Aplikasi AI/API} & \textbf{Fungsi yang Didukung dalam Inovasi} & \textbf{Kustomisasi/Pengaturan} \\
 \hline
-1 & & & \\[6pt]
+1 & Google Gemini API (Google AI Studio) & LLM Reasoning: analisis verdict AMAN/WASPADA/BAHAYA, ekstraksi entitas NER, deteksi sinyal perilaku teks & Prompt engineering kustom, temperature=0, seed=42 (deterministik), structured output JSON schema \\[4pt]
 \hline
-2 & & & \\[6pt]
+2 & PaddleOCR & Ekstraksi teks dari gambar poster lowongan (kanal OCR) & Preprocessing OpenCV (CLAHE, denoising), konfigurasi bahasa Indonesia+Inggris \\[4pt]
 \hline
-3 & & & \\[6pt]
+3 & SearXNG (self-hosted) & Agregasi pencarian web multi-engine untuk validasi reputasi entitas & Instance self-hosted, engine Bing+Brave, relevance filter kustom \\[4pt]
 \hline
-4 & Dst\ldots. & & \\[6pt]
+4 & Dst\ldots. & & \\[4pt]
 \hline
 \end{tabularx}
 
 \vspace{0.5em}
 
 % ===== CHECKBOX 2: NASKAH =====
-$\square$~Naskah dokumen yang kami unggah dan/atau karya kreasi kami telah disusun sesuai kaidah akademik dan menjunjung integritas ilmiah serta bukan merupakan hasil \textit{generating} oleh Kecerdasan Artifisial Generatif (Gen-AI) secara sepenuhnya, yaitu dengan menggunakan aplikasi deteksi \dotline{2.5cm} yang memberikan hasil deteksi tingkat penggunaan Gen-AI sebesar \dotline{1.2cm}\%, sesuai bukti \textit{AI writing detection} terlampir, yaitu dengan penjelasan dan argumentasi berikut:
+$\blacksquare$~Naskah dokumen yang kami unggah dan/atau karya kreasi kami telah disusun sesuai kaidah akademik dan menjunjung integritas ilmiah serta bukan merupakan hasil \textit{generating} oleh Kecerdasan Artifisial Generatif (Gen-AI) secara sepenuhnya, yaitu dengan menggunakan aplikasi deteksi \dotline{2.5cm} yang memberikan hasil deteksi tingkat penggunaan Gen-AI sebesar \dotline{1.2cm}\%, sesuai bukti \textit{AI writing detection} terlampir, yaitu dengan penjelasan dan argumentasi berikut:
 
 \vspace{0.3em}
 
@@ -91,15 +92,15 @@ $\square$~Naskah dokumen yang kami unggah dan/atau karya kreasi kami telah disus
 \hline
 \textbf{No.} & \multicolumn{1}{c|}{\textbf{Penjelasan dan Argumentasi Penggunaan Gen-AI}} \\
 \hline
-1 & \\[6pt]
+1 & Gen-AI digunakan sebagai alat bantu penyusunan draf awal narasi proposal (penulisan ulang dan parafrase), namun seluruh ide, arsitektur sistem, desain pipeline, dan pemilihan teknologi adalah hasil rancangan mandiri tim \\[4pt]
 \hline
-2 & \\[6pt]
+2 & Kode program ditulis langsung oleh anggota tim; Gen-AI hanya digunakan untuk debugging dan code review, bukan menghasilkan kode secara utuh \\[4pt]
 \hline
-3 & \\[6pt]
+3 & Data uji dan hasil evaluasi merupakan output nyata dari sistem Verifin yang kami bangun, bukan hasil generate Gen-AI \\[4pt]
 \hline
-4 & \\[6pt]
+4 & Analisis literatur dan perbandingan dengan karya terdahulu dilakukan secara manual melalui studi pustaka \\[4pt]
 \hline
-5 & Dst\ldots. \\[6pt]
+5 & Dst\ldots. \\[4pt]
 \hline
 \end{tabularx}
 
@@ -108,14 +109,15 @@ $\square$~Naskah dokumen yang kami unggah dan/atau karya kreasi kami telah disus
 % ===== PENUTUP =====
 Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemudian hari ditemukan bahwa pernyataan ini tidak benar, saya bersedia menerima sanksi sesuai ketentuan yang berlaku pada kompetisi GEMASTIK XIX Tahun 2026.
 
-\vspace{1em}
+\vspace{0.8em}
 
 % ===== TANDA TANGAN =====
 \begin{tabularx}{\textwidth}{@{}X X X@{}}
-Mengetahui, & & Kota/Kab., Tanggal-Bulan-Tahun \\[3pt]
-Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Yang Menyatakan \\[45pt]
-Nama Lengkap & Nama Lengkap & Nama Lengkap \\[2pt]
-NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM/NPM \dotline{2.2cm} \\
+Mengetahui, & & Yogyakarta, 12 Agustus 2026 \\[3pt]
+Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Yang Menyatakan \\[3pt]
+& & \raisebox{-0.5\height}{\includegraphics[height=1.8cm]{ttd-hafidz.jpeg}} \\[20pt]
+Dr. Hempri Suyatna, S.Sos., M.Si. & Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. & Hafidz Rizqullah Prasetya \\[2pt]
+NIP 197807082005011003 & NIP 111198701202201101 & NIM 24/535493/SV/24243 \\
 \end{tabularx}
 
 \end{document}

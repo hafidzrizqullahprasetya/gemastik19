@@ -5,6 +5,7 @@
 \setmainfont{Calibri}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{graphicx}
 \usepackage{setspace}
 \setstretch{1.1}
 \pagenumbering{gobble}
@@ -12,7 +13,6 @@
 \setlength{\parskip}{3pt}
 
 \newcommand{\dotline}[1]{\makebox[#1]{\dotfill}}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \begin{document}
 
@@ -31,12 +31,12 @@ Yang bertandatangan di bawah ini:
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Nama Ketua Tim & : \dotline{9.5cm} \\[3pt]
-Nomor Induk Mahasiswa & : \dotline{9.5cm} \\[3pt]
-Nama Tim & : \dotline{9.5cm} \\[3pt]
-Program Studi & : \dotline{9.5cm} \\[3pt]
-Nama Dosen Pembimbing & : \dotline{9.5cm} \\[3pt]
-Perugruan Tinggi & : \dotline{9.5cm} \\
+Nama Ketua Tim & : Hafidz Rizqullah Prasetya \\[3pt]
+Nomor Induk Mahasiswa & : 24/535493/SV/24243 \\[3pt]
+Nama Tim & : Verifin \\[3pt]
+Program Studi & : Teknologi Rekayasa Perangkat Lunak \\[3pt]
+Nama Dosen Pembimbing & : Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. \\[3pt]
+Perugruan Tinggi & : Universitas Gadjah Mada \\
 \end{tabularx}
 
 \vspace{0.5em}
@@ -46,8 +46,8 @@ Dengan ini menyatakan bahwa karya tim kami, yang diikutsertakan dalam GEMASTIK X
 \vspace{0.3em}
 
 \begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
-Judul Karya & : \dotline{9.5cm} \\[3pt]
-Cabang Kompetisi & : \dotline{9.5cm} \\
+Judul Karya & : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI \\[3pt]
+Cabang Kompetisi & : Pengembangan Perangkat Lunak \\
 \end{tabularx}
 
 \vspace{0.5em}
@@ -61,7 +61,7 @@ bahwa karya yang kami unggah adalah:
   \item Merupakan gagasan orisinal dan hasil karya dari tim kami sendiri;
   \item Tidak mengandung unsur pelanggaran plagiarisme;
   \item Tidak melanggar hak cipta pihak manapun;
-  \item Belum/Sudah*) pernah menjadi juara dalam kompetisi lain, serta tanpa/dengan*) tambahan unsur pengembangan minimal 50\%; [Catatan: *) coret yang tidak sesuai]
+  \item \textbf{Belum}/Sudah*) pernah menjadi juara dalam kompetisi lain, serta \textbf{tanpa}/dengan*) tambahan unsur pengembangan minimal 50\%; [Catatan: *) coret yang tidak sesuai]
   \item Terkait penggunaan \textit{Artificial Intelligence} (AI) apabila dilakukan, maka:
   \begin{enumerate}
     \item Penggunaan Kecerdasan Buatan Generatif (\textit{Generative AI}) dalam pengembangan karya ini (baik berupa teks, media, kode program, atau lainnya) tidak melebihi 25\% dari keseluruhan substansi karya dan murni difungsikan sebagai alat bantu (asistensi), bukan pencipta utama;
@@ -79,10 +79,11 @@ Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemu
 
 % ===== TANDA TANGAN =====
 \begin{tabularx}{\textwidth}{@{}X X X@{}}
-Mengetahui, & & Kota/Kab.\dotline{2cm}, Tanggal-Bulan-Tahun \\[3pt]
-Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Ketua Tim \\[45pt]
-Nama Lengkap & Nama Lengkap & Nama Lengkap \\[2pt]
-NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM/NPM \dotline{2.2cm} \\
+Mengetahui, & & Yogyakarta, 12 Agustus 2026 \\[3pt]
+Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Ketua Tim \\[3pt]
+& & \raisebox{-0.5\height}{\includegraphics[height=1.8cm]{ttd-hafidz.jpeg}} \\[20pt]
+Dr. Hempri Suyatna, S.Sos., M.Si. & Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. & Hafidz Rizqullah Prasetya \\[2pt]
+NIP 197807082005011003 & NIP 111198701202201101 & NIM 24/535493/SV/24243 \\
 \end{tabularx}
 
 \end{document}
