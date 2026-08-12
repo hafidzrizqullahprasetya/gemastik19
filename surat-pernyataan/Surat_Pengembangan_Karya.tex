@@ -1,0 +1,81 @@
+% Compile: xelatex
+\documentclass[10pt]{article}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Calibri}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{setspace}
+\setstretch{1.1}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\newcommand{\dotline}[1]{\makebox[#1]{\dotfill}}
+
+\begin{document}
+
+% ===== JUDUL =====
+\begin{center}
+{\fontsize{13}{15}\selectfont\bfseries
+PERNYATAAN PENGEMBANGAN KARYA\\
+GEMASTIK XIX TAHUN 2026}
+\end{center}
+
+\vspace{0.8em}
+
+% ===== IDENTITAS =====
+Yang bertandatangan di bawah ini:
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
+Nama Ketua Tim & : \dotline{9.5cm} \\[3pt]
+Nomor Induk Mahasiswa & : \dotline{9.5cm} \\[3pt]
+Nama Tim & : \dotline{9.5cm} \\[3pt]
+Program Studi & : \dotline{9.5cm} \\[3pt]
+Nama Dosen Pembimbing & : \dotline{9.5cm} \\[3pt]
+Perugruan Tinggi & : \dotline{9.5cm} \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+Dengan ini menyatakan bahwa karya tim kami, yang diikutsertakan dalam GEMASTIK XIX Tahun 2026:
+
+\vspace{0.3em}
+
+\begin{tabularx}{\textwidth}{@{}p{4.2cm}l@{}}
+Judul Karya & : \dotline{9.5cm} \\[3pt]
+Cabang Kompetisi & : \dotline{9.5cm} \\
+\end{tabularx}
+
+\vspace{0.5em}
+
+bahwa karya yang kami unggah:
+
+\vspace{0.3em}
+
+% ===== PERNYATAAN =====
+\begin{enumerate}
+  \item Merupakan karya \textbf{baru} yang dikembangkan secara mandiri oleh tim kami dan \textbf{bukan} merupakan pengembangan dari karya yang telah diikutsertakan dalam kompetisi sebelumnya;
+  \item Apabila di kemudian hari karya ini dikembangkan lebih lanjut, pengembangan tersebut akan menambahkan unsur pengembangan minimal 50\% dari substansi karya awal;
+  \item Karya ini belum pernah diikutsertakan dalam GEMASTIK atau kompetisi sejenis lainnya pada tahun-tahun sebelumnya;
+  \item Seluruh komponen karya (kode program, arsitektur sistem, desain antarmuka, dan naskah proposal) merupakan hasil rancangan mandiri tim kami;
+\end{enumerate}
+
+\vspace{0.3em}
+
+% ===== PENUTUP =====
+Demikian surat pernyataan ini saya buat dengan sebenar-benarnya. Apabila di kemudian hari ditemukan bahwa pernyataan ini tidak benar, saya bersedia menerima sanksi sesuai ketentuan yang berlaku pada kompetisi GEMASTIK XIX Tahun 2026.
+
+\vspace{0.8em}
+
+% ===== TANDA TANGAN =====
+\begin{tabularx}{\textwidth}{@{}X X X@{}}
+Mengetahui, & & Kota/Kab.\dotline{2cm}, Tanggal-Bulan-Tahun \\[3pt]
+Pimpinan Bidang Kemahasiswaan & Dosen Pembimbing & Ketua Tim \\[45pt]
+Nama Lengkap & Nama Lengkap & Nama Lengkap \\[2pt]
+NIP/NUPTK \dotline{2.2cm} & NIP/NUPTK \dotline{2.2cm} & NIM/NPM \dotline{2.2cm} \\
+\end{tabularx}
+
+\end{document}
