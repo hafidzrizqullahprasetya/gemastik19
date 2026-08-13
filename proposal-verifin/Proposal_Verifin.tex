@@ -132,7 +132,7 @@
 \addcontentsline{toc}{subsection}{A. Urgensi Masalah dan Skenario Pengguna}
 
 Tingkat pengangguran terbuka di Indonesia masih menjadi salah satu tantangan ekonomi nasional yang
-siginifikan. Berdasarkan Berita Resmi Statistik Badan Pusat Statistik (BPS) No.\ 39/05/Th.\ XXVIII,
+signifikan. Berdasarkan Berita Resmi Statistik Badan Pusat Statistik (BPS) No.\ 39/05/Th.\ XXVIII,
 per Februari 2025 jumlah pengangguran terbuka tercatat mencapai 7,28 juta orang (TPT 4,76\%),
 meningkat dari 7,20 juta orang pada periode yang sama tahun sebelumnya [1]. Di tengah tekanan
 tersebut, jutaan pencari kerja Indonesia setiap harinya menerima tawaran lowongan dari berbagai
@@ -238,7 +238,7 @@ OSINT multi-sumber, penalaran naratif LLM (yang sekaligus menilai sinyal perilak
 penjelasan kontribusi bukti berbasis Explainable
 AI (XAI).
 Keluaran sistem adalah sebuah \textit{Skor Risiko} 0--100 (0 = sangat aman, 100 = sangat berbahaya)
-beserta verdict tiga tingkat (AMAN/WASPADA/BAHAYA) yang didukung penjelasan berbasis bukti yang
+beserta verdict tiga tingkat (\textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA}) yang didukung penjelasan berbasis bukti yang
 dapat diverifikasi oleh pengguna awam.
 
 Secara ringkas, kontribusi utama Verifin dapat dinyatakan dalam satu kalimat:
@@ -367,7 +367,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 \item Membangun platform web \textbf{Verifin} sebagai \textit{Explainable AI-powered Decision
       Support System} yang mampu menganalisis teks atau URL lowongan kerja secara otomatis dan
       menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict
-      AMAN/WASPADA/BAHAYA dan penjelasan berbasis bukti, sehingga menggantikan proses verifikasi manual
+      \textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA} dan penjelasan berbasis bukti, sehingga menggantikan proses verifikasi manual
       yang tersebar di banyak sumber menjadi satu analisis terpadu dalam hitungan menit.
 
 \item Mengimplementasikan pipeline analisis berlapis yang mengintegrasikan Named Entity Recognition
@@ -431,7 +431,7 @@ Setiap verifikasi yang dilakukan pengguna secara langsung \textbf{mengurangi kes
 pada momen paling rentan sebelum mereka merespons tawaran.
 
 \item \textbf{Estimasi potensi penurunan risiko:} Bila dalam satu siklus awal Verifin memproses
-$N$ verifikasi dan proporsi lowongan berisiko yang terdeteksi \texttt{BAHAYA}/\texttt{WASPADA}
+$N$ verifikasi dan proporsi lowongan berisiko yang terdeteksi \textbf{BAHAYA}/\textbf{WASPADA}
 adalah $p$, maka terdapat $N \times p$ pengguna yang \textbf{diperingatkan sebelum berpotensi
 mentransfer uang atau menyerahkan data pribadi}. Mengacu pada rata-rata kerugian penipuan daring
 per korban pada laporan GASA [2], setiap kasus yang berhasil dicegah berpotensi setara dengan
@@ -442,7 +442,7 @@ dari tindakan berisiko. Angka ini merupakan skenario ilustratif dengan asumsi ek
 divalidasi melalui studi pengguna.
 
 \item \textbf{Dampak kolektif melalui Fraud Network Graph:} Setiap entitas mencurigakan yang
-tercatat dapat memperkuat deteksi bagi pengguna berikutnya (\textit{network effect}). $k$ laporan
+tercatat dapat memperkuat deteksi bagi pengguna berikutnya (\textit{network effect}).
 \item \textbf{Kontribusi pada penanggulangan TPPO:} Mengingat penipuan rekrutmen daring adalah
 metode utama perekrutan korban TPPO ke \textit{cyber scam centers} [3], [4], intervensi Verifin
 pada tahap awal, yaitu sebelum korban merespons iklan, berpotensi membantu memutus rantai
@@ -665,9 +665,9 @@ FR-05 & Investigasi OSINT Domain & Sistem melakukan investigasi terhadap domain/
 FR-06 & Investigasi OSINT Telepon & Sistem memvalidasi format nomor telepon Indonesia dan mengecek laporan fraud via Kaspersky Who Calls serta pencarian SERP publik & Tinggi \\
 \rowcolor{verfinrow}
 FR-07 & Investigasi OSINT Perusahaan & Sistem mencari jejak digital perusahaan via multi-engine web search (dengan filter relevansi entitas) dan mengidentifikasi inkonsistensi dengan klaim dalam lowongan & Tinggi \\
-FR-08 & Penalaran Naratif \& Verdict LLM & Sistem menghasilkan verdict AMAN/WASPADA/BAHAYA dan ringkasan narasi berbahasa Indonesia menggunakan LLM, secara ketat berbasis bukti OSINT (dilarang mengarang fakta di luar evidence) & Tinggi \\
+FR-08 & Penalaran Naratif \& Verdict LLM & Sistem menghasilkan verdict \textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA} dan ringkasan narasi berbahasa Indonesia menggunakan LLM, secara ketat berbasis bukti OSINT (dilarang mengarang fakta di luar evidence) & Tinggi \\
 \rowcolor{verfinrow}
-FR-09 & Skor Risiko dan Verdict & Sistem menghasilkan Skor Risiko integer 0--100 (0 = sangat aman, 100 = sangat berbahaya) melalui agregasi kontribusi bukti XAI, beserta verdict tiga tingkat: AMAN, WASPADA, BAHAYA & Tinggi \\
+FR-09 & Skor Risiko dan Verdict & Sistem menghasilkan Skor Risiko integer 0--100 (0 = sangat aman, 100 = sangat berbahaya) melalui agregasi kontribusi bukti XAI, beserta verdict tiga tingkat: \textbf{AMAN}, \textbf{WASPADA}, \textbf{BAHAYA} & Tinggi \\
 FR-10 & Penjelasan XAI & Sistem menghasilkan penjelasan kontribusi setiap bukti terhadap Skor Risiko menggunakan SHAP-inspired additive explainer (bobot dikalibrasi dari pola penipuan Indonesia) & Tinggi \\
 \rowcolor{verfinrow}
 FR-11 & Visualisasi Graf Jaringan & Sistem menampilkan graf interaktif koneksi entitas lowongan dengan entitas lain di database & Sedang \\
@@ -898,17 +898,17 @@ yang menggabungkan dua mekanisme komplementer:
 
 \begin{enumerate}[label=\textbf{\alph*.}, labelindent=0pt, leftmargin=*]
 \item \textbf{Regex deterministik} untuk entitas \emph{struktural} yang polanya stabil:
-      nomor telepon/WhatsApp (\texttt{PHONE}), alamat surel (\texttt{EMAIL}), dan URL/domain.
+      nomor telepon/WhatsApp (\textbf{PHONE}), alamat surel (\textbf{EMAIL}), dan URL/domain.
       Regex cepat, murah, dan presisi-tinggi pada pola yang jelas.
 \item \textbf{Ekstraksi berbasis LLM} untuk entitas \emph{semantik} yang sulit ditangkap pola
-      deterministik pada poster OCR yang berantakan: nama perusahaan/organisasi (\texttt{ORG}),
-      alamat fisik/lokasi kerja (\texttt{LOC}), dan informasi gaji (\texttt{SALARY}).
+      deterministik pada poster OCR yang berantakan: nama perusahaan/organisasi (\textbf{ORG}),
+      alamat fisik/lokasi kerja (\textbf{LOC}), dan informasi gaji (\textbf{SALARY}).
       LLM memahami konteks sehingga tidak rapuh terhadap variasi layout.
 \end{enumerate}
 
-Kedua mekanisme berjalan \textbf{paralel} (asyncio). Hasil digabung dengan strategi per-kategori:
-untuk \texttt{ORG}, output LLM bersifat otoritatif sehingga false-positive regex (frasa deskriptif
-yang kebetulan mirip nama) otomatis tersaring; untuk \texttt{LOC} dan \texttt{SALARY}, keduanya
+Kedua mekanisme berjalan \textbf{paralel} (\textit{asyncio}). Hasil digabung dengan strategi per-kategori:
+untuk \textbf{ORG}, output LLM bersifat otoritatif sehingga false-positive regex (frasa deskriptif
+yang kebetulan mirip nama) otomatis tersaring; untuk \textbf{LOC} dan \textbf{SALARY}, keduanya
 digabung secara aditif. Bila LLM tidak tersedia, sistem \emph{fallback} penuh ke regex sehingga
 pipeline tidak pernah terputus. Output berupa JSON terstruktur yang menjadi input untuk semua
 layer berikutnya.
@@ -949,7 +949,7 @@ pengembangan lanjutan yang terukur.
 \addcontentsline{toc}{subsubsection}{3. Layer 2: OSINT Engine}
 
 \begin{adjustwidth}{1.45cm}{0pt}
-\hspace*{0.85cm}Modul OSINT dijalankan secara paralel menggunakan \texttt{asyncio} untuk meminimalkan latensi, memanfaatkan potensi sumber informasi terbuka (OSINT) [8].
+\hspace*{0.85cm}Modul OSINT dijalankan secara paralel menggunakan \textit{asyncio} untuk meminimalkan latensi, memanfaatkan potensi sumber informasi terbuka (OSINT) [8].
 Terdapat tiga sub-modul utama:
 
 \begin{enumerate}[label=\textbf{\alph*.}, labelindent=0pt, leftmargin=*]
@@ -990,7 +990,7 @@ seluruh bukti dan menghasilkan verdict. Pada layer ini pula LLM menilai sinyal p
 (permintaan biaya, dokumen sensitif, gaji fantastis) berdasarkan panduan deteksi pola penipuan
 Indonesia. Model diinstruksikan untuk:
 \begin{enumerate}[label=\textbf{\alph*.}, labelindent=0pt, leftmargin=*]
-\item Menilai tingkat kepercayaan lowongan dan menetapkan verdict AMAN/WASPADA/BAHAYA beserta Skor Risiko
+\item Menilai tingkat kepercayaan lowongan dan menetapkan verdict \textbf{AMAN}, \textbf{WASPADA}, atau \textbf{BAHAYA} beserta Skor Risiko
 \item Merangkum temuan OSINT dalam narasi berbahasa Indonesia yang mudah dipahami
 \item Menyebutkan fakta-fakta spesifik yang mendukung atau melemahkan kepercayaan
 \item Memberikan rekomendasi tindak lanjut yang actionable
@@ -1000,7 +1000,7 @@ Indonesia. Model diinstruksikan untuk:
 \textbf{Pembatasan halusinasi (\textit{hallucination guard}).} Untuk menjaga verdict tetap berbasis bukti, LLM beroperasi dalam mode
 \textit{evidence-constrained}: prompt hanya memuat fakta hasil investigasi nyata, dan output
 dipaksakan mengikuti skema JSON terstruktur yang setiap klaimnya harus merujuk pada bukti.
-Determinisme dijaga melalui \texttt{temperature=0} dan seed tetap sehingga hasil konsisten dan
+Determinisme dijaga melalui \textit{temperature}=0 dan seed tetap sehingga hasil konsisten dan
 dapat direproduksi. Bila bukti tidak mencukupi, LLM wajib menurunkan keyakinan (verdict WASPADA)
 daripada berspekulasi. Seluruh kontribusi bukti kemudian diuraikan secara terukur oleh XAI
 Explainer pada Layer 4 sehingga pengguna dapat mengaudit alasan di balik verdict.
@@ -1066,7 +1066,7 @@ Skor Risiko final yang dihasilkan sistem. Perlu ditegaskan bahwa \textbf{Skor Ri
 probabilitas}: angka 82 tidak berarti ``82\% kemungkinan penipuan'', melainkan indikator tingkat
 risiko berdasarkan agregasi bukti. Skala 0--100 dipilih untuk granularitas (membedakan tingkat
 risiko antar kasus) dan kemudahan penyetelan ambang, yang kemudian disederhanakan menjadi verdict
-kategorikal AMAN/WASPADA/BAHAYA agar tetap mudah dipahami pengguna awam. Untuk menghindari
+kategorikal \textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA} agar tetap mudah dipahami pengguna awam. Untuk menghindari
 penghitungan ganda (\textit{double counting}), setiap kontribusi dihitung sekali per faktor dan
 bukti yang berasal dari sumber yang sama digabungkan dalam satu kategori kontribusi.
 
@@ -1087,22 +1087,22 @@ Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambar
 \rowcolor{verfinhead}\thead{Modul / Berkas} & \thead{Tanggung Jawab} \\
 \midrule
 \rowcolor{verfinrow}
-\texttt{backend/app/main.py} & \textit{Entry point} FastAPI \\
-\texttt{backend/app/api/v1/} & Endpoint \texttt{/verify} (teks/gambar/URL), \texttt{/community}, \texttt{/health} \\
+\textit{backend/app/main.py} & \textit{Entry point} FastAPI \\
+\textit{backend/app/api/v1/} & Endpoint \textit{/verify} (teks/gambar/URL), \textit{/community}, \textit{/health} \\
 \rowcolor{verfinrow}
-\texttt{services/ner.py}, \texttt{ocr.py} & NER regex (entitas struktural) dan pembungkus PaddleOCR (pra-proses CLAHE) \\
-\texttt{services/llm/} & Ekstraksi entitas semantik dan \textit{reasoning engine} verdict \\
+\textit{services/ner.py}, \textit{ocr.py} & NER regex (entitas struktural) dan pembungkus PaddleOCR (pra-proses CLAHE) \\
+\textit{services/llm/} & Ekstraksi entitas semantik dan \textit{reasoning engine} verdict \\
 \rowcolor{verfinrow}
-\texttt{services/nlp/classifier.py} & Placeholder nonaktif (\texttt{status: STUB}); penilaian perilaku teks dilakukan oleh reasoning engine LLM, bukan modul ini \\
-\texttt{services/osint/} & Orkestrasi probe OSINT paralel: Whois/domain, telepon, perusahaan, alamat, SearXNG, Google Form, media sosial, web evidence \\
+\textit{services/nlp/classifier.py} & Placeholder nonaktif (\textit{status: STUB}); penilaian perilaku teks dilakukan oleh reasoning engine LLM, bukan modul ini \\
+\textit{services/osint/} & Orkestrasi probe OSINT paralel: Whois/domain, telepon, perusahaan, alamat, SearXNG, Google Form, media sosial, web evidence \\
 \rowcolor{verfinrow}
-\texttt{services/xai/} \texttt{shap\_explainer.py} & Penjelasan kontribusi bukti aditif (SHAP-inspired) \\
-\texttt{services/graph/} \texttt{fraud\_network.py} & Fraud Network Graph (NetworkX) \\
+\textit{services/xai/ shap\_explainer.py} & Penjelasan kontribusi bukti aditif (SHAP-inspired) \\
+\textit{services/graph/ fraud\_network.py} & Fraud Network Graph (NetworkX) \\
 \rowcolor{verfinrow}
-\texttt{backend/database/} \texttt{models.py} & Model SQLAlchemy: \texttt{JobCase}, \texttt{CommunityReport} \\
-\texttt{frontend/src/app/} & Halaman: utama, analisis, hasil, komunitas \\
+\textit{backend/database/ models.py} & Model SQLAlchemy: \textit{JobCase}, \textit{CommunityReport} \\
+\textit{frontend/src/app/} & Halaman: utama, analisis, hasil, komunitas \\
 \rowcolor{verfinrow}
-\texttt{frontend/src/} \texttt{components/} & AnalysisForm, VerdictBadge, TrustScoreGauge, OsintBreakdown, XaiExplainer, FraudNetworkGraph, CommunityFeed \\
+\textit{frontend/src/ components/} & AnalysisForm, VerdictBadge, TrustScoreGauge, OsintBreakdown, XaiExplainer, FraudNetworkGraph, CommunityFeed \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -1112,8 +1112,8 @@ Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambar
 \addcontentsline{toc}{subsection}{C. Skema Database PostgreSQL}
 
 Skema terdiri atas dua tabel inti berikut. Deduplikasi lintas kasus dilakukan lewat pencocokan
-entitas ternormalisasi (kolom \texttt{phones}, \texttt{emails}, \texttt{company\_name}) dan hash
-konten (\texttt{raw\_text\_hash}), tanpa tabel fingerprint terpisah.
+entitas ternormalisasi (kolom \textit{phones}, \textit{emails}, \textit{company\_name}) dan hash
+konten (\textit{raw\_text\_hash}), tanpa tabel fingerprint terpisah.
 
 \begin{adjustwidth}{0.50cm}{0pt}
 \begin{lstlisting}[language=SQL, caption={DDL dua tabel inti Verifin (ringkas)}]
@@ -1241,9 +1241,9 @@ Modul diverifikasi mengembalikan status yang benar untuk setiap kasus uji.
 
 \item \textbf{Pengujian end-to-end tiga kanal input:} Sistem diuji menyeluruh pada tiga kanal input
 nyata (teks, gambar poster via OCR, dan tautan) serta satu kasus negatif penipuan. Hasilnya
-menunjukkan verdict yang konsisten dan deterministik (\texttt{temperature=0}, seed tetap):
-lowongan legitimate menghasilkan verdict \texttt{AMAN}, sedangkan lowongan penipuan nyata
-terdeteksi \texttt{BAHAYA} (lihat Bagian G).
+menunjukkan verdict yang konsisten dan deterministik (\textit{temperature}=0, seed tetap):
+lowongan legitimate menghasilkan verdict \textbf{AMAN}, sedangkan lowongan penipuan nyata
+terdeteksi \textbf{BAHAYA} (lihat Bagian G).
 
 \item \textbf{Validasi terhadap pencarian manual:} Hasil verifikasi sistem dibandingkan dengan hasil
 pencarian manual yang dilakukan peneliti pada kasus nyata (jejak digital perusahaan, nomor resmi,
@@ -1273,24 +1273,24 @@ satu metrik akurasi.
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Unit testing per komponen:} Setiap modul diuji secara terpisah menggunakan
-\texttt{pytest}: (a) NER, yaitu ekstraksi entitas dari berbagai layout teks/OCR termasuk kasus
-tepati (nomor dengan separator, email hasil OCR yang keliru, nama perusahaan ambigu); (b) penilaian
+\textit{pytest}: (a) NER, yaitu ekstraksi entitas dari berbagai layout teks/OCR termasuk kasus
+tepi (nomor dengan separator, email hasil OCR yang keliru, nama perusahaan ambigu); (b) penilaian
 sinyal perilaku teks oleh LLM, yaitu deteksi permintaan biaya, dokumen sensitif, gaji fantastis; (c) normalisasi dan
 validasi nomor telepon Indonesia (whitelist prefix operator, anti false-positive pada ID numerik);
 (d) XAI explainer, yaitu konsistensi agregasi kontribusi bukti terhadap Skor Risiko final.
 
 \item \textbf{Integration testing antar-modul:} Orchestrator OSINT diuji untuk memastikan eksekusi
-paralel (\texttt{asyncio.gather}) berjalan benar, arsitektur \emph{satu query terdistribusi} tidak
+paralel (\textit{asyncio.gather}) berjalan benar, arsitektur \emph{satu query terdistribusi} tidak
 memicu pencarian ganda, dan kegagalan satu sumber (mis.\ \textit{rate-limit} mesin pencari) tidak
-menghentikan pipeline, melainkan menghasilkan status \texttt{UNAVAILABLE} pada
+menghentikan pipeline, melainkan menghasilkan status \textbf{UNAVAILABLE} pada
 komponen tersebut.
 
 \item \textbf{Pengujian end-to-end:} Pipeline penuh diuji pada tiga kanal input nyata (teks, gambar
 poster via OCR, tautan) serta kasus negatif penipuan, dengan verifikasi bahwa verdict deterministik
-(\texttt{temperature=0}, seed tetap) dan seluruh klaim LLM merujuk pada bukti megenai data yang tersedia
+(\textit{temperature}=0, seed tetap) dan seluruh klaim LLM merujuk pada bukti mengenai data yang tersedia
 (pembatasan halusinasi aktif).
 
-\item \textbf{Pengujian API:} Endpoint publik (\texttt{/verify}, \texttt{/community}, \texttt{/health})
+\item \textbf{Pengujian API:} Endpoint publik (\textit{/verify}, \textit{/community}, \textit{/health})
 diuji untuk skenario sukses, input tidak valid, dan ketiadaan entitas, memastikan kode status HTTP
 dan skema respons sesuai kontrak.
 \end{enumerate}
@@ -1472,7 +1472,7 @@ Selain alur verifikasi utama, Verifin menyediakan dua halaman pendukung yang mem
 \hspace*{0.85cm}Halaman hasil menampilkan komponen berikut secara berurutan:
 
 \begin{enumerate}[label=\textbf{\alph*.}, labelindent=0pt, leftmargin=*]
-  \item \textbf{Verdict dan Skor Risiko}. Badge berwarna menampilkan putusan final (\texttt{AMAN} / \texttt{WASPADA} / \texttt{BAHAYA}) disertai Skor Risiko (0--100). Skor ini bukan probabilitas, melainkan indeks risiko berbasis agregasi bukti.
+  \item \textbf{Verdict dan Skor Risiko}. Badge berwarna menampilkan putusan final (\textbf{AMAN} / \textbf{WASPADA} / \textbf{BAHAYA}) disertai Skor Risiko (0--100). Skor ini bukan probabilitas, melainkan indeks risiko berbasis agregasi bukti.
   \item \textbf{Ringkasan Naratif LLM}. Penjelasan singkat berbahasa Indonesia yang merangkum temuan utama OSINT dan alasan di balik verdict yang diberikan.
   \item \textbf{Breakdown XAI}. Daftar faktor yang berkontribusi terhadap skor risiko (positif = meningkatkan risiko, negatif = menurunkan risiko), beserta penjelasan per-faktor yang dapat dipahami pengguna awam.
   \item \textbf{Detail OSINT}. Ringkasan temuan dari setiap modul investigasi: status domain/website, reputasi nomor telepon, jejak digital perusahaan, dan validasi alamat fisik.
@@ -1485,9 +1485,9 @@ Selain alur verifikasi utama, Verifin menyediakan dua halaman pendukung yang mem
 
 \begin{adjustwidth}{1.45cm}{0pt}
 \begin{enumerate}[label=\textbf{\alph*.}, labelindent=0pt, leftmargin=*]
-  \item Jika verdict \texttt{AMAN}: lowongan memiliki indikator kepercayaan yang terverifikasi. Pengguna tetap dianjurkan untuk memverifikasi secara mandiri sebelum memberikan data pribadi.
-  \item Jika verdict \texttt{WASPADA}: terdapat beberapa sinyal yang belum dapat dikonfirmasi. Pengguna disarankan melakukan verifikasi lanjutan sebelum merespons lowongan.
-  \item Jika verdict \texttt{BAHAYA}: sistem mendeteksi pola penipuan yang kuat. Pengguna disarankan untuk tidak merespons dan dapat melaporkan ke fitur komunitas Verifin atau ke pihak berwenang.
+  \item Jika verdict \textbf{AMAN}: lowongan memiliki indikator kepercayaan yang terverifikasi. Pengguna tetap dianjurkan untuk memverifikasi secara mandiri sebelum memberikan data pribadi.
+  \item Jika verdict \textbf{WASPADA}: terdapat beberapa sinyal yang belum dapat dikonfirmasi. Pengguna disarankan melakukan verifikasi lanjutan sebelum merespons lowongan.
+  \item Jika verdict \textbf{BAHAYA}: sistem mendeteksi pola penipuan yang kuat. Pengguna disarankan untuk tidak merespons dan dapat melaporkan ke fitur komunitas Verifin atau ke pihak berwenang.
 \end{enumerate}
 \end{adjustwidth}
 
