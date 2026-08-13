@@ -7,3 +7,6 @@ verifin-app
 *.out
 *.toc
 *.synctex.gz
+
+# Local-only files (tidak di-push ke GitHub)
+chat-pak-ganjar.md
