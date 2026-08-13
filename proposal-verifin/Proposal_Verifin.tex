@@ -196,7 +196,7 @@ menyerahkan KTP-nya (pintu pencurian identitas) dalam hitungan menit setelah men
 
 Menemukan poster lowongan menarik di Instagram:
 \begin{tcolorbox}[colback=white, colframe=verfinblue!25, boxrule=0.4pt, arc=1mm,
-  left=1.5mm, right=1.5mm, top=0.8mm, bottom=0.8mm]
+  left=2mm, right=2mm, top=0.8mm, bottom=0.8mm]
 \itshape\footnotesize ``Isi Google Form berikut untuk mendaftar. Cantumkan data pribadi lengkap
 dan nomor HP aktif.''
 \end{tcolorbox}
@@ -272,7 +272,7 @@ Verifin.
 \caption{Perbandingan Verifin dengan solusi verifikasi lowongan yang sudah ada}
 \label{tab:perbandingan}
 \vspace{0.2cm}
-\includegraphics[width=0.80\linewidth]{images/1.1.png}
+\includegraphics[width=0.72\linewidth]{images/1.1.png}
 \end{table}
 \end{adjustwidth}
 
@@ -367,8 +367,9 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 \item Membangun platform web \textbf{Verifin} sebagai \textit{Explainable AI-powered Decision
       Support System} yang mampu menganalisis teks atau URL lowongan kerja secara otomatis dan
       menghasilkan \textit{Skor Risiko} 0--100 (0 = aman, 100 = berbahaya) beserta verdict
-      \textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA} dan penjelasan berbasis bukti, sehingga menggantikan proses verifikasi manual
-      yang tersebar di banyak sumber menjadi satu analisis terpadu dalam hitungan menit.
+      \textbf{AMAN}\allowbreak/\textbf{WASPADA}\allowbreak/\textbf{BAHAYA} dan penjelasan berbasis
+      bukti, sehingga menggantikan proses verifikasi manual yang tersebar di banyak sumber
+      menjadi satu analisis terpadu dalam hitungan menit.
 
 \item Mengimplementasikan pipeline analisis berlapis yang mengintegrasikan Named Entity Recognition
       (NER) hibrida berbahasa Indonesia, investigasi OSINT multi-sumber
@@ -538,7 +539,7 @@ maupun mengatasi faktor psikologis dan sosial korban}, seperti desakan ekonomi, 
 dalam keputusan seseorang merespons tawaran. Intervensi Verifin terbatas pada \textbf{satu penyebab
 yang dapat diselesaikan melalui rekayasa perangkat lunak}, yaitu mengurangi
 \textit{information asymmetry} pada tahap verifikasi awal. Pengguna yang tetap merespons meskipun
-sistem memberi peringatan berada di luar ruang lingkup desain sistem ini.
+sistem memberi peringatan berada di luar ruang lingkup desain sistem ini.\par
 
 \subsection*{J.\quad Agenda Pengembangan Lanjutan (Future Work)}
 \addcontentsline{toc}{subsection}{J. Agenda Pengembangan Lanjutan (Future Work)}
@@ -627,12 +628,12 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 \addcontentsline{toc}{subsection}{D. Tools dan Platform Pengembangan}
 
 \begin{adjustwidth}{0.50cm}{0pt}
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Tools dan Platform Pengembangan Verifin}
 \label{tab:tools-platform}
 \vspace{0.2cm}
-\includegraphics[width=0.80\linewidth]{images/4.3.png}
+\includegraphics[width=0.70\linewidth]{images/4.3.png}
 \end{table}
 \end{adjustwidth}
 
@@ -650,7 +651,7 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 \caption{Daftar Kebutuhan Fungsional Verifin}
 \label{tab:fr-list}
 \small
-\begin{tabularx}{\linewidth}{@{}p{1.4cm}p{3.2cm}Yp{1.4cm}@{}}
+\begin{tabularx}{\linewidth}{@{}p{1.2cm}p{3.0cm}Yp{1.6cm}@{}}
 \toprule
 \rowcolor{verfinhead}\thead{ID} & \thead{Nama} & \thead{Deskripsi} & \thead{Prioritas} \\
 \midrule
@@ -711,7 +712,8 @@ NFR-06 & Transparansi & Setiap verdict disertai penjelasan berbasis fitur yang d
 \addcontentsline{toc}{subsection}{C. Desain Solusi: Arsitektur Sistem}
 
 Verifin mengimplementasikan arsitektur berlapis (\textit{layered architecture}) yang memisahkan
-tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur sistem secara keseluruhan:
+tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur sistem secara
+keseluruhan:\par
 
 \vspace{0.5cm}
 
@@ -855,14 +857,16 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 \begin{table}[H]
 \centering
 \caption{Tabel Skor Risiko dan Interpretasi Verdict}
+\label{tab:skor-risiko}
+\small
 \begin{tabularx}{\linewidth}{@{}p{2.2cm}p{2.2cm}Y@{}}
 \toprule
-\textbf{Rentang Skor} & \textbf{Verdict} & \textbf{Interpretasi} \\
+\rowcolor{verfinhead}\thead{Rentang Skor} & \thead{Verdict} & \thead{Interpretasi} \\
 \midrule
 0--39 & \textbf{\color{verfingreen!70!black}AMAN} & Lowongan memiliki indikator kepercayaan yang kuat: jejak digital OSINT terverifikasi (domain valid dan berumur, perusahaan ditemukan), tidak ada laporan penipuan, dan teks tidak memuat sinyal perilaku mencurigakan. \\
-\midrule
+\rowcolor{verfinrow}
 40--74 & \textbf{\color{verfinyellow!70!black}WASPADA} & Terdapat beberapa sinyal meragukan namun bukti tidak konklusif. Pengguna disarankan melakukan verifikasi tambahan sebelum merespons. \\
-\midrule
+\rowcolor{verfinrow}
 75--100 & \textbf{\color{verfinred}BAHAYA} & Terdapat indikator kuat penipuan, baik dari verifikasi OSINT (domain baru/tidak valid, nomor terlapor, perusahaan tidak ditemukan) maupun sinyal perilaku teks (permintaan biaya, dokumen sensitif, gaji fantastis). Pengguna sangat disarankan tidak merespons. \\
 \bottomrule
 \end{tabularx}
@@ -875,7 +879,7 @@ tanggung jawab setiap komponen secara jelas. Berikut adalah diagram arsitektur s
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\linewidth]{images/5.4.png}
+\includegraphics[width=0.75\linewidth]{images/5.4.png}
 \vspace{0.2cm}
 \caption{Tech Stack Verifin}
 \label{fig:tech-stack}
@@ -1442,7 +1446,7 @@ Selain alur verifikasi utama, Verifin menyediakan dua halaman pendukung yang mem
 \addcontentsline{toc}{subsubsection}{1. Akses Aplikasi}
 
 \begin{adjustwidth}{1.45cm}{0pt}
-\hspace*{0.85cm}Buka browser dan navigasikan ke URL aplikasi Verifin. Halaman utama menampilkan kolom input analisis dan navigasi ke riwayat verifikasi serta halaman komunitas pelaporan.
+Buka browser dan navigasikan ke URL aplikasi Verifin. Halaman utama menampilkan kolom input analisis dan navigasi ke riwayat verifikasi serta halaman komunitas pelaporan.
 \end{adjustwidth}
 
 \subsubsection*{2.\quad Masukkan Data Lowongan}
