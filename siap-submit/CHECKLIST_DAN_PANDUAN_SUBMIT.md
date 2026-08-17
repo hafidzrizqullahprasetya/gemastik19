@@ -97,4 +97,4 @@ Verifin adalah Decision Support System (DSS) proaktif berbasis Explainable AI (X
 - **Backend Base API:** `https://verifin.pempekasliwongkito.my.id`
 - **Repository App:** `https://github.com/matthewpriantara/verifin-app`
 - [x] **Berkas Deliverables ZIP:** Sudah dikompresi dengan format penamaan standar GEMASTIK XIX.
-- [ ] **Video Rancangan & Demo ($\le$ 3 Menit):** Sedang tahap editing $\to$ setelah selesai, upload ke YouTube dengan judul resmi $\to$ masukkan link ke portal dan ke berkas `URL_Video_Demo.txt`.
+- [x] **Video Rancangan & Demo ($\le$ 3 Menit):** Sudah di-upload ke YouTube $\to$ `https://www.youtube.com/watch?v=2O0NimwA1RQ` (Unlisted).

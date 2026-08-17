@@ -16,14 +16,14 @@ GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Verifin Deteks
 --------------------------------------------------------------------------------
 2. TAUTAN VIDEO YOUTUBE
 --------------------------------------------------------------------------------
-URL Video YouTube: [MASUKKAN_LINK_YOUTUBE_DI_SINI_SETELAH_UPLOAD]
-Contoh           : https://youtu.be/xxxxxxxxxxx atau https://www.youtube.com/watch?v=xxxxxxxxxxx
-Pengaturan Privasi: Public / Unlisted (Tidak Publik)
+URL Video YouTube : https://www.youtube.com/watch?v=2O0NimwA1RQ
+                    (https://youtu.be/2O0NimwA1RQ)
+Pengaturan Privasi: Unlisted (Tidak Publik)
 
 --------------------------------------------------------------------------------
 3. SPESIFIKASI VIDEO
 --------------------------------------------------------------------------------
-- Resolusi       : 1080p Full HD (1920 x 1080) / 720p HD
+- Resolusi       : 1080p Full HD (1920 x 1080)
 - Durasi         : Maksimal 3 Menit (Sesuai Ketentuan Babak Penyisihan)
 - Konten Video   : Latar Belakang Masalah, Arsitektur 4-Layer, Demonstrasi 3 Kanal Input (Teks, OCR Poster, URL), Deteksi Kasus Penipuan (XAI Aditif), dan Dampak.
 ================================================================================
