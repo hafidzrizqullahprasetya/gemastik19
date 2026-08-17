@@ -1,8 +1,16 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage[indonesian]{babel}
+
+% ── Istilah caption Bahasa Indonesia ──────────────────────────────────────
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\tablename}{Tabel}
+\renewcommand{\contentsname}{Daftar Isi}
+
 \usepackage{geometry}
-\geometry{top=3cm,bottom=3cm,left=3.5cm,right=3cm}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs}
@@ -87,7 +95,7 @@
 \section{Latar Belakang}
 Berdasarkan data Badan Pusat Statistik (BPS) per Februari 2025, tingkat pengangguran terbuka (TPT) di Indonesia mencapai 4,76\% atau setara dengan 7,28 juta jiwa. Desakan ekonomi yang tinggi dan persaingan ketat dalam mencari pekerjaan mendorong para pencari kerja untuk memanfaatkan berbagai saluran informal daring, seperti WhatsApp, Telegram, Instagram, dan grup Facebook. 
 
-Kondisi tersebut dimanfaatkan secara agresif oleh sindikat penipuan siber. Laporan riset \textit{Global Anti-Scam Alliance} (GASA) dan Mastercard (2024) mengidentifikasi bahwa 49\% korban kejahatan digital di Indonesia terekspos modus lowongan kerja palsu (*fake job scam*), berkontribusi pada total kerugian nasional yang diestimasi mencapai Rp 49 Triliun. Dampak yang ditimbulkan tidak hanya berupa kerugian finansial langsung (seperti pungutan biaya administrasi, deposit pelatihan, atau pembelian seragam palsu), melainkan juga eksploitasi pencurian data identitas (KTP/KK) untuk pinjaman online ilegal, hingga risiko kejahatan Tindak Pidana Perdagangan Orang (TPPO) di kawasan regional, sebagaimana dilaporkan oleh Kementerian Luar Negeri RI yang berhasil merepatriasi lebih dari 3.300 WNI korban penipuan daring.
+Kondisi tersebut dimanfaatkan secara agresif oleh sindikat penipuan siber. Laporan riset \textit{Global Anti-Scam Alliance} (GASA) dan Mastercard (2024) mengidentifikasi bahwa 49\% korban kejahatan digital di Indonesia terekspos modus lowongan kerja palsu (\textit{fake job scam}), berkontribusi pada total kerugian nasional yang diestimasi mencapai Rp 49 Triliun. Dampak yang ditimbulkan tidak hanya berupa kerugian finansial langsung (seperti pungutan biaya administrasi, deposit pelatihan, atau pembelian seragam palsu), melainkan juga eksploitasi pencurian data identitas (KTP/KK) untuk pinjaman online ilegal, hingga risiko kejahatan Tindak Pidana Perdagangan Orang (TPPO) di kawasan regional, sebagaimana dilaporkan oleh Kementerian Luar Negeri RI yang berhasil merepatriasi lebih dari 3.300 WNI korban penipuan daring.
 
 Akar permasalahan dari fenomena ini adalah \textit{Information Asymmetry} (kesenjangan informasi) antara perekrut anonim dan pencari kerja. Solusi yang ada di Indonesia saat ini bersifat reaktif, pasif, atau berbayar, dan belum ada alat verifikasi terpadu tepat pada titik penerimaan tawaran kerja. \textbf{Verifin} hadir sebagai \textit{Decision Support System} (DSS) yang melakukan investigasi otomatis multi-kanal (\textit{multichannel OSINT}) berbasis kecerdasan artifisial yang transparan (\textit{Explainable AI}).
 
