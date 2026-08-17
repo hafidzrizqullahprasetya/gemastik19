@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Responsive ─────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .section-title { font-size: 40px; }
+  .title-main { font-size: 64px; }
+  .closing-title { font-size: 48px; }
+
+  .stat-grid,
+  .pain-points,
+  .three-pillars,
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .demo-showcase,
+  .stack-categories,
+  .scam-analysis,
+  .modality-grid { grid-template-columns: 1fr; }
+
+  .ner-comparison { grid-template-columns: 1fr; }
+  .ner-arrow { text-align: center; transform: rotate(90deg); }
+}
+
+@media (max-width: 640px) {
+  .slide { padding: 100px 20px 60px; }
+  .section-title { font-size: 30px; }
+  .title-main { font-size: 44px; }
+  .subtitle { font-size: 18px; }
+  .closing-title { font-size: 34px; }
+
+  .stat-grid,
+  .pain-points,
+  .three-pillars,
+  .metrics-grid { grid-template-columns: 1fr; }
+
+  .team-showcase { gap: 24px; }
+  .nav-dots { right: 12px; }
+  .header { padding: 12px 16px; }
+  .gemastik-badge { display: none; }
+
+  .consequence-box { flex-direction: column; text-align: center; }
+  .pipeline-step { flex-direction: column; text-align: center; }
+  .journey-step { flex-direction: column; text-align: center; }
+  .journey-line { padding-left: 0; }
+}
+
+/* Print / recording friendly: hide nav when recording */
+@media print {
+  .nav-dots, .slide-counter, .theme-toggle { display: none; }
+}

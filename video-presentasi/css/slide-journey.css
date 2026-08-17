@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Slide: User Journey (Light Theme) ──────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.user-journey {
+  background: linear-gradient(135deg, #FFF8F2 0%, #FFEEE0 100%);
+}
+
+.journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.journey-step {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: white;
+  border-radius: 20px;
+  padding: 28px 32px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.journey-step:hover {
+  transform: translateX(12px);
+  border-color: var(--orange);
+  box-shadow: 0 16px 50px var(--shadow-lg);
+}
+
+.step-marker {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(255,107,53,0.3);
+}
+
+.journey-step h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.journey-step p {
+  font-size: 14px;
+  color: var(--charcoal-light);
+}
+
+.journey-line {
+  text-align: center;
+  font-size: 20px;
+  color: var(--orange);
+  margin: -6px 0;
+  padding-left: 60px;
+}
+
+.journey-highlight {
+  text-align: center;
+}
+
+.highlight-tag {
+  display: inline-block;
+  background: white;
+  border: 2px solid var(--green);
+  color: var(--green);
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(47,92,52,0.15);
+}

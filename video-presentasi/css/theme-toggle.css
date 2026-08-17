@@ -1,0 +1,37 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Alternating Theme Slides ──────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+
+/* Light slides (default) */
+.slide {
+  background: linear-gradient(135deg, #FFF8F2 0%, #FFF3E6 100%);
+}
+
+/* Dark slides */
+.slide.dark-slide {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Override for individual slides that have custom backgrounds */
+.title-slide.light-slide,
+.problem-breakdown.light-slide,
+.solution-intro.light-slide,
+.pipeline-section.light-slide,
+.demo-results.light-slide,
+.tech-stack.light-slide,
+.user-journey.light-slide {
+  background: linear-gradient(135deg, #FFF8F2 0%, #FFE8D6 100%);
+}
+
+.reality-check.dark-slide,
+.ner-explained.dark-slide,
+.scam-detection.dark-slide,
+.impact-metrics.dark-slide,
+.closing-slide.dark-slide {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Text color adjustments based on theme */
+.slide.dark-slide .section-title {
+  color: #f0f0f0;
+}

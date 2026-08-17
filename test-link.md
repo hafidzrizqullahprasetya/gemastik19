@@ -1,146 +1,98 @@
 ## INPUTAN
 
-https://www.facebook.com/groups/1736811799970333/permalink/4411661825818637/?mibextid=wwXIfr&rdid=L5McTvDaGFNAYTVS#
+https://www.threads.com/@andre.patra/post/Db8RPMwiZuD
 
 ini isinya
-# WE ARE HIRING — DRIVER
-
-**APPLY NOW!**
-
-### Posisi:
-
-**DRIVER**
-
-### Kualifikasi
-
-* Pria
-* Usia max. 40 tahun
-* Pendidikan minimal SMA/SMK sederajat
-* Memiliki SIM A aktif
-* Memiliki pengalaman sebagai driver/pengantar barang minimal 1 tahun
-* Sehat jasmani, jujur, disiplin, bertanggung jawab & komunikatif
-* Mampu bekerja secara individu maupun dalam tim
-* Diutamakan berdomisili di Yogyakarta dan sekitarnya
-
-### Kirim CV & ke Email Kami
-
-**[hrd.rosalyne@gmail.com](mailto:hrd.rosalyne@gmail.com)**
-
-**WhatsApp:** +62 818-664-088
-
-**Subject:** Posisi yang dilamar_nama_domisili
-
-### Alamat
-
-**Jl. Bugisan Selatan, Senggotan, Tirtonirmolo, Kasihan, Bantul**
-
+Buat temen-temen Karawang, baca utas ini!!
+PT Sinergi Informatika Semen Indonesia (SISI) is Hiring!
+• Posisi : Fullstack Developer (Project Based)
+• Penempatan : Karawang
+Kualifikasi :
+• S1 Teknik Informatika, Sistem Informasi, atau jurusan terkait.
+• Punya pengalaman di bidang terkait + menguasai bahasa pemrogramman & tools/tech stack.
+• Di utamakan yg tidak terikat kontrak dan domisili Karawang ya.
 
 ## ISI DEBUG
  
 ## HASIL DATA REAL Pencarian Manual
 
-Rosalyne — Interior Design & Contractor
-
-rosalyne.co.id
-https://www.rosalyne.co.id
-Build-in Furniture · Interior · Building · Landscape · Wallpaper · Contact Us.
-rosalyne group dari www.rosalyne.co.id
-Interior Jogja (@rosalyne_interior) - Instagram
-
-Instagram · rosalyne_interior
-7,1 rb+ pengikut
-8
-Free Consultation & 3D Design WA/Call 0811254088 Yogyakarta Our Service Contractor, Interior Designer, Furniture, MetalArt, Wallpaper · Modern di ...
-rosalyne group dari www.instagram.com
-about us - Rosalyne — Interior Design & Contractor
-
-rosalyne.co.id
-https://www.rosalyne.co.id › about
-Rosalyne bergerak di bidang Build-in Furniture, Interior Design, Building, Landscape dan Wallpaper. Rosalyne didirikan pada tahun 2010.
-rosalyne group dari www.rosalyne.co.id
+Mode AI
+Semua
 Gambar
-Rosalyne — Interior Design & Contractor
-Rosalyne — Interior Design & Contractor
-
-www.rosalyne.co.id
-𝐋𝐨𝐤𝐞𝐫𝐀𝐫𝐬𝐢𝐭𝐞𝐤.𝐢𝐝 ©️ ➖➖➖ Rosalyne Group ...
-𝐋𝐨𝐤𝐞𝐫𝐀𝐫𝐬𝐢𝐭𝐞𝐤.𝐢𝐝 ©️ ➖➖➖ Rosalyne Group ...
-
-Instagram
-Rosalyne Group Karir & Profil Terbaru 2026 | Glints TapLoker
-Rosalyne Group Karir & Profil Terbaru 2026 | Glints TapLoker
-
-Glints
-Lowongan Kerja Front Office - Drafter - Pelaksana Interior ...
-Lowongan Kerja Front Office - Drafter - Pelaksana Interior ...
-
-Lowongan Kerja Jogja
-Rosalyne Group | LinkedIn
-Rosalyne Group | LinkedIn
-
-LinkedIn
-Dalam hangatnya kebersamaan di acara buka puasa bersama Rosalyne Group,  kami merasa bangga melihat bagaimana nilai kekeluargaan tumbuh begitu kuat  di antara kita semua. Momen ini bukan sekadar berbagi ...
-Dalam hangatnya kebersamaan di acara buka puasa bersama Rosalyne Group, kami merasa bangga melihat bagaimana nilai kekeluargaan tumbuh begitu kuat di antara kita semua. Momen ini bukan sekadar berbagi ...
-
-Instagram
-Tampilkan gambar lainnya
-Rosalyne Group Karir & Profil Terbaru 2026 - Glints
-
-Glints
-https://glints.com › companies › rosalyne-group
-Rosalyne Group adalah perusahaan multi-bisnis yang bergerak di bidang konstruksi, interior, furniture, wallpaper, dan hospitality sejak tahun 2010.
-rosalyne group dari glints.com
-Rosalyne Group
-
-LinkedIn · Rosalyne Group
-40+ pengikut
-24
-Rosalyne Group bergerak dibidang Konstruksi Bangunan dan Desain Interior serta Hospility. Website: https://rosalyne.co.id/. External link for Rosalyne Group.
-Lowongan Rosalyne Group - LokerJogja.ID
-
-LOKER JOGJA ID
-https://www.lokerjogja.id › perusahaan › rosalyne-group
-Sales - Housekeeping - Admin Pajak - Arsitek - Front Office · SMA/K - S1/D4 · 0 - 2 Tahun · DI Yogyakarta. 6 bulan lalu · Dibutuhkan. Admin Audit ...
-rosalyne group dari www.lokerjogja.id
+Berita
 Video
-Konstruksi Rosalyne merupakan perusahaan yang bergerak di ...
-Instagram · Interior Jogja
-2 Apr 2026
-Instagram · Interior Jogja
+Shopping
+Video singkat
+Lainnya
+Alat
+SISI - Sinergi Informatika Semen Indonesia: Simplify Business ...
 
-0:56
-Konstruksi Rosalyne merupakan perusahaan yang bergerak di ...
-Instagram · Interior Jogja
-28 Mei 2026
-Instagram · Interior Jogja
+Sinergi Informatika Semen Indonesia
+https://sisi.id
+SISI hadir untuk mendukung transformasi digital yang mempercepat pertumbuhan bisnis dari berbagai industri di Indonesia.
+PT Sinergi Informatika Semen Indonesia (SISI)
 
-0:41
-Bangun Impian Anda Bersama Rosalyne. Rosalyne Konstruksi ...
-Instagram · Interior Jogja
-17 Jun 2026
-Instagram · Interior Jogja
+LinkedIn · PT Sinergi Informatika Semen Indonesia (SISI)
+15,8 rb+ pengikut
+24
+Established on June 9th, 2014, we have successfully implemented many changes and innovations in SIG Group since 2001. SISI continually provides the best IT ...
+Orang lain juga bertanya
+Apakah PT sisi BUMN?
+PT SIG bergerak di bidang apa?
+Apa sisi perusahaan?
+Life at SISI (@lifeatsisi) · Jakarta
 
-0:58
-Lihat semua
-Lowongan Kerja Rosalyne Konstruksindo Jaya di Indonesia
+Instagram · lifeatsisi
+4,6 rb+ pengikut
+8
+4.6K+ followers · 1.9K+ posts · Official Account of PT Sinergi Informatika Semen Indonesia #lifeatsisi #ptsisi #sisi #lokersisi #DXwithSISI #yourDXpartner.
+PT. Sinergi Informatika Semen Indonesia
+
+Diploy
+https://diploy.id › companies
+SISI merupakan tim inti Pengembangan dan Dukungan Operasional ICT untuk SIG dan seluruh anak perusahaan. Saat ini kami juga menjadi penyedia platform digital e- ...
+Bekerja di Sinergi Informatika Semen Indonesia - Jobstreet
 
 Jobstreet Indonesia
-https://id.jobstreet.com › Rosalyne-Konstruksindo-Jaya-...
+https://id.jobstreet.com › companies › sinergi-informati...
 27
-Admin. di PT Rosalyne Konstruksindo Jaya (Rosalyne Group). Ini adalah lowongan kerja Full time. DI Yogyakarta. Lingkungan kerja yang kolaboratif dan ...
-Rosalyne Group
+PT Sinergi Informatika Semen Indonesia Berdiri sejak tanggal 9 Juni 2014, SISI merupakan perusahaan yang bergerak di bidang teknologi informasi yang senantiasa ...
+About Us - SISI
 
-Grab JOOB
-https://grab.joob.id › business
-Rosalyne Group. Bagikan. Rosalyne bergerak di bidang Build-in Furniture, Interior Design, Building, Landscape dan Wallpaper. Rosalyne didirikan pada tahun 20...
+Sinergi Informatika Semen Indonesia
+https://sisi.id › about-us
+PT Sinergi Informatika Semen Indonesia (SISI) merupakan anak usaha dari PT Semen Indonesia (Persero) Tbk atau SIG. · SISI merupakan tim inti Pengembangan dan ...
+Sinergi Informatika Semen Indonesia
+
+Wikipedia
+https://id.wikipedia.org › wiki › Sinergi_Informatika_S...
+4
+PT Sinergi Informastika Semen Indonesia (PT SISI) adalah salah satu anak perusahaan SIG yang bergerak di bidang manajemen layanan teknologi informasi.
+pt sinergi informatika semen indonesia
+
+Glints
+https://glints.com › companies › pt-sinergi-informatika-...
+SISI merupakan tim inti Pengembangan dan Dukungan Operasional ICT untuk Semen Indonesia dan seluruh anak perusahaannya. Location: Jakarta Pusat, DKI Jakarta, ...
+PT Sinergi Informatika Semen Indonesia (SISI)
+
+LinkedIn · PT Sinergi Informatika Semen Indonesia (SISI)
+15,8 rb+ pengikut
+24
+SISI is also committed to making innovations for society by sustaining the launching of new products in IT sector. Website: https://sisi.id. External link ...
+PT Sinergi Informatika Semen Indonesia - MAGENTA
+
+Magentaku.id
+https://sisi.magentaku.id
+Kami hadir untuk memberikan sumbangsih terbaik bagi negeri dengan mengutamakan profesionalisme, integritas serta bersinergi dalam mewujudkan Indonesia yang ...
 Orang lain juga menelusuri
-Rosalyne group Jogja
-Rosalyne workshop
-Rosalyne Jogja
-Jurusan desain interior jogja
-Rosalyne warehouse
-Cv rosalyne konstruksindo jaya
-Jasa desain Interior Jogja murah
+SISI karir
+Gaji PT SISI
+Pt sisi apakah bumn
+Loker PT SISI
+Alamat pt sisi
+Pt SISI jakarta
+SISI SIG
+Life at SISI career
 1	
 2
 3
@@ -155,58 +107,50 @@ Berikutnya
 
 
 Lihat foto
-Peta ROSALYNE INTERIOR DESIGNER
+Peta PT Sinergi Informatika Semen Indonesia
 
 
 
 Lihat ke luar
-ROSALYNE CONTRACTOR,FURNITURE & WALLPAPER
-4,648 ulasan Google
-Toko perlengkapan rumah di Yogyakarta
+PT Sinergi Informatika Semen Indonesia
+4,772 ulasan Google
+Perusahaan software di Jakarta Selatan
 Situs
 Rute
-Tulis ulasan
-Simpan
-Bagikan
-Telepon
++4
 
-Alamat: Jl. A.M. Sangaji, Karangwaru, Kec. Tegalrejo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55241
-Lama Perjalanan:
-24 mnt
-·
-5 mnt
-·
-20 mnt
-Telepon: (0274) 6415584
+Alamat: Graha Aktiva, Jl. H. R. Rasuna Said No.Kav 3 Lt 11, RT.6/RW.4, Kuningan Tim., Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950
+Telepon: (021) 29410371
 Jam: 
-Tutup · Buka Jum pukul 08.00
-Provinsi: Daerah Istimewa Yogyakarta
+Segera tutup · 16.30 · Buka Sel pukul 07.30
+Provinsi: Daerah Khusus Ibukota Jakarta
 Sarankan edit · Pemilik bisnis ini?
 Ulasan
-Yoko Yuni Muryanto	"Aneka dekorasi buat rumah"
-quotes VIXION	"Kantor yang bersih, dan selalu cepat proses nya"
-Danur Fre	"Pelayanan sangat Bagus👍👍"
+Ulasan Google
+Tulis ulasan
+Tambahkan foto
+Cyber Ghost	"Isinnya anak-anak muda bertalenta, bisa main PS 4 pakai layar LCD 60 inchi"
+Bajaj Jumping	"Project Manager banyak yang tidak profesional & tidak kompeten di bidangnya"
+Irvan Bayu	"Keluarga baru di tahun baru"
 Lihat semua ulasan Google
-Dari ROSALYNE CONTRACTOR,FURNITURE & WALLPAPER
-"Rosalyne bergerak di bidang Build-in Furniture, Interior Design, Building, Landscape dan Wallpaper. Rosalyne didirikan pada tahun 2010. Rosalyne telah melaksanakan berbagai jenis pekerjaan Konstruksi dan Interior. Berkantor pusat diYogyakarta dan...  Lebih banyak
+Info terbaru dari PT Sinergi Informatika Semen Indonesia
+Lihat info sebelumnya di Google
 Profil
 
-Instagram
-Orang lain juga menelusuri
-Kyodai hotel
-Kyodai hotel
-Architect Hair Studio
-Architect Hair Studio
-Pusat Gadai Indonesia
-Pusat Gadai Indonesia
-CV.RAJAWALI TEKNOLOGI INDONESIA
-CV.RAJAWALI TEKNOLOGI INDONESIA
-Tentang data ini
+TikTok
+
+Facebook
+
+YouTube
+
+LinkedIn
+Dari PT Sinergi Informatika Semen Indonesia
+"PT Sinergi Informatika Semen Indonesia (SISI) is a subsidiary of the largest cement company in Southeast Asia named PT Semen Indonesia (Persero) Tbk. Established on June 9th 2014, we had successfully implemented a lot of changes and innovations in...  Lebih banyak
 Hasil dipersonalisasi
 -
 Coba tanpa personalisasi
 Indonesia
-55223, Terban, Kota Yogyakarta, Daerah Istimewa Yogyakarta - Dari perangkat Anda
+Maguwoharjo, Kabupaten Sleman, Daerah Istimewa Yogyakarta - Berdasarkan tempat Anda (Kantor)
  - Perbarui lokasi
 Bantuan
 Kirim masukan

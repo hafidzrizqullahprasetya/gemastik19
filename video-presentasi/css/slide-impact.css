@@ -1,0 +1,81 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Slide: Impact Metrics (Dark Theme) ─────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.impact-metrics {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #f0f0f0;
+}
+
+.impact-metrics .section-title {
+  color: #f0f0f0;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.metric-card {
+  background: #2d2d2d;
+  border-radius: 24px;
+  padding: 36px 28px;
+  text-align: center;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+
+.metric-card.primary::before { background: var(--orange); }
+.metric-card.success::before { background: var(--green); }
+.metric-card.warning::before { background: var(--amber); }
+.metric-card.danger::before { background: var(--red); }
+.metric-card.teal::before { background: var(--teal); }
+.metric-card.amber::before { background: var(--amber); }
+
+.metric-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.metric-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.metric-value {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.metric-card.primary .metric-value { color: var(--orange-light); }
+.metric-card.success .metric-value { color: var(--green-light); }
+.metric-card.warning .metric-value { color: var(--amber-light); }
+.metric-card.danger .metric-value { color: var(--red-light); }
+.metric-card.teal .metric-value { color: var(--teal-light); }
+.metric-card.amber .metric-value { color: var(--amber-light); }
+
+.metric-desc {
+  font-size: 15px;
+  color: #b0b0b0;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.metric-note {
+  font-size: 13px;
+  color: #808080;
+  opacity: 0.7;
+  font-style: italic;
+}

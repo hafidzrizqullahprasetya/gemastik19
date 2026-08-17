@@ -1,0 +1,124 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Slide: Reality Check (Dark Theme) ──────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.reality-check {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #f0f0f0;
+}
+
+.reality-check .section-title {
+  color: #f0f0f0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: #2d2d2d;
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+
+.stat-card.stat-danger::before { background: var(--red); }
+.stat-card.stat-warn::before { background: var(--amber); }
+
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.stat-number {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.stat-danger .stat-number { color: var(--red-light); }
+.stat-warn .stat-number { color: var(--amber-light); }
+
+.stat-label {
+  font-size: 15px;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+.stat-icon {
+  font-size: 48px;
+  margin-top: 16px;
+  opacity: 0.8;
+}
+
+.scam-modalities {
+  background: #2d2d2d;
+  border-radius: 24px;
+  padding: 40px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.scam-modalities h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.modality-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.modality-item {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 24px;
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.modality-item.danger {
+  background: #2d1f1f;
+  border-color: var(--red-light);
+}
+
+.modality-item:hover {
+  transform: translateX(8px);
+  border-color: var(--red);
+}
+
+.modality-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.modality-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 8px;
+}
+
+.modality-item p {
+  font-size: 14px;
+  color: #b0b0b0;
+  font-style: italic;
+}

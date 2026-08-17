@@ -1,0 +1,74 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Slide: Tech Stack (Light Theme) ────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.tech-stack {
+  background: linear-gradient(135deg, #FFF8F2 0%, #FFEEE0 100%);
+}
+
+.stack-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.stack-category {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px var(--shadow);
+}
+
+.stack-category h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stack-item {
+  background: var(--cream);
+  border: 2px solid var(--border);
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  transition: all 0.3s ease;
+}
+
+.stack-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--shadow);
+  border-color: var(--orange);
+  background: white;
+}
+
+.architecture-diagram {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px var(--shadow);
+  text-align: center;
+}
+
+.architecture-diagram p {
+  font-size: 16px;
+  color: var(--charcoal-light);
+  margin-bottom: 8px;
+}
+
+.architecture-diagram strong {
+  color: var(--charcoal);
+}

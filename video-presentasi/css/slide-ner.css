@@ -1,0 +1,90 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Slide: NER Explained (Dark Theme) ──────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+.ner-explained {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #f0f0f0;
+}
+
+.ner-explained .section-title {
+  color: #f0f0f0;
+}
+
+.ner-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ner-input, .ner-output {
+  background: #2d2d2d;
+  border-radius: 20px;
+  padding: 32px;
+  border: 2px solid var(--border);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+}
+
+.ner-input h4, .ner-output h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.input-box pre {
+  color: #D4D4D4;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ner-arrow {
+  font-size: 48px;
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.entity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entity {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border-left: 4px solid;
+}
+
+.entity-company { background: #1a2f1a; border-color: var(--green); }
+.entity-phone { background: #1a2a3a; border-color: #2196F3; }
+.entity-salary { background: #2d2a1a; border-color: var(--amber); }
+.entity-email { background: #2a1a2a; border-color: #9C27B0; }
+.entity-location { background: #2d1a1a; border-color: var(--red); }
+
+.ner-example {
+  text-align: center;
+}
+
+.example-note {
+  display: inline-block;
+  background: #2d2d2d;
+  border: 2px solid var(--teal);
+  color: var(--teal-light);
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(42,157,143,0.15);
+}

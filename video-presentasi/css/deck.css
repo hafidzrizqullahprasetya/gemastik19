@@ -1,0 +1,1353 @@
+/* ═══════════════════════════════════════════════════════════════════════ */
+/* ─── Verifin Presentation Deck — Video-Optimized Typography ──────────── */
+/* ─── Pure Dual-Tone Charcoal (#26211d) & Cream (#fbf4eb) ─────────────── */
+/* ═══════════════════════════════════════════════════════════════════════ */
+:root {
+  --charcoal: #26211d;
+  --charcoal-soft: #3d352e;
+  --charcoal-muted: rgba(38, 33, 29, 0.76);
+  --cream: #fbf4eb;
+  --cream-soft: #f4e9dc;
+  --cream-elevated: #fffcf8;
+  --cream-muted: rgba(251, 244, 235, 0.82);
+  --line-light: rgba(38, 33, 29, 0.16);
+  --line-dark: rgba(251, 244, 235, 0.18);
+  --shadow-card: 0 10px 32px rgba(38, 33, 29, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: "Segoe UI", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  letter-spacing: -0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* ─── Slide System (Full Viewport for 16:9 Video Presentation) ────────── */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: none;
+  min-height: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: clamp(24px, 4vh, 48px) clamp(36px, 5.5vw, 84px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  display: flex;
+}
+
+.slide:nth-of-type(odd) {
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+.slide:nth-of-type(even) {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.slide-content {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  opacity: 1;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.slide.active .slide-content {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Text Hierarchy on Dark Slides ───────────────────────────────────── */
+.slide:nth-of-type(even) .section-title,
+.slide:nth-of-type(even) h1,
+.slide:nth-of-type(even) h2,
+.slide:nth-of-type(even) h3,
+.slide:nth-of-type(even) h4,
+.slide:nth-of-type(even) strong {
+  color: var(--cream);
+}
+
+.slide:nth-of-type(even) p,
+.slide:nth-of-type(even) span,
+.slide:nth-of-type(even) li,
+.slide:nth-of-type(even) .stat-label,
+.slide:nth-of-type(even) .metric-desc,
+.slide:nth-of-type(even) .metric-note,
+.slide:nth-of-type(even) .charcoal-light {
+  color: var(--cream-muted);
+}
+
+/* ─── Section Header (Large & Bold for Video) ─────────────────────────── */
+.section-header {
+  margin-bottom: clamp(18px, 2.8vh, 32px);
+  text-align: left;
+}
+
+.section-title {
+  font-size: clamp(30px, 3.8vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-top: 10px;
+}
+
+/* ─── Universal Badges / Pills (Legible on Video) ──────────────────────── */
+.badge,
+.badge-purple,
+.badge-teal,
+.badge-green,
+.badge-red,
+.badge-blue,
+.competition-tag,
+.division-tag,
+.verifin-badge,
+.channel-tag,
+.tech-tags span,
+.stack-item,
+.verdict-badge,
+.highlight-tag,
+.example-note,
+.step-badge {
+  background: transparent;
+  border: 1.5px solid currentColor;
+  color: inherit;
+  box-shadow: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+}
+
+.slide:nth-of-type(odd) .badge,
+.slide:nth-of-type(odd) .badge-purple,
+.slide:nth-of-type(odd) .badge-teal,
+.slide:nth-of-type(odd) .badge-green,
+.slide:nth-of-type(odd) .badge-red,
+.slide:nth-of-type(odd) .badge-blue,
+.slide:nth-of-type(odd) .competition-tag,
+.slide:nth-of-type(odd) .division-tag,
+.slide:nth-of-type(odd) .verifin-badge,
+.slide:nth-of-type(odd) .channel-tag,
+.slide:nth-of-type(odd) .tech-tags span,
+.slide:nth-of-type(odd) .stack-item,
+.slide:nth-of-type(odd) .verdict-badge,
+.slide:nth-of-type(odd) .highlight-tag,
+.slide:nth-of-type(odd) .example-note,
+.slide:nth-of-type(odd) .step-badge {
+  color: var(--charcoal);
+}
+
+.slide:nth-of-type(even) .badge,
+.slide:nth-of-type(even) .badge-purple,
+.slide:nth-of-type(even) .badge-teal,
+.slide:nth-of-type(even) .badge-green,
+.slide:nth-of-type(even) .badge-red,
+.slide:nth-of-type(even) .badge-blue,
+.slide:nth-of-type(even) .competition-tag,
+.slide:nth-of-type(even) .division-tag,
+.slide:nth-of-type(even) .verifin-badge,
+.slide:nth-of-type(even) .channel-tag,
+.slide:nth-of-type(even) .tech-tags span,
+.slide:nth-of-type(even) .stack-item,
+.slide:nth-of-type(even) .verdict-badge,
+.slide:nth-of-type(even) .highlight-tag,
+.slide:nth-of-type(even) .example-note,
+.slide:nth-of-type(even) .step-badge {
+  color: var(--cream);
+}
+
+.hero-bg,
+.bg-shape,
+.closing-bg-gradient {
+  display: none;
+}
+
+/* ─── Card Styling on Light Slides ────────────────────────────────────── */
+.member-card,
+.stat-card,
+.pain-point-card,
+.pillar-card,
+.pipeline-step,
+.modality-item,
+.ner-input,
+.ner-output,
+.result-card,
+.analysis-item,
+.stack-category,
+.architecture-diagram,
+.metric-card,
+.journey-step,
+.supervisor-card,
+.team-info,
+.data-chart,
+.consequence-box,
+.total-score-box {
+  background: var(--cream-elevated);
+  border: 1.5px solid var(--line-light);
+  box-shadow: var(--shadow-card);
+  color: var(--charcoal);
+  border-radius: 20px;
+}
+
+/* ─── Card Styling on Dark Slides ─────────────────────────────────────── */
+.slide:nth-of-type(even) .member-card,
+.slide:nth-of-type(even) .stat-card,
+.slide:nth-of-type(even) .pain-point-card,
+.slide:nth-of-type(even) .pillar-card,
+.slide:nth-of-type(even) .pipeline-step,
+.slide:nth-of-type(even) .modality-item,
+.slide:nth-of-type(even) .ner-input,
+.slide:nth-of-type(even) .ner-output,
+.slide:nth-of-type(even) .result-card,
+.slide:nth-of-type(even) .analysis-item,
+.slide:nth-of-type(even) .stack-category,
+.slide:nth-of-type(even) .architecture-diagram,
+.slide:nth-of-type(even) .metric-card,
+.slide:nth-of-type(even) .journey-step,
+.slide:nth-of-type(even) .supervisor-card,
+.slide:nth-of-type(even) .team-info,
+.slide:nth-of-type(even) .data-chart,
+.slide:nth-of-type(even) .consequence-box,
+.slide:nth-of-type(even) .total-score-box {
+  background: rgba(251, 244, 235, 0.07);
+  border-color: var(--line-dark);
+  color: var(--cream);
+  box-shadow: none;
+}
+
+/* ─── SLIDE 1: Title / Cover ──────────────────────────────────────────── */
+.title-slide {
+  text-align: center;
+}
+
+.title-slide .slide-content {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 0 !important;
+}
+
+.verifin-logo-large,
+.closing-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: var(--charcoal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 6px;
+}
+
+.slide:nth-of-type(even) .verifin-logo-large,
+.slide:nth-of-type(even) .closing-logo {
+  background: var(--cream);
+  color: var(--charcoal);
+}
+
+.verifin-logo-large svg,
+.closing-logo svg {
+  width: 44px;
+  height: 44px;
+}
+
+.title-main {
+  font-size: clamp(52px, 6.5vw, 78px);
+  line-height: 1;
+  font-weight: 900;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: clamp(16px, 1.8vw, 22px);
+  color: var(--charcoal-soft);
+  max-width: 920px;
+  margin: 2px auto 8px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.header-tags-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 2px 0 6px;
+  flex-wrap: wrap;
+}
+
+.header-tags-row span {
+  font-size: 13px;
+  padding: 6px 16px;
+}
+
+.feature-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 2px 0 12px;
+  flex-wrap: wrap;
+}
+
+.feature-badges span {
+  font-size: 13.5px;
+  padding: 6px 18px;
+}
+
+.team-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 920px;
+  margin: 6px 0 10px;
+}
+
+.member-card {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.member-photo {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--charcoal);
+}
+
+.member-card h3 {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.member-nim,
+.member-role {
+  font-size: 12.5px;
+  color: var(--charcoal-muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.supervisor-card {
+  padding: 10px 28px;
+  max-width: 580px;
+  margin: 6px auto 8px;
+  text-align: center;
+}
+
+.supervisor-label,
+.supervisor-nip {
+  font-size: 12px;
+  color: var(--charcoal-muted);
+}
+
+.supervisor-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin: 2px 0;
+}
+
+.university-footer {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.university-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+}
+
+.university-year {
+  font-size: 13px;
+  color: var(--charcoal-soft);
+  font-weight: 600;
+}
+
+/* ─── SLIDE 2: Reality Check (2-Column Spacious & Bold) ───────────────── */
+.reality-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.reality-stats-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.reality-stats-col .stat-card {
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-number {
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.stat-label {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--cream);
+  font-weight: 500;
+}
+
+.stat-label small {
+  display: block;
+  opacity: 0.78;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.reality-modalities-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.col-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 2px;
+}
+
+.modality-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  flex: 1;
+}
+
+.modality-item {
+  padding: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.modality-icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.modality-item h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+
+.modality-item p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--cream-muted);
+}
+
+/* ─── SLIDE 3: Problem Breakdown ──────────────────────────────────────── */
+.pain-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.pain-point-card {
+  padding: 28px 24px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.pain-point-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.pain-point-card p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--charcoal-muted);
+}
+
+.consequence-box {
+  padding: 20px 26px;
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.consequence-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.consequence-text span {
+  font-size: 14.5px;
+  line-height: 1.45;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* ─── SLIDE 4: Solution Intro ─────────────────────────────────────────── */
+.solution-hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.solution-hero .section-title {
+  font-size: clamp(38px, 4.8vw, 58px);
+  margin-top: 10px;
+}
+
+.hero-lead {
+  font-size: 18px;
+  color: var(--cream-muted);
+  margin-top: 8px;
+}
+
+.three-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pillar-card {
+  padding: 30px 26px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--cream);
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.pillar-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.pillar-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.pillar-card p {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--cream-muted);
+}
+
+/* ─── SLIDE 5: Pipeline Section ───────────────────────────────────────── */
+.pipeline-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.pipeline-step {
+  padding: 26px 20px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.step-num {
+  font-size: 26px;
+  font-weight: 900;
+  opacity: 0.35;
+}
+
+.pipeline-step h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.pipeline-step p {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--charcoal-muted);
+  margin-bottom: 14px;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-tags span {
+  font-size: 11px;
+  padding: 4px 10px;
+}
+
+/* ─── SLIDE 6: NER Explained ──────────────────────────────────────────── */
+.ner-comparison {
+  display: grid;
+  grid-template-columns: 1fr 52px 1.35fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.ner-input,
+.ner-output {
+  padding: 24px;
+}
+
+.ner-input h4,
+.ner-output h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.input-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1.5px solid var(--line-dark);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.input-box pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--cream);
+  white-space: pre-wrap;
+}
+
+.ner-arrow {
+  text-align: center;
+  font-size: 28px;
+  color: var(--cream);
+  opacity: 0.7;
+}
+
+.entity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.entity {
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: 1.5px solid var(--line-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entity span {
+  opacity: 0.78;
+  font-size: 12.5px;
+}
+
+.example-note {
+  display: block;
+  padding: 14px 20px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-transform: none;
+  letter-spacing: 0;
+  border-radius: 14px;
+}
+
+/* ─── SLIDE 7: Demo Results ───────────────────────────────────────────── */
+.demo-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.result-card {
+  padding: 24px 26px;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score-score {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.result-card h3 {
+  font-size: 18.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.result-card .channel-tag {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-details p {
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* ─── SLIDE 8: Scam Detection (XAI Breakdown) ─────────────────────────── */
+.scam-analysis-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.risk-score-chart.data-chart {
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.chart-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chart-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.72;
+  display: block;
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.chart-score-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.score-main {
+  font-size: clamp(38px, 4.2vw, 52px);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--cream);
+}
+
+.score-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-max {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.score-status-badge {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--cream);
+  color: var(--cream);
+}
+
+.risk-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.risk-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 44px;
+  align-items: center;
+  gap: 12px;
+}
+
+.risk-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.risk-track {
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(251, 244, 235, 0.16);
+  overflow: hidden;
+}
+
+.risk-track b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cream);
+}
+
+.risk-val {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: right;
+  color: var(--cream);
+}
+
+.chart-footer-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-dark);
+  font-size: 13px;
+  color: var(--cream-muted);
+}
+
+.chart-footer-note strong {
+  color: var(--cream);
+}
+
+.scam-analysis {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scam-analysis .analysis-item {
+  padding: 14px 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.signal-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 1.5px solid var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16.5px;
+  font-weight: 900;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+
+.signal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.signal-body h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+.signal-body p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--cream-muted);
+}
+
+.total-score-box {
+  padding: 16px 24px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.formula-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+}
+
+.formula-label {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.formula-block code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--line-dark);
+}
+
+.verdict-callout {
+  font-size: 14.5px;
+  white-space: nowrap;
+}
+
+.verdict-callout strong {
+  font-weight: 800;
+}
+
+/* ─── SLIDE 9: Tech Stack ─────────────────────────────────────────────── */
+.stack-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.stack-category {
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-category h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.stack-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stack-item {
+  padding: 8px 12px;
+  font-size: 12.5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.architecture-diagram {
+  padding: 16px 22px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.architecture-diagram p {
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+/* ─── SLIDE 10: Impact Metrics ────────────────────────────────────────── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.metric-card {
+  padding: 18px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.metric-value {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.metric-desc {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.metric-note {
+  font-size: 11px;
+  opacity: 0.72;
+  margin-top: 4px;
+}
+
+.impact-chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.impact-bars {
+  display: grid;
+  gap: 10px;
+}
+
+.impact-bar-row {
+  display: grid;
+  grid-template-columns: 65px 1fr 75px;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+}
+
+.impact-bar-row i {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(251, 244, 235, 0.18);
+  overflow: hidden;
+}
+
+.impact-bar-row b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cream);
+}
+
+.impact-note-card {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.impact-note-card strong {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.impact-note-card p {
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+/* ─── SLIDE 11: User Journey ──────────────────────────────────────────── */
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.journey-step {
+  padding: 24px 18px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step-marker {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.journey-step h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.journey-step p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--charcoal-muted);
+}
+
+.journey-highlight {
+  text-align: center;
+}
+
+.journey-highlight .highlight-tag {
+  font-size: 13px;
+  padding: 8px 20px;
+}
+
+/* ─── SLIDE 12: Closing Slide ─────────────────────────────────────────── */
+.closing-slide {
+  text-align: center;
+}
+
+.closing-slide .slide-content {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  padding: 0 !important;
+}
+
+.closing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.closing-title {
+  font-size: clamp(38px, 5vw, 62px);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.tagline-large {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.tagline-subtitle {
+  font-size: 15px;
+  color: var(--cream-muted);
+}
+
+.team-info {
+  padding: 14px 28px;
+  border-radius: 16px;
+}
+
+.team-info p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+.university-credit p {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid var(--cream);
+  border-radius: 12px;
+  color: var(--cream);
+}
+
+/* ─── Navigation Dots & Counter ───────────────────────────────────────── */
+.nav-dots {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.nav-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(38, 33, 29, 0.25);
+  cursor: pointer;
+}
+
+.nav-dot.active {
+  background: var(--charcoal);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 4px rgba(38, 33, 29, 0.12);
+}
+
+.on-dark-slide .nav-dot {
+  background: rgba(251, 244, 235, 0.3);
+}
+
+.on-dark-slide .nav-dot.active {
+  background: var(--cream);
+  box-shadow: 0 0 0 4px rgba(251, 244, 235, 0.15);
+}
+
+.slide-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 22px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(251, 244, 235, 0.9);
+  color: var(--charcoal);
+  border: 1.5px solid var(--line-light);
+  z-index: 1000;
+}
+
+.on-dark-slide .slide-counter {
+  background: rgba(38, 33, 29, 0.9);
+  color: var(--cream);
+  border-color: var(--line-dark);
+}
+
+/* ─── Responsive Adjustments ──────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .team-showcase,
+  .pain-points,
+  .three-pillars,
+  .pipeline-container,
+  .journey-steps,
+  .stack-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reality-two-col,
+  .scam-analysis-layout,
+  .ner-comparison {
+    grid-template-columns: 1fr;
+  }
+}
