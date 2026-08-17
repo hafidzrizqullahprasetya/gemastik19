@@ -25,7 +25,7 @@ Seluruh berkas sudah ditata rapi dan siap diunggah sesuai ketentuan buku panduan
 ```
 siap-submit/
 ├── 01_SURAT_PERNYATAAN/
-│   ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Surat Pernyataan Orisinalitas.pdf (213 KB, Bermaterai Rp10.000 & Bertandatangan)
+│   ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Surat Pernyataan Orisinalitas.pdf (356 KB, Bermaterai Rp10.000 & Bertandatangan)
 │   ├── Surat_Pengembangan_Karya.pdf (904 KB)
 │   └── Surat_Penggunaan_AI.pdf (920 KB)
 │
@@ -36,10 +36,11 @@ siap-submit/
 │   └── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Verifin Deteksi Lowongan Kerja Palsu berbasis AI/
 │       ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Verifin Deteksi Lowongan Kerja Palsu berbasis AI - Proposal.pdf
 │       ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Dokumen Teknis.pdf (2.87 MB, Panduan Instalasi & Penggunaan)
-│       ├── Surat_Pernyataan_Orisinalitas.pdf
-│       ├── URL_Aplikasi_dan_Repository.txt
-│       ├── URL_Video_Demo.txt
-│       ├── Daftar_Komponen_dan_Lisensi.txt
+│       ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Surat Pernyataan Orisinalitas.pdf
+│       ├── URL_Aplikasi_dan_Repository.txt (Live Vercel & FastAPI Cloudflare Tunnel)
+│       ├── URL_Video_Demo.txt (Template Link YouTube)
+│       ├── Daftar_Komponen_dan_Lisensi.txt (Daftar Library & Lisensi)
+│       ├── Adopsi_Lisensi_MIT.txt
 │       └── LICENSE (MIT License)
 │
 ├── GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Verifin Deteksi Lowongan Kerja Palsu berbasis AI.zip (File ZIP Deliverables Siap Upload)
