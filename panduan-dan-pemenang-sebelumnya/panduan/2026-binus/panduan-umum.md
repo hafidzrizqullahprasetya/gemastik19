@@ -135,7 +135,7 @@ Panitia tidak menyediakan akomodasi, transportasi, dan konsumsi bagi para finali
 | II | **Keamanan Siber (Cyber Security)** | | 15 Agustus 2026<br>pkl. 09:00-22:00 WIB | Penyisihan: 23 Agustus 2026<br>Penilaian Write-up: 24-30 Agustus 2026 | | | |
 | III | **Penambangan Data (Data Mining)** | | | | | | |
 | IV | **Desain Pengalaman Pengguna (UX Design)** | | | | | | |
-| V | **Animasi (Animation)** | 27 Juli - 14 Agustus 2026 | 27 Juli - 14 Agustus 2026 | 15 Agustus - 2 September 2026 | M1 September 2026 | 26-30 Oktober 2026 | 10-13 November 2026 |
+| V | **Animasi (Animation)** | 27 Juli - 17 Agustus 2026 | 27 Juli - 17 Agustus 2026 | 15 Agustus - 2 September 2026 | M1 September 2026 | 26-30 Oktober 2026 | 10-13 November 2026 |
 | VI | **Kota Cerdas (Smart City)** | | | | | | |
 | VII | **Karya Tulis Ilmiah (Scientific Paper)** | | | | | | |
 | VIII | **Pengembangan Perangkat Lunak (Software Development)** | | | | | | |
@@ -304,10 +304,10 @@ Pusat Panggilan: 126
 ## **TIMELINE KOMPETISI GEMASTIK 2026**
 
 1. **Pendaftaran Perguruan Tinggi & Tim Peserta**  
-    27 Juli - 14 Agustus 2026
+    27 Juli - 17 Agustus 2026
 
 2. **Pemanasan Pra-Penyisihan / Tenggat Unggah Proposal**  
-   📅 27 Juli - 14 Agustus 2026
+   📅 27 Juli - 17 Agustus 2026
 
 3. **Penyisihan / Masa Penjurian**  
    📅 15 Agustus - 2 September 2026
