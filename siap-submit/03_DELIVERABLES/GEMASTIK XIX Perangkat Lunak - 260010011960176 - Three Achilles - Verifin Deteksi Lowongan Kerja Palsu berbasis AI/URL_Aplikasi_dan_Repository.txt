@@ -25,7 +25,6 @@ Status           : Aktif / Live Production (FastAPI via Cloudflare Tunnel)
 3. REPOSITORY GITHUB RESMI
 --------------------------------------------------------------------------------
 Repository Source Code Aplikasi : https://github.com/matthewpriantara/verifin-app
-Repository Dokumen & Proposal   : https://github.com/hafidzrizqullahprasetya/gemastik19
 
 --------------------------------------------------------------------------------
 4. FITUR MODALITAS PENGUJIAN
