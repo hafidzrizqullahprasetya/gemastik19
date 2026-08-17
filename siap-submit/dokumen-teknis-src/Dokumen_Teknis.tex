@@ -1,0 +1,325 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[indonesian]{babel}
+\usepackage{geometry}
+\geometry{top=3cm,bottom=3cm,left=3.5cm,right=3cm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\onehalfspacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue
+}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{teal},
+    commentstyle=\color{gray}\itshape
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\footnotesize \textit{Dokumen Teknis Verifin --- GEMASTIK XIX 2026}}
+\lhead{\footnotesize \textit{Tim Three Achilles -- UGM}}
+\cfoot{\thepage}
+
+\begin{document}
+
+% ─── HALAMAN JUDUL (PAS 1 HALAMAN) ───────────────────────────────────────────
+\begin{titlepage}
+    \thispagestyle{empty}
+    \singlespacing
+    \centering
+    \vspace*{0.2cm}
+    {\large \textbf{PAGELARAN MAHASISWA NASIONAL BIDANG TIK}}\\[0.2cm]
+    {\normalsize \textbf{(GEMASTIK XIX 2026)}}\\[0.3cm]
+    {\large \textbf{DIVISI VIII: PENGEMBANGAN PERANGKAT LUNAK}}\\[0.6cm]
+
+    \rule{\textwidth}{1.2pt}\\[0.3cm]
+    {\Large \textbf{DOKUMEN TEKNIS}}\\[0.15cm]
+    {\normalsize \textbf{PANDUAN INSTALASI, ARSITEKTUR, DAN PENGGUNAAN}}\\[0.25cm]
+    {\large \textbf{Verifin: Explainable AI-Powered Decision Support System untuk Verifikasi Lowongan Kerja Berbasis Bukti OSINT}}\\[0.3cm]
+    \rule{\textwidth}{1.2pt}\\[0.6cm]
+
+    \textbf{ID Tim:} 260010011960176 \quad\textbar\quad \textbf{Nama Tim:} Three Achilles\\[0.6cm]
+
+    \textbf{Disusun Oleh:}\\[0.2cm]
+    \small
+    \begin{tabular}{lll}
+        Hafidz Rizqullah Prasetya & NIM. 24/535493/SV/24243 & (Ketua Tim) \\
+        Matthew Hayunaji Priantara & NIM. 24/536179/SV/24400 & (Anggota 1) \\
+        Akmal Manggala Putra & NIM. 24/536182/SV/24402 & (Anggota 2) \\
+    \end{tabular}\\[0.6cm]
+
+    \normalsize
+    \textbf{Dosen Pembimbing:}\\[0.15cm]
+    Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng. (NIP. 11198701202201101)\\[0.8cm]
+
+    \vfill
+    {\large \textbf{UNIVERSITAS GADJAH MADA}}\\[0.1cm]
+    {\normalsize \textbf{YOGYAKARTA}}\\[0.1cm]
+    {\normalsize \textbf{2026}}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ─── BAB I: LATAR BELAKANG ───────────────────────────────────────────────────
+\section{Latar Belakang}
+Berdasarkan data Badan Pusat Statistik (BPS) per Februari 2025, tingkat pengangguran terbuka (TPT) di Indonesia mencapai 4,76\% atau setara dengan 7,28 juta jiwa. Desakan ekonomi yang tinggi dan persaingan ketat dalam mencari pekerjaan mendorong para pencari kerja untuk memanfaatkan berbagai saluran informal daring, seperti WhatsApp, Telegram, Instagram, dan grup Facebook. 
+
+Kondisi tersebut dimanfaatkan secara agresif oleh sindikat penipuan siber. Laporan riset \textit{Global Anti-Scam Alliance} (GASA) dan Mastercard (2024) mengidentifikasi bahwa 49\% korban kejahatan digital di Indonesia terekspos modus lowongan kerja palsu (*fake job scam*), berkontribusi pada total kerugian nasional yang diestimasi mencapai Rp 49 Triliun. Dampak yang ditimbulkan tidak hanya berupa kerugian finansial langsung (seperti pungutan biaya administrasi, deposit pelatihan, atau pembelian seragam palsu), melainkan juga eksploitasi pencurian data identitas (KTP/KK) untuk pinjaman online ilegal, hingga risiko kejahatan Tindak Pidana Perdagangan Orang (TPPO) di kawasan regional, sebagaimana dilaporkan oleh Kementerian Luar Negeri RI yang berhasil merepatriasi lebih dari 3.300 WNI korban penipuan daring.
+
+Akar permasalahan dari fenomena ini adalah \textit{Information Asymmetry} (kesenjangan informasi) antara perekrut anonim dan pencari kerja. Solusi yang ada di Indonesia saat ini bersifat reaktif, pasif, atau berbayar, dan belum ada alat verifikasi terpadu tepat pada titik penerimaan tawaran kerja. \textbf{Verifin} hadir sebagai \textit{Decision Support System} (DSS) yang melakukan investigasi otomatis multi-kanal (\textit{multichannel OSINT}) berbasis kecerdasan artifisial yang transparan (\textit{Explainable AI}).
+
+% ─── BAB II: TUJUAN ──────────────────────────────────────────────────────────
+\section{Tujuan}
+Tujuan dari pengembangan dan dokumentasi teknis sistem Verifin adalah:
+\begin{enumerate}
+    \item Menyediakan sistem verifikasi rekrutmen proaktif yang mampu memproses tiga modalitas input (teks broadcast, gambar poster ber-OCR, dan tautan URL web).
+    \item Mengotomatiskan rangkaian investigasi intelijen sumber terbuka (\textit{Automated OSINT}) meliputi DNS/Whois, reputasi nomor telepon, mesin metasearch, dan validasi geospasial OpenStreetMap dalam waktu kurang dari 2 menit.
+    \item Mengembangkan mesin penalaran \textit{Explainable AI} (XAI) aditif yang memberikan skor risiko objektif (0--100) serta verdict deterministik 3 tingkat (\textbf{AMAN}, \textbf{WASPADA}, \textbf{BAHAYA}) tanpa efek \textit{black-box}.
+    \item Memetakan sindikat penipuan berulang melalui pemodelan graf relasi entitas (\textit{Fraud Network Graph}).
+    \item Memberikan panduan instalasi, konfigurasi, dan pemeliharaan teknis yang komprehensif bagi pengembang, evaluator, dan pengelola sistem.
+\end{enumerate}
+
+% ─── BAB III: NILAI INOVASI DAN DAMPAK PEMANFAATAN ───────────────────────────
+\section{Nilai Inovasi dan Dampak Pemanfaatan}
+
+\subsection{Nilai Inovasi}
+Verifin menghadirkan 4 keunggulan inovasi utama:
+\begin{enumerate}
+    \item \textbf{Multichannel Input Ingestion:} Pra-pemrosesan citra tingkat lanjut menggunakan \textit{Contrast Limited Adaptive Histogram Equalization} (CLAHE) dan PaddleOCR 2.8.1 berbahasa Indonesia, memungkinkan ekstraksi teks poster beresolusi rendah sekalipun.
+    \item \textbf{Hibrida Deterministic Regex \& Semantic LLM:} Memadukan ketepatan 100\% aturan regex untuk entitas berpola terstruktur (surel, telepon, URL) dengan LLM untuk ekstraksi entitas semantik kontekstual (nama perusahaan, gaji, lokasi).
+    \item \textbf{Transparansi Aditif (XAI by Design):} Penghitungan skor risiko tidak diserahkan ke probabilitas samar, melainkan melalui penjumlahan bobot bukti objektif:
+    \begin{equation}
+        S_{\text{risiko}} = S_{\text{dasar}} + \sum_{i=1}^{n} \phi_i
+    \end{equation}
+    di mana setiap sinyal memiliki bobot terukur (biaya $+35$, KTP $+25$, gaji fantastis $+20$, kontak anonim $+15$, PT phantom $+10$).
+    \item \textbf{Deteksi Sindikat via Fraud Network Graph:} Graph database berbasis NetworkX yang mendeteksi relasi tersembunyi antarlaporan penipuan berdasarkan kesamaan nomor rekening, nomor kontak, atau domain.
+\end{enumerate}
+
+\subsection{Estimasi Dampak Pemanfaatan}
+\begin{itemize}
+    \item \textbf{Aksesibilitas Terbuka (100\% Gratis):} Layanan investigasi dasar disediakan secara cuma-cuma tanpa dinding berbayar (\textit{paywall}) untuk mendemokratisasi keamanan pencari kerja.
+    \item \textbf{Efisiensi Waktu Analisis ($<$2 Menit):} Rangkaian probe OSINT dan reasoning yang berjalan secara asinkron (\textit{asyncio parallel pipeline}) memangkas waktu investigasi manual dari hitungan jam menjadi hitungan detik.
+    \item \textbf{Perlindungan Komunitas \& Efek Jaringan:} Kemitraan terencana dengan Kantor Alumni / UGM Career memproteksi ribuan lulusan baru secara proaktif.
+\end{itemize}
+
+% ─── BAB IV: DESKRIPSI FUNGSIONAL DAN DETAIL FITUR ──────────────────────────
+\section{Deskripsi Fungsional dan Penjelasan Detail Fitur}
+
+\subsection{Arsitektur Sistem 4 Lapisan}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/1.1.png}
+    \caption{Arsitektur Tingkat Tinggi Sistem Verifin}
+    \label{fig:arsitektur}
+\end{figure}
+
+Sistem Verifin dirancang dengan arsitektur \textit{microservices-ready} yang terdiri dari 4 lapisan pipeline:
+\begin{enumerate}
+    \item \textbf{Layer 1 --- Multichannel Ingestion \& NER Hibrida:} Menerima input teks, gambar poster (OCR), atau URL. Regex deterministik mengekstrak nomor telepon (+62), surel, dan URL, sedangkan LLM mengekstrak nama instansi, rentang gaji, dan posisi pekerjaan.
+    \item \textbf{Layer 2 --- Automated OSINT Engine:} Melakukan pengecekan Whois domain (usia domain, registrar, status SSL), investigasi nomor telepon (reputasi spam/kaspersky), metasearch web korporat via SearXNG, dan geolokasi alamat via OpenStreetMap (OSM Nominatim).
+    \item \textbf{Layer 3 --- Sinyal Perilaku \& Fraud Graph:} Mengurai indikator manipulasi psikologis (urgensi palsu, imbalan tidak masuk akal, dokumen sensitif) dan memetakan simpul entitas pada graf relasi.
+    \item \textbf{Layer 4 --- LLM Reasoning \& Additive XAI:} Mensintesis seluruh bukti terverifikasi menjadi narasi analisis, rincian bobot risiko, dan verdict akhir (\textbf{AMAN} $\le 25$, \textbf{WASPADA} $26$--$60$, \textbf{BAHAYA} $\ge 61$).
+\end{enumerate}
+
+\subsection{Spesifikasi RESTful API Backend}
+FastAPI mengekspos endpoint API terdokumentasi (Swagger UI):
+\begin{itemize}
+    \item \texttt{POST /api/analyze/text} --- Menerima payload teks lowongan kerja mentah.
+    \item \texttt{POST /api/analyze/image} --- Menerima multipart form data citra poster untuk OCR \& analisis.
+    \item \texttt{POST /api/analyze/url} --- Menerima payload URL website lowongan kerja untuk web-scraping \& verifikasi domain.
+    \item \texttt{GET /api/reports} --- Mengambil daftar riwayat laporan publik komunitas.
+    \item \texttt{POST /api/reports} --- Mengirimkan laporan penipuan baru dari pengguna.
+    \item \texttt{GET /api/graph/stats} --- Mengambil visualisasi relasi graf entitas penipuan.
+\end{itemize}
+
+% ─── BAB V: PANDUAN INSTALASI DAN DEPLOYMENT ─────────────────────────────────
+\section{Panduan Instalasi dan Deployment}
+
+\subsection{Kebutuhan Sistem (Prerequisites)}
+\begin{itemize}
+    \item \textbf{Perangkat Keras Minimum:} 2 vCPU, 4 GB RAM, 20 GB SSD Storage.
+    \item \textbf{Perangkat Keras Rekomendasi:} 4 vCPU, 8 GB RAM (untuk akselerasi inferensi OCR/PaddleOCR).
+    \item \textbf{Perangkat Lunak:} Python $\ge$ 3.11, Node.js $\ge$ 18.x LTS, Docker \& Docker Compose (opsional), Git.
+\end{itemize}
+
+\subsection{Konfigurasi Environment Variable}
+Salin berkas konfigurasi template \texttt{.env.example} pada backend menjadi \texttt{.env}:
+\begin{lstlisting}[language=bash]
+# Server Configuration
+PORT=8000
+ENVIRONMENT=production
+
+# Database & Supabase
+DATABASE_URL=postgresql://user:password@host:5432/verifin_db
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_KEY=your-supabase-anon-or-service-key
+
+# AI & LLM Provider
+LLM_PROVIDER=cloud
+LLM_API_KEY=your-gemini-or-openai-api-key
+LLM_MODEL=gemini-1.5-flash
+
+# OSINT External APIs
+SEARXNG_URL=https://search.verifin.my.id
+NOMINATIM_USER_AGENT=Verifin-App-Gemastik19
+\end{lstlisting}
+
+\subsection{Instalasi Backend (FastAPI)}
+\begin{lstlisting}[language=bash]
+# 1. Masuk ke direktori backend
+cd verifin-app/backend
+
+# 2. Buat virtual environment Python
+python -m venv venv
+source venv/bin/activate  # Untuk Linux/macOS
+# .\venv\Scripts\Activate.ps1 # Untuk Windows PowerShell
+
+# 3. Pasang seluruh dependensi
+pip install --upgrade pip
+pip install -r requirements.txt
+
+# 4. Jalankan database migration (opsional bila menggunakan Supabase)
+python -m app.db.init_db
+
+# 5. Jalankan server backend FastAPI
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+\end{lstlisting}
+
+\subsection{Instalasi Frontend (Next.js)}
+\begin{lstlisting}[language=bash]
+# 1. Masuk ke direktori frontend
+cd verifin-app/frontend
+
+# 2. Pasang dependensi Node.js
+npm install
+
+# 3. Konfigurasi environment frontend (.env.local)
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
+
+# 4. Jalankan mode pengembangan
+npm run dev
+# Aplikasi dapat diakses di http://localhost:3000
+
+# 5. Build untuk produksi
+npm run build
+npm run start
+\end{lstlisting}
+
+% ─── BAB VI: PANDUAN PENGGUNAAN DAN SCREENSHOT ──────────────────────────────
+\section{Panduan Penggunaan dan Screenshot Antarmuka}
+
+\subsection{Kanal 1: Verifikasi Teks Lowongan (The Biker Shop)}
+Pengguna menempelkan teks lowongan kerja pada tab input teks. Sistem mengekstrak entitas dan melakukan validasi multi-sumber secara otomatis.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{images/tes text.png}
+    \includegraphics[width=0.48\textwidth]{images/hasil text 1.png}
+    \caption{Input Teks (kiri) dan Hasil Analisis Skor 10 AMAN (kanan)}
+    \label{fig:uji_teks}
+\end{figure}
+
+\subsection{Kanal 2: Verifikasi Gambar Poster OCR (VinFast Yogyakarta)}
+Pengguna mengunggah gambar poster lowongan. Algoritma CLAHE dan PaddleOCR membaca seluruh teks, dilanjutkan dengan investigasi OSINT.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{images/tes gambar.png}
+    \includegraphics[width=0.48\textwidth]{images/hasil gambar 1.png}
+    \caption{Input Citra Poster (kiri) dan Hasil Analisis Skor 48 WASPADA (kanan)}
+    \label{fig:uji_gambar}
+\end{figure}
+
+\subsection{Kanal 3: Verifikasi Tautan Web URL (PT SISI Semen Indonesia)}
+Pengguna memasukkan URL web rekrutmen. Modul crawler dan Whois memvalidasi kepemilikan domain dan sertifikat keamanan korporat.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{images/tes link.png}
+    \includegraphics[width=0.48\textwidth]{images/hasil link 1.png}
+    \caption{Input URL (kiri) dan Hasil Analisis Skor 15 AMAN (kanan)}
+    \label{fig:uji_link}
+\end{figure}
+
+\subsection{Deteksi Kasus Negatif Penipuan (Admin Online WFH)}
+Pengujian terhadap kasus penipuan rekrutmen nyata dengan indikasi pemerasan biaya admin, permintaan dokumen KTP sensitif, dan perusahaan phantom.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{images/hasil test negatif.png}
+    \caption{Tampilan Rincian Bukti Kasus Penipuan (Skor 95 BAHAYA)}
+    \label{fig:uji_negatif}
+\end{figure}
+
+\subsection{Laporan Komunitas dan Riwayat Analisis}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{images/mockup-community.png}
+    \includegraphics[width=0.48\textwidth]{images/mockup-riwayat.png}
+    \caption{Fitur Laporan Komunitas (kiri) dan Riwayat Pemeriksaan (kanan)}
+    \label{fig:fitur_pendukung}
+\end{figure}
+
+% ─── BAB VII: DAFTAR KOMPONEN DAN LISENSI ────────────────────────────────────
+\section{Daftar Komponen Perangkat Lunak dan Lisensi}
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Daftar Komponen dan Lisensi Perangkat Lunak}
+\begin{tabularx}{\textwidth}{llllX}
+\toprule
+\textbf{No} & \textbf{Komponen / Library} & \textbf{Versi} & \textbf{Lisensi} & \textbf{Fungsi} \\
+\midrule
+1 & Next.js & 14.x / 16.x & MIT & Framework Frontend React App Router \\
+2 & React & 18.x / 19.x & MIT & UI Component Library \\
+3 & Tailwind CSS & 3.4.x & MIT & Utility-first Styling \\
+4 & Shadcn UI & Latest & MIT & Accessible UI Primitives \\
+5 & Lucide React & 0.x & ISC & Vector Icons \\
+6 & Vis.js & 9.x & Apache 2.0 & Interactive Network Graph UI \\
+7 & FastAPI & 0.110.0 & MIT & High-performance Python ASGI Web API \\
+8 & Uvicorn & 0.28.0 & BSD-3 & ASGI Web Server \\
+9 & Pydantic & 2.7.x & MIT & Data Validation \& Settings Management \\
+10 & PaddleOCR & 2.8.x & Apache 2.0 & Multilingual Optical Character Recognition \\
+11 & OpenCV Python & 4.9.x & Apache 2.0 & Image Preprocessing (CLAHE) \\
+12 & NetworkX & 3.2.x & BSD-3 & Fraud Relationship Graph Modeling \\
+13 & python-whois & 0.8.0 & MIT & Domain Registration OSINT \\
+14 & dnspython & 2.6.1 & ISC & DNS Record Resolution OSINT \\
+15 & SQLAlchemy & 2.0.x & MIT & Object Relational Mapper \\
+16 & PostgreSQL / Supabase & 15.x & PostgreSQL & Relational Database Management System \\
+17 & SearXNG & Latest & AGPL-3.0 & Privacy-respecting Metasearch Engine \\
+18 & OpenStreetMap (OSM) & API & ODbL & Geospatial Address Geocoding \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ─── BAB VIII: TAUTAN SUMBER DAYA EKSTERNAL ──────────────────────────────────
+\section{Tautan Sumber Daya Eksternal}
+\begin{itemize}
+    \item \textbf{URL Demo Aplikasi Web (Frontend Live):} \url{https://verifin-app.vercel.app}
+    \item \textbf{Dokumentasi API Backend (Swagger UI Live):} \url{https://verifin.pempekasliwongkito.my.id/docs}
+    \item \textbf{Repository GitHub Source Code Aplikasi:} \url{https://github.com/matthewpriantara/verifin-app}
+    \item \textbf{Repository GitHub Dokumen \& Proposal:} \url{https://github.com/hafidzrizqullahprasetya/gemastik19}
+    \item \textbf{Video Rancangan Perangkat Lunak (YouTube):} Tautan dicantumkan pada berkas \texttt{URL\_Video\_Demo.txt}.
+\end{itemize}
+
+\end{document}

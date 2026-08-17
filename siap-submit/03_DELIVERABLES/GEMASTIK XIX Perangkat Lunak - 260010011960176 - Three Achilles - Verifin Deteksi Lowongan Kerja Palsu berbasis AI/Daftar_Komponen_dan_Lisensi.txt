@@ -1,0 +1,66 @@
+================================================================================
+GEMASTIK XIX 2026 - DIVISI VIII PENGEMBANGAN PERANGKAT LUNAK
+DAFTAR KOMPONEN PERANGKAT LUNAK (SOFTWARE LIBRARIES) & ADOPSI LISENSI
+================================================================================
+
+ID Tim          : 260010011960176
+Nama Tim        : Three Achilles
+Perguruan Tinggi: Universitas Gadjah Mada
+Judul Karya     : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI
+
+--------------------------------------------------------------------------------
+1. LAPISAN FRONTEND (USER INTERFACE & GRAPH VISUALIZATION)
+--------------------------------------------------------------------------------
+- Next.js (14.x / 16.x)       : MIT License
+- React (18.x / 19.x)         : MIT License
+- Tailwind CSS (3.4.x)        : MIT License
+- Shadcn UI & Radix Primitives: MIT License
+- Lucide React Icons          : ISC License
+- Vis.js Network Graph        : Apache License 2.0
+- Framer Motion               : MIT License
+
+--------------------------------------------------------------------------------
+2. LAPISAN BACKEND (RESTful API & PIPELINE SERVICES)
+--------------------------------------------------------------------------------
+- FastAPI (0.110.0)           : MIT License
+- Uvicorn (0.28.0)            : BSD 3-Clause License
+- Pydantic (2.7.x)            : MIT License
+- Python-Multipart (0.0.9)    : Apache License 2.0
+- SQLAlchemy (2.0.x)          : MIT License
+- Psycopg2-binary             : LGPL with exception / BSD
+- Python-dotenv (1.0.1)       : BSD 3-Clause License
+- Requests (2.31.0)           : Apache License 2.0
+
+--------------------------------------------------------------------------------
+3. LAPISAN AI, OCR & NLP ENGINE
+--------------------------------------------------------------------------------
+- PaddleOCR (2.8.x)           : Apache License 2.0
+- PaddlePaddle                : Apache License 2.0
+- OpenCV Python (4.9.x)       : Apache License 2.0
+- Pillow / PIL (10.x)         : HPND License
+- Google Generative AI / LLM  : Apache License 2.0 / Commercial API Terms
+
+--------------------------------------------------------------------------------
+4. LAPISAN OSINT & NETWORK GRAPH
+--------------------------------------------------------------------------------
+- NetworkX (3.2.x)            : BSD 3-Clause License
+- python-whois (0.8.0)        : MIT License
+- dnspython (2.6.1)           : ISC License
+- Scrapling (0.4.x)           : BSD 3-Clause License
+- SearXNG Metasearch API      : AGPL 3.0 License
+- OpenStreetMap / Nominatim   : Open Database License (ODbL)
+
+--------------------------------------------------------------------------------
+5. BASIS DATA & INFRASTRUKTUR
+--------------------------------------------------------------------------------
+- PostgreSQL (15.x / 16.x)    : PostgreSQL License
+- Supabase Cloud              : Apache License 2.0 / MIT
+- Docker & Docker Compose     : Apache License 2.0
+
+--------------------------------------------------------------------------------
+6. ADOPSI LISENSI KARYA
+--------------------------------------------------------------------------------
+Seluruh kode sumber orisinal, arsitektur sistem, dan modul investigasi Verifin
+yang dikembangkan oleh Tim Three Achilles dilisensikan di bawah:
+MIT License (Copyright (c) 2026 Three Achilles - Universitas Gadjah Mada).
+================================================================================

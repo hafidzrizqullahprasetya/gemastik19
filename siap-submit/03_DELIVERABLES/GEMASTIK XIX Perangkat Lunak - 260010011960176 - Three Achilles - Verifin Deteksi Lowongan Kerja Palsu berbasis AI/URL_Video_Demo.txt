@@ -1,0 +1,29 @@
+================================================================================
+GEMASTIK XIX 2026 - DIVISI VIII PENGEMBANGAN PERANGKAT LUNAK
+INFORMASI URL VIDEO RANCANGAN & DEMO PERANGKAT LUNAK
+================================================================================
+
+ID Tim          : 260010011960176
+Nama Tim        : Three Achilles
+Perguruan Tinggi: Universitas Gadjah Mada
+Judul Karya     : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI
+
+--------------------------------------------------------------------------------
+1. FORMAT JUDUL VIDEO YOUTUBE (SESUAI PANDUAN RESMI)
+--------------------------------------------------------------------------------
+GEMASTIK XIX Perangkat Lunak - 260010011960176 - Three Achilles - Verifin Deteksi Lowongan Kerja Palsu berbasis AI
+
+--------------------------------------------------------------------------------
+2. TAUTAN VIDEO YOUTUBE
+--------------------------------------------------------------------------------
+URL Video YouTube: [MASUKKAN_LINK_YOUTUBE_DI_SINI_SETELAH_UPLOAD]
+Contoh           : https://youtu.be/xxxxxxxxxxx atau https://www.youtube.com/watch?v=xxxxxxxxxxx
+Pengaturan Privasi: Public / Unlisted (Tidak Publik)
+
+--------------------------------------------------------------------------------
+3. SPESIFIKASI VIDEO
+--------------------------------------------------------------------------------
+- Resolusi       : 1080p Full HD (1920 x 1080) / 720p HD
+- Durasi         : Maksimal 3 Menit (Sesuai Ketentuan Babak Penyisihan)
+- Konten Video   : Latar Belakang Masalah, Arsitektur 4-Layer, Demonstrasi 3 Kanal Input (Teks, OCR Poster, URL), Deteksi Kasus Penipuan (XAI Aditif), dan Dampak.
+================================================================================

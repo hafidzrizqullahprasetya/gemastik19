@@ -1,0 +1,37 @@
+================================================================================
+GEMASTIK XIX 2026 - DIVISI VIII PENGEMBANGAN PERANGKAT LUNAK
+INFORMASI URL APLIKASI DAN REPOSITORY SOURCE CODE
+================================================================================
+
+ID Tim          : 260010011960176
+Nama Tim        : Three Achilles
+Perguruan Tinggi: Universitas Gadjah Mada
+Judul Karya     : Verifin: Deteksi Lowongan Kerja Palsu berbasis AI
+
+--------------------------------------------------------------------------------
+1. URL APLIKASI WEB (LIVE PRODUCTION DEMO)
+--------------------------------------------------------------------------------
+URL Frontend Web : https://verifin-app.vercel.app
+Status           : Aktif / Live Production (Vercel)
+
+--------------------------------------------------------------------------------
+2. URL DOKUMENTASI API BACKEND (FASTAPI / SWAGGER UI)
+--------------------------------------------------------------------------------
+URL API Backend  : https://verifin.pempekasliwongkito.my.id
+URL Swagger Docs : https://verifin.pempekasliwongkito.my.id/docs
+Status           : Aktif / Live Production (FastAPI via Cloudflare Tunnel)
+
+--------------------------------------------------------------------------------
+3. REPOSITORY GITHUB RESMI
+--------------------------------------------------------------------------------
+Repository Source Code Aplikasi : https://github.com/matthewpriantara/verifin-app
+Repository Dokumen & Proposal   : https://github.com/hafidzrizqullahprasetya/gemastik19
+
+--------------------------------------------------------------------------------
+4. FITUR MODALITAS PENGUJIAN
+--------------------------------------------------------------------------------
+Sistem Verifin mendukung 3 modalitas pengujian langsung:
+1. Input Teks   : Verifikasi lowongan teks / broadcast WhatsApp & Telegram.
+2. Input Gambar : Verifikasi poster lowongan via OCR (PaddleOCR + CLAHE).
+3. Input URL    : Verifikasi link website / domain rekrutmen.
+================================================================================
