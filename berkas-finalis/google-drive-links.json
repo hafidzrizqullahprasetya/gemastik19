@@ -1,0 +1,86 @@
+{
+  "rootFolder": {
+    "id": "1SwHqhgmQfS5e98LXP2f99fzRQb1EjIuh",
+    "name": "GEMASTIK XIX 2026 - Berkas Finalis Verifin (Three Achilles UGM)",
+    "webViewLink": "https://drive.google.com/drive/folders/1SwHqhgmQfS5e98LXP2f99fzRQb1EjIuh"
+  },
+  "folders": [
+    {
+      "id": "1CixzTVF7vHjHbgZlY9q7JpQc-Qf41BWY",
+      "name": "01 - Evaluasi Juri & Ringkasan Eksekutif",
+      "desc": "Evaluasi dewan juri penyisihan, action plan, dan factsheet eksekutif"
+    },
+    {
+      "id": "1McoQe8tIe6XNzPtrG8RJX30AwPWkZ3YN",
+      "name": "02 - Proposal & Makalah Ilmiah",
+      "desc": "Proposal resmi 30 halaman dan naskah ilmiah IEEE"
+    },
+    {
+      "id": "1v7ZDuz3nxdec7q-kANTL4ynxEIJjtpr-",
+      "name": "03 - Dokumen Administrasi & HKI",
+      "desc": "Dokumen pendaftaran Hak Cipta DJKI dan surat-surat pernyataan resmi"
+    }
+  ],
+  "files": [
+    {
+      "name": "00 - Katalog & Panduan Lengkap Berkas Finalis.pdf",
+      "folder": "01 - Evaluasi Juri & Ringkasan Eksekutif",
+      "id": "1S-ZA7RGkD7nnEFnOIqKZsqwYu18TMLuO",
+      "link": "https://drive.google.com/file/d/1S-ZA7RGkD7nnEFnOIqKZsqwYu18TMLuO/view?usp=drivesdk"
+    },
+    {
+      "name": "01 - Evaluasi Dewan Juri & Rencana Tindak Lanjut Finalis.pdf",
+      "folder": "01 - Evaluasi Juri & Ringkasan Eksekutif",
+      "id": "1x-RqKv4qxV6lJQu1DGZTCkfgHs6sQdrx",
+      "link": "https://drive.google.com/file/d/1x-RqKv4qxV6lJQu1DGZTCkfgHs6sQdrx/view?usp=drivesdk"
+    },
+    {
+      "name": "02 - Executive Summary Factsheet (One Pager).pdf",
+      "folder": "01 - Evaluasi Juri & Ringkasan Eksekutif",
+      "id": "1XBS1-52MOyZqDjayZpFPxpe_4JSBwaDU",
+      "link": "https://drive.google.com/file/d/1XBS1-52MOyZqDjayZpFPxpe_4JSBwaDU/view?usp=drivesdk"
+    },
+    {
+      "name": "01 - Proposal Lengkap Babak Penyisihan (30 Halaman).pdf",
+      "folder": "02 - Proposal & Makalah Ilmiah",
+      "id": "1OY8F4AgK06u_U45o_jriJxBoDkPWyX2S",
+      "link": "https://drive.google.com/file/d/1OY8F4AgK06u_U45o_jriJxBoDkPWyX2S/view?usp=drivesdk"
+    },
+    {
+      "name": "02 - Makalah Ilmiah Format IEEE Gemastik (Camera-Ready).pdf",
+      "folder": "02 - Proposal & Makalah Ilmiah",
+      "id": "1b5jUYy7W9u5bexLGegpX7dX7QcrYY4qj",
+      "link": "https://drive.google.com/file/d/1b5jUYy7W9u5bexLGegpX7dX7QcrYY4qj/view?usp=drivesdk"
+    },
+    {
+      "name": "01 - Dokumen Deskripsi Ciptaan Program Komputer (HKI DJKI).pdf",
+      "folder": "03 - Dokumen Administrasi & HKI",
+      "id": "1bA-jw7p-GGQxSFFgFtHavuPQ9MN5VRSw",
+      "link": "https://drive.google.com/file/d/1bA-jw7p-GGQxSFFgFtHavuPQ9MN5VRSw/view?usp=drivesdk"
+    },
+    {
+      "name": "02 - Draf Surat Pernyataan Hak Cipta Bermeterai Rp10.000.pdf",
+      "folder": "03 - Dokumen Administrasi & HKI",
+      "id": "1uCE3xwArC9ril2Dmndk3nua71xF7R2-H",
+      "link": "https://drive.google.com/file/d/1uCE3xwArC9ril2Dmndk3nua71xF7R2-H/view?usp=drivesdk"
+    },
+    {
+      "name": "03 - Surat Pernyataan Orisinalitas Karya.pdf",
+      "folder": "03 - Dokumen Administrasi & HKI",
+      "id": "1Q9Qv4jQUHVWtTkezDyvdJ5fH9u_Y1e3G",
+      "link": "https://drive.google.com/file/d/1Q9Qv4jQUHVWtTkezDyvdJ5fH9u_Y1e3G/view?usp=drivesdk"
+    },
+    {
+      "name": "04 - Surat Pernyataan Batasan Penggunaan AI.pdf",
+      "folder": "03 - Dokumen Administrasi & HKI",
+      "id": "1M2ZM8eFPp8G2OpI8SKS3XR9BQnUpbWJ5",
+      "link": "https://drive.google.com/file/d/1M2ZM8eFPp8G2OpI8SKS3XR9BQnUpbWJ5/view?usp=drivesdk"
+    },
+    {
+      "name": "05 - Surat Pernyataan Status Pengembangan Karya.pdf",
+      "folder": "03 - Dokumen Administrasi & HKI",
+      "id": "1-U3dEMNSxtS6TnTaO02wtwQwDUjrJGqV",
+      "link": "https://drive.google.com/file/d/1-U3dEMNSxtS6TnTaO02wtwQwDUjrJGqV/view?usp=drivesdk"
+    }
+  ]
+}
