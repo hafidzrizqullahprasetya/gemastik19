@@ -87,7 +87,7 @@ async function uploadPdfFile(token, folderId, fileName, localPath, desc) {
 
 async function updateFileContent(token, fileId, localPath, newName) {
   const fileBytes = readFileSync(localPath);
-  
+
   // 1. Update media content
   const res = await fetch(`https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=media`, {
     method: 'PATCH',
@@ -97,7 +97,7 @@ async function updateFileContent(token, fileId, localPath, newName) {
     },
     body: fileBytes
   });
-  
+
   if (!res.ok) {
     const err = await res.text();
     throw new Error(`Update content failed for ${fileId}: ` + err);
@@ -203,7 +203,7 @@ async function main() {
     token,
     '1b5jUYy7W9u5bexLGegpX7dX7QcrYY4qj',
     join(DIR, '04-draf-makalah-ilmiah-gemastik.pdf'),
-    '02 - Makalah Ilmiah Format IEEE Gemastik (Camera-Ready).pdf'
+    '02 - Draf Makalah Ilmiah Format IEEE Gemastik.pdf'
   );
 
   // 7. Update Dokumen Deskripsi HKI in Folder 3
@@ -274,7 +274,7 @@ async function main() {
         link: 'https://drive.google.com/file/d/1OY8F4AgK06u_U45o_jriJxBoDkPWyX2S/view?usp=drivesdk'
       },
       {
-        name: '02 - Makalah Ilmiah Format IEEE Gemastik (Camera-Ready).pdf',
+        name: '02 - Draf Makalah Ilmiah Format IEEE Gemastik.pdf',
         folder: '02 - Proposal & Makalah Ilmiah',
         id: '1b5jUYy7W9u5bexLGegpX7dX7QcrYY4qj',
         link: 'https://drive.google.com/file/d/1b5jUYy7W9u5bexLGegpX7dX7QcrYY4qj/view?usp=drivesdk'
