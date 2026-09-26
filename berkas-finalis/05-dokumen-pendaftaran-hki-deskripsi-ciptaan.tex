@@ -1,0 +1,245 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=2.2cm, bottom=2.2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{mathptmx}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\setstretch{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\emergencystretch=3em
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue!70!black,
+    citecolor=black,
+    pdftitle={Deskripsi Program Komputer HKI Verifin - GEMASTIK XIX 2026},
+    pdfauthor={Tim Three Achilles UGM}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textbf{Verifin} --- Deskripsi Program Komputer (HKI)}
+\fancyhead[R]{\small Ditjen Kekayaan Intelektual (DJKI)}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Listing setup
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.97,0.97,0.97}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegray}\itshape,
+    keywordstyle=\color{blue}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    rulecolor=\color{gray!30}
+}
+\lstset{style=mystyle}
+
+\begin{document}
+
+\begin{center}
+    {\fontsize{14}{16}\selectfont\textbf{DOKUMEN PENDAFTARAN HAK CIPTA (HKI)}}\\[3pt]
+    {\fontsize{12}{14}\selectfont\textbf{DESKRIPSI DAN SPESIFIKASI PROGRAM KOMPUTER}}\\[2pt]
+    {\fontsize{10}{12}\selectfont Direktorat Jenderal Kekayaan Intelektual (DJKI) --- Kementerian Hukum dan HAM RI}\\[1pt]
+    {\fontsize{9}{11}\selectfont Persyaratan Berkas Finalis Divisi VIII (PPL) GEMASTIK XIX 2026}
+\end{center}
+
+\vspace{0.5em}
+\hrule height 1pt
+\vspace{1em}
+
+\begin{tabularx}{\textwidth}{@{}p{3.8cm}X@{}}
+\textbf{Kategori Ciptaan} & : \textbf{Program Komputer} (\textit{Software}) \\
+\textbf{Judul Ciptaan}    & : \textbf{VERIFIN: SISTEM PENDUKUNG KEPUTUSAN VERIFIKASI KEABSAHAN LOWONGAN KERJA BERBASIS MULTIMODAL OSINT DAN EXPLAINABLE ARTIFICIAL INTELLIGENCE} \\
+\textbf{Tanggal Pengumuman} & : 12 Agustus 2026 di Yogyakarta, Indonesia \\
+\end{tabularx}
+
+\vspace{1em}
+
+\section*{1. Identitas Para Pencipta dan Pemegang Hak Cipta}
+
+\subsection*{A. Para Pencipta (\textit{Authors})}
+\begin{enumerate}
+    \item \textbf{Hafidz Rizqullah Prasetya} (NIM: 24/535493/SV/24243) \\
+    \textit{Kewarganegaraan:} Indonesia \\
+    \textit{Peran Teknis:} Perancangan Arsitektur Machine Learning, Engine OSINT, dan Logika XAI Monotonik.
+    
+    \item \textbf{Matthew Hayunaji Priantara} (NIM: 24/536179/SV/24400) \\
+    \textit{Kewarganegaraan:} Indonesia \\
+    \textit{Peran Teknis:} Perancangan Arsitektur Backend Asinkron FastAPI, Fraud Network Graph, dan Status Contract Engine.
+    
+    \item \textbf{Akmal Manggala Putra} (NIM: 24/536182/SV/24402) \\
+    \textit{Kewarganegaraan:} Indonesia \\
+    \textit{Peran Teknis:} Perancangan Antarmuka Pengguna Next.js, Visualisasi Graf Relasi SVG, Aksesibilitas WCAG, dan Integrasi Klien.
+    
+    \item \textbf{Dr.Eng. Ir. Ganjar Alfian, S.T., M.Eng.} (NIP: 11198701202201101) \\
+    \textit{Afiliasi:} Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada \\
+    \textit{Peran:} Dosen Pembimbing dan Supervisor Metodologi Rekayasa Perangkat Lunak.
+\end{enumerate}
+
+\subsection*{B. Pemegang Hak Cipta (\textit{Copyright Holder})}
+\begin{itemize}
+    \item \textbf{Nama Lembaga:} Universitas Gadjah Mada (UGM)
+    \item \textbf{Alamat:} Bulaksumur, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+\end{itemize}
+
+\vspace{0.8em}
+\section*{2. Uraian Singkat Ciptaan dan Nilai Kebaruan}
+
+Program komputer \textbf{Verifin} adalah sistem perangkat lunak terintegrasi yang berfungsi sebagai \textit{Decision Support System} (Sistem Pendukung Keputusan) untuk menguji dan memverifikasi keabsahan tawaran lowongan pekerjaan daring secara waktu nyata (\textit{real-time}). Sistem ini diciptakan untuk memitigasi kejahatan penipuan ketenagakerjaan daring (\textit{online recruitment fraud}) dan Tindak Pidana Perdagangan Orang (TPPO) yang merugikan masyarakat pencari kerja di Indonesia.
+
+\textbf{Fitur Kunci dan Kebaruan Teknologi Program Komputer:}
+\begin{enumerate}
+    \item \textbf{Multimodal Data Ingestion:} Program mampu menerima tiga variasi format masukan secara simultan: teks percakapan digital mentah, berkas citra poster lowongan kerja melalui integrasi modul PaddleOCR dengan prapemrosesan OpenCV CLAHE, serta alamat tautan situs web (URL).
+    \item \textbf{Active PII Sanitization Gateway:} Program menyaring dan menyamarkan data identitas pribadi pengguna (\textit{Personally Identifiable Information} / PII) seperti NIK, nomor rekening bank, dan nama individu menggunakan ekspresi reguler deterministik sebelum data diolah lebih lanjut, mematuhi standar UU Pelindungan Data Pribadi No. 27/2022.
+    \item \textbf{Automated Multi-Source OSINT Orchestration:} Program mengorkestrasi penelusuran bukti digital berbasis intelijen sumber terbuka (\textit{Open-Source Intelligence}) secara paralel dan asinkron, meliputi audit registrasi domain WHOIS/RDAP, verifikasi rekaman DNS mail server (SPF/DKIM/DMARC), penelusuran jejak digital via SearXNG, serta validasi fisik geospasial OpenStreetMap Nominatim.
+    \item \textbf{Bipartite Fraud Network Graph Engine:} Program memodelkan entitas kontak (telepon, surel, rekening) dan data historis laporan penipuan menggunakan struktur graf bipartit heterogen berbasis NetworkX untuk mengidentifikasi pola kejahatan sindikat terorganisasi yang menggunakan identitas berulang (\textit{sybil entities}) lintas perusahaan fiktif.
+    \item \textbf{Calibrated Additive Explainable AI (XAI) Scoring:} Program menghitung skor risiko komposit skala 0 hingga 100 yang transparan melalui formulasi aditif terkalibrasi ke dalam tiga zona ambang batas baku: \textbf{Aman (0--39)}, \textbf{Waspada (40--74)}, dan \textbf{Bahaya (75--100)}.
+\end{enumerate}
+
+\newpage
+
+\section*{3. Spesifikasi Teknis dan Lingkungan Operasional}
+
+\begin{itemize}
+    \item \textbf{Bahasa Pemrograman:} Python 3.11+ (Backend Service), TypeScript / JavaScript ES2024 (Frontend Web).
+    \item \textbf{Kerangka Kerja Utama:}
+    \begin{itemize}
+        \item \textit{Backend:} FastAPI 0.115+, Pydantic V2, SQLAlchemy, NetworkX, PaddleOCR, Uvicorn.
+        \item \textit{Frontend:} Next.js 16 (App Router), React 19, Tailwind CSS v4, Motion, Phosphor Icons.
+    \end{itemize}
+    \item \textbf{Basis Data:} PostgreSQL (Supabase) dengan mekanisme fallback lokal SQLite3.
+    \item \textbf{Kebutuhan Sistem Peladen (Server Minimum):}
+    \begin{itemize}
+        \item CPU: 2 Core (x86\_64 atau ARM64)
+        \item RAM: 2.0 GB RAM
+        \item Media Penyimpanan: 10 GB SSD
+        \item Jaringan: Port HTTP/HTTPS (80/443).
+    \end{itemize}
+    \item \textbf{Kebutuhan Klien (Pengguna):} Peramban web modern (Chrome, Firefox, Safari, Edge) pada desktop atau perangkat seluler.
+\end{itemize}
+
+\vspace{0.8em}
+\section*{4. Matriks Kepatuhan Lisensi Pihak Ketiga}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{3.2cm}p{4cm}p{2.8cm}X@{}}
+\toprule
+\textbf{Nama Komponen} & \textbf{Pengembang / Organisasi} & \textbf{Jenis Lisensi} & \textbf{Penggunaan dalam Verifin} \\
+\midrule
+FastAPI & Sebastián Ramírez & MIT License & Kerangka kerja inti REST API asinkron. \\
+Next.js & Vercel, Inc. & MIT License & Kerangka kerja antarmuka web interaktif. \\
+PaddleOCR & PaddlePaddle (Baidu) & Apache License 2.0 & Ekstraksi teks dari citra poster lowongan. \\
+NetworkX & NetworkX Developers & BSD 3-Clause & Pemodelan graf relasi sindikat kejahatan. \\
+Pydantic & Samuel Colvin & MIT License & Validasi integritas kontrak API. \\
+Tailwind CSS & Tailwind Labs & MIT License & Tata letak dan desain antarmuka pengguna. \\
+OpenCV (Python) & OpenCV Team & Apache License 2.0 & Pra-pemrosesan citra (CLAHE) OCR. \\
+python-whois & Richard Penman & MIT License & Kueri data registrasi domain dan DNS. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\vspace{0.5em}
+\section*{5. Cuplikan Kode Sumber Representatif (\textit{Source Code})}
+
+\subsection*{A. Bagian Awal: Ingestion dan PII Sanitizer Gateway}
+\begin{lstlisting}[language=Python]
+# File: verifin-app/backend/app/services/ner.py
+import re
+from typing import Dict, Any, List
+
+def sanitize_pii(text: str) -> str:
+    """
+    Menyamarkan informasi identitas pribadi (PII) sebelum diproses ke modul NLP
+    Sesuai standar kepatuhan UU Pelindungan Data Pribadi No. 27/2022.
+    """
+    # Masking Nomor Induk Kependudukan (NIK 16 Digit)
+    text = re.sub(r'\b\d{16}\b', '[NIK_TERLINDUNGI_VERIFIN]', text)
+    # Masking Rekening Bank & Kartu Kredit
+    text = re.sub(r'\b\d{10,16}\b', '[NOMOR_REKENING_TERLINDUNGI]', text)
+    # Masking Nomor Telepon Pelamar Pribadi
+    text = re.sub(r'(\+62|08)[0-9]{8,12}', '[NOMOR_KONTAK_DISAMARKAN]', text)
+    return text
+\end{lstlisting}
+
+\newpage
+
+\subsection*{B. Bagian Tengah: Multi-Source OSINT Probe Orchestrator}
+\begin{lstlisting}[language=Python]
+# File: verifin-app/backend/app/services/osint/pipeline.py
+import asyncio
+from typing import Dict, Any, List
+from app.services.osint.status_contract import ProbeResult, ProbeStatus
+
+async def execute_osint_orchestration(entities: Dict[str, Any]) -> List[ProbeResult]:
+    """
+    Eksekusi probe OSINT multi-sumber secara paralel dengan batas waktu 3.0 detik
+    """
+    tasks = [
+        asyncio.wait_for(probe_domain_whois(entities.get("domain")), timeout=3.0),
+        asyncio.wait_for(probe_mail_records(entities.get("domain")), timeout=3.0),
+        asyncio.wait_for(probe_geospatial_osm(entities.get("address")), timeout=3.0),
+        asyncio.wait_for(probe_fraud_graph(entities.get("contact")), timeout=3.0)
+    ]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+    return [normalize_probe_status(res) for res in results]
+\end{lstlisting}
+
+\subsection*{C. Bagian Akhir: Explainable AI Additive Risk Calculation}
+\begin{lstlisting}[language=Python]
+# File: verifin-app/backend/app/services/xai/explainer.py
+from typing import Dict, Any, List
+
+def calculate_calibrated_risk(base_score: float, probe_evidences: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Kalkulasi skor risiko aditif terkalibrasi monotonik dalam rentang [0, 100]
+    Ambang Batas Baku: 0-39 (AMAN), 40-74 (WASPADA), 75-100 (BAHAYA)
+    """
+    total_score = base_score
+    for evidence in probe_evidences:
+        if evidence.get("status") == "COMPLETED":
+            total_score += evidence.get("weight", 0.0) * evidence.get("severity", 1.0)
+            
+    clamped_score = max(0.0, min(100.0, total_score))
+    
+    if clamped_score < 40.0:
+        verdict = "AMAN"
+    elif clamped_score < 75.0:
+        verdict = "WASPADA"
+    else:
+        verdict = "BAHAYA"
+        
+    return {
+        "risk_score": round(clamped_score, 1),
+        "verdict": verdict,
+        "evidence_breakdown": probe_evidences
+    }
+\end{lstlisting}
+
+\end{document}
