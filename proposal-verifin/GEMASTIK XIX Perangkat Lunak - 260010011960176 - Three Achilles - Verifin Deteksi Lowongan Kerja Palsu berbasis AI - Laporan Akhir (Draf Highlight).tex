@@ -469,8 +469,8 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 \phantomsection
 \addcontentsline{toc}{subsection}{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}
 
-\begin{bannerpenyisihan}{Kriteria 2 (Dampak \& Keberlanjutan) -- Uji Coba Terbatas (Pilot Study) \& Valuasi Finansial}
-\textbf{Catatan Juri Babak Penyisihan Nasional GEMASTIK XIX (Skor 5/7):} Menjawab evaluasi juri bahwa proyeksi dampak sebelumnya masih berupa simulasi teoretis, belum ada hasil pilot aktual, serta perlunya analisis keberlanjutan biaya komputasi operasional LLM dan mitigasi risiko hukum pencemaran nama baik. Ditambahkan formulasi matematis valuasi ekonomi ($\mathcal{I}_{\text{fin}} = N \cdot p \cdot \eta \cdot \bar{L}$), simulasi 3 skenario adopsi berbasis data BPS dan GASA 2024, rasio Benefit-to-Cost (BCR 1.259:1), hasil empiris Controlled Pilot Study pada 20 pengguna (efisiensi waktu 93,5\%, lonjakan akurasi deteksi dari 45\% ke 95\%), serta disclaimer hukum mitigasi pencemaran nama baik.
+\begin{bannerpenyisihan}{Kriteria 2 (Dampak \& Keberlanjutan) -- Protokol Pilot Study \& Valuasi Finansial}
+\textbf{Catatan Juri Babak Penyisihan Nasional GEMASTIK XIX (Skor 5/7):} Menjawab evaluasi juri bahwa proyeksi dampak sebelumnya masih berupa simulasi teoretis, belum ada hasil pilot aktual, serta perlunya analisis keberlanjutan biaya komputasi operasional LLM dan mitigasi risiko hukum pencemaran nama baik. Ditambahkan formulasi matematis valuasi ekonomi ($\mathcal{I}_{\text{fin}} = N \cdot p \cdot \eta \cdot \bar{L}$), simulasi 3 skenario adopsi berbasis data BPS dan GASA 2024, rasio Benefit-to-Cost (BCR 1.259:1), rancangan protokol Controlled Pilot Study pada 20 responden (target efisiensi waktu, peningkatan akurasi deteksi, dan instrumen SUS) yang dipersiapkan sebagai roadmap validasi empiris babak final, serta disclaimer hukum mitigasi pencemaran nama baik.
 \end{bannerpenyisihan}
 \vspace{0.2cm}
 
@@ -525,21 +525,13 @@ API LLM) diperkirakan sebesar Rp250--Rp350 per verifikasi. Pada skenario moderat
 operasional sebesar Rp16,38 juta mampu memproteksi potensi kerugian ekonomi sebesar Rp20,64 Miliar,
 menghasilkan \textbf{\textit{Benefit-to-Cost Ratio} (BCR) sebesar 1.259:1}.
 
-\subsubsection*{3.\quad Validasi Uji Terbatas Pengguna (Pilot Usability \& Detection Study)}
-Untuk memvalidasi dampak nyata sebelum peluncuran massal, kami melaksanakan pengujian terbatas (\textit{controlled pilot test})
-terhadap 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate}) menggunakan 10 sampel
-lowongan kerja (5 lowongan legitimate dan 5 lowongan penipuan lintas kanal: WhatsApp, formulir, dan poster).
-Hasil pengujian empiris menunjukkan:
+\subsubsection*{3.\quad Rancangan Protokol Uji Terbatas Pengguna (Controlled Pilot Study Roadmap)}
+Sebagai komitmen menjawab evaluasi dewan juri mengenai pembuktian dampak empiris pada pengguna riil, kami telah menyusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate} di lingkungan kampus):
 \begin{enumerate}[label=\textbf{\alph*.}]
-\item \textbf{Efisiensi Waktu Investigasi:} Wata-rata waktu verifikasi terpangkas dari \textbf{18,4 menit}
-      (metode manual konvensional: pencarian Google, peta, cek nomor) menjadi hanya \textbf{1,2 menit} menggunakan
-      Verifin, setara efisiensi waktu sebesar \textbf{93,5\%}.
-\item \textbf{Peningkatan Akurasi Deteksi Bahaya:} Akurasi identifikasi responden terhadap lowongan berbahaya melonjak
-      dari \textbf{45,0\%} (evaluasi mandiri tanpa alat) menjadi \textbf{95,0\%} setelah membaca verdict, Skor Risiko,
-      dan penjelasan bukti XAI Verifin.
-\item \textbf{Tingkat Kepuasan \& Usability:} Pengukuran kegunaan antarmuka menggunakan kuesioner \textit{System Usability Scale}
-      (SUS) menghasilkan skor rata-rata \textbf{83,5} (kategori \textit{Excellent / Grade A}), membuktikan kemudahan
-      operasional bagi pengguna awam.
+\item \textbf{Desain Skenario Kasus Uji:} Pengujian dirancang menggunakan 10 sampel lowongan kerja riil (5 lowongan legitimate dan 5 lowongan penipuan lintas kanal: WhatsApp BUMN palsu, poster luar negeri terindikasi TPPO, formulir phishing, dan portal resmi).
+\item \textbf{Target Pengukuran Efisiensi Waktu:} Mengukur durasi investigasi mandiri manual (pencarian Google, peta OSM, cek nomor) dibandingkan verifikasi satu pintu Verifin, dengan target pemangkasan durasi dari baseline $\sim$15--20 menit menjadi $\sim$1--2 menit (target efisiensi waktu $>$90\%).
+\item \textbf{Target Efikasi Intervensi Pencegahan:} Mengukur peningkatan akurasi responden dalam mengenali indikator bahaya sebelum dan sesudah membaca narasi transparansi XAI serta Skor Risiko Verifin.
+\item \textbf{Evaluasi Kegunaan Antarmuka (SUS):} Menilai tingkat kepuasan dan kemudahan navigasi antarmuka pengguna awam menggunakan instrumen baku \textit{System Usability Scale} (SUS) 10 pertanyaan skala Likert berstandar internasional.
 \end{enumerate}
 
 \subsubsection*{4.\quad Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan}
@@ -1512,8 +1504,8 @@ mengakses lowongan melalui perangkat mobile.
 \phantomsection
 \addcontentsline{toc}{subsection}{F. Halaman Komunitas dan Riwayat Verifikasi}
 
-\begin{bannerpenyisihan}{Kriteria 3 \& 5 (Usability UX \& Kepatuhan Privasi) -- Komunitas, Riwayat, SUS 83,5, \& PII}
-\textbf{Catatan Juri Babak Penyisihan Nasional GEMASTIK XIX (Skor 5/7 \& 6/7):} Menjawab evaluasi juri terkait pengujian usability aktual, pemahaman pengguna bahwa label AMAN bukan jaminan legalitas, keberlanjutan moderasi laporan komunitas, serta perlindungan privasi (PII). Disajikan evaluasi System Usability Scale (SUS 83,5 / Grade A), audit aksesibilitas WCAG 2.1 AA, antarmuka Community Feed dan Riwayat Verifikasi berbasis Progressive Disclosure, serta penegasan arsitektur sanitasi PII (UU PDP No. 27/2022).
+\begin{bannerpenyisihan}{Kriteria 3 \& 5 (Usability UX \& Kepatuhan Privasi) -- Komunitas, Riwayat, \& Protokol SUS}
+\textbf{Catatan Juri Babak Penyisihan Nasional GEMASTIK XIX (Skor 5/7 \& 6/7):} Menjawab evaluasi juri terkait pengujian usability aktual, pemahaman pengguna bahwa label AMAN bukan jaminan legalitas, keberlanjutan moderasi laporan komunitas, serta perlindungan privasi (PII). Disajikan rancangan protokol evaluasi System Usability Scale (SUS), audit aksesibilitas WCAG 2.1 AA, antarmuka Community Feed dan Riwayat Verifikasi berbasis Progressive Disclosure, serta penegasan arsitektur sanitasi PII (UU PDP No. 27/2022).
 \end{bannerpenyisihan}
 \vspace{0.2cm}
 

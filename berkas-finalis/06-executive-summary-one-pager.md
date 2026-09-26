@@ -59,13 +59,13 @@ Verifin adalah sistem pendukung keputusan (Decision Support System) yang beroper
 * **Cakupan Pengujian Kode (88,4% via pytest-cov):** Teruji pada modul inti (NER: 94,2%, XAI: 91,5%, REST API: 92,0%).
 * **Ketahanan Sistem Asinkron:** Isolasi kegagalan dengan batas waktu (timeout) 3,0 detik per probe OSINT; degradasi terkelola ke status UNAVAILABLE (bobot risiko 0.0) untuk mencegah False Negative.
 
-### B. Evaluasi Akurasi (Pengujian Buta pada 100 Sampel Kasus Riil)
-* **Presisi:** 97,9% | **Recall:** 94,0% | **F1-Score:** 95,9% | **Akurasi Keseluruhan:** 96,0%.
+### B. Rancangan Benchmark Kasus Nyata (100 Sampel Roadmap)
+* **Dataset Teranotasi Lokal:** Himpunan 100 sampel lowongan kerja Indonesia (50 legal dan 50 penipuan) dari kanal WhatsApp, poster media sosial, dan portal resmi untuk pengujian benchmark babak final.
 
-### C. Controlled Pilot Study (20 Pengguna, 10 Skenario Riil)
-* **Efisiensi Waktu Pemeriksaan:** Menurunkan durasi investigasi dari 18,4 menit (manual) menjadi 1,2 menit (Verifin), efisiensi sebesar 93,5%.
-* **Peningkatan Akurasi Deteksi:** Akurasi mengenali lowongan berbahaya meningkat dari 45,0% menjadi 95,0% (p < 0,001).
-* **System Usability Scale (SUS):** Memperoleh skor rata-rata 83,5 (kategori Grade A / Excellent).
+### C. Protokol Controlled Pilot Study (20 Pengguna, 10 Skenario Riil - Roadmap)
+* **Target Efisiensi Waktu Pemeriksaan:** Menurunkan durasi investigasi mandiri dari baseline ~18 menit (manual) menjadi ~1 menit (Verifin), potensi efisiensi >90%.
+* **Target Efikasi Intervensi:** Mengukur signifikansi peningkatan akurasi responden dalam mendeteksi lowongan berbahaya setelah membaca bukti XAI.
+* **Evaluasi Usability Berstandar SUS:** Pengujian antarmuka menggunakan instrumen baku System Usability Scale (SUS) 10 pertanyaan skala Likert.
 
 ### D. Valuasi Dampak Finansial dan Rasio Manfaat-Biaya
 * **Potensi Proteksi Kerugian Finansial:** Rp20,64 Miliar pada skenario adopsi moderat (54.600 pemeriksaan tahunan).

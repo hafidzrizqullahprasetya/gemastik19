@@ -127,18 +127,14 @@ Pengujian otomatis dilakukan menggunakan *Pytest* dan *Playwright E2E* pada 146 
 
 Evaluasi ketahanan adversarial membuktikan bahwa sistem kebal terhadap upaya manipulasi karakter serupa (*homoglyphs*), upaya SSRF (blokir IP privat RFC1918), serta upaya *prompt injection* pada model bahasa (tingkat keberhasilan injeksi 0%).
 
-### B. Evaluasi Metrik Deteksi Kasus Nyata
-Evaluasi blind test dilakukan terhadap 100 data sampel lowongan kerja riil di Indonesia (50 legal dan 50 terindikasi penipuan). Hasil matriks konfusi menunjukkan performa klasifikasi yang sangat presisi:
-- **Precision:** 97,9% (hanya 1 kasus *false positive* pada entitas UMKM baru).
-- **Recall:** 94,0% (47 dari 50 kasus penipuan berhasil diidentifikasi tepat).
-- **F1-Score:** 95,9% | **Akurasi Keseluruhan:** 96,0%.
+### B. Rancangan Kurasi Korpus Kasus Nyata & Benchmark (Roadmap)
+Untuk menguji keandalan sistem pada data independen non-kurasi, tim sedang menghimpun korpus benchmark berisi 100 sampel lowongan kerja riil di Indonesia (50 terverifikasi legal dan 50 indikasi penipuan) dari kanal publik (poster rekrutmen media sosial, broadcast pesan instan, dan portal karier resmi). Dataset ini dipersiapkan sebagai tolok ukur pengujian presisi, recall, dan ketahanan model penalaran bukti terhadap variasi modus operandi domestik.
 
-### C. Controlled Pilot Study & Evaluasi Usability
-Eksperimen terkontrol dengan desain *within-subject comparison* diselenggarakan terhadap 20 pencari kerja muda yang diminta mengevaluasi 10 kasus lowongan kerja (5 legal dan 5 penipuan). Hasil pengukuran empiris membuktikan bahwa:
-1. **Efisiensi Waktu:** Rata-rata durasi investigasi mandiri menurun drastis dari **18,4 menit** menjadi **1,2 menit** per lowongan setelah menggunakan Verifin (peningkatan efisiensi sebesar **93,5%**).
-2. **Akurasi Pengguna:** Akurasi responden dalam mengidentifikasi lowongan berbahaya melonjak signifikan dari **45,0%** menjadi **95,0%** ($t(19) = 8{,}42, p < 0{,}001$).
-3. **Usability (SUS):** Evaluasi *System Usability Scale* menghasilkan skor rata-rata **83,5** (kategori *Grade A / Excellent*), mengonfirmasi bahwa antarmuka Verifin sangat mudah dipahami oleh pengguna non-teknis.
-
+### C. Protokol Controlled Pilot Study & Evaluasi Usability (Roadmap)
+Sebagai bagian dari rencana validasi empiris babak final, tim telah merancang protokol eksperimen terkontrol (*within-subject design*) yang siap dieksekusi bersama 20 responden pencari kerja muda:
+1. **Pengujian Efisiensi Waktu:** Mengukur durasi investigasi mandiri manual (baseline penelusuran web/peta) dibandingkan verifikasi terpadu Verifin pada 10 skenario penugasan.
+2. **Efikasi Intervensi Keputusan:** Menguji signifikansi peningkatan akurasi responden dalam mendeteksi lowongan berisiko sebelum dan sesudah membaca narasi bukti XAI.
+3. **Evaluasi Usability (SUS):** Mengukur tingkat kemudahan pengoperasian dan kepuasan antarmuka menggunakan instrumen baku *System Usability Scale* (SUS) 10-item skala Likert.
 ### D. Valuasi Dampak Ekonomi Kuantitatif
 Model valuasi dampak finansial diformulasikan berdasarkan data populasi pencari kerja BPS (7,28 juta) dan rata-rata kerugian nominal penipuan lowongan kerja sebesar Rp4.200.000 (GASA & Mastercard, 2024):
 $$\mathcal{I}_{\text{fin}} = N \cdot p_{\text{scam}} \cdot \eta_{\text{cegah}} \cdot \bar{L}$$
@@ -147,7 +143,7 @@ Pada tingkat adopsi moderat ($N = 54.600$ pemeriksaan tahunan) dengan asumsi efi
 ---
 
 ## V. KESIMPULAN
-Verifin berhasil membuktikan efektivitas integrasi kecerdasan buatan terjelaskan (*Explainable AI*), ekstraksi multimodal, dan otomasi investigasi OSINT dalam memutus rantai penipuan lowongan kerja daring di Indonesia. Sistem tidak hanya unggul dalam keandalan rekayasa perangkat lunak (cakupan kode 88,4% dan toleransi kegagalan jaringan tinggi), namun juga terbukti secara empiris memangkas waktu investigasi pengguna hingga 93,5%, mendongkrak akurasi deteksi masyarakat hingga 95,0%, serta menawarkan rasio manfaat-biaya 1.259:1. Penelitian masa depan diarahkan pada pelatihan lanjut (*fine-tuning*) korpus penipuan domestik yang dihimpun melalui fitur komunitas ke dalam model fondasi *IndoBERT-base* guna mewujudkan kedaulatan inferensi kecerdasan buatan lokal yang mandiri dan berlatensi ultra-rendah.
+Verifin membuktikan potensi integrasi kecerdasan buatan terjelaskan (*Explainable AI*), ekstraksi multimodal, dan otomasi investigasi OSINT dalam memutus rantai penipuan lowongan kerja daring di Indonesia. Sistem memiliki ketahanan rekayasa perangkat lunak tinggi (cakupan kode 88,4% pada modul inti dan toleransi kegagalan jaringan tinggi), efisiensi komputasi dengan rasio manfaat-biaya 1.259:1, serta didukung rancangan protokol evaluasi empiris pengguna. Pengembangan lanjutan difokuskan pada eksekusi pilot study formal dan pelatihan lanjut (*fine-tuning*) korpus penipuan domestik teranotasi ke dalam model fondasi IndoBERT-base demi kemandirian komputasi lokal berlatensi ultra-rendah.
 
 ---
 
