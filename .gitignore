@@ -6,6 +6,8 @@ verifin-app
 *.log
 *.out
 *.toc
+*.lot
+*.lof
 *.synctex.gz
 *.fdb_latexmk
 *.fls

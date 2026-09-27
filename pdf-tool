@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+import sys
+import argparse
+import pymupdf
+
+def main():
+    parser = argparse.ArgumentParser(description="Ultra-fast PDF Inspection and Rendering Tool (via PyMuPDF)")
+    subparsers = parser.add_subparsers(dest="cmd", required=True)
+
+    # Info command
+    info_p = subparsers.add_parser("info", help="Get PDF metadata and page count")
+    info_p.add_argument("pdf", help="Path to PDF")
+
+    # Render command
+    render_p = subparsers.add_parser("render", help="Render PDF page(s) to PNG")
+    render_p.add_argument("pdf", help="Path to PDF")
+    render_p.add_argument("--page", "-p", type=int, default=1, help="1-based page number (default: 1)")
+    render_p.add_argument("--dpi", "-d", type=int, default=150, help="Resolution DPI (default: 150)")
+    render_p.add_argument("--output", "-o", default=None, help="Output image file path (default: /tmp/page_<N>.png)")
+
+    # Text command
+    text_p = subparsers.add_parser("text", help="Extract text from PDF page(s)")
+    text_p.add_argument("pdf", help="Path to PDF")
+    text_p.add_argument("--page", "-p", type=int, default=None, help="1-based page number (default: all)")
+
+    args = parser.parse_args()
+
+    doc = pymupdf.open(args.pdf)
+
+    if args.cmd == "info":
+        print(f"File: {args.pdf}")
+        print(f"Pages: {len(doc)}")
+        meta = doc.metadata
+        if meta:
+            for k in ["title", "author", "creator", "producer", "creationDate", "modDate"]:
+                if meta.get(k):
+                    print(f"{k.capitalize()}: {meta[k]}")
+
+    elif args.cmd == "render":
+        if args.page < 1 or args.page > len(doc):
+            print(f"Error: Page {args.page} out of range (1..{len(doc)})", file=sys.stderr)
+            sys.exit(1)
+        out_path = args.output or f"/tmp/page_{args.page}.png"
+        page = doc[args.page - 1]
+        pix = page.get_pixmap(dpi=args.dpi)
+        pix.save(out_path)
+        print(f"Rendered page {args.page}/{len(doc)} -> {out_path} ({pix.width}x{pix.height})")
+
+    elif args.cmd == "text":
+        if args.page is not None:
+            if args.page < 1 or args.page > len(doc):
+                print(f"Error: Page {args.page} out of range (1..{len(doc)})", file=sys.stderr)
+                sys.exit(1)
+            print(doc[args.page - 1].get_text())
+        else:
+            for i, page in enumerate(doc):
+                print(f"--- PAGE {i+1} ---")
+                print(page.get_text())
+
+if __name__ == "__main__":
+    main()
