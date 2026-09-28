@@ -66,6 +66,24 @@
   \end{tcolorbox}%
 }
 
+\definecolor{biruisi}{RGB}{224, 242, 254}
+\definecolor{sorotbiru}{RGB}{186, 230, 253}
+\newenvironment{sorotbiru}{%
+  \begin{tcolorbox}[
+    breakable,
+    enhanced,
+    frame hidden,
+    boxrule=0pt,
+    arc=0mm,
+    sharp corners,
+    colback=blue!10,
+    left=1.5mm, right=1.5mm, top=1.0mm, bottom=1.0mm,
+    before skip=1.5pt, after skip=1.5pt
+  ]%
+}{%
+  \end{tcolorbox}%
+}
+
 \usepackage{changepage}
 
 \definecolor{verfinblue}{RGB}{30,64,175}
@@ -233,6 +251,24 @@
 \endgroup
 \newpage
 \pagenumbering{arabic}
+
+\noindent
+\begin{tcolorbox}[
+  enhanced,
+  boxrule=0.6pt,
+  colframe=verfinblue!60,
+  colback=verfinblue!3,
+  arc=1.5mm,
+  left=3mm, right=3mm, top=2mm, bottom=2mm
+]
+\small
+\textbf{Panduan Visual Notasi Sorotan Dokumen (\textit{Document Highlighting Guide}):}
+\begin{itemize}[leftmargin=1.5em, itemsep=1.5pt, topsep=2pt]
+  \item \colorbox{yellow!30}{\textbf{Sorotan Kuning:}} Menandai perbaikan substantif, penguatan arsitektur, dan penambahan justifikasi teknis/kuantitatif baru pasca-penyisihan sesuai masukan Dewan Juri GEMASTIK XIX.
+  \item \colorbox{blue!15}{\textbf{Sorotan Biru:}} Menandai \textbf{Rencana Masa Depan (\textit{Roadmap / Future Work})} secara transparan untuk membedakan kesiapan modul perangkat lunak saat ini dengan agenda pengembangan pasca-kompetisi.
+\end{itemize}
+\end{tcolorbox}
+\vspace{0.2cm}
 
 \refstepcounter{section}
 \section*{BAB I LATAR BELAKANG}
@@ -575,7 +611,9 @@ Biaya komputasi operasional Verifin (arsitektur serverless FastAPI, basis data S
 API LLM) diperkirakan sebesar Rp250--Rp350 per verifikasi. Pada skenario moderat (54.600 verifikasi), total biaya
 operasional sebesar Rp16,38 juta mampu memproteksi potensi kerugian ekonomi sebesar Rp20,64 Miliar,
 menghasilkan \textbf{\textit{Benefit-to-Cost Ratio} (BCR) sebesar 1.259:1}.
+\end{sorotkuning}
 
+\begin{sorotbiru}
 \subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna (Controlled Pilot Study Roadmap)}
 Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate} di lingkungan kampus):
 \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, labelindent=0.65cm, labelsep=0.5em]
@@ -584,7 +622,9 @@ Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan P
 \item \textbf{Target Efikasi Intervensi Pencegahan:} Mengukur peningkatan akurasi responden dalam mengenali indikator bahaya sebelum dan sesudah membaca narasi transparansi XAI serta Skor Risiko Verifin.
 \item \textbf{Evaluasi Kegunaan Antarmuka (SUS):} Menilai tingkat kepuasan dan kemudahan navigasi antarmuka pengguna awam menggunakan instrumen baku \textit{System Usability Scale} (SUS) 10 pertanyaan skala Likert berstandar internasional.
 \end{enumerate}
+\end{sorotbiru}
 
+\begin{sorotkuning}
 \subsubsection*{4. Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan}
 Selain kerugian moneter, penipuan rekrutmen daring merupakan pintu masuk utama Tindak Pidana Perdagangan Orang (TPPO)
 ke sindikat kejahatan siber regional (Kemenlu mencatat 3.300+ WNI menjadi korban pada 2020--2024 [3], [4]). Verifin
@@ -593,11 +633,12 @@ Keberlanjutan sistem diperkuat oleh efek jaringan \textit{Fraud Network Graph}: 
 secara kumulatif memperkaya basis data intelijen penipuan tanpa biaya akuisisi data komersial.
 \end{sorotkuning}
 
-\subsection*{D. Rencana Kemitraan Strategis dan Pilot Deployment}
-\addcontentsline{toc}{subsection}{D. Rencana Kemitraan Strategis dan Pilot Deployment}
+\subsection*{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Implementasi)}
+\addcontentsline{toc}{subsection}{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Implementasi)}
 
+\begin{sorotbiru}
 Untuk memastikan Verifin tidak berhenti sebagai prototipe, kami merancang strategi
-\textit{go-to-market} melalui kemitraan institusional yang konkret.
+\textit{go-to-market} melalui kemitraan institusional jangka panjang pasca-kompetisi:
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Kemitraan UGM Career (Kantor Alumni UGM):} Verifin direncanakan untuk diintegrasikan
@@ -616,6 +657,7 @@ keputusan, dan tingkat kepercayaan diri pengguna.
 job board nasional, platform pemerintah (Kemnaker, Kartu Prakerja), maupun kanal komunitas
 (bot WhatsApp/Telegram).
 \end{enumerate}
+\end{sorotbiru}
 
 
 \refstepcounter{section}
@@ -690,14 +732,19 @@ Untuk mengatasi ketiadaan korpus tersebut secara ilmiah dan bertanggung jawab, V
       khusus untuk pola lokal (format nomor seluler HLR Indonesia 08xx/+62, format gaji Rupiah, OCR Bahasa Indonesia)
       dengan \textbf{Penalaran LLM Berbasis Bukti (\textit{Evidence-Constrained Reasoning})} yang dipandu
       panduan taksonomi penipuan kerja Indonesia. LLM dibatasi secara ketat hanya menimbang fakta OSINT riil tanpa spekulasi.
-\item \textbf{Fase Keberlanjutan (Data Flywheel \& Fine-Tuning IndoBERT):} Modul \textit{Community Monitoring}
+\end{enumerate}
+\end{sorotkuning}
+
+\begin{sorotbiru}
+\begin{enumerate}[label=\textbf{\arabic*.}, resume]
+\item \textbf{Fase Keberlanjutan (Roadmap Data Flywheel \& Fine-Tuning IndoBERT):} Modul \textit{Community Monitoring}
       Verifin dioperasikan sebagai instrumen pengumpulan korpus teranotasi aktif untuk menyusun
       korpus penipuan lowongan kerja Bahasa Indonesia pertama. Laporan komunitas yang tervalidasi dan
       disanitasi dari PII akan digunakan untuk \textit{fine-tuning} model pra-latih \textbf{IndoBERT-base}
       (berbasis korpus Indo4B [9]) sebagai mesin klasifikasi lokal mandiri (\textit{edge inference}) berlatensi
-      rendah demi menjamin kedaulatan data dan privasi pengguna.
+      rendah demi menjamin kedaulatan data dan privasi pengguna pasca-kompetisi.
 \end{enumerate}
-\end{sorotkuning}
+\end{sorotbiru}
 
 \subsection*{F. Ketergantungan API Eksternal}
 \addcontentsline{toc}{subsection}{F. Ketergantungan API Eksternal}
@@ -716,9 +763,7 @@ perbatasan.
 Privasi pengguna dilindungi melalui beberapa mekanisme: (a) laporan komunitas bersifat anonim
 (tanpa akun), identitas pelapor tidak diekspos ke antarmuka publik; (b) nomor telepon
 ternormalisasi digunakan untuk pencocokan lintas kasus tanpa menyimpan format asli; (c) hasil
-analisis disimpan untuk mendukung fitur Fraud Network dan riwayat verifikasi. Roadmap
-pengembangan mencakup penerapan \textit{PII masking} sebelum pengiriman ke LLM eksternal serta
-kebijakan retensi data yang lebih ketat.
+analisis disimpan untuk mendukung fitur Fraud Network dan riwayat verifikasi. \colorbox{blue!15}{\textbf{Roadmap Privasi:}} Penerapan \textit{PII masking} otomatis sebelum pengiriman ke LLM eksternal serta kebijakan retensi data berbasis kedaluwarsa waktu.
 
 \subsection*{I. Batas Intervensi Sistem}
 \addcontentsline{toc}{subsection}{I. Batas Intervensi Sistem}
@@ -728,15 +773,18 @@ verifikasi awal. Faktor psikologis dan sosial korban (desakan ekonomi, bias otor
 
 \subsection*{J. Agenda Pengembangan Lanjutan (Future Work)}
 \addcontentsline{toc}{subsection}{J. Agenda Pengembangan Lanjutan (Future Work)}
-Terdapat tiga agenda pengembangan yang direncanakan setelah versi kompetisi, yakni:
+
+\begin{sorotbiru}
+Terdapat tiga agenda pengembangan utama yang direncanakan setelah versi kompetisi GEMASTIK XIX, yakni:
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia} untuk
 melengkapi penalaran LLM dengan model terlatih yang representatif terhadap domain Indonesia.
 \item \textbf{Studi pengguna (\textit{user study})} untuk mengukur dampak nyata Verifin terhadap kemampuan pengguna
-mengidentifikasi lowongan palsu (desain kontrol--perlakuan).
-\item \textbf{Integrasi kanal} melalui bot WhatsApp dan ekstensi peramban untuk menurunkan hambatan penggunaan
-(\textit{friction}) lebih jauh.
+mengidentifikasi lowongan palsu (desain kontrol--perlakuan berstandar SUS).
+\item \textbf{Integrasi kanal} melalui bot WhatsApp dan ekstensi peramban (\textit{browser extension}) untuk menurunkan hambatan penggunaan
+(\textit{friction}) lebih jauh bagi masyarakat luas.
 \end{enumerate}
+\end{sorotbiru}
 
 
 \refstepcounter{section}
@@ -1199,7 +1247,7 @@ Domain Reputation & 15\% & Keaktifan website dan reputasi domain. Jika lowongan 
 Phone Reported & 10\% & Nomor terindikasi penipuan pada basis data intelijen/SERP = penalti tinggi; nomor resmi perusahaan = sinyal aman \\ \hline
 Company Found & 15\% & Legalitas dan jejak digital perusahaan ditemukan di direktori publik; tidak ditemukan = penalti \\ \hline
 \rowcolor{verfinrow}
-Fraud Network Match & 20\% & Entitas (nomor kontak, email, atau nama badan usaha) terhubung dengan simpul penipuan pada basis data graf \\ \hline
+Fraud Network Match & 20\% & Entitas (nomor kontak, email, atau nama badan usaha) terhubung dengan simpul penipuan pada basis data graf [11] \\ \hline
 \textit{Nilai Dasar ($S_{\text{dasar}}$)} & \textit{12 poin} & \textit{Konstanta netral yang diterapkan pada setiap lowongan sebelum fitur dievaluasi untuk mencerminkan ketidakpastian awal} \\ \hline
 \end{tabularx}
 \end{table}
@@ -1376,12 +1424,12 @@ Kontrak REST API \& Sanitasi Input & 12 endpoint & 92,0\% & Validasi schema Pyda
 \end{table}
 
 
-\begin{sorotkuning}
+\begin{sorotbiru}
 \textbf{Rencana Penguatan Pengujian (Roadmap CI/CD):} Hasil pengujian di atas membuktikan keandalan
 arsitektur Verifin. Pada tahap pengembangan lanjutan menuju rilis publik skala nasional, rangkaian test suite
 ini diintegrasikan ke dalam pipeline GitHub Actions CI/CD dengan threshold coverage minimum 85\% dan automasi
 regression testing berkala terhadap korpus data laporan komunitas baru.
-\end{sorotkuning}
+\end{sorotbiru}
 
 \refstepcounter{section}
 
@@ -1598,18 +1646,19 @@ Pengguna dapat melaporkan entitas mencurigakan (nomor HP, email, URL, nama perus
 \item United Nations Office on Drugs and Crime (UNODC), ``Casinos, Cyber Fraud, and Trafficking
   in Persons for Forced Criminality in Southeast Asia,'' \textit{UNODC Regional Report}, 2023.
 
-\item A.\ Amaar, W.\ Aljedaani, F.\ Rustam, S.\ Ullah, and E.\ Lee, ``Detection of Fake Job
+\item A.\ Amaar, W.\ Aljedaani, F.\ Rustam, S.\ Ullah, V.\ Rupapara, and S.\ Ludi, ``Detection of Fake Job
   Postings by Utilizing Machine Learning and Natural Language Processing Approaches,''
   \textit{Neural Processing Letters}, vol.\ 54, no.\ 3, pp.\ 2219--2247, 2022.
   doi: \href{https://doi.org/10.1007/s11063-021-10727-z}{10.1007/s11063-021-10727-z}.
 
-\item T.\ Alwafi and R.\ Abdulrahman, ``Detection of Recruitment Fraud Using Semantic
-  Approaches,'' \textit{Security and Communication Networks}, vol.\ 2019, Art.\ ID 7523043, 2019.
-  doi: \href{https://doi.org/10.1155/2019/7523043}{10.1155/2019/7523043}.
+\item K.\ Taneja, J.\ Vashishtha, and S.\ Ratnoo, ``Fraud-BERT: transformer based context aware online
+  recruitment fraud detection,'' \textit{Discover Computing}, vol.\ 28, Art.\ no.\ 9, 2025.
+  doi: \href{https://doi.org/10.1007/s10791-025-09502-8}{10.1007/s10791-025-09502-8}.
 
 \item V.\ G.\ Varsha and P.\ A.\ Thomas, ``Explainable AI For Phishing Detection: Techniques,
   Challenges, and Experimental Validation,'' in \textit{Proc.\ IEEE Recent Advances in
   Intelligent Computational Systems (RAICS)}, Nov.\ 2025.
+  doi: \href{https://doi.org/10.1109/RAICS66191.2025.11332593}{10.1109/RAICS66191.2025.11332593}.
 
 \item J.\ Pastor-Galindo, P.\ Nespoli, F.\ G.\ Marmol, and G.\ M.\ Perez, ``The Not Yet
   Exploited Goldmine of OSINT: Opportunities, Open Challenges and Future Trends,''
@@ -1623,6 +1672,19 @@ Pengguna dapat melaporkan entitas mencurigakan (nomor HP, email, URL, nama perus
 \item C.\ Vidros, C.\ Kolias, G.\ Kambourakis, and L.\ Akoglu, ``Automatic Detection of Online
   Recruitment Frauds: Characteristics, Methods, and a Public Dataset,'' \textit{Future Internet},
   vol.\ 9, no.\ 1, Art.\ no.\ 6, 2017. doi: \href{https://doi.org/10.3390/fi9010006}{10.3390/fi9010006}.
+
+\item B.\ Shi, ``GAR-HGNN: A Heterogeneous Graph-Based Approach to Recruitment Fraud Detection,''
+  in \textit{Proc.\ 5th Int.\ Conf.\ on Automation Control, Algorithm and Intelligent Bionics (ACAIB)},
+  Jun.\ 2025, pp.\ 297--302. doi: \href{https://doi.org/10.1145/3760269.3760321}{10.1145/3760269.3760321}.
+
+\item Efendi dan L.\ F.\ Nola, ``Dampak Penipuan Lowongan Kerja dan Pencegahannya,''
+  \textit{Info Singkat Komisi IX Bidang Ketenagakerjaan}, Pusat Analisis Keparlemenan Badan Keahlian Setjen DPR RI,
+  vol.\ 17, no.\ 24, pp.\ 19--24, Des.\ 2025.
+
+\item G.\ Carvallo dan S.\ E.\ Benu, ``Tinjauan Yuridis Penanggulangan Cyber-Recruitment dalam
+  Tindak Pidana Perdagangan Orang: Tinjauan Unsur dan Pembuktian Digital,''
+  \textit{Majelis: Jurnal Hukum Indonesia}, vol.\ 3, no.\ 2, pp.\ 13--22, Mei 2026.
+  doi: \href{https://doi.org/10.62383/majelis.v3i2.1532}{10.62383/majelis.v3i2.1532}.
 
 \end{enumerate}
 \endgroup
