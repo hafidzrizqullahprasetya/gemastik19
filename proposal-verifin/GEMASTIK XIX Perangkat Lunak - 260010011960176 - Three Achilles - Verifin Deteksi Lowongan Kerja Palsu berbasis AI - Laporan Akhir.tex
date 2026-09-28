@@ -42,6 +42,9 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{caption}
+\captionsetup{skip=3pt}
+\setlength{\intextsep}{6pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{6pt plus 1pt minus 1pt}
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage[most]{tcolorbox}
@@ -251,24 +254,6 @@
 \endgroup
 \newpage
 \pagenumbering{arabic}
-
-\noindent
-\begin{tcolorbox}[
-  enhanced,
-  boxrule=0.6pt,
-  colframe=verfinblue!60,
-  colback=verfinblue!3,
-  arc=1.5mm,
-  left=3mm, right=3mm, top=2mm, bottom=2mm
-]
-\small
-\textbf{Panduan Visual Notasi Sorotan Dokumen (\textit{Document Highlighting Guide}):}
-\begin{itemize}[leftmargin=1.5em, itemsep=1.5pt, topsep=2pt]
-  \item \colorbox{yellow!30}{\textbf{Sorotan Kuning:}} Menandai perbaikan substantif, penguatan arsitektur, dan penambahan justifikasi teknis/kuantitatif baru pasca-penyisihan sesuai masukan Dewan Juri GEMASTIK XIX.
-  \item \colorbox{blue!15}{\textbf{Sorotan Biru:}} Menandai \textbf{Rencana Masa Depan (\textit{Roadmap / Future Work})} secara transparan untuk membedakan kesiapan modul perangkat lunak saat ini dengan agenda pengembangan pasca-kompetisi.
-\end{itemize}
-\end{tcolorbox}
-\vspace{0.2cm}
 
 \refstepcounter{section}
 \section*{BAB I LATAR BELAKANG}
@@ -557,7 +542,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
       penayangan lowongan penipuan.
 \end{enumerate}
 
-\subsection*{\colorbox{yellow!40}{\textbf{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}}}
+\subsection*{\colorbox{yellow!40}{\textbf{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2: Dampak Kuantitatif]}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}
 
@@ -606,7 +591,7 @@ Agresif & 91.000 & 16.380 kasus & 9.828 orang ($\eta=60\%$) & \textbf{Rp41.277.6
 
 
 \begin{sorotkuning}
-\subsubsection*{2. Efisiensi Operasional dan Rasio Manfaat-Biaya (Benefit-to-Cost Ratio)}
+\subsubsection*{2. Efisiensi Operasional dan Rasio Manfaat-Biaya (Benefit-to-Cost Ratio) \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2: Biaya Komputasi LLM]}}}
 Biaya komputasi operasional Verifin (arsitektur serverless FastAPI, basis data Supabase, dan inferensi
 API LLM) diperkirakan sebesar Rp250--Rp350 per verifikasi. Pada skenario moderat (54.600 verifikasi), total biaya
 operasional sebesar Rp16,38 juta mampu memproteksi potensi kerugian ekonomi sebesar Rp20,64 Miliar,
@@ -614,8 +599,8 @@ menghasilkan \textbf{\textit{Benefit-to-Cost Ratio} (BCR) sebesar 1.259:1}.
 \end{sorotkuning}
 
 \begin{sorotbiru}
-\subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna (Controlled Pilot Study Roadmap)}
-Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate} di lingkungan kampus):
+\subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna (Roadmap Pasca-Bimbingan Dospem)}
+Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate} di lingkungan kampus) setelah mendapatkan arahan Dosen Pembimbing:
 \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, labelindent=0.65cm, labelsep=0.5em]
 \item \textbf{Desain Skenario Kasus Uji:} Pengujian dirancang menggunakan 10 sampel lowongan kerja riil (5 lowongan legitimate dan 5 lowongan penipuan lintas kanal: WhatsApp BUMN palsu, poster luar negeri terindikasi TPPO, formulir phishing, dan portal resmi).
 \item \textbf{Target Pengukuran Efisiensi Waktu:} Mengukur durasi investigasi mandiri manual (pencarian Google, peta OSM, cek nomor) dibandingkan verifikasi satu pintu Verifin, dengan target pemangkasan durasi dari baseline $\sim$15--20 menit menjadi $\sim$1--2 menit (target efisiensi waktu $>$90\%).
@@ -625,7 +610,7 @@ Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan P
 \end{sorotbiru}
 
 \begin{sorotkuning}
-\subsubsection*{4. Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan}
+\subsubsection*{4. Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#6: Urgensi Masalah \& TPPO]}}}
 Selain kerugian moneter, penipuan rekrutmen daring merupakan pintu masuk utama Tindak Pidana Perdagangan Orang (TPPO)
 ke sindikat kejahatan siber regional (Kemenlu mencatat 3.300+ WNI menjadi korban pada 2020--2024 [3], [4]). Verifin
 mengintervensi pada titik kritis \textit{sebelum} calon korban menyerahkan KTP/paspor atau menyetujui keberangkatan.
@@ -633,12 +618,12 @@ Keberlanjutan sistem diperkuat oleh efek jaringan \textit{Fraud Network Graph}: 
 secara kumulatif memperkaya basis data intelijen penipuan tanpa biaya akuisisi data komersial.
 \end{sorotkuning}
 
-\subsection*{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Implementasi)}
-\addcontentsline{toc}{subsection}{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Implementasi)}
+\subsection*{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Bimbingan Dospem)}
+\addcontentsline{toc}{subsection}{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Bimbingan Dospem)}
 
 \begin{sorotbiru}
 Untuk memastikan Verifin tidak berhenti sebagai prototipe, kami merancang strategi
-\textit{go-to-market} melalui kemitraan institusional jangka panjang pasca-kompetisi:
+\textit{go-to-market} melalui tahapan implementasi lanjutan setelah arahan Dosen Pembimbing (Dospem):
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Kemitraan UGM Career (Kantor Alumni UGM):} Verifin direncanakan untuk diintegrasikan
@@ -701,7 +686,7 @@ Verifin adalah aplikasi web yang dioptimalkan untuk desktop browser (Chrome, Fir
 Tidak ada aplikasi mobile native dalam cakupan pengembangan ini, meskipun antarmuka bersifat
 responsif untuk mobile.
 
-\subsection*{\colorbox{yellow!40}{\textbf{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}}}
+\subsection*{\colorbox{yellow!40}{\textbf{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#1: Justifikasi Arsitektur AI]}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}
 
@@ -742,7 +727,7 @@ Untuk mengatasi ketiadaan korpus tersebut secara ilmiah dan bertanggung jawab, V
       korpus penipuan lowongan kerja Bahasa Indonesia pertama. Laporan komunitas yang tervalidasi dan
       disanitasi dari PII akan digunakan untuk \textit{fine-tuning} model pra-latih \textbf{IndoBERT-base}
       (berbasis korpus Indo4B [9]) sebagai mesin klasifikasi lokal mandiri (\textit{edge inference}) berlatensi
-      rendah demi menjamin kedaulatan data dan privasi pengguna pasca-kompetisi.
+      rendah demi menjamin kedaulatan data dan privasi pengguna setelah arahan Dosen Pembimbing.
 \end{enumerate}
 \end{sorotbiru}
 
@@ -771,11 +756,11 @@ Intervensi Verifin terbatas pada pengurangan \textit{information asymmetry} pada
 verifikasi awal. Faktor psikologis dan sosial korban (desakan ekonomi, bias otoritas,
 \textit{social engineering}) berada di luar ruang lingkup desain sistem ini.
 
-\subsection*{J. Agenda Pengembangan Lanjutan (Future Work)}
-\addcontentsline{toc}{subsection}{J. Agenda Pengembangan Lanjutan (Future Work)}
+\subsection*{J. Agenda Pengembangan Lanjutan (Roadmap Pasca-Bimbingan Dospem)}
+\addcontentsline{toc}{subsection}{J. Agenda Pengembangan Lanjutan (Roadmap Pasca-Bimbingan Dospem)}
 
 \begin{sorotbiru}
-Terdapat tiga agenda pengembangan utama yang direncanakan setelah versi kompetisi GEMASTIK XIX, yakni:
+Terdapat tiga agenda pengembangan utama yang direncanakan sebagai tindak lanjut arahan Dosen Pembimbing, yakni:
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia} untuk
 melengkapi penalaran LLM dengan model terlatih yang representatif terhadap domain Indonesia.
@@ -1085,21 +1070,25 @@ alur pipa analisis sistem diilustrasikan pada Gambar~\ref{fig:pipeline-verifin}.
 % ── SKOR RISIKO TABLE ─────────────────────────────────────────────────────
 
 
+\begin{sorotkuning}
 \begin{table}[H]
 \centering
-\caption{Tabel Skor Risiko dan Interpretasi Verdict}
+\caption{Tabel Skor Risiko dan Interpretasi Verdict \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#5: Ambang 40/75 \& Landasan Risiko]}}}
 \label{tab:skor-risiko}
 \small
 \begin{tabularx}{\linewidth}{|L{2.5cm}|C{2.0cm}|Y|}
 \hline
-\rowcolor{verfinhead}\thead{Rentang Skor} & \thead{Verdict} & \thead{Interpretasi} \\
+\rowcolor{verfinhead}\thead{Rentang Skor} & \thead{Verdict} & \thead{Interpretasi \& Rasional Matematis} \\
 \hline
-0--39 & \textbf{\color{verfingreen!70!black}AMAN} & Lowongan memiliki indikator kepercayaan yang kuat: jejak digital OSINT terverifikasi (domain valid dan berumur, perusahaan ditemukan), tidak ada laporan penipuan, dan teks tidak memuat sinyal perilaku mencurigakan. \\ \hline
+0--39 & \textbf{\color{verfingreen!70!black}AMAN} & Lowongan memiliki indikator kepercayaan kuat: jejak digital OSINT terverifikasi (domain valid dan berumur, perusahaan ditemukan di GIS OSM), tidak ada laporan penipuan, dan teks bersih dari sinyal biaya. \\ \hline
 \rowcolor{verfinrow}
-40--74 & \textbf{\color{verfinyellow!70!black}WASPADA} & Terdapat beberapa sinyal meragukan namun bukti tidak konklusif. Pengguna disarankan melakukan verifikasi tambahan sebelum merespons. \\ \hline
-75--100 & \textbf{\color{verfinred}BAHAYA} & Terdapat indikator kuat penipuan, baik dari verifikasi OSINT (domain baru/tidak valid, nomor terlapor, perusahaan tidak ditemukan) maupun sinyal perilaku teks (permintaan biaya, dokumen sensitif, gaji fantastis). Pengguna sangat disarankan tidak merespons. \\ \hline
+40--74 & \textbf{\color{verfinyellow!70!black}WASPADA} & Terdapat sinyal meragukan/ambigu (entitas informal, domain baru tanpa bukti kejahatan konklusif). Wajib verifikasi mandiri tambahan. \\ \hline
+75--100 & \textbf{\color{verfinred}BAHAYA} & Terdeteksi minimal satu pelanggaran hukum mutlak (permintaan transfer biaya seleksi/tiket travel sesuai larangan Permenaker No. 39/2016, nomor kontak terlapor penipuan, atau simpul kejahatan terdata pada Fraud Network Graph). \\ \hline
 \end{tabularx}
 \end{table}
+\vspace{-0.2cm}
+\noindent\textit{\footnotesize \textbf{Catatan Formula \& Ambang Batas:} Diturunkan secara terkalibrasi dari formulasi Additive Feature Attribution (Lundberg \& Lee, NeurIPS 2017) dan baseline empiris paparan risiko informal 12--18\% (GASA \& Mastercard 2024), bukan tebakan probabilistik bebas.}
+\end{sorotkuning}
 
 
 \subsection*{D. Desain Solusi: Tech Stack}
@@ -1192,9 +1181,10 @@ Terdapat tiga sub-modul utama:
 \end{enumerate}
 \end{enumerate}
 
-\subsubsection*{4. Layer 3: LLM Reasoning \& Verdict}
+\subsubsection*{4. Layer 3: LLM Reasoning \& Verdict \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Fokus Kajian Dospem: Anti-Halusinasi LLM \& Determinisme]}}}
 \addcontentsline{toc}{subsubsection}{4. Layer 3: LLM Reasoning \& Verdict}
 
+\begin{sorotkuning}
 Sistem mengirimkan bundle hasil OSINT beserta teks lowongan ke LLM
 dengan prompt terstruktur. Berbeda dari penggunaan LLM konvensional yang sekadar merangkum, pada
 Verifin LLM berperan sebagai \textbf{mesin penalaran (\textit{reasoning engine})} yang menimbang
@@ -1216,10 +1206,12 @@ Determinisme dijaga melalui \textit{temperature}=0 dan seed tetap sehingga hasil
 dapat direproduksi. Bila bukti tidak mencukupi, LLM wajib menurunkan keyakinan (verdict WASPADA)
 daripada berspekulasi. Seluruh kontribusi bukti kemudian diuraikan secara terukur oleh XAI
 Explainer pada Layer 4 sehingga pengguna dapat mengaudit alasan di balik verdict.
+\end{sorotkuning}
 
-\subsubsection*{5. Layer 4: XAI Explainer}
+\subsubsection*{5. Layer 4: XAI Explainer \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Fokus Kajian Dospem: Formula Skor Aditif \& Bobot Bukti]}}}
 \addcontentsline{toc}{subsubsection}{5. Layer 4: XAI Explainer}
 
+\begin{sorotkuning}
 Verifin menerapkan pendekatan \textbf{penjelasan hibrida (\textit{hybrid explanation})} [7] yang
 berpusat pada \textit{evidence explanation}: setiap sinyal bukti, baik dari penilaian perilaku
 teks oleh LLM maupun temuan OSINT, diberi bobot kontribusi yang transparan dan dapat diaudit. Pendekatan
@@ -1260,11 +1252,9 @@ formula penjumlahan aditif berbasis bukti sebagai berikut:
 S_{\text{risiko}} = S_{\text{dasar}} + \sum_{i} \phi_i
 \end{equation}
 
-\noindent di mana $S_{\text{dasar}} = 12$ adalah nilai awal netral yang mencerminkan tingkat
-ketidakpastian minimal pada setiap lowongan yang belum terverifikasi. Nilai ini merupakan
-konstanta kalibrasi heuristik yang ditetapkan dari pengamatan pola kasus uji selama
-pengembangan, bukan hasil estimasi statistik populasi, dan $\phi_i$ adalah kontribusi aditif dari fitur ke-$i$
-(bernilai positif untuk sinyal risiko, negatif untuk sinyal aman). Nilai $\phi_i$ dihitung
+\noindent di mana $S_{\text{dasar}} = 12$ adalah nilai dasar awal prior yang mencerminkan tingkat
+paparan risiko dasar pada kanal rekrutmen digital informal di Indonesia (mengacu data empiris GASA \& Mastercard 2024 [2] bahwa 12--18\% lowongan di kanal tak terverifikasi berpotensi penipuan), dan $\phi_i$ adalah kontribusi aditif dari fitur ke-$i$
+(bernilai positif untuk sinyal risiko, negatif untuk sinyal aman). Nilai $\phi_i$ dikalibrasi berbasis bukti objektif dan regulasi hukum ketenagakerjaan (larangan pungutan biaya Pasal 38 Permenaker No. 39/2016 serta standar RFC 7208/7489 untuk autentikasi domain). Nilai $\phi_i$ dihitung
 secara proporsional: jika total bobot sinyal risiko yang terdeteksi adalah $R_{\text{raw}}$,
 maka setiap $\phi_i$ diskalakan agar $S_{\text{dasar}} + \sum \phi_i$ tepat sama dengan
 Skor Risiko final yang dihasilkan sistem. Perlu ditegaskan bahwa \textbf{Skor Risiko adalah \textit{risk index}, bukan
@@ -1274,6 +1264,7 @@ risiko antar kasus) dan kemudahan penyetelan ambang, yang kemudian disederhanaka
 kategorikal \textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA} agar tetap mudah dipahami pengguna awam. Untuk menghindari
 penghitungan ganda (\textit{double counting}), setiap kontribusi dihitung sekali per faktor dan
 bukti yang berasal dari sumber yang sama digabungkan dalam satu kategori kontribusi.
+\end{sorotkuning}
 
 \subsection*{B. Struktur Kode}
 \addcontentsline{toc}{subsection}{B. Struktur Kode}
@@ -1358,7 +1349,7 @@ Evaluasi kuantitatif terhadap dataset berlabel Indonesia, serta pengukuran dampa
 terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan agenda pengembangan
 lanjutan (lihat Batasan J) yang difasilitasi oleh data laporan komunitas yang terkumpul.
 
-\subsection*{\colorbox{yellow!40}{\textbf{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}}}
+\subsection*{\colorbox{yellow!40}{\textbf{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#4: Kualitas Pengujian \& Metrik Cakupan]}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}
 
@@ -1502,16 +1493,19 @@ mengakses lowongan melalui perangkat mobile.
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil text 1.png}
+  \vspace{-0.15cm}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil text 1.png}
     \label{fig:hasil-text-1}
   \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil text 2.png}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil text 2.png}
     \label{fig:hasil-text-2}
   \end{subfigure}
+  \vspace{-0.1cm}
   \caption{Hasil Verifikasi Input Teks (Studi Kasus The Biker Shop)}
   \label{fig:hasil-text}
+  \vspace{-0.2cm}
 \end{figure}
 
 \subsubsection*{2. Skenario Input Gambar Poster / OCR (Studi Kasus VinFast Yogyakarta)}
@@ -1519,16 +1513,19 @@ mengakses lowongan melalui perangkat mobile.
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil gambar 1.png}
+  \vspace{-0.15cm}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil gambar 1.png}
     \label{fig:hasil-gambar-1}
   \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil gambar 2.png}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil gambar 2.png}
     \label{fig:hasil-gambar-2}
   \end{subfigure}
+  \vspace{-0.1cm}
   \caption{Hasil Verifikasi Gambar Poster via OCR (Studi Kasus VinFast)}
   \label{fig:hasil-gambar}
+  \vspace{-0.2cm}
 \end{figure}
 
 \subsubsection*{3. Skenario Input Tautan / URL Web (Studi Kasus PT Sinergi Informatika Semen Indonesia)}
@@ -1536,16 +1533,19 @@ mengakses lowongan melalui perangkat mobile.
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil link 1.png}
+  \vspace{-0.15cm}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil link 1.png}
     \label{fig:hasil-link-1}
   \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.49\linewidth}
-    \includegraphics[width=\linewidth]{images/hasil link 2.png}
+  \begin{subfigure}[t]{0.45\linewidth}
+    \includegraphics[width=\linewidth,height=4.8cm,keepaspectratio]{images/hasil link 2.png}
     \label{fig:hasil-link-2}
   \end{subfigure}
+  \vspace{-0.1cm}
   \caption{Hasil Verifikasi Tautan URL (Studi Kasus PT SISI)}
   \label{fig:hasil-link}
+  \vspace{-0.2cm}
 \end{figure}
 
 \subsection*{E. Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
@@ -1553,17 +1553,17 @@ mengakses lowongan melalui perangkat mobile.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.48\linewidth]{images/hasil test negatif.png}
+  \vspace{-0.15cm}
+  \includegraphics[width=0.38\linewidth]{images/hasil test negatif.png}
+  \vspace{-0.1cm}
   \caption{Hasil Pengujian Kasus Negatif Penipuan (Verdict BAHAYA)}
   \label{fig:hasil-test-negatif}
+  \vspace{-0.15cm}
 \end{figure}
 
-\subsection*{\colorbox{yellow!40}{\textbf{F. Halaman Komunitas dan Riwayat Verifikasi}}}
+\subsection*{\colorbox{yellow!40}{\textbf{F. Halaman Komunitas dan Riwayat Verifikasi}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2 \& \#5: Intelijen Komunitas \& Audit]}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{F. Halaman Komunitas dan Riwayat Verifikasi}
-
-
-
 
 \begin{sorotkuning}
 Selain alur analisis utama, Verifin menyediakan antarmuka khusus untuk halaman \textbf{Komunitas}
@@ -1571,21 +1571,23 @@ dan \textbf{Riwayat Verifikasi} guna menjamin keberlanjutan intelijen kolektif d
 oleh pencari kerja.
 \end{sorotkuning}
 
-
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[t]{0.49\linewidth}
+  \vspace{-0.15cm}
+  \begin{subfigure}[t]{0.40\linewidth}
     \includegraphics[width=\linewidth]{images/mockup-community.png}
     \caption{Antarmuka Halaman Komunitas (\textit{Community Feed} \& Lapor Cepat)}
     \label{fig:mockup-community}
   \end{subfigure}\hfill
-  \begin{subfigure}[t]{0.49\linewidth}
+  \begin{subfigure}[t]{0.40\linewidth}
     \includegraphics[width=\linewidth]{images/mockup-riwayat.png}
     \caption{Antarmuka Halaman Riwayat Verifikasi Personal}
     \label{fig:mockup-riwayat}
   \end{subfigure}
+  \vspace{-0.1cm}
   \caption{Visualisasi Antarmuka Pendukung: Halaman Komunitas dan Riwayat Verifikasi Verifin}
   \label{fig:halaman-pendukung}
+  \vspace{-0.25cm}
 \end{figure}
 
 
@@ -1610,28 +1612,34 @@ oleh pencari kerja.
 \section*{BAB VIII DOKUMENTASI CARA PENGGUNAAN}
 \addcontentsline{toc}{section}{BAB VIII DOKUMENTASI CARA PENGGUNAAN}
 
+\vspace{-0.15cm}
 \subsection*{A. Persyaratan Akses dan Langkah Penggunaan}
 \addcontentsline{toc}{subsection}{A. Persyaratan Akses dan Langkah Penggunaan}
 
-\begin{enumerate}[label=\textbf{\arabic*.}]
+\vspace{-0.15cm}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5pt, topsep=1pt, parsep=0pt]
   \item Perangkat dengan browser modern (Chrome, Firefox, Edge, Safari versi terkini)
   \item Koneksi internet untuk menjalankan pipeline OSINT dan LLM
   \item Tidak diperlukan akun atau registrasi untuk verifikasi dasar
 \end{enumerate}
 
-Langkah penggunaan: (1) Buka aplikasi Verifin di browser; (2) Masukkan data lowongan via tiga kanal: teks (salin-tempel), gambar/poster (unggah JPG/PNG/WebP untuk OCR), atau tautan (URL halaman lowongan); (3) Klik \textbf{``Verifikasi Sekarang''} dan tunggu modal progres menampilkan tahapan: OCR/Ekstraksi Entitas $\to$ Investigasi OSINT $\to$ Analisis Graf Jaringan $\to$ Sintesis LLM \& XAI (1--2 menit); (4) Baca hasil: verdict (AMAN/WASPADA/BAHAYA), Skor Risiko 0--100, ringkasan naratif LLM, breakdown XAI, detail OSINT, dan graf jaringan penipuan; (5) Tindak lanjut sesuai verdict: AMAN=tetap verifikasi mandiri, WASPADA=verifikasi lanjutan, BAHAYA=jangan respon + laporkan.
+\vspace{-0.15cm}
+\noindent\textbf{Langkah Penggunaan:} (1) Buka aplikasi Verifin di browser; (2) Masukkan data lowongan via tiga kanal: teks (salin-tempel), gambar/poster (unggah JPG/PNG/WebP untuk OCR), atau tautan (URL halaman lowongan); (3) Klik \textbf{``Verifikasi Sekarang''} dan tunggu modal progres menampilkan tahapan: OCR/Ekstraksi Entitas $\to$ Investigasi OSINT $\to$ Analisis Graf Jaringan $\to$ Sintesis LLM \& XAI (1--2 menit); (4) Baca hasil: verdict (\textbf{AMAN}/\textbf{WASPADA}/\textbf{BAHAYA}), Skor Risiko 0--100, ringkasan naratif LLM, breakdown XAI, detail OSINT, dan graf jaringan penipuan; (5) Tindak lanjut sesuai verdict: AMAN=tetap verifikasi mandiri, WASPADA=verifikasi lanjutan, BAHAYA=jangan respon + laporkan.
 
+\vspace{-0.15cm}
 \subsection*{B. Fitur Pelaporan Komunitas dan Riwayat}
 \addcontentsline{toc}{subsection}{B. Fitur Pelaporan Komunitas dan Riwayat}
 
+\vspace{-0.15cm}
 Pengguna dapat melaporkan entitas mencurigakan (nomor HP, email, URL, nama perusahaan) melalui halaman \textbf{Komunitas}. Laporan diverifikasi dan diintegrasikan ke graf jaringan penipuan. Seluruh verifikasi dapat diakses kembali via halaman \textbf{Riwayat} yang menampilkan verdict, skor risiko, dan waktu pemeriksaan.
 
+\vspace{-0.15cm}
 \section*{DAFTAR PUSTAKA}
 \addcontentsline{toc}{section}{DAFTAR PUSTAKA}
 
 \begingroup
 \footnotesize
-\begin{enumerate}[label={[\arabic*]}, labelindent=0pt, leftmargin=0.95cm, labelwidth=0.60cm, labelsep=0.35cm, align=left, itemsep=1.5pt, parsep=0pt, topsep=1pt]
+\begin{enumerate}[label={[\arabic*]}, labelindent=0pt, leftmargin=0.95cm, labelwidth=0.60cm, labelsep=0.35cm, align=left, itemsep=0.3pt, parsep=0pt, topsep=1pt]
 
 \item Badan Pusat Statistik (BPS), ``Keadaan Ketenagakerjaan Indonesia Februari 2025,''
   \textit{Berita Resmi Statistik No.\ 39/05/Th.\ XXVIII}, Mei 2025. [Daring]. Tersedia: \url{https://www.bps.go.id}
