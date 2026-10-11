@@ -273,13 +273,75 @@ Mastercard menunjukkan skala persoalan ini: 66\% orang dewasa di Indonesia terek
 satu upaya penipuan digital dalam 12 bulan terakhir, dengan total estimasi kerugian finansial
 nasional mencapai Rp49 triliun [2]. Dari seluruh korban penipuan digital, \textbf{49\% di antaranya
 terekspos modus penipuan lowongan kerja (\textit{employment scam})}, menjadikannya salah satu
-modus paling dominan [2]. Lebih jauh, krisis ini tidak berhenti pada kerugian finansial.
+modus paling dominan [2] (Gambar~\ref{fig:urgensi-stat}). Lebih jauh, krisis ini tidak berhenti pada kerugian finansial.
 Kementerian Luar Negeri RI mencatat lebih dari 3.300 WNI diselamatkan dari pusat-pusat
 \textit{online scamming} di Asia Tenggara (Kamboja, Myanmar, Laos, Filipina) pada periode
 2020--2024, yang keseluruhannya berangkat akibat tergiur iklan lowongan kerja palsu di media
 sosial [3]. Temuan ini sejalan dengan laporan UNODC yang menegaskan bahwa penipuan rekrutmen daring
 (\textit{fraudulent job postings}) merupakan metode utama perekrutan korban Tindak Pidana
 Perdagangan Orang (TPPO) untuk dipekerjakan paksa di \textit{cyber scam centers} [4].
+
+% Infografis: Statistik Kerentanan
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.56\linewidth}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    bar width=11pt,
+    width=7.5cm,
+    height=4.0cm,
+    enlarge y limits=0.45,
+    xlabel={\scriptsize \% Korban Penipuan Digital di Indonesia [2]},
+    symbolic y coords={Penipuan Loker, Penipuan Digital},
+    ytick=data,
+    yticklabel style={font=\scriptsize, align=right},
+    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
+    nodes near coords align={horizontal},
+    every node near coord/.append style={font=\scriptsize\bfseries},
+    tick label style={font=\scriptsize},
+    label style={font=\scriptsize},
+    xmin=0, xmax=80,
+]
+\addplot[fill=verfinred!80,draw=verfinred] coordinates {(49,Penipuan Loker)};
+\addplot[fill=verfinblue!70,draw=verfinblue] coordinates {(66,Penipuan Digital)};
+\end{axis}
+\end{tikzpicture}%
+}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.42\linewidth}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+\begin{axis}[
+    xbar,
+    bar width=11pt,
+    width=6.0cm,
+    height=4.0cm,
+    enlarge y limits=0.45,
+    xlabel={\scriptsize Estimasi Kerugian Finansial [2]},
+    symbolic y coords={Rugi Nasional},
+    ytick=data,
+    yticklabels={{Rp 49 Triliun}},
+    yticklabel style={font=\scriptsize, align=right},
+    nodes near coords={Rp 49 T},
+    nodes near coords align={horizontal},
+    every node near coord/.append style={font=\scriptsize\bfseries},
+    tick label style={font=\scriptsize},
+    label style={font=\scriptsize},
+    xmin=0, xmax=70,
+]
+\addplot[fill=verfinred!60,draw=verfinred] coordinates {(49,Rugi Nasional)};
+\end{axis}
+\end{tikzpicture}%
+}
+\end{subfigure}
+  \caption{Statistik Urgensi Penipuan Lowongan Kerja di Indonesia [2]}
+  \label{fig:urgensi-stat}
+\end{figure}
+
 
 Di balik fakta-fakta tersebut, terdapat satu persoalan mendasar: \textbf{pencari kerja harus
 memverifikasi keaslian tawaran secara mandiri} dari berbagai sumber yang tersebar, mulai dari mencari nama
@@ -392,8 +454,8 @@ dapat diaudit.
 \subsection*{C. Perbandingan dengan Solusi yang Sudah Ada}
 \addcontentsline{toc}{subsection}{C. Perbandingan dengan Solusi yang Sudah Ada}
 
-Untuk menegaskan orisinalitas dan posisi Verifin, berikut perbandingan dengan solusi yang saat ini
-tersedia bagi pencari kerja Indonesia. Tidak satu pun solusi eksisting yang melakukan
+Untuk menegaskan orisinalitas dan posisi Verifin, perbandingan dengan solusi yang saat ini
+tersedia bagi pencari kerja Indonesia dirangkum pada Tabel~\ref{tab:perbandingan}. Tidak satu pun solusi eksisting yang melakukan
 \textbf{verifikasi proaktif berbasis bukti pada titik penerimaan lowongan}; Verifin mengatasi celah tersebut melalui verifikasi terpadu.
 
 \begin{table}[H]
@@ -421,67 +483,6 @@ dan merupakan perangkat lunak fungsional yang \textbf{dapat
 dioperasikan dan dampaknya terukur} bagi masyarakat luas.
 
 \vspace{0.1cm}
-
-% Infografis: Statistik Kerentanan
-\begin{figure}[H]
-\centering
-\begin{subfigure}[t]{0.56\linewidth}
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tikzpicture}
-\begin{axis}[
-    xbar,
-    bar width=11pt,
-    width=7.5cm,
-    height=4.0cm,
-    enlarge y limits=0.45,
-    xlabel={\scriptsize \% Korban Penipuan Digital di Indonesia [2]},
-    symbolic y coords={Penipuan Loker, Penipuan Digital},
-    ytick=data,
-    yticklabel style={font=\scriptsize, align=right},
-    nodes near coords={\pgfmathprintnumber\pgfplotspointmeta\%},
-    nodes near coords align={horizontal},
-    every node near coord/.append style={font=\scriptsize\bfseries},
-    tick label style={font=\scriptsize},
-    label style={font=\scriptsize},
-    xmin=0, xmax=80,
-]
-\addplot[fill=verfinred!80,draw=verfinred] coordinates {(49,Penipuan Loker)};
-\addplot[fill=verfinblue!70,draw=verfinblue] coordinates {(66,Penipuan Digital)};
-\end{axis}
-\end{tikzpicture}%
-}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.42\linewidth}
-\centering
-\resizebox{\linewidth}{!}{%
-\begin{tikzpicture}
-\begin{axis}[
-    xbar,
-    bar width=11pt,
-    width=6.0cm,
-    height=4.0cm,
-    enlarge y limits=0.45,
-    xlabel={\scriptsize Estimasi Kerugian Finansial [2]},
-    symbolic y coords={Rugi Nasional},
-    ytick=data,
-    yticklabels={{Rp 49 Triliun}},
-    yticklabel style={font=\scriptsize, align=right},
-    nodes near coords={Rp 49 T},
-    nodes near coords align={horizontal},
-    every node near coord/.append style={font=\scriptsize\bfseries},
-    tick label style={font=\scriptsize},
-    label style={font=\scriptsize},
-    xmin=0, xmax=70,
-]
-\addplot[fill=verfinred!60,draw=verfinred] coordinates {(49,Rugi Nasional)};
-\end{axis}
-\end{tikzpicture}%
-}
-\end{subfigure}
-  \caption{Statistik Urgensi Penipuan Lowongan Kerja di Indonesia [2]}
-  \label{fig:urgensi-stat}
-\end{figure}
 
 
 \refstepcounter{section}
@@ -781,7 +782,7 @@ mengidentifikasi lowongan palsu (desain kontrol--perlakuan berstandar SUS).
 \subsection*{A. Metodologi dan Struktur Sprint}
 \addcontentsline{toc}{subsection}{A. Metodologi dan Struktur Sprint}
 
-Pengembangan Verifin menerapkan metodologi \textbf{Agile Scrum} yang diadaptasi untuk tim 3 orang, mencakup 1 sprint persiapan (Sprint 0) dan 4 sprint utama (Sprint 1--4) berdurasi masing-masing dua minggu.
+Pengembangan Verifin menerapkan metodologi \textbf{Agile Scrum} yang diadaptasi untuk tim 3 orang, mencakup 1 sprint persiapan (Sprint 0) dan 4 sprint utama (Sprint 1--4) berdurasi masing-masing dua minggu, dengan pembagian target deliverable pada Tabel~\ref{tab:sprint-structure}.
 
 \begin{table}[H]
 \centering
@@ -805,6 +806,7 @@ Sprint 4 & Minggu 9--10 & Pengujian integrasi, optimasi performa, deployment Ver
 
 \subsection*{B. Pembagian Peran Tim}
 \addcontentsline{toc}{subsection}{B. Pembagian Peran Tim}
+Distribusi peran dan tanggung jawab spesifik dari masing-masing anggota tim dirinci pada Tabel~\ref{tab:team-roles}.
 
 \begin{table}[H]
 \centering
@@ -840,6 +842,7 @@ Frontend \& Integration & Matthew Hayunaji P. & Next.js frontend, UI/UX, visuali
 
 \subsection*{D. Tools dan Platform Pengembangan}
 \addcontentsline{toc}{subsection}{D. Tools dan Platform Pengembangan}
+Daftar perangkat, pustaka, dan infrastruktur penunjang yang digunakan dalam perancangan dan implementasi sistem dirangkum pada Tabel~\ref{tab:tools-platform}.
 
 \begin{table}[htbp]
 \centering
@@ -901,6 +904,7 @@ FR-14 & API Publik & Sistem menyediakan REST API terdokumentasi via FastAPI auto
 
 \subsection*{B. Analisis Kebutuhan Non-Fungsional}
 \addcontentsline{toc}{subsection}{B. Analisis Kebutuhan Non-Fungsional}
+Kebutuhan non-fungsional sistem yang menjamin aspek keandalan, performa, dan transparansi dijelaskan pada Tabel~\ref{tab:nfr-list}.
 
 \begin{table}[H]
 \centering
@@ -966,6 +970,8 @@ alur pipa analisis sistem diilustrasikan pada Gambar~\ref{fig:pipeline-verifin}.
 \end{figure}
 
 \vspace{0.1cm}
+Secara konseptual, integrasi fungsional empat subsistem pendukung keputusan dalam Verifin dirinci pada Gambar~\ref{fig:dss-verifin}.
+
 
 % ── DIAGRAM JOB TRUST INFRASTRUCTURE ─────────────────────────────────────
 \begin{figure}[H]
@@ -1022,6 +1028,8 @@ alur pipa analisis sistem diilustrasikan pada Gambar~\ref{fig:pipeline-verifin}.
 \end{figure}
 
 \vspace{0.1cm}
+Keluaran akhir evaluasi risiko dikategorikan ke dalam tiga tingkat vonis (\textit{verdict tiers}) yang divisualisasikan pada Gambar~\ref{fig:verdict-levels}.
+
 
 % ── DIAGRAM VERDICT TIERS ─────────────────────────────────────────────────
 \begin{figure}[H]
@@ -1070,6 +1078,8 @@ alur pipa analisis sistem diilustrasikan pada Gambar~\ref{fig:pipeline-verifin}.
 % ── SKOR RISIKO TABLE ─────────────────────────────────────────────────────
 
 
+Interpretasi operasional dan landasan ambang batas tiap tingkatan skor dijabarkan pada Tabel~\ref{tab:skor-risiko}.
+
 \begin{sorotkuning}
 \begin{table}[H]
 \centering
@@ -1093,6 +1103,8 @@ alur pipa analisis sistem diilustrasikan pada Gambar~\ref{fig:pipeline-verifin}.
 
 \subsection*{D. Desain Solusi: Tech Stack}
 \addcontentsline{toc}{subsection}{D. Desain Solusi: Tech Stack}
+
+Komponen teknologi, pustaka, dan infrastruktur pembangun ekosistem Verifin dipetakan pada Gambar~\ref{fig:tech-stack}.
 
 \begin{figure}[H]
 \centering
@@ -1220,7 +1232,7 @@ SHAP/LIME; yang terpenting adalah pengguna dapat \textbf{mengaudit kontribusi se
 secara transparan. Setiap fitur diberi bobot dasar yang ditentukan berdasarkan \textit{expert
 judgement} terhadap kekuatan bukti masing-masing faktor, dengan prinsip: bukti objektif eksternal
 (jejak digital, laporan komunitas) diberi bobot lebih tinggi daripada sinyal linguistik internal.
-Berikut bobot dasar setiap fitur:
+Bobot dasar setiap fitur dan mekanisme penanganannya dipaparkan pada Tabel~\ref{tab:xai-weights}:
 
 \begin{table}[H]
 \centering
@@ -1299,9 +1311,7 @@ Repositori Verifin diorganisasikan sebagai \textit{monorepo} dua layanan. Gambar
 \subsection*{C. Skema Database PostgreSQL}
 \addcontentsline{toc}{subsection}{C. Skema Database PostgreSQL}
 
-Skema terdiri atas dua tabel inti berikut. Deduplikasi lintas kasus dilakukan lewat pencocokan
-entitas ternormalisasi (kolom \textit{phones}, \textit{emails}, \textit{company\_name}) dan hash
-konten (\textit{raw\_text\_hash}), tanpa tabel fingerprint terpisah.
+Struktur ringkas dua tabel inti yang menopang persistensi data analisis dan pelaporan komunitas disajikan pada Tabel~\ref{tab:ddl-schema}. Deduplikasi lintas kasus dilakukan lewat pencocokan entitas ternormalisasi (kolom \textit{phones}, \textit{emails}, \textit{company\_name}) dan hash konten (\textit{raw\_text\_hash}), tanpa tabel fingerprint terpisah.
 
 \begin{table}[H]
 \centering
@@ -1456,6 +1466,7 @@ mengakses lowongan melalui perangkat mobile.
 
 \subsection*{B. Antarmuka Form Input Multi-Kanal}
 \addcontentsline{toc}{subsection}{B. Antarmuka Form Input Multi-Kanal}
+Antarmuka formulir masukan multi-kanal yang mendukung teks, unggahan poster, dan tautan URL disajikan pada Gambar~\ref{fig:form-input}.
 
 \begin{figure}[H]
   \centering
@@ -1477,6 +1488,7 @@ mengakses lowongan melalui perangkat mobile.
 
 \subsection*{C. Modal Progres Pemrosesan Pipeline Real-Time}
 \addcontentsline{toc}{subsection}{C. Modal Progres Pemrosesan Pipeline Real-Time}
+Modal indikator progres analisis yang memberikan umpan balik pemrosesan bertahap secara real-time ditampilkan pada Gambar~\ref{fig:mockup-loading}.
 
 \begin{figure}[H]
   \centering
@@ -1550,6 +1562,7 @@ mengakses lowongan melalui perangkat mobile.
 
 \subsection*{E. Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
 \addcontentsline{toc}{subsection}{E. Pengujian Kasus Negatif (Deteksi Lowongan Penipuan / Verdict BAHAYA)}
+Bukti ketepatan deteksi pada skenario lowongan berbahaya dengan skor risiko tinggi dan vonis BAHAYA diperlihatkan pada Gambar~\ref{fig:hasil-test-negatif}.
 
 \begin{figure}[H]
   \centering
@@ -1568,7 +1581,7 @@ mengakses lowongan melalui perangkat mobile.
 \begin{sorotkuning}
 Selain alur analisis utama, Verifin menyediakan antarmuka khusus untuk halaman \textbf{Komunitas}
 dan \textbf{Riwayat Verifikasi} guna menjamin keberlanjutan intelijen kolektif dan kemudahan pemantauan
-oleh pencari kerja.
+oleh pencari kerja (Gambar~\ref{fig:halaman-pendukung}).
 \end{sorotkuning}
 
 \begin{figure}[H]
