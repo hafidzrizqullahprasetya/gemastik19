@@ -275,20 +275,52 @@ dapat diaudit.
 \subsection*{C.\quad Perbandingan dengan Solusi yang Sudah Ada}
 \addcontentsline{toc}{subsection}{C. Perbandingan dengan Solusi yang Sudah Ada}
 
-Untuk menegaskan orisinalitas dan posisi Verifin, berikut perbandingan dengan solusi yang saat ini
-tersedia bagi pencari kerja Indonesia. Tidak satu pun solusi eksisting yang melakukan
-\textbf{verifikasi proaktif berbasis bukti pada titik penerimaan lowongan}; celah inilah yang diisi
-Verifin.
+Untuk menegaskan orisinalitas dan posisi Verifin, dilakukan analisis komparatif terhadap lanskap solusi deteksi penipuan lowongan kerja, baik di tingkat domestik maupun global. Tidak satu pun solusi eksisting yang melakukan \textbf{verifikasi proaktif multi-sinyal berbasis bukti pada titik awal penerimaan lowongan}; Verifin mengatasi celah tersebut melalui integrasi OSINT, penalaran AI, dan transparansi keputusan.
 
-\begin{adjustwidth}{0.50cm}{0pt}
 \begin{table}[H]
 \centering
-\caption{Perbandingan Verifin dengan solusi verifikasi lowongan yang sudah ada}
+\caption{Perbandingan komprehensif Verifin dengan platform deteksi penipuan kerja mandiri (developer-built)}
 \label{tab:perbandingan}
-\vspace{0.1cm}
-\includegraphics[width=0.72\linewidth]{images/1.1.png}
+\vspace{0.05cm}
+\scriptsize
+\renewcommand{\arraystretch}{0.95}
+\begin{tabularx}{\linewidth}{|L{3.2cm}|L{3.9cm}|Y|}
+\hline
+\rowcolor{verfinhead}\thead{Platform Developer} & \thead{Mekanisme \& Sinyal Analisis} & \thead{Keterbatasan \& Celah Fundamental vs. Verifin} \\
+\hline
+\rowcolor{verfinrow}
+\raisebox{-0.15em}{\includegraphics[height=1.05em]{images/logos/verifin_shield.png}}\ \textbf{Verifin} \newline
+\textit{(Solusi yang Diajukan)} \newline
+\href{https://verifin.web.id/}{\scriptsize\textcolor{verfinblue}{\underline{verifin.web.id}}} & 
+Verifikasi multi-sinyal: \textit{Hybrid NER} (IndoBERT), live OSINT (Whocalls, Ditjen AHU, PSE Kominfo, WHOIS/DNS, form phishing), penalaran LLM, XAI (SHAP), dan \textit{Fraud Network Graph}. & 
+\textbf{Solusi Terpadu:} Proaktif pra-respons, verifikasi berbasis bukti fakta riil lintas-dimensi, transparan dapat diaudit (XAI), serta teroptimasi untuk kanal informal (+62) dan poster fisik (OCR). \\ \hline
+
+\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/cekloker.png}}\ \textbf{CekLoker AI} \newline
+\href{https://cekloker-ai.dhanyindraswara.workers.dev/}{\scriptsize\textcolor{verfinblue}{\underline{cekloker-ai.workers.dev}}} & 
+\textit{Serverless LLM prompting} (Cloudflare Workers AI) membaca teks \& dokumen/gambar untuk mencari pola \textit{red flags}. & 
+\textbf{Zero OSINT}: Tidak memvalidasi fakta ke basis data resmi (AHU/PSE), DNS, atau riwayat nomor HP. Rentan halusinasi pada teks formal, \textit{blackbox} tanpa bobot XAI matematis, dan tanpa graf sindikat. \\ \hline
+
+\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/jobscam.png}}\ \textbf{JobScamAI} \newline
+\href{https://jobscam.info/}{\scriptsize\textcolor{verfinblue}{\underline{jobscam.info}}} & 
+Analisis klasifikasi pola bahasa teks (NLP) untuk deteksi penipuan dan forum pelaporan komunitas. & 
+\textbf{Hanya analisis teks}: Input URL nonaktif, tidak mendukung OCR poster gambar, tidak memiliki pipeline OSINT untuk validasi nomor telepon, domain, atau legalitas izin PT. \\ \hline
+
+\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/karirfair.png}}\ \textbf{Karir Fair} \newline
+\href{https://www.karirfair.com/cek-penipuan/}{\scriptsize\textcolor{verfinblue}{\underline{karirfair.com/cek-penipuan}}} & 
+Form pencocokan teks iklan, nomor HP terhadap blacklist internal, dan regex penyaringan domain email gratisan. & 
+\textbf{Pengecekan statis terfragmentasi}: Input dipisah manual tanpa NER/OCR, gagal mendeteksi nomor perdana baru (\textit{burner SIM}), dan tanpa penalaran AI/LLM kontekstual. \\ \hline
+
+\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/verijob.png}}\ \textbf{VeriJob} \newline
+\href{https://www.verijob.app/}{\scriptsize\textcolor{verfinblue}{\underline{verijob.app}}} & 
+Pemindaian URL portal karier dan email terhadap \textit{domain typosquatting}, peniruan korporat global, dan basis data fraud US. & 
+\textbf{Regional blindspot}: Mengabaikan regulasi Indonesia dan nomor +62. Salah asumsi modus: sindikat penipuan lokal memakai Google Form dan WhatsApp, bukan portal web tiruan. \\ \hline
+
+\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/github.png}}\ \textbf{JobVerify (MCP)} \newline
+\href{https://github.com/yessGlory17/job-verify}{\scriptsize\textcolor{verfinblue}{\underline{github.com/job-verify}}} & 
+Server MCP lokal (Claude Desktop) dengan alat OSINT mandiri untuk memverifikasi entitas DM dan pola scam freelance. & 
+\textbf{Barier teknis tinggi}: Memerlukan konfigurasi CLI dan hanya berjalan di Claude Desktop. Tidak aksesibel bagi pencari kerja awam dan tidak memetakan graf sindikat lokal. \\ \hline
+\end{tabularx}
 \end{table}
-\end{adjustwidth}
 
 Dari tabel di atas terlihat bahwa Verifin bersifat \textbf{komplementer, bukan duplikatif}: ia
 mengintegrasikan dimensi-dimensi yang selama ini terfragmentasi (nomor, domain, alamat, media
