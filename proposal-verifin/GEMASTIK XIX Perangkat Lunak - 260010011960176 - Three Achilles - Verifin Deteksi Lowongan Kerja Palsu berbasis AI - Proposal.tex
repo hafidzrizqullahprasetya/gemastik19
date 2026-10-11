@@ -282,44 +282,7 @@ Untuk menegaskan orisinalitas dan posisi Verifin, dilakukan analisis komparatif 
 \caption{Perbandingan komprehensif Verifin dengan platform deteksi penipuan kerja mandiri (developer-built)}
 \label{tab:perbandingan}
 \vspace{0.05cm}
-\scriptsize
-\renewcommand{\arraystretch}{0.95}
-\begin{tabularx}{\linewidth}{|L{3.2cm}|L{3.9cm}|Y|}
-\hline
-\rowcolor{verfinhead}\thead{Platform Developer} & \thead{Mekanisme \& Sinyal Analisis} & \thead{Keterbatasan \& Celah Fundamental vs. Verifin} \\
-\hline
-\rowcolor{verfinrow}
-\raisebox{-0.15em}{\includegraphics[height=1.05em]{images/logos/verifin_shield.png}}\ \textbf{Verifin} \newline
-\textit{(Solusi yang Diajukan)} \newline
-\href{https://verifin.web.id/}{\scriptsize\textcolor{verfinblue}{\underline{verifin.web.id}}} & 
-Verifikasi multi-sinyal: \textit{Hybrid NER} (IndoBERT), live OSINT (Whocalls, Ditjen AHU, PSE Kominfo, WHOIS/DNS, form phishing), penalaran LLM, XAI (SHAP), dan \textit{Fraud Network Graph}. & 
-\textbf{Solusi Terpadu:} Proaktif pra-respons, verifikasi berbasis bukti fakta riil lintas-dimensi, transparan dapat diaudit (XAI), serta teroptimasi untuk kanal informal (+62) dan poster fisik (OCR). \\ \hline
-
-\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/cekloker.png}}\ \textbf{CekLoker AI} \newline
-\href{https://cekloker-ai.dhanyindraswara.workers.dev/}{\scriptsize\textcolor{verfinblue}{\underline{cekloker-ai.workers.dev}}} & 
-\textit{Serverless LLM prompting} (Cloudflare Workers AI) membaca teks \& dokumen/gambar untuk mencari pola \textit{red flags}. & 
-\textbf{Zero OSINT}: Tidak memvalidasi fakta ke basis data resmi (AHU/PSE), DNS, atau riwayat nomor HP. Rentan halusinasi pada teks formal, \textit{blackbox} tanpa bobot XAI matematis, dan tanpa graf sindikat. \\ \hline
-
-\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/jobscam.png}}\ \textbf{JobScamAI} \newline
-\href{https://jobscam.info/}{\scriptsize\textcolor{verfinblue}{\underline{jobscam.info}}} & 
-Analisis klasifikasi pola bahasa teks (NLP) untuk deteksi penipuan dan forum pelaporan komunitas. & 
-\textbf{Hanya analisis teks}: Input URL nonaktif, tidak mendukung OCR poster gambar, tidak memiliki pipeline OSINT untuk validasi nomor telepon, domain, atau legalitas izin PT. \\ \hline
-
-\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/karirfair.png}}\ \textbf{Karir Fair} \newline
-\href{https://www.karirfair.com/cek-penipuan/}{\scriptsize\textcolor{verfinblue}{\underline{karirfair.com/cek-penipuan}}} & 
-Form pencocokan teks iklan, nomor HP terhadap blacklist internal, dan regex penyaringan domain email gratisan. & 
-\textbf{Pengecekan statis terfragmentasi}: Input dipisah manual tanpa NER/OCR, gagal mendeteksi nomor perdana baru (\textit{burner SIM}), dan tanpa penalaran AI/LLM kontekstual. \\ \hline
-
-\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/verijob.png}}\ \textbf{VeriJob} \newline
-\href{https://www.verijob.app/}{\scriptsize\textcolor{verfinblue}{\underline{verijob.app}}} & 
-Pemindaian URL portal karier dan email terhadap \textit{domain typosquatting}, peniruan korporat global, dan basis data fraud US. & 
-\textbf{Regional blindspot}: Mengabaikan regulasi Indonesia dan nomor +62. Salah asumsi modus: sindikat penipuan lokal memakai Google Form dan WhatsApp, bukan portal web tiruan. \\ \hline
-
-\raisebox{-0.15em}{\includegraphics[height=1.0em]{images/logos/github.png}}\ \textbf{JobVerify (MCP)} \newline
-\href{https://github.com/yessGlory17/job-verify}{\scriptsize\textcolor{verfinblue}{\underline{github.com/job-verify}}} & 
-Server MCP lokal (Claude Desktop) dengan alat OSINT mandiri untuk memverifikasi entitas DM dan pola scam freelance. & 
-\textbf{Barier teknis tinggi}: Memerlukan konfigurasi CLI dan hanya berjalan di Claude Desktop. Tidak aksesibel bagi pencari kerja awam dan tidak memetakan graf sindikat lokal. \\ \hline
-\end{tabularx}
+\includegraphics[width=\linewidth]{images/table-comparison-upscale.png}
 \end{table}
 
 Dari tabel di atas terlihat bahwa Verifin bersifat \textbf{komplementer, bukan duplikatif}: ia
@@ -511,7 +474,33 @@ Agresif & 91.000 & 16.380 kasus & 9.828 orang ($\eta=60\%$) & \textbf{Rp41.277.6
 Biaya komputasi operasional Verifin (arsitektur serverless FastAPI, basis data Supabase, dan inferensi
 API LLM) diperkirakan sebesar Rp250--Rp350 per verifikasi. Pada skenario moderat (54.600 verifikasi), total biaya
 operasional sebesar Rp16,38 juta mampu memproteksi potensi kerugian ekonomi sebesar Rp20,64 Miliar,
-menghasilkan \textbf{\textit{Benefit-to-Cost Ratio} (BCR) sebesar 1.259:1}.
+menghasilkan \textbf{\textit{Benefit-to-Cost Ratio} (BCR) sebesar 1.259:1}. Rincian alokasi biaya operasional tahunan
+berdasarkan profil arsitektur teknis dan strategi optimasi \textit{caching} disajikan pada Tabel~\ref{tab:breakdown-biaya}.
+
+\begin{adjustwidth}{0.50cm}{0pt}
+\begin{table}[H]
+\centering
+\caption{Breakdown Estimasi Biaya Komputasi dan Operasional Tahunan Verifin (54.600 Verifikasi/Tahun)}
+\label{tab:breakdown-biaya}
+\small
+\begin{tabularx}{\linewidth}{@{}L{3.4cm}Y C{2.2cm} R{2.6cm}@{}}
+\toprule
+\rowcolor{verfinhead}\thead{Komponen Infrastruktur} & \thead{Spesifikasi \& Profil Operasional} & \thead{Biaya / Bulan} & \thead{Total Biaya / Tahun} \\
+\midrule
+\rowcolor{verfinrow}
+\textbf{Cloud Compute \& Hosting} & Container PaaS (FastAPI, autoscale 1 vCPU, 1 GB RAM, high availability) & Rp350.000 & Rp4.200.000 \\
+\textbf{Database \& Storage} & Supabase Pro Tier (PostgreSQL, pgvector, auth, automated daily backup) & Rp390.000 & Rp4.680.000 \\
+\rowcolor{verfinrow}
+\textbf{In-Memory Cache} & Upstash Redis Serverless (caching OSINT, deduplikasi hash, hit rate 55\%) & Rp150.000 & Rp1.800.000 \\
+\textbf{LLM Token Inference} & API LLM (input $\sim$1.200 \& output $\sim$400 tokens; 55\% kueri dilayani cache) & Rp230.000 & Rp2.760.000 \\
+\rowcolor{verfinrow}
+\textbf{OSINT \& Search Proxy} & Egress bandwidth, query Whois/DNS, dan metasearch crawler proxy & Rp245.000 & Rp2.940.000 \\
+\midrule
+\textbf{Total Biaya Operasional} & \textbf{54.600 verifikasi (biaya marginal Rp300/kueri)} & \textbf{Rp1.365.000} & \textbf{Rp16.380.000} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{adjustwidth}
 
 \subsubsection*{3.\quad Validasi Uji Terbatas Pengguna (Pilot Usability \& Detection Study)}
 Untuk memvalidasi dampak nyata sebelum peluncuran massal, kami melaksanakan pengujian terbatas (\textit{controlled pilot test})
