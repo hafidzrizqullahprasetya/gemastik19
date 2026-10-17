@@ -1,6 +1,6 @@
 # Workspace Gemastik 19 — Verifin
 
-Repositori ini adalah workspace utama kompetisi Gemastik XIX (Divisi II: Perangkat Lunak) oleh Tim Three Achilles.
+Repositori ini adalah workspace utama kompetisi Gemastik XIX (Divisi VIII: Pengembangan Perangkat Lunak) oleh Tim Three Achilles.
 
 ## Hubungan Dua Repositori
 
@@ -23,16 +23,16 @@ Saat menyusun atau memvalidasi konten dokumen/makalah, selalu verifikasi ke impl
 
 | Area / Fitur di Dokumen Lomba | Lokasi Implementasi di `verifin-app` |
 | :--- | :--- |
-| **Pipeline Verifikasi Utama & Orkestrasi** | `backend/app/api/v1/verify/pipeline.py` |
-| **Ekstraksi Entitas & Hybrid NER** | `backend/app/services/ner.py` & `llm/entity_validator.py` |
+| **Pipeline Verifikasi Utama & Orkestrasi** | `backend/app/api/v1/verify/{pipeline,router}.py` (SSE streaming) |
+| **Ekstraksi Entitas & Hybrid NER** | `backend/app/services/ner.py` & `llm/entity_extraction.py` |
 | **OCR Poster Lowongan Kerja** | `backend/app/services/ocr.py` |
 | **OSINT Validator (No HP, Whocalls)** | `backend/app/services/osint/phone_validator.py` |
 | **OSINT Legalitas & Reputasi Perusahaan** | `backend/app/services/osint/company_validator.py` |
 | **OSINT Domain, Email & WHOIS/DNS** | `backend/app/services/osint/whois_handler.py` |
 | **OSINT Google Form Phishing Detector** | `backend/app/services/osint/gform_inspector.py` |
 | **LLM Reasoning & Scoring Verdict** | `backend/app/services/llm/verifin_reasoning.py` |
-| **Explainable AI (XAI / SHAP)** | `backend/app/services/llm/shap_explainer.py` & `frontend/src/modules/report/ShapChart.tsx` |
-| **Graf Jaringan Fraud (Graph Analytics)** | `backend/app/services/graph/fraud_network.py` & `frontend/src/components/report/FraudNetworkGraph.tsx` |
+| **Explainable AI (XAI / SHAP)** | `backend/app/services/xai/shap_explainer.py` & `frontend/src/modules/report/ShapChart.tsx` |
+| **Graf Jaringan Fraud (Graph Analytics)** | `backend/app/services/graph/fraud_network.py` (Visualisasi bukti di `frontend/src/components/report/EvidencePanel.tsx`) |
 | **Frontend UI (Input, Verification, Report)** | `frontend/src/modules/{home,verify,report}/` |
 | **Community Report & Admin Moderation** | `backend/app/api/v1/community/` & `frontend/src/modules/admin/` |
 
@@ -41,5 +41,5 @@ Saat menyusun atau memvalidasi konten dokumen/makalah, selalu verifikasi ke impl
 ## Aturan Kerja Git Agent
 
 - **Perubahan Dokumen Lomba:** Gunakan git standar di root (`git add`, `git commit`).
-- **Perubahan Kode Aplikasi:** WAJIB isolasi menggunakan flag `-C verifin-app` (contoh: `git -C verifin-app status`, `git -C verifin-app commit`). Targetkan branch `hafidz`.
-- **Akurasi Data:** Klaim angka metrik (akurasi, latency, arsitektur modul) pada berkas di `berkas-finalis/` dan `proposal-verifin/` harus konsisten dengan implementasi di `verifin-app`.
+- **Perubahan Kode Aplikasi:** WAJIB isolasi menggunakan flag `-C verifin-app` (contoh: `git -C verifin-app status`, `git -C verifin-app commit`). Cek branch aktif terlebih dahulu (`git -C verifin-app branch --show-current`).
+- **Akurasi Data:** Klaim angka metrik (akurasi, latency, arsitektur modul) pada berkas di `siap-submit/` dan `proposal-verifin/` harus konsisten dengan implementasi di `verifin-app`.
