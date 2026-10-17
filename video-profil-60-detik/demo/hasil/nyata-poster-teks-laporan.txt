@@ -1,0 +1,105 @@
+Verifin
+Verifikasi baru
+KASUS #EFC02F34
+Aman
+
+Risiko rendah
+
+Lowongan tergolong aman dengan catatan karena tidak meminta biaya, meski menggunakan email gratisan dan alamat belum spesifik.
+
+25
+/ 100
+
+SKOR RISIKO
+
+25 dari 100
+
+Faktor Penilaian
+
+Alasan utama di balik verdict ini
+
+Mendukung keamanan
+
+Tidak ada indikasi permintaan biaya rekrutmen.
+Nomor kontak tidak memiliki catatan penipuan.
+Kualifikasi dan benefit pekerjaan tergolong wajar.
+
+Perlu diwaspadai
+
+Kontak rekrutmen memakai domain email gratisan.
+Alamat kantor fisik belum dicantumkan spesifik.
+Rekomendasi Sebelum Melamar
+
+Langkah aman yang disarankan
+
+1
+Konfirmasi lokasi fisik dealer VinFast Yogyakarta.
+2
+Hindari transfer uang dalam proses rekrutmen.
+3
+Verifikasi hubungan perusahaan dengan merek terkait.
+Perusahaan & Lokasi
+
+Identitas dan titik geografis yang terverifikasi
+
+PERUSAHAAN
+
+VINFAST
+
+YOGYAKARTA
+
+Nomor bersih
+
+LOKASI
+
+Perkiraan Wilayah
+
+Daerah Istimewa Yogyakarta, Indonesia
+
+-7.795347, 110.367284
+
+Google Maps
+OpenStreetMap
+
+KONTAK TERVERIFIKASI
+
++6287852676658
+Bersih
+Jejak Digital
+
+Profil media sosial dan situs resmi yang ditemukan publik
+
+Belum Ditemukan Jejak Digital Publik
+
+Tidak ditemukan profil media sosial terverifikasi atau website resmi publik yang terhubung dengan entitas ini pada penelusuran terbuka.
+
+Data Lowongan yang Diekstrak
+
+VINFAST • YOGYAKARTA
+
+Detail Teknis & Atribusi Bukti
+
+Kontribusi tiap sinyal terhadap skor akhir
+
+Verifikasi lowongan lain
+Laporkan Kasus Ini
+VERIFIN
+
+Platform verifikasi lowongan kerja terintegrasi. Memanfaatkan OSINT, graf hubungan (Heterogeneous Graph), dan Explainable AI (Evidence Attribution) untuk menciptakan ekosistem pencarian kerja yang aman.
+
+NAVIGASI
+Verifikasi Baru
+Lapor Komunitas
+Dashboard Admin
+TEKNOLOGI & ENGINE
+PaddleOCR
+OSINT
+NetworkX
+Evidence Attribution
+LLM Reasoning
+
+© 2026 VERIFIN. Hak Cipta Dilindungi.
+
+Dikembangkan sebagai solusi deteksi penipuan kerja cerdas.
+
+Disclaimer: Hasil analisis risiko yang disajikan bersifat indikatif dan merupakan hasil pemrosesan AI secara otomatis. Bukan merupakan putusan hukum final.

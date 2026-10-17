@@ -1,0 +1,900 @@
+{
+  "verdict": "AMAN",
+  "risk_score": 25,
+  "case_id": "efc02f34-41e0-4266-9eb0-0b595230698e",
+  "summary": "Lowongan tergolong aman dengan catatan karena tidak meminta biaya, meski menggunakan email gratisan dan alamat belum spesifik.",
+  "risk_factors": [
+    "Kontak rekrutmen memakai domain email gratisan.",
+    "Alamat kantor fisik belum dicantumkan spesifik."
+  ],
+  "safe_factors": [
+    "Tidak ada indikasi permintaan biaya rekrutmen.",
+    "Nomor kontak tidak memiliki catatan penipuan.",
+    "Kualifikasi dan benefit pekerjaan tergolong wajar."
+  ],
+  "recommendations": [
+    "Konfirmasi lokasi fisik dealer VinFast Yogyakarta.",
+    "Hindari transfer uang dalam proses rekrutmen.",
+    "Verifikasi hubungan perusahaan dengan merek terkait."
+  ],
+  "entities": {
+    "companies": [
+      "VINFAST"
+    ],
+    "contacts": [
+      "+6287852676658"
+    ],
+    "emails": [
+      "pt.jogjaenergibersih@gmail.com"
+    ],
+    "urls": [],
+    "addresses": [],
+    "location_candidates": [
+      "YOGYAKARTA"
+    ],
+    "salaries": [
+      "UMR"
+    ]
+  },
+  "model_used": "ag/gemini-3.8-flash-medium (Evidence Reasoning)",
+  "osint": {
+    "domain": {
+      "age_years": null,
+      "created_at": "N/A (free email)",
+      "is_new": false,
+      "domain": "gmail.com",
+      "skipped": "free_email"
+    },
+    "email_security": {
+      "spf_active": false,
+      "dmarc_active": false,
+      "skipped": "free_email"
+    },
+    "address_validations": [
+      {
+        "address_input": "YOGYAKARTA",
+        "company_name_input": "VINFAST",
+        "address_found": true,
+        "address_details": {
+          "found": true,
+          "probe_status": "COMPLETED",
+          "evidence_status": "FOUND",
+          "lat": -7.7953473,
+          "lon": 110.3672845,
+          "display_name": "Daerah Istimewa Yogyakarta, Indonesia",
+          "country": "Indonesia",
+          "confidence_score": 0.604,
+          "matched_query": "YOGYAKARTA",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=VINFAST%2C+YOGYAKARTA",
+          "osm_url": "https://www.openstreetmap.org/?mlat=-7.7953473&mlon=110.3672845&zoom=17",
+          "match_level": "area",
+          "coordinates_exact": false,
+          "house_number_match": false,
+          "street_match": false,
+          "token_score": 1,
+          "matched_tokens": [
+            "yogyakarta"
+          ],
+          "coordinate_confidence": 0.604
+        },
+        "risk_signals": [],
+        "safe_signals": [],
+        "neutral_notes": [
+          "Peta menemukan wilayah sekitar; titik exact belum terkonfirmasi."
+        ],
+        "web_verification": {
+          "found": false,
+          "method": "google_maps_serp",
+          "match_score": 0,
+          "matched_snippet": null,
+          "maps_match": false,
+          "maps_url": null,
+          "lat": null,
+          "lon": null,
+          "matched_name": null,
+          "name_match": false,
+          "street_match": false,
+          "house_number_match": false,
+          "address_match_level": "none",
+          "discovered_street": null
+        },
+        "business_found": false
+      }
+    ],
+    "phones": [
+      {
+        "source": "kaspersky",
+        "phone": "+6287852676658",
+        "url": "https://whocalls.id.kaspersky.com/info/6287852676658",
+        "checked": true,
+        "danger_level": null,
+        "category": null,
+        "scam_confirmed": false,
+        "risk_flags": [],
+        "error": "Kaspersky check gagal: 'Response' object has no attribute 'css_first'",
+        "found": false,
+        "serp_fallback": {
+          "serp_checked": true,
+          "serp_results": [],
+          "risk_flags": [],
+          "found_scam": false
+        }
+      }
+    ],
+    "phone_probe": {
+      "status": "UNAVAILABLE",
+      "note": "Nomor HP ditemukan, tetapi validator reputasi tidak tersedia."
+    },
+    "companies": [
+      {
+        "name": "VINFAST",
+        "checked": true,
+        "method": "public_web_only",
+        "registry": {
+          "pt_registry_verified": false,
+          "portal": {
+            "source": "ahu.go.id",
+            "ok": false,
+            "pt_registry_verified": false,
+            "note": "Legalitas formal PT (AHU/OSS) tidak diotomasi; hanya jejak web publik.",
+            "skipped": true
+          },
+          "disclaimer": "Legalitas formal PT (AHU/OSS) BELUM diverifikasi per-entitas. Hanya probe portal + jejak web publik."
+        },
+        "stats": {
+          "search_count": 1,
+          "public_mentions": 0,
+          "fraud_related_mentions": 0,
+          "legality_mentions": 0,
+          "successful_requests": 1,
+          "relevant_results": 0,
+          "cross_service_match_count": 10,
+          "social_public_mention_count": 0
+        },
+        "neutral_notes": [
+          "Tidak ada hasil relevan untuk 'VINFAST' pada request yang berhasil; ini bukan bukti ketiadaan jejak publik."
+        ],
+        "risk_flags": [],
+        "safe_flags": []
+      }
+    ],
+    "web": {
+      "enabled": true,
+      "engine": "searxng + lightpanda fallback",
+      "websites": [],
+      "probe_status": "COMPLETED",
+      "gform_inspections": [],
+      "searches": [
+        {
+          "type": "search",
+          "query": "VINFAST",
+          "ok": true,
+          "request_status": "COMPLETED",
+          "engine": "searxng-intelligent",
+          "status": "FOUND",
+          "results": [
+            {
+              "title": "Official site",
+              "url": "https://vinfastauto.com/",
+              "snippet": "VinFast",
+              "source_type": "official",
+              "_final_score": 1,
+              "_entity_score": 1
+            },
+            {
+              "title": "Homepage | VinFast",
+              "url": "https://vinfast.com/",
+              "snippet": "A new energy of affordability, a competitively priced, all-electric vehicle is here with the Vinfast VF 6. It features outstanding efficiency and modern styling throughout.",
+              "source_type": "web",
+              "_final_score": 0.84,
+              "_entity_score": 1
+            },
+            {
+              "title": "VinFast - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/VinFast",
+              "snippet": "VinFast is a subsidiary of Vingroup, Vietnam's largest private conglomerate, that produces electric vehicles and motorcycles. It went public on Nasdaq in 2023 but faced challenges in international expansion and net losses.",
+              "source_type": "wiki",
+              "_final_score": 0.7967,
+              "_entity_score": 1
+            },
+            {
+              "title": "VinFast - Website chính thức tại Việt Nam",
+              "url": "https://vinfastauto.com/vn_vi",
+              "snippet": "VinFast - Cập nhật thông tin chính thức về ô tô & xe máy điện VinFast gồm thông số, giá bán, ưu đãi & hậu mãi, công cụ hỗ trợ mua xe, showroom & trạm sạc,...",
+              "source_type": "web",
+              "_final_score": 0.7945,
+              "_entity_score": 1
+            },
+            {
+              "title": "Vinfast Indonesia",
+              "url": "https://vinfastindonesia.com/",
+              "snippet": "Layanan di bengkel resmi Vinfast Menggunakan Vinfast Genuine Parts yaitu suku cadang resmi dari Vinfast dengan mengedepankan kualitas dan telah dirancang sesuai dengan spesifikasi dan kebutuhan kendaraan kesayangan Anda.",
+              "source_type": "official",
+              "_final_score": 0.76,
+              "_entity_score": 1
+            },
+            {
+              "title": "VinFast",
+              "url": "https://vinfastauto.eu/en/frontpage",
+              "snippet": "VinFast EVs are built with premium craftsmanship and the highest quality parts designed for safety, reliability, and comfort on every journey. Sign up here to find out more about the exceptional features throughout every VinFast, and our mi",
+              "source_type": "official",
+              "_final_score": 0.7429,
+              "_entity_score": 1
+            },
+            {
+              "title": "Motor Listrik VinFast 2026 - Evo, Feliz II, Viper & Vero X | Dealer Resmi",
+              "url": "https://sepeda-motor.id/merek/vinfast/",
+              "snippet": "VinFast adalah merek otomotif listrik terkemuka asal Vietnam yang hadir di Indonesia dengan lini motor listrik berkualitas premium. Lihat spesifikasi, harga, dan fitur empat pilihan model VinFast: Evo, Feliz II, Viper, dan Vero X.",
+              "source_type": "official",
+              "_final_score": 0.7375,
+              "_entity_score": 1
+            },
+            {
+              "title": "Premier New Electric Car Company | VinFast",
+              "url": "https://vinfastauto.us/",
+              "snippet": "VinFast, the innovative new electric car company, prioritizes premium craftsmanship and innovation in engineering it’s EVs. Driving VinFast electric vehicles gives you the opportunity for savings benefits versus a gas vehicle and the peace ",
+              "source_type": "web",
+              "_final_score": 0.69,
+              "_entity_score": 1
+            },
+            {
+              "title": "Homepage | VinFast",
+              "url": "https://vinfastauto.id/id",
+              "snippet": "Cakupan Warranty didasarkan pada waktu atau jarak tempuh, mana yang tercapai lebih dulu. Daftar lengkap mengenai cakupan warranty dapat dibaca pada Buku Warranty VinFast",
+              "source_type": "web",
+              "_final_score": 0.69,
+              "_entity_score": 1
+            },
+            {
+              "title": "Homepage | VinFast",
+              "url": "https://vinfastauto.id/",
+              "snippet": "We've got a maintenance plan that's right for you. Warranty Terms. Warranty coverage is based on time or mileage, whichever occurs first. A comprehensive list of full warranty coverage can be found in the VinFast Warranty Policy Booklet",
+              "source_type": "web",
+              "_final_score": 0.64,
+              "_entity_score": 1
+            }
+          ],
+          "raw_result_count": 10,
+          "relevant_result_count": 10,
+          "error": null,
+          "risk_flags": [],
+          "fallback_kind": "intelligent_search",
+          "fallback_index": 0
+        }
+      ],
+      "social_searches": [],
+      "evidence_counts": {
+        "relevant_results": 10,
+        "by_source_type": {
+          "official": 4,
+          "web": 5,
+          "wiki": 1
+        },
+        "successful_requests": 1,
+        "empty_searches": 0,
+        "no_relevant_searches": 0,
+        "unavailable_searches": 0,
+        "digital_footprint": "strong",
+        "official_presence": true,
+        "marketplace_presence": false,
+        "social_presence": false,
+        "maps_presence": false
+      },
+      "risk_flags": [],
+      "safe_flags": [
+        "Ditemukan 4 jejak publik.",
+        "Ditemukan 5 hasil web publik.",
+        "Ditemukan 1 jejak publik.",
+        "Ditemukan indikasi website/halaman resmi perusahaan."
+      ],
+      "neutral_notes": [],
+      "platform_evidence": {
+        "ok": true,
+        "query": "VINFAST",
+        "platforms": {
+          "google_maps": {
+            "count": 0,
+            "results": []
+          },
+          "instagram": {
+            "count": 0,
+            "results": []
+          },
+          "facebook": {
+            "count": 0,
+            "results": []
+          },
+          "tiktok": {
+            "count": 0,
+            "results": []
+          },
+          "twitter": {
+            "count": 0,
+            "results": []
+          },
+          "job_portal": {
+            "count": 0,
+            "results": []
+          },
+          "web_search": {
+            "count": 10,
+            "results": [
+              {
+                "title": "Official site",
+                "url": "https://vinfastauto.com/",
+                "snippet": "VinFast",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "score": 1,
+                "category": "general",
+                "published_date": null,
+                "_category": "official",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 1
+              },
+              {
+                "title": "Homepage | VinFast",
+                "url": "https://vinfast.com/",
+                "snippet": "A new energy of affordability, a competitively priced, all-electric vehicle is here with the Vinfast VF 6. It features outstanding efficiency and modern styling throughout.",
+                "engines": [
+                  "duckduckgo",
+                  "yahoo"
+                ],
+                "score": 2.5,
+                "category": "general",
+                "published_date": null,
+                "_category": "web",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.84
+              },
+              {
+                "title": "VinFast - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/VinFast",
+                "snippet": "VinFast is a subsidiary of Vingroup, Vietnam's largest private conglomerate, that produces electric vehicles and motorcycles. It went public on Nasdaq in 2023 but faced challenges in international expansion and net losses.",
+                "engines": [
+                  "duckduckgo",
+                  "yahoo"
+                ],
+                "score": 0.7222222222222222,
+                "category": "general",
+                "published_date": null,
+                "_category": "wiki",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.7967
+              },
+              {
+                "title": "VinFast - Website chính thức tại Việt Nam",
+                "url": "https://vinfastauto.com/vn_vi",
+                "snippet": "VinFast - Cập nhật thông tin chính thức về ô tô & xe máy điện VinFast gồm thông số, giá bán, ưu đãi & hậu mãi, công cụ hỗ trợ mua xe, showroom & trạm sạc,...",
+                "engines": [
+                  "duckduckgo",
+                  "yahoo"
+                ],
+                "score": 0.8484848484848484,
+                "category": "general",
+                "published_date": null,
+                "_category": "web",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.7945
+              },
+              {
+                "title": "Vinfast Indonesia",
+                "url": "https://vinfastindonesia.com/",
+                "snippet": "Layanan di bengkel resmi Vinfast Menggunakan Vinfast Genuine Parts yaitu suku cadang resmi dari Vinfast dengan mengedepankan kualitas dan telah dirancang sesuai dengan spesifikasi dan kebutuhan kendaraan kesayangan Anda.",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "score": 0.2,
+                "category": "general",
+                "published_date": null,
+                "_category": "official",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.76
+              },
+              {
+                "title": "VinFast",
+                "url": "https://vinfastauto.eu/en/frontpage",
+                "snippet": "VinFast EVs are built with premium craftsmanship and the highest quality parts designed for safety, reliability, and comfort on every journey. Sign up here to find out more about the exceptional features throughout every VinFast, and our mission to drive the world's EV transition.",
+                "engines": [
+                  "yahoo"
+                ],
+                "score": 0.14285714285714285,
+                "category": "general",
+                "published_date": null,
+                "_category": "official",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.7429
+              },
+              {
+                "title": "Motor Listrik VinFast 2026 - Evo, Feliz II, Viper & Vero X | Dealer Resmi",
+                "url": "https://sepeda-motor.id/merek/vinfast/",
+                "snippet": "VinFast adalah merek otomotif listrik terkemuka asal Vietnam yang hadir di Indonesia dengan lini motor listrik berkualitas premium. Lihat spesifikasi, harga, dan fitur empat pilihan model VinFast: Evo, Feliz II, Viper, dan Vero X.",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "score": 0.125,
+                "category": "general",
+                "published_date": null,
+                "_category": "official",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.7375
+              },
+              {
+                "title": "Premier New Electric Car Company | VinFast",
+                "url": "https://vinfastauto.us/",
+                "snippet": "VinFast, the innovative new electric car company, prioritizes premium craftsmanship and innovation in engineering it’s EVs. Driving VinFast electric vehicles gives you the opportunity for savings benefits versus a gas vehicle and the peace of mind that comes with an industry-leading warranty.",
+                "engines": [
+                  "yahoo"
+                ],
+                "score": 0.5,
+                "category": "general",
+                "published_date": null,
+                "_category": "web",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.69
+              },
+              {
+                "title": "Homepage | VinFast",
+                "url": "https://vinfastauto.id/id",
+                "snippet": "Cakupan Warranty didasarkan pada waktu atau jarak tempuh, mana yang tercapai lebih dulu. Daftar lengkap mengenai cakupan warranty dapat dibaca pada Buku Warranty VinFast",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "score": 0.5,
+                "category": "general",
+                "published_date": null,
+                "_category": "web",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.69
+              },
+              {
+                "title": "Homepage | VinFast",
+                "url": "https://vinfastauto.id/",
+                "snippet": "We've got a maintenance plan that's right for you. Warranty Terms. Warranty coverage is based on time or mileage, whichever occurs first. A comprehensive list of full warranty coverage can be found in the VinFast Warranty Policy Booklet",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "score": 0.3333333333333333,
+                "category": "general",
+                "published_date": null,
+                "_category": "web",
+                "_entity_score": 1,
+                "_location_score": 0,
+                "_final_score": 0.64
+              }
+            ]
+          }
+        },
+        "merged_evidence": {
+          "ok": true,
+          "query": "VINFAST",
+          "results": [],
+          "summary": "",
+          "entities_found": [],
+          "has_strong_verification": false,
+          "has_scam_indicators": false,
+          "total_results": 0
+        },
+        "verification_summary": "",
+        "entities_found": [],
+        "has_strong_verification": false,
+        "has_scam_indicators": false,
+        "total_raw_results": 10,
+        "total_extracted": 0
+      },
+      "search_intelligence": {
+        "digital_footprint": "strong",
+        "official_presence": true,
+        "marketplace_presence": false,
+        "social_presence": false,
+        "maps_presence": false,
+        "scam_mentions": 0,
+        "advice_only_scam": false,
+        "top_categories": [
+          "web",
+          "official",
+          "wiki"
+        ],
+        "risk_flags": [],
+        "safe_flags": [
+          "Ditemukan indikasi website/halaman resmi perusahaan."
+        ]
+      }
+    },
+    "social": {
+      "enabled": true,
+      "probe_status": "COMPLETED",
+      "evidence_status": "NO_RELEVANT_RESULTS",
+      "platform": "social_media",
+      "query": "VINFAST",
+      "found": false,
+      "social_found": false,
+      "official_social_found": false,
+      "public_footprint_found": false,
+      "authenticated": false,
+      "posts": [],
+      "profiles": [],
+      "platform_hits": {
+        "instagram": false,
+        "threads": false,
+        "tiktok": false,
+        "facebook": false,
+        "x_twitter": false
+      },
+      "official_platform_hits": {
+        "instagram": false,
+        "threads": false,
+        "tiktok": false,
+        "facebook": false,
+        "x_twitter": false
+      },
+      "public_platform_hits": {
+        "instagram": false,
+        "threads": false,
+        "tiktok": false,
+        "facebook": false,
+        "x_twitter": false
+      },
+      "evidence_counts": {
+        "public_posts": 0,
+        "public_profiles": 0,
+        "official_posts": 0,
+        "by_platform": {
+          "instagram": 0,
+          "threads": 0,
+          "tiktok": 0,
+          "facebook": 0,
+          "x_twitter": 0,
+          "other": 0
+        }
+      },
+      "search_diagnostics": {
+        "platforms_requested": [
+          "instagram",
+          "threads",
+          "tiktok",
+          "facebook",
+          "x_twitter"
+        ],
+        "search_engine": "lightpanda",
+        "note": "Hasil sosial diklasifikasikan terpisah dari portal loker dan aggregator."
+      },
+      "social_searches": [],
+      "risk_flags": [],
+      "errors": []
+    },
+    "evidence_policy": {
+      "mode": "factual_sources_only",
+      "note": "Semua temuan OSINT berasal dari fetch/scrape/API nyata (WHOIS, DNS, OSM, Kaspersky Who Calls, Scrapling, dan seluruh platform media sosial). LLM reasoner dilarang mengarang fakta di luar evidence.",
+      "social": "all_platforms"
+    },
+    "fraud_network": {
+      "nodes": [
+        {
+          "id": "VINFAST",
+          "type": "company",
+          "risk_score": 0,
+          "status": "CLEAN"
+        },
+        {
+          "id": "+6287852676658",
+          "type": "phone",
+          "risk_score": 0,
+          "status": "CLEAN"
+        },
+        {
+          "id": "pt.jogjaenergibersih@gmail.com",
+          "type": "email",
+          "risk_score": 0,
+          "status": "FREE_PROVIDER"
+        }
+      ],
+      "edges": [
+        {
+          "source": "+6287852676658",
+          "target": "VINFAST",
+          "relation": "contact_of"
+        },
+        {
+          "source": "pt.jogjaenergibersih@gmail.com",
+          "target": "VINFAST",
+          "relation": "email_of"
+        }
+      ],
+      "cluster_id": null,
+      "entity_in_fraud_network": false,
+      "total_case_count": 3,
+      "threat_level": "LOW",
+      "entity_seen_multiple_cases": true,
+      "fraud_case_count": 0,
+      "matched_entities": [],
+      "network_graph_summary": {
+        "total_nodes": 43,
+        "total_edges": 40,
+        "case_nodes": 12,
+        "fraud_cases": 2
+      },
+      "syndicate_analysis": {
+        "syndicate_detected": false,
+        "syndicate_alerts": [],
+        "historical_associations_count": 0,
+        "data_source": "database_historical_cases",
+        "note": "Dihitung dari riwayat job_cases nyata."
+      },
+      "community_reports": {
+        "status": "COMPLETED",
+        "report_count": 0,
+        "reported_by_community": false,
+        "risk_signal": "NONE"
+      },
+      "status": "COMPLETED"
+    },
+    "timing": {
+      "osint_parallel_sec": 16.542,
+      "ocr": {
+        "preprocess_sec": 0.479,
+        "model_init_sec": 0,
+        "inference_sec": 9.09,
+        "total_sec": 9.569,
+        "image_shape": [
+          1040,
+          790,
+          3
+        ],
+        "line_count": 18
+      }
+    },
+    "nlp": {
+      "enabled": true,
+      "status": "RULE_BASED_HEURISTIC",
+      "reason": "Taksonomi Pola Penipuan Kerja Indonesia (Paper22, GASA 2024, UNODC 2023)"
+    },
+    "syndicate_analysis": {
+      "syndicate_detected": false,
+      "syndicate_alerts": [],
+      "historical_associations_count": 0,
+      "data_source": "database_historical_cases",
+      "note": "Dihitung dari riwayat job_cases nyata."
+    },
+    "persistence_status": "SAVED"
+  },
+  "shap_explanation": {
+    "model_type": "Evidence Attribution Engine (Feature Contribution Analysis)",
+    "base_value": 12,
+    "final_risk_score": 25,
+    "evidence_confidence": null,
+    "decision_confidence": null,
+    "confidence_method": "not_calibrated",
+    "evidence_coverage_percent": null,
+    "probe_hit_rate_percent": 33.3,
+    "probe_applicability": {
+      "applicable": 3,
+      "positive": 1,
+      "outcomes": {
+        "phone_reputation": false,
+        "web_evidence": true,
+        "social_media": false
+      },
+      "excluded_not_provided": [
+        "whois_domain",
+        "address_geocoding",
+        "legal_registry"
+      ]
+    },
+    "decision_path": [
+      {
+        "step": "1. OCR & Entity Extraction",
+        "status": "PASS",
+        "detail": "Entitas terdeteksi: VINFAST; 1 no HP, 1 perusahaan, 1 alamat."
+      },
+      {
+        "step": "2. Address OSM Geocoding",
+        "status": "AREA_ONLY",
+        "detail": "Wilayah/jalan ditemukan, tetapi titik exact belum terkonfirmasi."
+      },
+      {
+        "step": "3. Phone Kaspersky Who Calls Check",
+        "status": "SKIP",
+        "detail": "Tidak ada nomor HP untuk dicek"
+      },
+      {
+        "step": "4. Email Domain Infrastructure Check",
+        "status": "PASS",
+        "detail": "Free provider (gmail.com); SPF/DMARC tidak relevan."
+      },
+      {
+        "step": "5. Fraud Network Case Memory",
+        "status": "NO_MATCH",
+        "detail": "Status jaringan: tidak ada asosiasi fraud publik."
+      },
+      {
+        "step": "6. Final Risk Level Evaluation",
+        "status": "LOW",
+        "detail": "Skor risiko akhir: 25 / 100 (Risiko Rendah); bukan probabilitas."
+      }
+    ],
+    "consistency_breakdown": [
+      {
+        "factor": "company_name_match",
+        "raw_score": 40,
+        "weight": 0.25,
+        "weighted_contribution": 10
+      },
+      {
+        "factor": "address_gis_match",
+        "raw_score": null,
+        "weight": 0.2,
+        "weighted_contribution": 0,
+        "status": "NOT_PROVIDED"
+      },
+      {
+        "factor": "phone_reputation",
+        "raw_score": 50,
+        "weight": 0.2,
+        "weighted_contribution": 10
+      },
+      {
+        "factor": "domain_security",
+        "raw_score": 70,
+        "weight": 0.15,
+        "weighted_contribution": 10.5
+      },
+      {
+        "factor": "social_footprint",
+        "raw_score": 40,
+        "weight": 0.2,
+        "weighted_contribution": 8
+      }
+    ],
+    "dns_records": {
+      "resolver": "system resolver",
+      "provider_type": "FREE_EMAIL_PROVIDER",
+      "domain": "gmail.com",
+      "spf_active": false,
+      "dmarc_active": false
+    },
+    "not_verified": [
+      {
+        "item": "Legal Entity AHU / OSS",
+        "reason": "Tidak ada API publik otomatis; perlu cek manual"
+      },
+      {
+        "item": "BPJS Employment Registration",
+        "reason": "Data internal perusahaan"
+      },
+      {
+        "item": "NPWP Tax Registration",
+        "reason": "Data terproteksi regulasi"
+      }
+    ],
+    "probe_weights": [
+      {
+        "probe": "Address Geocoding (OSM GIS)",
+        "weight": 0.25,
+        "configured_weight": 0.25,
+        "effective_weight": 0,
+        "execution_time_ms": null,
+        "status": "AREA_ONLY",
+        "applicable": false
+      },
+      {
+        "probe": "Phone Reputation (Kaspersky Who Calls)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0.2,
+        "execution_time_ms": null,
+        "status": "UNAVAILABLE",
+        "applicable": true,
+        "url": "https://whocalls.id.kaspersky.com/info/6287852676658"
+      },
+      {
+        "probe": "Web Evidence (SERP)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0.2,
+        "execution_time_ms": null,
+        "status": "VALID",
+        "applicable": true
+      },
+      {
+        "probe": "Email Security (DNS MX/SPF)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0.2,
+        "execution_time_ms": null,
+        "status": "FREE_PROVIDER",
+        "applicable": true
+      },
+      {
+        "probe": "Legal Entity (AHU/OSS)",
+        "weight": 0.15,
+        "configured_weight": 0.15,
+        "effective_weight": 0.15,
+        "execution_time_ms": 0,
+        "status": "UNKNOWN",
+        "applicable": true,
+        "note": "Tidak ada API publik otomatis"
+      }
+    ],
+    "community_bootstrap_strategy": {
+      "current_stage": "STAGE_1_PUBLIC_OSINT_BOOTSTRAP",
+      "public_osint_references_mined": 4,
+      "verified_candidate_reviews_count": 0,
+      "bootstrap_note": "Menggunakan rujukan OSINT publik sebelum ulasan pelamar terakumulasi."
+    },
+    "deduplication_engine": {
+      "sha256_text_hash": "n/a (dihitung di layer router/cache)",
+      "perceptual_hash_phash": "n/a (memerlukan imagehash; tidak dihitung di explainer)",
+      "crop_compression_invariant": false
+    },
+    "networkx_graph_analytics": {
+      "algorithm": "Connected Component Subgraph Analysis (nx.connected_components)",
+      "subgraph_id": "n/a (tidak ada kluster)",
+      "nodes_in_cluster": 3,
+      "entity_in_fraud_network": false,
+      "threat_level": "LOW",
+      "shared_identity_reuse": false
+    },
+    "checked_at": "2026-10-17T10:52:57.248379+00:00",
+    "ethical_safeguards": {
+      "human_review_recommended": true,
+      "cost_of_error": {
+        "false_positive_fatal_cost": 5,
+        "false_negative_cost": 10
+      }
+    },
+    "verdict": "AMAN",
+    "feature_contributions": [
+      {
+        "feature": "Entitas Muncul di Beberapa Kasus",
+        "feature_key": "entity_seen_multiple_cases",
+        "value": 1,
+        "contribution": 8.48,
+        "impact": "risk",
+        "description": "Entitas ini sebelumnya terdeteksi di 3 verifikasi lain",
+        "delta": 8.48
+      },
+      {
+        "feature": "Kontak Hanya Email Gratisan",
+        "feature_key": "free_email_only",
+        "value": 1,
+        "contribution": 4.52,
+        "impact": "risk",
+        "description": "Tidak ada domain korporat — kontak hanya via Gmail/Yahoo tanpa infrastruktur resmi",
+        "delta": 4.52
+      }
+    ],
+    "waterfall_chart": [
+      {
+        "label": "Entitas Muncul di Beberapa Kasus",
+        "value": 8.48,
+        "cumulative": 20.48,
+        "impact": "risk",
+        "delta": 8.48
+      },
+      {
+        "label": "Kontak Hanya Email Gratisan",
+        "value": 4.52,
+        "cumulative": 25,
+        "impact": "risk",
+        "delta": 4.52
+      }
+    ],
+    "top_risk_features": [
+      "Kontak Hanya Email Gratisan",
+      "Entitas Muncul di Beberapa Kasus"
+    ],
+    "top_safe_features": [],
+    "summary": "Berdasarkan bukti publik independen yang berhasil dikumpulkan, lowongan ini dinilai aman — tidak ditemukan indikator kuat penipuan. Sistem tidak dapat menjamin legalitas perusahaan secara absolut karena beberapa sumber resmi (seperti registri AHU/OSS) tidak tersedia secara publik."
+  }
+}

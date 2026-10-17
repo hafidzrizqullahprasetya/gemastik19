@@ -1,0 +1,252 @@
+Verifin
+Verifikasi baru
+KASUS #6B4B9B4E
+Aman
+
+Risiko rendah
+
+Lowongan terindikasi aman dengan jejak fisik dan digital yang jelas serta tanpa indikasi pungutan biaya.
+
+12
+/ 100
+
+SKOR RISIKO
+
+12 dari 100
+
+Faktor Penilaian
+
+Alasan utama di balik verdict ini
+
+Mendukung keamanan
+
+Alamat fisik terkonfirmasi di peta
+Tidak ada indikasi permintaan biaya
+Jejak publik bisnis terverifikasi kuat
+
+Perlu diwaspadai
+
+Email kontak menggunakan domain gratisan
+Nomor kontak berbeda dari kontak publik
+Rekomendasi Sebelum Melamar
+
+Langkah aman yang disarankan
+
+1
+Lamar pekerjaan melalui formulir pendaftaran
+2
+Jangan pernah mentransfer uang apa pun
+3
+Datangi langsung gerai untuk konfirmasi
+Perusahaan & Lokasi
+
+Identitas dan titik geografis yang terverifikasi
+
+PERUSAHAAN
+
+The Biker Shop
+
+The Biker Shop Jogja, Jl. Parangtritis No.38, Mantrijeron, Kec. Mantrijeron, Kota Jogja, DIY - 55143
+
+Nomor bersih
+Jejak digital
+
+LOKASI
+
+Perkiraan Wilayah
+
+Kota Yogyakarta, Depok, Daerah Istimewa Yogyakarta, Indonesia
+
+-7.801349, 110.364735
+
+Google Maps
+OpenStreetMap
+
+KONTAK TERVERIFIKASI
+
++6285738325536
+Bersih
+Jejak Digital
+
+Profil media sosial dan situs resmi yang ditemukan publik
+
+The Biker Shop Jogja (@thebikershop.jogja) - Instagram
+
+Instagram
+
+The Biker Shop Jogja (@thebikershopjogja) - Instagram
+
+Instagram
+
+The Bikershop Jogja | Sleman - Facebook
+
+Facebook
+
+thebikershop.id (@thebikershop.id) TikTok | Tonton Video TikTok Terbaru ...
+
+TikTok
+
+Thebikershopjogja - Facebook
+
+Facebook
+
+Data Lowongan yang Diekstrak
+
+The Biker Shop • The Biker Shop Jogja
+
+Detail Teknis & Atribusi Bukti
+
+Kontribusi tiap sinyal terhadap skor akhir
+
+BUKTI OSINT
+
+Data dari sumber nyata, bukan rekaan model AI
+
+factual_sources_only
+
+DOMAIN & EMAIL SECURITY
+
+DNS/WHOIS
+
+UMUR DOMAIN
+
+N/A (free email)
+
+EMAIL SECURITY
+
+SPF
+DMARC
+
+REPUTASI NOMOR HP/WA
+
+Kaspersky Who Calls
++6285738325536
+Bersih dari laporan penipuan
+
+PROFIL PERUSAHAAN DARI WEB PUBLIK
+
+SERP Analysis
+The Biker Shop
+9 hasil web relevan
+Ditemukan 9 jejak publik di search (bukan klaim legalitas AHU).
+
+LOKASI & VERIFIKASI PETA
+
+OpenStreetMap
+
+LOKASI TERVERIFIKASI
+
+The Biker Shop Jogja, Jl. Parangtritis No.38, Mantrijeron, Kec. Mantrijeron, Kota Jogja, DIY - 55143
+
+Kota Yogyakarta, Depok, Daerah Istimewa Yogyakarta, Indonesia
+
+-7.801349, 110.364735
+Wilayah ditemukan
+Buka di Google Maps
+
+SOCIAL MEDIA INTELLIGENCE
+
+6 profil ditemukan
+
+Jejak digital publik terverifikasi dari berbagai platform media sosial:
+
+INSTAGRAM
+
+The Biker Shop Jogja (@thebikershop.jogj...
+Followers
+
+1,641
+
+Posts
+
+77
+
+Following
+
+656
+
+1,641 Followers, 656 Following, 77 Posts - The Biker Shop Jogja (@thebikershop.jogja) on Instagram: "OFFICIAL ROYAL ENFI...
+
+Jejak publik terverifikasi
+
+INSTAGRAM
+
+The Biker Shop Jogja (@thebikershopjogja...
+Followers
+
+51
+
+Posts
+
+35
+
+Following
+
+109
+
+COVER LEATHER & SYNTHETIC Yogyakarta, Indonesia Cp : 081293992715 COD Yogyakarta/Pengiriman via JNE PM for serious order only!
+
+Jejak publik terverifikasi
+
+FACEBOOK
+
+The Bikershop Jogja | Sleman - Facebook
+
+May 12, 2022 · banyak yang minat ini!!!... pastiin kalian ordernya ke The Biker Shop yaa dapetin harga termurah se Indon...
+
+Jejak publik terverifikasi
+
+FACEBOOK
+
+The Bikershop Jogja | Sleman - Facebook
+
+May 12, 2022 · The Biker Shop Jogja Jl ry wonosari km 9 no 9 Jogjakarta 📞Telfon / wa : 085727572068 ( Johan ) 🚧🚧🚧🚧�...
+
+Jejak publik terverifikasi
+
+TIKTOK
+
+thebikershop.id (@thebikershop.id) TikTo...
+
+Alamat dealer The Biker Shop yogyakarta : Jl.Parangtritis no.38, Mantrijeron, Yogyakarta Alamat dealer The Biker Shop So...
+
+Jejak publik terverifikasi
+
+FACEBOOK
+
+Thebikershopjogja - Facebook
+
+󱚸 PIC at Djoko Motor 󱜧 Studied at Universitas Kristen Maranatha 󱜧 Went to St. Aloysius Bandung 󱜏 Lives in Yogyakarta...
+
+Jejak publik terverifikasi
+
+STATUS PENCARIAN PER PLATFORM
+
+Instagram
+✓
+Tiktok
+✓
+Facebook
+✓
+Verifikasi lowongan lain
+Laporkan Kasus Ini
+VERIFIN
+
+Platform verifikasi lowongan kerja terintegrasi. Memanfaatkan OSINT, graf hubungan (Heterogeneous Graph), dan Explainable AI (Evidence Attribution) untuk menciptakan ekosistem pencarian kerja yang aman.
+
+NAVIGASI
+Verifikasi Baru
+Lapor Komunitas
+Dashboard Admin
+TEKNOLOGI & ENGINE
+PaddleOCR
+OSINT
+NetworkX
+Evidence Attribution
+LLM Reasoning
+
+© 2026 VERIFIN. Hak Cipta Dilindungi.
+
+Dikembangkan sebagai solusi deteksi penipuan kerja cerdas.
+
+Disclaimer: Hasil analisis risiko yang disajikan bersifat indikatif dan merupakan hasil pemrosesan AI secara otomatis. Bukan merupakan putusan hukum final.

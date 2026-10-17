@@ -1,0 +1,687 @@
+{
+  "verdict": "AMAN",
+  "risk_score": 25,
+  "case_id": "18e64599-9bae-44c3-befa-07d11f1268ef",
+  "summary": "Lowongan terindikasi aman dari entitas perusahaan nyata tanpa permintaan biaya, meski disebarkan via akun media sosial personal.",
+  "risk_factors": [
+    "Dipublikasikan lewat akun Threads personal."
+  ],
+  "safe_factors": [
+    "Tidak ada indikasi pungutan biaya.",
+    "Perusahaan memiliki jejak web publik valid.",
+    "Kualifikasi pekerjaan terperinci dan wajar."
+  ],
+  "recommendations": [
+    "Jangan bayar biaya rekrutmen apa pun.",
+    "Hindari menyerahkan data perbankan sensitif."
+  ],
+  "entities": {
+    "companies": [
+      "PT Sinergi Informatika Semen Indonesia (SISI)"
+    ],
+    "contacts": [],
+    "emails": [],
+    "urls": [
+      "https://www.threads.com/@andre.patra/post/Db8RPMwiZuD"
+    ],
+    "addresses": [],
+    "location_candidates": [
+      "Karawang",
+      "Karawang ya"
+    ],
+    "salaries": []
+  },
+  "model_used": "ag/gemini-3.8-flash-medium (Evidence Reasoning) (DB Cache Hit)",
+  "osint": {
+    "web": {
+      "engine": "searxng + lightpanda fallback",
+      "enabled": true,
+      "searches": [
+        {
+          "ok": true,
+          "type": "search",
+          "error": null,
+          "query": "SISI",
+          "engine": "searxng-intelligent",
+          "status": "FOUND",
+          "results": [
+            {
+              "url": "https://sisi.id/",
+              "title": "Simplify Business & Life - SISI - Sinergi Informatika Semen Indonesia",
+              "snippet": "SISI hadir untuk mendukung transformasi digital yang mempercepat pertumbuhan bisnis dari berbagai industri di Indonesia",
+              "source_type": "web",
+              "_final_score": 0.84,
+              "_entity_score": 1
+            },
+            {
+              "url": "https://sisi.id/about-us/",
+              "title": "About Us - SISI - Sinergi Informatika Semen Indonesia",
+              "snippet": "Berdiri sejak tanggal 9 Juni 2014, SISI merupakan perusahaan yang bergerak di bidang Teknologi Informasi yang senantiasa menyediakan berbagai solusi IT yang andal, mutakhir, dan berorientasi untuk memenuhi harapan pelanggan.",
+              "source_type": "official",
+              "_final_score": 0.75,
+              "_entity_score": 1
+            },
+            {
+              "url": "https://www.disnakerja.com/lowongan-kerja-pt-sinergi-informatika-semen-indonesia/",
+              "title": "PT Sinergi Informatika Semen Indonesia - DISNAKERJA.COM",
+              "snippet": "PT Sinergi Informatika Semen Indonesia (SISI) merupakan anak usaha dari PT Semen Indonesia (Persero) Tbk. yang bergerak di bidang teknologi informasi dan komunikasi. Resmi berdiri pada tanggal 9 Juni 2014, SISI dibentuk berdasar dari pengal",
+              "source_type": "official",
+              "_final_score": 0.73,
+              "_entity_score": 1
+            }
+          ],
+          "risk_flags": [],
+          "fallback_kind": "intelligent_search",
+          "fallback_index": 0,
+          "request_status": "COMPLETED",
+          "raw_result_count": 3,
+          "relevant_result_count": 3
+        }
+      ],
+      "websites": [],
+      "risk_flags": [
+        "Jejak digital sangat minim — sulit diverifikasi."
+      ],
+      "safe_flags": [
+        "Ditemukan 1 hasil web publik.",
+        "Ditemukan 2 jejak publik.",
+        "Ditemukan indikasi website/halaman resmi perusahaan."
+      ],
+      "probe_status": "COMPLETED",
+      "neutral_notes": [],
+      "evidence_counts": {
+        "maps_presence": false,
+        "by_source_type": {
+          "web": 1,
+          "official": 2
+        },
+        "empty_searches": 0,
+        "social_presence": false,
+        "relevant_results": 3,
+        "digital_footprint": "weak",
+        "official_presence": true,
+        "successful_requests": 1,
+        "marketplace_presence": false,
+        "no_relevant_searches": 0,
+        "unavailable_searches": 0
+      },
+      "social_searches": [],
+      "gform_inspections": [],
+      "platform_evidence": {
+        "ok": true,
+        "query": "PT Sinergi Informatika Semen Indonesia (SISI)",
+        "platforms": {
+          "tiktok": {
+            "count": 0,
+            "results": []
+          },
+          "twitter": {
+            "count": 0,
+            "results": []
+          },
+          "facebook": {
+            "count": 0,
+            "results": []
+          },
+          "instagram": {
+            "count": 0,
+            "results": []
+          },
+          "job_portal": {
+            "count": 0,
+            "results": []
+          },
+          "web_search": {
+            "count": 3,
+            "results": [
+              {
+                "url": "https://sisi.id/",
+                "score": 1,
+                "title": "Simplify Business & Life - SISI - Sinergi Informatika Semen Indonesia",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "snippet": "SISI hadir untuk mendukung transformasi digital yang mempercepat pertumbuhan bisnis dari berbagai industri di Indonesia",
+                "category": "general",
+                "_category": "web",
+                "_final_score": 0.84,
+                "_entity_score": 1,
+                "published_date": null,
+                "_location_score": 0
+              },
+              {
+                "url": "https://sisi.id/about-us/",
+                "score": 0.16666666666666666,
+                "title": "About Us - SISI - Sinergi Informatika Semen Indonesia",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "snippet": "Berdiri sejak tanggal 9 Juni 2014, SISI merupakan perusahaan yang bergerak di bidang Teknologi Informasi yang senantiasa menyediakan berbagai solusi IT yang andal, mutakhir, dan berorientasi untuk memenuhi harapan pelanggan.",
+                "category": "general",
+                "_category": "official",
+                "_final_score": 0.75,
+                "_entity_score": 1,
+                "published_date": null,
+                "_location_score": 0
+              },
+              {
+                "url": "https://www.disnakerja.com/lowongan-kerja-pt-sinergi-informatika-semen-indonesia/",
+                "score": 0.1,
+                "title": "PT Sinergi Informatika Semen Indonesia - DISNAKERJA.COM",
+                "engines": [
+                  "duckduckgo"
+                ],
+                "snippet": "PT Sinergi Informatika Semen Indonesia (SISI) merupakan anak usaha dari PT Semen Indonesia (Persero) Tbk. yang bergerak di bidang teknologi informasi dan komunikasi. Resmi berdiri pada tanggal 9 Juni 2014, SISI dibentuk berdasar dari pengalaman mengelola ICT Semen Indonesia Group selama lebih dari 1",
+                "category": "general",
+                "_category": "official",
+                "_final_score": 0.73,
+                "_entity_score": 1,
+                "published_date": null,
+                "_location_score": 0
+              }
+            ]
+          },
+          "google_maps": {
+            "count": 0,
+            "results": []
+          }
+        },
+        "entities_found": [],
+        "merged_evidence": {
+          "ok": true,
+          "query": "PT Sinergi Informatika Semen Indonesia (SISI)",
+          "results": [],
+          "summary": "",
+          "total_results": 0,
+          "entities_found": [],
+          "has_scam_indicators": false,
+          "has_strong_verification": false
+        },
+        "total_extracted": 0,
+        "total_raw_results": 3,
+        "has_scam_indicators": false,
+        "verification_summary": "",
+        "has_strong_verification": false
+      },
+      "search_intelligence": {
+        "risk_flags": [
+          "Jejak digital sangat minim — sulit diverifikasi."
+        ],
+        "safe_flags": [
+          "Ditemukan indikasi website/halaman resmi perusahaan."
+        ],
+        "maps_presence": false,
+        "scam_mentions": 0,
+        "top_categories": [
+          "official",
+          "web"
+        ],
+        "social_presence": false,
+        "advice_only_scam": false,
+        "digital_footprint": "weak",
+        "official_presence": true,
+        "marketplace_presence": false
+      }
+    },
+    "domain": {
+      "is_new": false,
+      "age_years": null,
+      "created_at": "Tidak diketahui"
+    },
+    "phones": [],
+    "social": {
+      "found": false,
+      "posts": [],
+      "query": "PT Sinergi Informatika Semen Indonesia (SISI)",
+      "errors": [],
+      "enabled": true,
+      "platform": "social_media",
+      "profiles": [],
+      "risk_flags": [],
+      "probe_status": "COMPLETED",
+      "social_found": false,
+      "authenticated": false,
+      "platform_hits": {
+        "tiktok": false,
+        "threads": false,
+        "facebook": false,
+        "instagram": false,
+        "x_twitter": false
+      },
+      "evidence_counts": {
+        "by_platform": {
+          "other": 0,
+          "tiktok": 0,
+          "threads": 0,
+          "facebook": 0,
+          "instagram": 0,
+          "x_twitter": 0
+        },
+        "public_posts": 0,
+        "official_posts": 0,
+        "public_profiles": 0
+      },
+      "evidence_status": "NO_RELEVANT_RESULTS",
+      "social_searches": [],
+      "search_diagnostics": {
+        "note": "Hasil sosial diklasifikasikan terpisah dari portal loker dan aggregator.",
+        "search_engine": "lightpanda",
+        "platforms_requested": [
+          "instagram",
+          "threads",
+          "tiktok",
+          "facebook",
+          "x_twitter"
+        ]
+      },
+      "public_platform_hits": {
+        "tiktok": false,
+        "threads": false,
+        "facebook": false,
+        "instagram": false,
+        "x_twitter": false
+      },
+      "official_social_found": false,
+      "official_platform_hits": {
+        "tiktok": false,
+        "threads": false,
+        "facebook": false,
+        "instagram": false,
+        "x_twitter": false
+      },
+      "public_footprint_found": false
+    },
+    "timing": {
+      "osint_parallel_sec": 11.583
+    },
+    "companies": [
+      {
+        "name": "PT Sinergi Informatika Semen Indonesia (SISI)",
+        "stats": {
+          "search_count": 1,
+          "public_mentions": 2,
+          "relevant_results": 2,
+          "legality_mentions": 0,
+          "successful_requests": 1,
+          "fraud_related_mentions": 0,
+          "cross_service_match_count": 3,
+          "social_public_mention_count": 0
+        },
+        "method": "public_web_only",
+        "checked": true,
+        "registry": {
+          "portal": {
+            "ok": false,
+            "note": "Legalitas formal PT (AHU/OSS) tidak diotomasi; hanya jejak web publik.",
+            "source": "ahu.go.id",
+            "skipped": true,
+            "pt_registry_verified": false
+          },
+          "disclaimer": "Legalitas formal PT (AHU/OSS) BELUM diverifikasi per-entitas. Hanya probe portal + jejak web publik.",
+          "pt_registry_verified": false
+        },
+        "risk_flags": [],
+        "safe_flags": [
+          "Ditemukan 2 jejak publik di search (bukan klaim legalitas AHU)."
+        ],
+        "neutral_notes": []
+      }
+    ],
+    "phone_probe": {
+      "note": "Nomor HP tidak tercantum pada input; pemeriksaan Kaspersky dilewati.",
+      "status": "NOT_PROVIDED"
+    },
+    "fraud_network": {
+      "edges": [],
+      "nodes": [
+        {
+          "id": "PT Sinergi Informatika Semen Indonesia (SISI)",
+          "type": "company",
+          "status": "CLEAN",
+          "risk_score": 0
+        }
+      ],
+      "cluster_id": null,
+      "threat_level": "LOW",
+      "total_case_count": 0,
+      "entity_in_fraud_network": false
+    },
+    "email_security": {
+      "spf_active": false,
+      "dmarc_active": false
+    },
+    "evidence_policy": {
+      "mode": "factual_sources_only",
+      "note": "Semua temuan OSINT berasal dari fetch/scrape/API nyata (WHOIS, DNS, OSM, Kaspersky Who Calls, Scrapling, dan seluruh platform media sosial). LLM reasoner dilarang mengarang fakta di luar evidence.",
+      "social": "all_platforms"
+    },
+    "address_validations": [
+      {
+        "risk_signals": [],
+        "safe_signals": [],
+        "address_found": true,
+        "address_input": "Karawang",
+        "neutral_notes": [
+          "Peta menemukan wilayah sekitar; titik exact belum terkonfirmasi."
+        ],
+        "business_found": false,
+        "address_details": {
+          "lat": -6.3021906,
+          "lon": 107.3046116,
+          "found": true,
+          "country": "Indonesia",
+          "osm_url": "https://www.openstreetmap.org/?mlat=-6.3021906&mlon=107.3046116&zoom=17",
+          "match_level": "area",
+          "token_score": 1,
+          "display_name": "Karawang, Jawa Barat, Indonesia",
+          "probe_status": "COMPLETED",
+          "street_match": false,
+          "matched_query": "Karawang",
+          "matched_tokens": [
+            "karawang"
+          ],
+          "evidence_status": "FOUND",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PT+Sinergi+Informatika+Semen+Indonesia+%28SISI%29%2C+Karawang",
+          "confidence_score": 0.508,
+          "coordinates_exact": false,
+          "house_number_match": false,
+          "coordinate_confidence": 0.508
+        },
+        "web_verification": {
+          "lat": null,
+          "lon": null,
+          "found": false,
+          "method": "google_maps_serp",
+          "maps_url": null,
+          "maps_match": false,
+          "name_match": false,
+          "match_score": 0,
+          "matched_name": null,
+          "street_match": false,
+          "matched_snippet": null,
+          "house_number_match": false,
+          "address_match_level": "none"
+        },
+        "company_name_input": "PT Sinergi Informatika Semen Indonesia (SISI)"
+      },
+      {
+        "risk_signals": [],
+        "safe_signals": [],
+        "address_found": true,
+        "address_input": "Karawang ya",
+        "neutral_notes": [
+          "Peta menemukan wilayah sekitar; titik exact belum terkonfirmasi."
+        ],
+        "business_found": false,
+        "address_details": {
+          "lat": -6.3207517,
+          "lon": 107.2764369,
+          "found": true,
+          "country": "Indonesia",
+          "osm_url": "https://www.openstreetmap.org/?mlat=-6.3207517&mlon=107.2764369&zoom=17",
+          "match_level": "area",
+          "token_score": 1,
+          "display_name": "Blok YA, Perum Karaba Indah, Sukamakmur, Karawang, Jawa Barat, 41361, Indonesia",
+          "probe_status": "COMPLETED",
+          "street_match": false,
+          "matched_query": "Karawang ya",
+          "matched_tokens": [
+            "karawang"
+          ],
+          "evidence_status": "FOUND",
+          "google_maps_url": "https://www.google.com/maps/search/?api=1&query=PT+Sinergi+Informatika+Semen+Indonesia+%28SISI%29%2C+Karawang+ya",
+          "confidence_score": 0.053,
+          "coordinates_exact": false,
+          "house_number_match": false,
+          "coordinate_confidence": 0.053
+        },
+        "web_verification": {
+          "lat": null,
+          "lon": null,
+          "found": false,
+          "method": "google_maps_serp",
+          "maps_url": null,
+          "maps_match": false,
+          "name_match": false,
+          "match_score": 0,
+          "matched_name": null,
+          "street_match": false,
+          "matched_snippet": null,
+          "house_number_match": false,
+          "address_match_level": "none"
+        },
+        "company_name_input": "PT Sinergi Informatika Semen Indonesia (SISI)"
+      }
+    ]
+  },
+  "shap_explanation": {
+    "model_type": "Evidence Attribution Engine (Feature Contribution Analysis)",
+    "base_value": 12,
+    "final_risk_score": 25,
+    "evidence_confidence": null,
+    "decision_confidence": null,
+    "confidence_method": "not_calibrated",
+    "evidence_coverage_percent": null,
+    "probe_hit_rate_percent": 50,
+    "probe_applicability": {
+      "applicable": 2,
+      "positive": 1,
+      "outcomes": {
+        "web_evidence": true,
+        "social_media": false
+      },
+      "excluded_not_provided": [
+        "whois_domain",
+        "phone_reputation",
+        "address_geocoding",
+        "legal_registry"
+      ]
+    },
+    "decision_path": [
+      {
+        "step": "1. OCR & Entity Extraction",
+        "status": "PASS",
+        "detail": "Entitas terdeteksi: PT Sinergi Informatika Semen Indonesia (SISI); 0 no HP, 1 perusahaan, 2 alamat."
+      },
+      {
+        "step": "2. Address OSM Geocoding",
+        "status": "AREA_ONLY",
+        "detail": "Wilayah/jalan ditemukan, tetapi titik exact belum terkonfirmasi."
+      },
+      {
+        "step": "3. Phone Kaspersky Who Calls Check",
+        "status": "NOT_PROVIDED",
+        "detail": "Nomor HP tidak tercantum pada input; pemeriksaan dilewati."
+      },
+      {
+        "step": "4. Email Domain Infrastructure Check",
+        "status": "NOT_PROVIDED",
+        "detail": "Email tidak tercantum pada input; pemeriksaan domain dilewati."
+      },
+      {
+        "step": "5. Fraud Network Case Memory",
+        "status": "NO_MATCH",
+        "detail": "Status jaringan: tidak ada asosiasi fraud publik."
+      },
+      {
+        "step": "6. Final Risk Level Evaluation",
+        "status": "LOW",
+        "detail": "Skor risiko akhir: 25 / 100 (Risiko Rendah); bukan probabilitas."
+      }
+    ],
+    "consistency_breakdown": [
+      {
+        "factor": "company_name_match",
+        "raw_score": 100,
+        "weight": 0.25,
+        "weighted_contribution": 25
+      },
+      {
+        "factor": "address_gis_match",
+        "raw_score": null,
+        "weight": 0.2,
+        "weighted_contribution": 0,
+        "status": "NOT_PROVIDED"
+      },
+      {
+        "factor": "phone_reputation",
+        "raw_score": 50,
+        "weight": 0.2,
+        "weighted_contribution": 10
+      },
+      {
+        "factor": "domain_security",
+        "raw_score": 95,
+        "weight": 0.15,
+        "weighted_contribution": 14.2
+      },
+      {
+        "factor": "social_footprint",
+        "raw_score": 40,
+        "weight": 0.2,
+        "weighted_contribution": 8
+      }
+    ],
+    "dns_records": {
+      "resolver": "system resolver",
+      "provider_type": "CORPORATE_DOMAIN",
+      "domain": "n/a",
+      "spf_active": false,
+      "dmarc_active": false
+    },
+    "not_verified": [
+      {
+        "item": "Legal Entity AHU / OSS",
+        "reason": "Tidak ada API publik otomatis; perlu cek manual"
+      },
+      {
+        "item": "BPJS Employment Registration",
+        "reason": "Data internal perusahaan"
+      },
+      {
+        "item": "NPWP Tax Registration",
+        "reason": "Data terproteksi regulasi"
+      }
+    ],
+    "probe_weights": [
+      {
+        "probe": "Address Geocoding (OSM GIS)",
+        "weight": 0.25,
+        "configured_weight": 0.25,
+        "effective_weight": 0,
+        "execution_time_ms": null,
+        "status": "AREA_ONLY",
+        "applicable": false
+      },
+      {
+        "probe": "Phone Reputation (Kaspersky Who Calls)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0,
+        "execution_time_ms": null,
+        "status": "NOT_PROVIDED",
+        "applicable": false,
+        "url": null
+      },
+      {
+        "probe": "Web Evidence (SERP)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0.2,
+        "execution_time_ms": null,
+        "status": "VALID",
+        "applicable": true
+      },
+      {
+        "probe": "Email Security (DNS MX/SPF)",
+        "weight": 0.2,
+        "configured_weight": 0.2,
+        "effective_weight": 0,
+        "execution_time_ms": null,
+        "status": "NOT_PROVIDED",
+        "applicable": false
+      },
+      {
+        "probe": "Legal Entity (AHU/OSS)",
+        "weight": 0.15,
+        "configured_weight": 0.15,
+        "effective_weight": 0.15,
+        "execution_time_ms": 0,
+        "status": "UNKNOWN",
+        "applicable": true,
+        "note": "Tidak ada API publik otomatis"
+      }
+    ],
+    "community_bootstrap_strategy": {
+      "current_stage": "STAGE_1_PUBLIC_OSINT_BOOTSTRAP",
+      "public_osint_references_mined": 3,
+      "verified_candidate_reviews_count": 0,
+      "bootstrap_note": "Menggunakan rujukan OSINT publik sebelum ulasan pelamar terakumulasi."
+    },
+    "deduplication_engine": {
+      "sha256_text_hash": "n/a (dihitung di layer router/cache)",
+      "perceptual_hash_phash": "n/a (memerlukan imagehash; tidak dihitung di explainer)",
+      "crop_compression_invariant": false
+    },
+    "networkx_graph_analytics": {
+      "algorithm": "Connected Component Subgraph Analysis (nx.connected_components)",
+      "subgraph_id": "n/a (tidak ada kluster)",
+      "nodes_in_cluster": 1,
+      "entity_in_fraud_network": false,
+      "threat_level": "LOW",
+      "shared_identity_reuse": false
+    },
+    "checked_at": "2026-10-17T10:53:07.295593+00:00",
+    "ethical_safeguards": {
+      "human_review_recommended": true,
+      "cost_of_error": {
+        "false_positive_fatal_cost": 5,
+        "false_negative_cost": 10
+      }
+    },
+    "verdict": "AMAN",
+    "feature_contributions": [
+      {
+        "feature": "Tidak Ada SPF/DMARC pada Domain Korporat",
+        "feature_key": "no_spf_corporate",
+        "value": 1,
+        "contribution": 13,
+        "impact": "risk",
+        "description": "Domain korporat tanpa konfigurasi email security — rentan spoofing",
+        "delta": 13
+      },
+      {
+        "feature": "Hasil Web Relevan Ditemukan",
+        "feature_key": "company_found_web",
+        "value": 1,
+        "contribution": 10,
+        "impact": "safe",
+        "description": "Ditemukan 3 hasil web relevan dengan nama perusahaan; keterkaitan resmi belum terverifikasi.",
+        "delta": -10
+      }
+    ],
+    "waterfall_chart": [
+      {
+        "label": "Tidak Ada SPF/DMARC pada Domain Korporat",
+        "value": 13,
+        "cumulative": 25,
+        "impact": "risk",
+        "delta": 13
+      },
+      {
+        "label": "Hasil Web Relevan Ditemukan",
+        "value": 10,
+        "cumulative": 15,
+        "impact": "safe",
+        "delta": -10
+      }
+    ],
+    "top_risk_features": [
+      "Tidak Ada SPF/DMARC pada Domain Korporat"
+    ],
+    "top_safe_features": [
+      "Hasil Web Relevan Ditemukan"
+    ],
+    "summary": "Berdasarkan bukti publik independen yang berhasil dikumpulkan, lowongan ini dinilai aman — tidak ditemukan indikator kuat penipuan. Sistem tidak dapat menjamin legalitas perusahaan secara absolut karena beberapa sumber resmi (seperti registri AHU/OSS) tidak tersedia secara publik."
+  }
+}

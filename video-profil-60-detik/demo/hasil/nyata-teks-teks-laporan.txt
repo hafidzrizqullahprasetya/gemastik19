@@ -1,0 +1,122 @@
+Verifin
+Verifikasi baru
+KASUS #6B4B9B4E
+Aman
+
+Risiko rendah
+
+Lowongan terindikasi aman dengan jejak fisik dan digital yang jelas serta tanpa indikasi pungutan biaya.
+
+12
+/ 100
+
+SKOR RISIKO
+
+12 dari 100
+
+Faktor Penilaian
+
+Alasan utama di balik verdict ini
+
+Mendukung keamanan
+
+Alamat fisik terkonfirmasi di peta
+Tidak ada indikasi permintaan biaya
+Jejak publik bisnis terverifikasi kuat
+
+Perlu diwaspadai
+
+Email kontak menggunakan domain gratisan
+Nomor kontak berbeda dari kontak publik
+Rekomendasi Sebelum Melamar
+
+Langkah aman yang disarankan
+
+1
+Lamar pekerjaan melalui formulir pendaftaran
+2
+Jangan pernah mentransfer uang apa pun
+3
+Datangi langsung gerai untuk konfirmasi
+Perusahaan & Lokasi
+
+Identitas dan titik geografis yang terverifikasi
+
+PERUSAHAAN
+
+The Biker Shop
+
+The Biker Shop Jogja, Jl. Parangtritis No.38, Mantrijeron, Kec. Mantrijeron, Kota Jogja, DIY - 55143
+
+Nomor bersih
+Jejak digital
+
+LOKASI
+
+Perkiraan Wilayah
+
+Kota Yogyakarta, Depok, Daerah Istimewa Yogyakarta, Indonesia
+
+-7.801349, 110.364735
+
+Google Maps
+OpenStreetMap
+
+KONTAK TERVERIFIKASI
+
++6285738325536
+Bersih
+Jejak Digital
+
+Profil media sosial dan situs resmi yang ditemukan publik
+
+The Biker Shop Jogja (@thebikershop.jogja) - Instagram
+
+Instagram
+
+The Biker Shop Jogja (@thebikershopjogja) - Instagram
+
+Instagram
+
+The Bikershop Jogja | Sleman - Facebook
+
+Facebook
+
+thebikershop.id (@thebikershop.id) TikTok | Tonton Video TikTok Terbaru ...
+
+TikTok
+
+Thebikershopjogja - Facebook
+
+Facebook
+
+Data Lowongan yang Diekstrak
+
+The Biker Shop • The Biker Shop Jogja
+
+Detail Teknis & Atribusi Bukti
+
+Kontribusi tiap sinyal terhadap skor akhir
+
+Verifikasi lowongan lain
+Laporkan Kasus Ini
+VERIFIN
+
+Platform verifikasi lowongan kerja terintegrasi. Memanfaatkan OSINT, graf hubungan (Heterogeneous Graph), dan Explainable AI (Evidence Attribution) untuk menciptakan ekosistem pencarian kerja yang aman.
+
+NAVIGASI
+Verifikasi Baru
+Lapor Komunitas
+Dashboard Admin
+TEKNOLOGI & ENGINE
+PaddleOCR
+OSINT
+NetworkX
+Evidence Attribution
+LLM Reasoning
+
+© 2026 VERIFIN. Hak Cipta Dilindungi.
+
+Dikembangkan sebagai solusi deteksi penipuan kerja cerdas.
+
+Disclaimer: Hasil analisis risiko yang disajikan bersifat indikatif dan merupakan hasil pemrosesan AI secara otomatis. Bukan merupakan putusan hukum final.

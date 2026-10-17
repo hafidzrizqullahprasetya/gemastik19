@@ -1,0 +1,169 @@
+Verifin
+Verifikasi baru
+KASUS #D485E46E
+Bahaya
+
+Risiko tinggi
+
+Lowongan terindikasi kuat penipuan karena memungut biaya seragam serta meminta data selfie KTP pelamar.
+
+95
+/ 100
+
+SKOR RISIKO
+
+95 dari 100
+
+Faktor Penilaian
+
+Alasan utama di balik verdict ini
+
+Mendukung keamanan
+
+Ditemukan jejak web publik nama serupa
+
+Perlu diwaspadai
+
+Permintaan transfer biaya ke rekening pribadi
+Meminta foto selfie dan dokumen KTP
+Gaji tidak realistis tanpa proses interview
+Rekomendasi Sebelum Melamar
+
+Langkah aman yang disarankan
+
+1
+Jangan transfer uang ke rekening pribadi
+2
+Hindari mengirim data identitas atau KTP
+3
+Laporkan akun dan abaikan lowongan ini
+Perusahaan & Lokasi
+
+Identitas dan titik geografis yang terverifikasi
+
+PERUSAHAAN
+
+PT SEJAGAT ENERGI TBK
+
+Jakarta
+
+Jejak digital
+
+LOKASI
+
+Perkiraan Wilayah
+
+Daerah Khusus Ibukota Jakarta, Indonesia
+
+-6.175405, 106.827168
+
+Google Maps
+OpenStreetMap
+Jejak Digital
+
+Profil media sosial dan situs resmi yang ditemukan publik
+
+Darma Energi Sejagat - Facebook
+
+Facebook
+
+SOLAR INDUSTRI HSD | PT Darma Energi Sejagat Gas | Facebook
+
+Facebook
+
+Data Lowongan yang Diekstrak
+
+PT SEJAGAT ENERGI TBK • Jakarta
+
+Detail Teknis & Atribusi Bukti
+
+Kontribusi tiap sinyal terhadap skor akhir
+
+BUKTI OSINT
+
+Data dari sumber nyata, bukan rekaan model AI
+
+factual_sources_only
+
+DOMAIN & EMAIL SECURITY
+
+DNS/WHOIS
+
+UMUR DOMAIN
+
+N/A (free email)
+
+EMAIL SECURITY
+
+SPF
+DMARC
+
+PROFIL PERUSAHAAN DARI WEB PUBLIK
+
+SERP Analysis
+PT SEJAGAT ENERGI TBK
+9 hasil web relevan
+Ditemukan 9 jejak publik di search (bukan klaim legalitas AHU).
+
+LOKASI & VERIFIKASI PETA
+
+OpenStreetMap
+
+LOKASI TERVERIFIKASI
+
+Jakarta
+
+Daerah Khusus Ibukota Jakarta, Indonesia
+
+-6.175405, 106.827168
+Wilayah ditemukan
+Buka di Google Maps
+
+SOCIAL MEDIA INTELLIGENCE
+
+2 profil ditemukan
+
+Jejak digital publik terverifikasi dari berbagai platform media sosial:
+
+FACEBOOK
+
+Darma Energi Sejagat - Facebook
+
+Darma Energi Sejagat is on Facebook. Join Facebook to connect with Darma Energi Sejagat and others you may know. Faceboo...
+
+Jejak publik terverifikasi
+
+FACEBOOK
+
+SOLAR INDUSTRI HSD | PT Darma Energi Sej...
+
+Kami menyediakan tangki besi second berkualitas yang telah melalui proses pengecekan sebelum dikirim ke lokasi Anda....
+
+Jejak publik terverifikasi
+
+STATUS PENCARIAN PER PLATFORM
+
+Facebook
+✓
+Verifikasi lowongan lain
+Laporkan Kasus Ini
+VERIFIN
+
+Platform verifikasi lowongan kerja terintegrasi. Memanfaatkan OSINT, graf hubungan (Heterogeneous Graph), dan Explainable AI (Evidence Attribution) untuk menciptakan ekosistem pencarian kerja yang aman.
+
+NAVIGASI
+Verifikasi Baru
+Lapor Komunitas
+Dashboard Admin
+TEKNOLOGI & ENGINE
+PaddleOCR
+OSINT
+NetworkX
+Evidence Attribution
+LLM Reasoning
+
+© 2026 VERIFIN. Hak Cipta Dilindungi.
+
+Dikembangkan sebagai solusi deteksi penipuan kerja cerdas.
+
+Disclaimer: Hasil analisis risiko yang disajikan bersifat indikatif dan merupakan hasil pemrosesan AI secara otomatis. Bukan merupakan putusan hukum final.
