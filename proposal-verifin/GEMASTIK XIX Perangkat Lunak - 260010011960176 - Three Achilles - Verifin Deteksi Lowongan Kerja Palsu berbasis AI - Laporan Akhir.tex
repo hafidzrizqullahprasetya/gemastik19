@@ -17,6 +17,7 @@
 \usepackage{mathptmx}
 \usepackage{indentfirst}
 \usepackage{pdfpages}
+\usepackage{eso-pic}
 \setlength{\parindent}{0.65cm}
 \usepackage{graphicx}
 \usepackage{xurl}
@@ -159,11 +160,9 @@
 
 \begin{titlepage}
 \thispagestyle{empty}
-\begin{tikzpicture}[remember picture, overlay]
-  \node[anchor=center, inner sep=0pt] at (current page.center) {
-    \includegraphics[width=\paperwidth,height=\paperheight]{cover.png}
-  };
-\end{tikzpicture}
+% eso-pic: cover penuh satu halaman tanpa perlu kompilasi dua kali
+\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{cover.png}}}
+\mbox{}
 \addcontentsline{toc}{section}{HALAMAN JUDUL}
 \end{titlepage}
 
