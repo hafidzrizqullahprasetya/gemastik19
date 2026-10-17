@@ -376,7 +376,7 @@ Hasil uji 17 Okt (sebagai gambaran, rekam ulang untuk final): ketiganya **AMAN**
 - **M19 · Arsitektur empat lapis** (20 dtk): diagram kiri ke kanan **Input → Ekstraksi entitas (OCR/NER) → Investigasi OSINT paralel → Jaringan penipuan → Penalaran + penjelasan skor → Verdict**. Tiap kotak menyala saat disebut, dan satu "berkas" kecil bergerak melewatinya.
 - **M20 · Stack** (12 dtk): nama teknologi sebagai teks rapi, dikelompokkan per lapis: FastAPI · Python 3.11 · PostgreSQL · SearXNG · browser headless · OpenStreetMap · Next.js. Versi diambil dari `requirements.txt` / `package.json`.
 - **M21 · Cache sidik jari** (8 dtk): teks lowongan → hash SHA-256 (potongan heksadesimal) → "sudah pernah dicek → hasil langsung keluar".
-- **M22 · Pengujian** (12 dtk): **38 tes otomatis, semua lulus** (pytest, dijalankan 17 Okt 2026 pada commit `2b07f03`). Evaluasi data berlabel: 24 sampel EMSCAD, khusus lapisan berbasis aturan, presisi 1,0, recall 0,667, F1 0,8, dengan label "sampel kecil, apa adanya".
+- **M22 · Pengujian** (12 dtk): **38 tes otomatis, semua lulus** (pytest, dijalankan 17 Okt 2026 pada commit `2b07f03`). Evaluasi data berlabel internal: 24 sampel bergaya EMSCAD (12 aman, 12 penipuan; bukan dataset EMSCAD asli), khusus lapisan berbasis aturan, presisi 1,0, recall 0,667, F1 0,8, dengan label "sampel kecil, apa adanya".
 
 > **HAFIDZ**: Yang tadi kelihatan seperti sidang, aslinya empat lapis: ekstraksi entitas, investigasi OSINT, jaringan penipuan, lalu penalaran dan penjelasan skor.
 > **AKMAL**: Backend-nya FastAPI di Python 3.11, data di PostgreSQL. Pencarian lewat SearXNG. Halaman yang dinamis dibuka pakai browser headless, dan alamat dicek ke OpenStreetMap.
@@ -465,7 +465,7 @@ Proyek baru: `video-presentasi-10-menit/remotion/`, dengan komponen yang disalin
 | M19 | S11 | 20s | Penuh | Diagram arsitektur empat lapis | — | baru (`ArchDiagram`) |
 | M20 | S11 | 12s | Penuh | Stack per lapis | `requirements.txt`, `package.json` | `Label` |
 | M21 | S11 | 8s | Penuh | Cache SHA-256 | — | baru |
-| M22 | S11 | 12s | Penuh | 38 tes lulus + evaluasi EMSCAD | pytest + `eval_results/evaluasi-emscad.json` | `StatCard` |
+| M22 | S11 | 12s | Penuh | 38 tes lulus + evaluasi 24 sampel internal | pytest + `eval_results/evaluasi-emscad.json` | `StatCard` |
 | M23 | S12 | 15s | Penuh | Kanal informal → Verifin → API | — | baru (`FlowSteps`) |
 | M24 | S12 | 12s | Penuh | Biaya (estimasi) + flywheel | Laporan Akhir | baru |
 | M25 | S13 | ±15s | Overlay kanan | Tempel/Tunggu/Tahu + "Transfer" dicoret | jeda suara take live | `Mnemonic` |
