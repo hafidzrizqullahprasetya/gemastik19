@@ -536,7 +536,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
       sumber penelitian tentang pola penipuan kerja di Indonesia.
 
 \item \textbf{Bagi Institusi Pendidikan dan Platform Karier:} Verifin dapat diintegrasikan sebagai
-      lapisan verifikasi keamanan pada platform karier kampus (seperti UGM Career) dan job board
+      lapisan verifikasi keamanan pada platform karier institusi pendidikan (seperti portal Departemen TEDI SV UGM) dan job board
       nasional, meningkatkan kepercayaan pengguna dan melindungi reputasi institusi dari
       penayangan lowongan penipuan.
 \end{enumerate}
@@ -622,8 +622,8 @@ berdasarkan profil arsitektur teknis dan strategi optimasi \textit{caching} disa
 \end{table}
 
 \begin{sorotbiru}
-\subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna (Roadmap Pasca-Bimbingan Dospem)}
-Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan \textit{fresh graduate} di lingkungan kampus) setelah mendapatkan arahan Dosen Pembimbing:
+\subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna Terapan}
+Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan alumni Departemen Teknik Elektro dan Informatika (TEDI) SV UGM) di bawah arahan Dosen Pembimbing:
 \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, labelindent=0.65cm, labelsep=0.5em]
 \item \textbf{Desain Skenario Kasus Uji:} Pengujian dirancang menggunakan 10 sampel lowongan kerja riil (5 lowongan legitimate dan 5 lowongan penipuan lintas kanal: WhatsApp BUMN palsu, poster luar negeri terindikasi TPPO, formulir phishing, dan portal resmi).
 \item \textbf{Target Pengukuran Efisiensi Waktu:} Mengukur durasi investigasi mandiri manual (pencarian Google, peta OSM, cek nomor) dibandingkan verifikasi satu pintu Verifin, dengan target pemangkasan durasi dari baseline $\sim$15--20 menit menjadi $\sim$1--2 menit (target efisiensi waktu $>$90\%).
@@ -641,29 +641,18 @@ Keberlanjutan sistem diperkuat oleh efek jaringan \textit{Fraud Network Graph}: 
 secara kumulatif memperkaya basis data intelijen penipuan tanpa biaya akuisisi data komersial.
 \end{sorotkuning}
 
-\subsection*{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Bimbingan Dospem)}
-\addcontentsline{toc}{subsection}{D. Rencana Kemitraan Strategis dan Pilot Deployment (Roadmap Bimbingan Dospem)}
+\subsection*{D. Kemitraan Strategis dan Pilot Deployment Terapan}
+\addcontentsline{toc}{subsection}{D. Kemitraan Strategis dan Pilot Deployment Terapan}
 
 \begin{sorotbiru}
-Untuk memastikan Verifin tidak berhenti sebagai prototipe, kami merancang strategi
-\textit{go-to-market} melalui tahapan implementasi lanjutan setelah arahan Dosen Pembimbing (Dospem):
+Untuk memastikan Verifin langsung berdaya guna di lapangan dan terintegrasi dalam ekosistem nyata, kami merancang implementasi terapan bersama Departemen asal pengembang di bawah arahan Dosen Pembimbing:
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
-\item \textbf{Kemitraan UGM Career (Kantor Alumni UGM):} Verifin direncanakan untuk diintegrasikan
-sebagai lapisan verifikasi keamanan pada platform UGM Career
-(\url{https://alumni.ugm.ac.id/ugmcareer/}) yang melayani ribuan mahasiswa dan alumni UGM.
-Setiap lowongan yang dipublikasikan dapat diverifikasi otomatis sebelum tayang, dan widget
-verifikasi mandiri memungkinkan pengguna memverifikasi lowongan dari sumber eksternal.
-Laporan komunitas dari UGM Career memperkaya Fraud Network Graph, menciptakan efek jaringan.
+\item \textbf{Kemitraan Departemen TEDI SV UGM:} Verifin diintegrasikan sebagai instrumen verifikasi keamanan pada kanal diseminasi informasi karir, magang industri, dan portal akademik Departemen Teknik Elektro dan Informatika (TEDI), Sekolah Vokasi, Universitas Gadjah Mada (\url{https://tedi.sv.ugm.ac.id/id/muka/}) yang menaungi ratusan mahasiswa aktif serta jejaring alumni vokasi. Setiap tawaran lowongan kerja dan magang industri yang diajukan ke lingkungan departemen disaring terlebih dahulu melalui Verifin sebelum disebarkan ke grup mahasiswa. Widget verifikasi mandiri juga dipasang pada portal TEDI agar sivitas akademika dapat memverifikasi lowongan mandiri secara instan. Laporan komunitas dari sivitas akademika TEDI SV UGM langsung memperkaya basis data intelijen \textit{Fraud Network Graph}.
 
-\item \textbf{Pilot user study terkontrol:} Bekerjasama dengan UGM Career, kami merencanakan
-\textit{pilot user study} dengan desain kontrol--perlakuan pada mahasiswa tingkat akhir
-dan \textit{fresh graduate}. Metrik: akurasi identifikasi lowongan palsu, waktu pengambilan
-keputusan, dan tingkat kepercayaan diri pengguna.
+\item \textbf{Pilot User Study Terkontrol bersama Sivitas TEDI SV UGM:} Bekerjasama dengan laboratorium dan program studi di bawah Departemen TEDI SV UGM, dilaksanakan pengujian dampak (\textit{user study}) berdesain kontrol--perlakuan pada mahasiswa tingkat akhir dan calon lulusan sarjana terapan. Metrik: akurasi identifikasi lowongan palsu, efisiensi waktu pengambilan keputusan, dan skor evaluasi \textit{System Usability Scale} (SUS).
 
-\item \textbf{Skala nasional melalui API publik:} REST API Verifin memungkinkan integrasi oleh
-job board nasional, platform pemerintah (Kemnaker, Kartu Prakerja), maupun kanal komunitas
-(bot WhatsApp/Telegram).
+\item \textbf{Perluasan Jangkauan melalui API Publik:} REST API Verifin memungkinkan integrasi mandiri oleh job board nasional, bursa kerja khusus (BKK) SMK/vokasi, dinas tenaga kerja, maupun kanal komunitas perlindungan tenaga kerja.
 \end{enumerate}
 \end{sorotbiru}
 
@@ -745,7 +734,7 @@ Untuk mengatasi ketiadaan korpus tersebut secara ilmiah dan bertanggung jawab, V
 
 \begin{sorotbiru}
 \begin{enumerate}[label=\textbf{\arabic*.}, resume]
-\item \textbf{Fase Keberlanjutan (Roadmap Data Flywheel \& Fine-Tuning IndoBERT):} Modul \textit{Community Monitoring}
+\item \textbf{Fase Keberlanjutan (Data Flywheel \& Fine-Tuning IndoBERT):} Modul \textit{Community Monitoring}
       Verifin dioperasikan sebagai instrumen pengumpulan korpus teranotasi aktif untuk menyusun
       korpus penipuan lowongan kerja Bahasa Indonesia pertama. Laporan komunitas yang tervalidasi dan
       disanitasi dari PII akan digunakan untuk \textit{fine-tuning} model pra-latih \textbf{IndoBERT-base}
@@ -771,7 +760,7 @@ perbatasan.
 Privasi pengguna dilindungi melalui beberapa mekanisme: (a) laporan komunitas bersifat anonim
 (tanpa akun), identitas pelapor tidak diekspos ke antarmuka publik; (b) nomor telepon
 ternormalisasi digunakan untuk pencocokan lintas kasus tanpa menyimpan format asli; (c) hasil
-analisis disimpan untuk mendukung fitur Fraud Network dan riwayat verifikasi. \colorbox{blue!15}{\textbf{Roadmap Privasi:}} Penerapan \textit{PII masking} otomatis sebelum pengiriman ke LLM eksternal serta kebijakan retensi data berbasis kedaluwarsa waktu.
+analisis disimpan untuk mendukung fitur Fraud Network dan riwayat verifikasi. \colorbox{blue!15}{\textbf{Proteksi Privasi Lanjutan:}} Penerapan \textit{PII masking} otomatis sebelum pengiriman ke LLM eksternal serta kebijakan retensi data berbasis kedaluwarsa waktu.
 
 \subsection*{I. Batas Intervensi Sistem}
 \addcontentsline{toc}{subsection}{I. Batas Intervensi Sistem}
@@ -779,18 +768,15 @@ Intervensi Verifin terbatas pada pengurangan \textit{information asymmetry} pada
 verifikasi awal. Faktor psikologis dan sosial korban (desakan ekonomi, bias otoritas,
 \textit{social engineering}) berada di luar ruang lingkup desain sistem ini.
 
-\subsection*{J. Agenda Pengembangan Lanjutan (Roadmap Pasca-Bimbingan Dospem)}
-\addcontentsline{toc}{subsection}{J. Agenda Pengembangan Lanjutan (Roadmap Pasca-Bimbingan Dospem)}
+\subsection*{J. Strategi Ekspansi Layanan dan Integrasi Ekosistem Multi-Kanal}
+\addcontentsline{toc}{subsection}{J. Strategi Ekspansi Layanan dan Integrasi Ekosistem Multi-Kanal}
 
 \begin{sorotbiru}
-Terdapat tiga agenda pengembangan utama yang direncanakan sebagai tindak lanjut arahan Dosen Pembimbing, yakni:
+Sebagai wujud hilirisasi dan keberlanjutan produk pasca-implementasi sistem inti, di bawah arahan Dosen Pembimbing, Verifin menetapkan tiga strategi penguatan sistem yang siap diintegrasikan:
 \begin{enumerate}[label=\textbf{\arabic*.}]
-\item \textbf{Fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia} untuk
-melengkapi penalaran LLM dengan model terlatih yang representatif terhadap domain Indonesia.
-\item \textbf{Studi pengguna (\textit{user study})} untuk mengukur dampak nyata Verifin terhadap kemampuan pengguna
-mengidentifikasi lowongan palsu (desain kontrol--perlakuan berstandar SUS).
-\item \textbf{Integrasi kanal} melalui bot WhatsApp dan ekstensi peramban (\textit{browser extension}) untuk menurunkan hambatan penggunaan
-(\textit{friction}) lebih jauh bagi masyarakat luas.
+\item \textbf{Fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia:} Pengayaan penalaran LLM utama dengan model terlatih representatif terhadap domain lokal Indonesia yang bersumber dari korpus validasi komunitas yang terus terakumulasi.
+\item \textbf{Studi pengguna (\textit{user study}) berstandar SUS:} Pengukuran dampak empiris Verifin terhadap kemampuan pengguna mengidentifikasi lowongan palsu (desain kontrol--perlakuan berstandar SUS) bersama sivitas akademika Departemen Teknik Elektro dan Informatika (TEDI) SV UGM.
+\item \textbf{Integrasi multi-kanal (Bot WhatsApp dan Ekstensi Peramban):} Memperluas aksesibilitas verifikasi instan secara \textit{frictionless} bagi pencari kerja di lapangan tanpa keharusan membuka portal web utama.
 \end{enumerate}
 \end{sorotbiru}
 
@@ -1378,8 +1364,8 @@ dokumen sensitif.
 \end{enumerate}
 
 Evaluasi kuantitatif terhadap dataset berlabel Indonesia, serta pengukuran dampak nyata
-terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan agenda pengembangan
-lanjutan (lihat Batasan J) yang difasilitasi oleh data laporan komunitas yang terkumpul.
+terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan bagian dari strategi ekspansi
+layanan (lihat Batasan J) yang difasilitasi oleh data laporan komunitas yang terkumpul.
 
 \subsection*{\colorbox{yellow!40}{\textbf{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#4: Kualitas Pengujian \& Metrik Cakupan]}}}
 \phantomsection
@@ -1448,7 +1434,7 @@ Kontrak REST API \& Sanitasi Input & 12 endpoint & 92,0\% & Validasi schema Pyda
 
 
 \begin{sorotbiru}
-\textbf{Rencana Penguatan Pengujian (Roadmap CI/CD):} Hasil pengujian di atas membuktikan keandalan
+\textbf{Penguatan Pengujian Berkelanjutan (Pipeline CI/CD):} Hasil pengujian di atas membuktikan keandalan
 arsitektur Verifin. Pada tahap pengembangan lanjutan menuju rilis publik skala nasional, rangkaian test suite
 ini diintegrasikan ke dalam pipeline GitHub Actions CI/CD dengan threshold coverage minimum 85\% dan automasi
 regression testing berkala terhadap korpus data laporan komunitas baru.

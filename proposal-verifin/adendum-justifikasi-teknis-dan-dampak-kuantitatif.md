@@ -199,11 +199,11 @@ Pengguna diinformasikan mengenai setiap tahapan ini secara *real-time* melalui m
 
 ## 5. Integrasi Strategis, Keberlanjutan, & Tanggung Jawab Sosial
 
-### 5.1 Kemitraan Strategis dengan UGM Career (Kantor Alumni UGM)
-Sebagai langkah nyata hilirisasi perangkat lunak, Tim Three Achilles telah merancang integrasi teknis Verifin dengan platform karier resmi kampus, **UGM Career** (`https://alumni.ugm.ac.id/ugmcareer/`):
-1. **Pre-Publishing Gate:** Verifin diintegrasikan melalui REST API ke sistem manajemen lowongan UGM Career untuk menyaring otomatis setiap iklan lowongan yang diajukan oleh mitra eksternal sebelum dipublikasikan kepada mahasiswa/alumni.
-2. **Self-Service Verification Widget:** Memasang modul verifikasi mandiri Verifin pada portal alumni, memungkinkan pencari kerja memverifikasi lowongan yang mereka terima dari jejaring informal secara gratis.
-3. **Institutional Threat Intelligence:** Setiap laporan penipuan yang diverifikasi oleh tim UGM Career secara otomatis memperkuat basis data graf *Fraud Network*, melindungi puluhan ribu mahasiswa UGM dari ancaman penipuan kerja.
+### 5.1 Kemitraan Terapan dengan Departemen TEDI SV UGM
+Sebagai langkah nyata hilirisasi perangkat lunak, Tim Three Achilles merancang integrasi teknis Verifin bersama departemen asal pengembang, **Departemen Teknik Elektro dan Informatika (TEDI), Sekolah Vokasi, Universitas Gadjah Mada** (`https://tedi.sv.ugm.ac.id/id/muka/`):
+1. **Pre-Publishing Gate:** Verifin diintegrasikan melalui REST API ke kanal diseminasi lowongan kerja dan magang industri TEDI SV UGM untuk menyaring otomatis setiap iklan lowongan yang masuk sebelum dipublikasikan kepada mahasiswa dan alumni.
+2. **Self-Service Verification Widget:** Memasang modul verifikasi mandiri Verifin pada portal akademik dan kemahasiswaan TEDI, memungkinkan mahasiswa memverifikasi lowongan yang mereka terima dari jejaring informal secara gratis dan instan.
+3. **Institutional Threat Intelligence:** Setiap laporan penipuan yang diverifikasi oleh sivitas akademika TEDI SV UGM secara otomatis memperkuat basis data graf *Fraud Network*, menciptakan ekosistem perlindungan kolektif di lingkungan kampus.
 
 ### 5.2 Perlindungan Terhadap Kejahatan TPPO Regional
 Salah satu kontribusi sosial paling mendesak dari Verifin adalah mitigasi dini Tindak Pidana Perdagangan Orang (TPPO). Sebagaimana dicatat Kementerian Luar Negeri RI, lebih dari **3.300 WNI** terjebak menjadi pekerja paksa di pusat penipuan daring (*cyber scam centers*) di Asia Tenggara (Kamboja, Myanmar, Laos, Filipina) sepanjang 2020–2024. Mayoritas korban terpapar iklan lowongan pekerjaan bergaji fantastis di media sosial.
