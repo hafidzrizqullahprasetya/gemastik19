@@ -262,9 +262,7 @@
 
 \refstepcounter{section}
 \begin{sorotkuning}
-\noindent\textbf{Keterangan sorotan.} Sesuai panduan GEMASTIK XIX, bagian yang diubah atau diperbaiki dari proposal
-babak penyisihan diberi \textbf{latar kuning}. \textbf{Latar biru} menandai rencana pengembangan lanjutan yang belum
-diimplementasikan. Teks tanpa sorotan sama dengan proposal.
+\noindent Bagian berlatar kuning adalah perubahan atau perbaikan dari proposal babak penyisihan.
 \end{sorotkuning}
 
 \section*{BAB I LATAR BELAKANG}
@@ -463,11 +461,11 @@ dapat diaudit.
 \subsection*{C. Perbandingan dengan Solusi yang Sudah Ada}
 \addcontentsline{toc}{subsection}{C. Perbandingan dengan Solusi yang Sudah Ada}
 
-Untuk menegaskan posisi Verifin, dilakukan analisis komparatif terhadap solusi deteksi penipuan lowongan kerja yang dapat diakses publik, sebagaimana dirangkum pada Tabel~\ref{tab:perbandingan}. \revisi{Tabel disusun ulang dari pengecekan langsung tiap layanan pada 18 Oktober 2026. Dua layanan pada proposal (CekLoker AI dan JobVerify MCP) tidak lagi dapat diakses sehingga dikeluarkan, dan klaim kelemahan pesaing yang tidak dapat diverifikasi dihapus.} Inovasi Verifin bersifat integratif: menggabungkan tiga kanal input dengan pemeriksaan bukti publik konteks Indonesia dalam satu penilaian yang dapat diaudit.
+Untuk menegaskan posisi Verifin, dilakukan analisis komparatif terhadap solusi deteksi penipuan lowongan kerja yang dapat diakses publik, sebagaimana dirangkum pada Tabel~\ref{tab:perbandingan}. \revisi{Tabel disusun ulang dari pengecekan langsung tiap layanan. Dua layanan pada proposal (CekLoker AI dan JobVerify MCP) tidak lagi dapat diakses sehingga dikeluarkan, dan klaim kelemahan pesaing yang tidak dapat diverifikasi dihapus.} Inovasi Verifin bersifat integratif: menggabungkan tiga kanal input dengan pemeriksaan bukti publik konteks Indonesia dalam satu penilaian yang dapat diaudit.
 
 \begin{table}[H]
 \centering
-\caption{\revisi{Perbandingan Verifin dengan layanan cek penipuan lowongan (diakses 18 Oktober 2026)}}
+\caption{\revisi{Perbandingan Verifin dengan layanan cek penipuan lowongan}}
 \label{tab:perbandingan}
 \small
 \begin{tabularx}{\linewidth}{|L{2.2cm}|L{3.0cm}|Y|}
@@ -558,7 +556,7 @@ dioperasikan dan dampaknya terukur} bagi masyarakat luas.
       penayangan lowongan penipuan.
 \end{enumerate}
 
-\subsection*{\colorbox{yellow!40}{\textbf{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2: Dampak Kuantitatif]}}}
+\subsection*{\colorbox{yellow!40}{\textbf{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{C. Estimasi Dampak Kuantitatif dan Uji Terbatas Pengguna}
 
@@ -606,7 +604,7 @@ Tabel~\ref{tab:simulasi-dampak} menyajikan simulasi kuantitatif dalam tiga skena
 
 
 \begin{sorotkuning}
-\subsubsection*{2. Efisiensi Operasional dan Rasio Manfaat-Biaya (Benefit-to-Cost Ratio) \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2: Biaya Komputasi LLM]}}}
+\subsubsection*{2. Efisiensi Operasional dan Rasio Manfaat-Biaya (Benefit-to-Cost Ratio)}
 Biaya komputasi operasional Verifin (arsitektur serverless FastAPI, basis data Supabase, dan inferensi
 API LLM) diperkirakan sebesar \revisi{sekitar Rp270} per verifikasi. Pada skenario moderat (54.600 verifikasi), total biaya
 operasional \revisi{sebesar Rp14,58 juta mampu memproteksi potensi kerugian ekonomi sebesar Rp8,35 Miliar,
@@ -637,7 +635,7 @@ berdasarkan profil arsitektur teknis dan strategi optimasi \textit{caching} disa
 \end{tabularx}
 \end{table}
 
-\begin{sorotbiru}
+\begin{sorotkuning}
 \subsubsection*{3. Rancangan Protokol Uji Terbatas Pengguna Terapan}
 Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan Protokol Eksperimen Terkontrol (\textit{Controlled Pilot Study Protocol})} yang disiapkan untuk dieksekusi bersama 20 responden representatif (mahasiswa tingkat akhir dan alumni Departemen Teknik Elektro dan Informatika (TEDI) SV UGM) di bawah arahan Dosen Pembimbing:
 \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=*, labelindent=0.65cm, labelsep=0.5em]
@@ -646,10 +644,10 @@ Untuk memvalidasi dampak empiris pada pengguna riil, disusun \textbf{Rancangan P
 \item \textbf{Target Efikasi Intervensi Pencegahan:} Mengukur peningkatan akurasi responden dalam mengenali indikator bahaya sebelum dan sesudah membaca narasi transparansi XAI serta Skor Risiko Verifin.
 \item \textbf{Evaluasi Kegunaan Antarmuka (SUS):} Menilai tingkat kepuasan dan kemudahan navigasi antarmuka pengguna awam menggunakan instrumen baku \textit{System Usability Scale} (SUS) 10 pertanyaan skala Likert berstandar internasional.
 \end{enumerate}
-\end{sorotbiru}
+\end{sorotkuning}
 
 \begin{sorotkuning}
-\subsubsection*{4. Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#6: Urgensi Masalah \& TPPO]}}}
+\subsubsection*{4. Kontribusi Non-Finansial: Intervensi Pencegahan TPPO dan Efek Jaringan}
 Selain kerugian moneter, penipuan rekrutmen daring merupakan pintu masuk utama Tindak Pidana Perdagangan Orang (TPPO)
 ke sindikat kejahatan siber regional (\revisi{Kemenlu mencatat 3.428 kasus WNI terkait penipuan daring pada 2020--2023, sekitar 40\% terindikasi TPPO [3]}, [4]). Verifin
 mengintervensi pada titik kritis \textit{sebelum} calon korban menyerahkan KTP/paspor atau menyetujui keberangkatan.
@@ -660,17 +658,17 @@ secara kumulatif memperkaya basis data intelijen penipuan tanpa biaya akuisisi d
 \subsection*{D. Kemitraan Strategis dan Pilot Deployment Terapan}
 \addcontentsline{toc}{subsection}{D. Kemitraan Strategis dan Pilot Deployment Terapan}
 
-\begin{sorotbiru}
-Untuk memastikan Verifin langsung berdaya guna di lapangan dan terintegrasi dalam ekosistem nyata, kami merancang implementasi terapan bersama Departemen asal pengembang di bawah arahan Dosen Pembimbing:
+\begin{sorotkuning}
+Untuk memastikan Verifin berdaya guna di lapangan, kami \textbf{merencanakan} implementasi terapan bersama departemen asal pengembang. Ketiga rencana berikut belum dijalankan:
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
-\item \textbf{Kemitraan Departemen TEDI SV UGM:} Verifin diintegrasikan sebagai instrumen verifikasi keamanan pada kanal diseminasi informasi karir, magang industri, dan portal akademik Departemen Teknik Elektro dan Informatika (TEDI), Sekolah Vokasi, Universitas Gadjah Mada (\url{https://tedi.sv.ugm.ac.id/id/muka/}) yang menaungi ratusan mahasiswa aktif serta jejaring alumni vokasi. Setiap tawaran lowongan kerja dan magang industri yang diajukan ke lingkungan departemen disaring terlebih dahulu melalui Verifin sebelum disebarkan ke grup mahasiswa. Widget verifikasi mandiri juga dipasang pada portal TEDI agar sivitas akademika dapat memverifikasi lowongan mandiri secara instan. Laporan komunitas dari sivitas akademika TEDI SV UGM langsung memperkaya basis data intelijen \textit{Fraud Network Graph}.
+\item \textbf{Kemitraan Departemen TEDI SV UGM:} Verifin direncanakan menjadi instrumen verifikasi keamanan pada kanal diseminasi informasi karir, magang industri, dan portal akademik Departemen Teknik Elektro dan Informatika (TEDI), Sekolah Vokasi, Universitas Gadjah Mada (\url{https://tedi.sv.ugm.ac.id/id/muka/}) yang menaungi ratusan mahasiswa aktif serta jejaring alumni vokasi. Rencananya, tawaran lowongan kerja dan magang yang masuk ke lingkungan departemen diperiksa melalui Verifin sebelum disebarkan ke grup mahasiswa, dan tautan verifikasi mandiri ditambahkan pada portal TEDI. Laporan komunitas dari sivitas akademika akan memperkaya basis data \textit{Fraud Network Graph}.
 
-\item \textbf{Pilot User Study Terkontrol bersama Sivitas TEDI SV UGM:} Bekerjasama dengan laboratorium dan program studi di bawah Departemen TEDI SV UGM, dilaksanakan pengujian dampak (\textit{user study}) berdesain kontrol--perlakuan pada mahasiswa tingkat akhir dan calon lulusan sarjana terapan. Metrik: akurasi identifikasi lowongan palsu, efisiensi waktu pengambilan keputusan, dan skor evaluasi \textit{System Usability Scale} (SUS).
+\item \textbf{Pilot User Study Terkontrol bersama Sivitas TEDI SV UGM:} Bekerja sama dengan laboratorium dan program studi di bawah Departemen TEDI SV UGM, direncanakan pengujian dampak (\textit{user study}) berdesain kontrol--perlakuan pada mahasiswa tingkat akhir dan calon lulusan sarjana terapan. Metrik: akurasi identifikasi lowongan palsu, efisiensi waktu pengambilan keputusan, dan skor evaluasi \textit{System Usability Scale} (SUS).
 
 \item \textbf{Perluasan Jangkauan melalui API Publik:} REST API Verifin memungkinkan integrasi mandiri oleh job board nasional, bursa kerja khusus (BKK) SMK/vokasi, dinas tenaga kerja, maupun kanal komunitas perlindungan tenaga kerja.
 \end{enumerate}
-\end{sorotbiru}
+\end{sorotkuning}
 
 
 \refstepcounter{section}
@@ -713,7 +711,7 @@ Verifin adalah aplikasi web yang dioptimalkan untuk desktop browser (Chrome, Fir
 Tidak ada aplikasi mobile native dalam cakupan pengembangan ini, meskipun antarmuka bersifat
 responsif untuk mobile.
 
-\subsection*{\colorbox{yellow!40}{\textbf{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#1: Justifikasi Arsitektur AI]}}}
+\subsection*{\colorbox{yellow!40}{\textbf{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{E. Strategi NLP Bahasa Indonesia dan Kedaulatan Korpus}
 
@@ -747,16 +745,16 @@ Untuk mengatasi ketiadaan korpus tersebut secara ilmiah dan bertanggung jawab, V
 \end{enumerate}
 \end{sorotkuning}
 
-\begin{sorotbiru}
-\begin{enumerate}[label=\textbf{\arabic*.}, resume]
+\begin{sorotkuning}
+\begin{enumerate}[label=\textbf{\arabic*.}, start=2]
 \item \textbf{Fase Keberlanjutan (Data Flywheel \& Fine-Tuning IndoBERT):} Modul \textit{Community Monitoring}
-      Verifin dioperasikan sebagai instrumen pengumpulan korpus teranotasi aktif untuk menyusun
+      Verifin direncanakan menjadi instrumen pengumpulan korpus teranotasi untuk menyusun
       korpus penipuan lowongan kerja Bahasa Indonesia pertama. Laporan komunitas yang tervalidasi dan
       disanitasi dari PII akan digunakan untuk \textit{fine-tuning} model pra-latih \textbf{IndoBERT-base}
       (berbasis korpus Indo4B [9]) sebagai mesin klasifikasi lokal mandiri (\textit{edge inference}) berlatensi
       rendah demi menjamin kedaulatan data dan privasi pengguna setelah arahan Dosen Pembimbing.
 \end{enumerate}
-\end{sorotbiru}
+\end{sorotkuning}
 
 \subsection*{F. Ketergantungan API Eksternal}
 \addcontentsline{toc}{subsection}{F. Ketergantungan API Eksternal}
@@ -777,7 +775,7 @@ Privasi pengguna dilindungi melalui beberapa mekanisme: (a) laporan komunitas be
 (b) nomor telepon ternormalisasi digunakan untuk pencocokan lintas kasus; (c) hasil
 analisis disimpan untuk mendukung fitur Fraud Network dan riwayat verifikasi; \revisi{(d) endpoint admin dan riwayat
 lengkap dilindungi token yang hanya disisipkan server, sedangkan pencarian riwayat publik (\texttt{/cari}) hanya
-mengembalikan ringkasan tanpa teks, nomor, atau email.} \colorbox{blue!15}{\textbf{Proteksi Privasi Lanjutan:}} Penerapan \textit{PII masking} otomatis sebelum pengiriman ke LLM eksternal serta kebijakan retensi data berbasis kedaluwarsa waktu.
+mengembalikan ringkasan tanpa teks, nomor, atau email.} \revisi{\textbf{Rencana lanjutan:} penerapan \textit{PII masking} otomatis sebelum pengiriman ke LLM eksternal serta kebijakan retensi data berbasis kedaluwarsa waktu.}
 
 \subsection*{I. Batas Intervensi Sistem}
 \addcontentsline{toc}{subsection}{I. Batas Intervensi Sistem}
@@ -788,14 +786,14 @@ verifikasi awal. Faktor psikologis dan sosial korban (desakan ekonomi, bias otor
 \subsection*{J. Strategi Ekspansi Layanan dan Integrasi Ekosistem Multi-Kanal}
 \addcontentsline{toc}{subsection}{J. Strategi Ekspansi Layanan dan Integrasi Ekosistem Multi-Kanal}
 
-\begin{sorotbiru}
-Sebagai wujud hilirisasi dan keberlanjutan produk pasca-implementasi sistem inti, di bawah arahan Dosen Pembimbing, Verifin menetapkan tiga strategi penguatan sistem yang siap diintegrasikan:
+\begin{sorotkuning}
+Sebagai wujud hilirisasi dan keberlanjutan produk pasca-implementasi sistem inti, di bawah arahan Dosen Pembimbing, Verifin merencanakan tiga strategi penguatan sistem berikut (belum diimplementasikan):
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Fine-tuning model klasifikasi pada dataset lowongan penipuan Indonesia:} Pengayaan penalaran LLM utama dengan model terlatih representatif terhadap domain lokal Indonesia yang bersumber dari korpus validasi komunitas yang terus terakumulasi.
 \item \textbf{Studi pengguna (\textit{user study}) berstandar SUS:} Pengukuran dampak empiris Verifin terhadap kemampuan pengguna mengidentifikasi lowongan palsu (desain kontrol--perlakuan berstandar SUS) bersama sivitas akademika Departemen Teknik Elektro dan Informatika (TEDI) SV UGM.
 \item \textbf{Integrasi multi-kanal (Bot WhatsApp dan Ekstensi Peramban):} Memperluas aksesibilitas verifikasi instan secara \textit{frictionless} bagi pencari kerja di lapangan tanpa keharusan membuka portal web utama.
 \end{enumerate}
-\end{sorotbiru}
+\end{sorotkuning}
 
 
 \refstepcounter{section}
@@ -1118,7 +1116,7 @@ Interpretasi operasional dan landasan ambang batas tiap tingkatan skor dijabarka
 \begin{sorotkuning}
 \begin{table}[H]
 \centering
-\caption{Tabel Skor Risiko dan Interpretasi Verdict \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#5: Ambang 40/75 \& Landasan Risiko]}}}
+\caption{Tabel Skor Risiko dan Interpretasi Verdict}
 \label{tab:skor-risiko}
 \small
 \begin{tabularx}{\linewidth}{|L{2.5cm}|C{2.0cm}|Y|}
@@ -1143,7 +1141,7 @@ Komponen teknologi, pustaka, dan infrastruktur pembangun Verifin dipetakan pada 
 
 \begin{table}[H]
 \centering
-\caption{\revisi{Tech Stack Verifin (sesuai repositori, Oktober 2026)}}
+\caption{\revisi{Tech Stack Verifin}}
 \label{fig:tech-stack}
 \small
 \begin{tabularx}{\linewidth}{|L{3.0cm}|Y|}
@@ -1248,7 +1246,7 @@ Terdapat tiga sub-modul utama:
 \end{enumerate}
 \end{enumerate}
 
-\subsubsection*{4. Layer 3: LLM Reasoning \& Verdict \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Fokus Kajian Dospem: Anti-Halusinasi LLM \& Determinisme]}}}
+\subsubsection*{4. Layer 3: LLM Reasoning \& Verdict}
 \addcontentsline{toc}{subsubsection}{4. Layer 3: LLM Reasoning \& Verdict}
 
 \begin{sorotkuning}
@@ -1275,7 +1273,7 @@ daripada berspekulasi. Seluruh kontribusi bukti kemudian diuraikan secara teruku
 Explainer pada Layer 4 sehingga pengguna dapat mengaudit alasan di balik verdict.
 \end{sorotkuning}
 
-\subsubsection*{5. Layer 4: XAI Explainer \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Fokus Kajian Dospem: Formula Skor Aditif \& Bobot Bukti]}}}
+\subsubsection*{5. Layer 4: XAI Explainer}
 \addcontentsline{toc}{subsubsection}{5. Layer 4: XAI Explainer}
 
 \begin{sorotkuning}
@@ -1425,7 +1423,7 @@ Evaluasi kuantitatif terhadap dataset berlabel Indonesia, serta pengukuran dampa
 terhadap keputusan pengguna melalui studi kontrol--perlakuan, merupakan bagian dari strategi ekspansi
 layanan (lihat Batasan J) yang difasilitasi oleh data laporan komunitas yang terkumpul.
 
-\subsection*{\colorbox{yellow!40}{\textbf{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#4: Kualitas Pengujian \& Metrik Cakupan]}}}
+\subsection*{\colorbox{yellow!40}{\textbf{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{E. Pengujian Perangkat Lunak, Metrik Kualitas, dan Evaluasi E2E}
 
@@ -1433,10 +1431,8 @@ layanan (lihat Batasan J) yang difasilitasi oleh data laporan komunitas yang ter
 
 
 \begin{sorotkuning}
-\textbf{[Revisi dari proposal]} Angka pengujian pada proposal (126 kasus uji, \textit{pass rate} 100\%) dan draf laporan
-sebelumnya tidak dapat direproduksi dari repositori. Seluruh angka di bawah ini diukur ulang langsung dari kode pada
-18 Oktober 2026 (repositori \texttt{verifin-app}, commit \texttt{3216fd2}) dan dapat dijalankan ulang oleh juri dengan
-perintah \texttt{pytest --cov=app}. Pengujian Verifin disusun berlapis mengikuti pipeline:
+Angka pengujian pada proposal (126 kasus uji, \textit{pass rate} 100\%) diganti hasil pengukuran ulang langsung dari
+repositori, yang dapat dijalankan ulang dengan perintah \texttt{pytest --cov=app}. Pengujian Verifin disusun berlapis mengikuti pipeline:
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{Unit dan integrasi (\textit{pytest}):} \textbf{60 tes otomatis, seluruhnya lulus}, dengan
@@ -1447,15 +1443,15 @@ perintah \texttt{pytest --cov=app}. Pengujian Verifin disusun berlapis mengikuti
 \item \textbf{Otomasi CI:} workflow GitHub Actions (\texttt{.github/workflows/test.yml}) menjalankan seluruh tes backend
       beserta laporan coverage, serta \textit{typecheck}, \textit{lint}, dan \textit{build} frontend pada setiap
       \textit{push} ke cabang utama.
-\item \textbf{Uji probe OSINT dengan entitas nyata (18 Okt 2026):} WHOIS/RDAP mengembalikan umur domain yang benar
+\item \textbf{Uji probe OSINT dengan entitas nyata:} WHOIS/RDAP mengembalikan umur domain yang benar
       (\texttt{qhomemart.co.id} 9,4 tahun; \texttt{newsaphirhotel.com} 13,5 tahun); pemeriksaan MX/SPF/DMARC berjalan;
       Kaspersky Who Calls menilai nomor HR Qhomemart bersih; SearXNG menemukan 7 hasil relevan termasuk situs resmi;
       OpenStreetMap mencocokkan alamat pada tingkat wilayah. Google Form yang mewajibkan login dilaporkan sebagai
       ``tidak dapat diverifikasi'', bukan dinilai aman.
-\item \textbf{End-to-end dan latensi:} pada 17 Oktober 2026 sistem diuji dengan tiga loker nyata (teks, poster, tautan)
+\item \textbf{End-to-end dan latensi:} sistem diuji dengan tiga loker nyata (teks, poster, tautan)
       dan satu kasus negatif. Durasi analisis lengkap tanpa cache \textbf{40--54 detik}. OCR PaddleOCR memerlukan
       4,8 detik (poster 790$\times$1040) dan 13,6 detik (poster 1086$\times$1448) setelah model dimuat.
-      Set uji lanjutan berisi lima loker nyata dari Threads (Oktober 2026) beserta catatan pengecekan manual telah
+      Set uji lanjutan berisi lima loker nyata dari Threads beserta catatan pengecekan manual telah
       disiapkan di \texttt{test/okt-2026/}.
 \item \textbf{Keamanan:} tes otomatis memastikan endpoint admin menolak permintaan tanpa token (401) dan tertutup bila
       token server belum dikonfigurasi (503), serta pencarian kasus menolak awalan ID pendek. Uji langsung pada server
@@ -1470,7 +1466,7 @@ Setiap perbaikan disertai tes regresi. Ringkasan per area disajikan pada Tabel~\
 
 \begin{table}[H]
 \centering
-\caption{Ringkasan pengujian otomatis Verifin (diukur 18 Oktober 2026)}
+\caption{Ringkasan pengujian otomatis Verifin}
 \label{tab:test-results}
 \small
 \begin{tabularx}{\linewidth}{|L{3.6cm}|C{1.5cm}|C{1.9cm}|Y|}
@@ -1496,12 +1492,12 @@ OCR & 1 & 22\% & Tidak terjadi \textit{deadlock} saat model dimuat pertama kali 
 \noindent\textit{\footnotesize Evaluasi berlabel yang tersedia saat ini masih terbatas: 24 sampel internal (12 aman, 12 penipuan; bukan dataset EMSCAD)
 pada lapisan aturan saja menghasilkan presisi 1,0, recall 0,667, dan F1 0,8. Angka ini belum mewakili pipeline penuh.}
 
-\begin{sorotbiru}
+\begin{sorotkuning}
 \textbf{Rencana penguatan pengujian:} (1) tes berbasis \textit{mock} untuk probe OSINT agar coverage modul eksternal naik;
 (2) evaluasi pipeline penuh pada set loker nyata Indonesia yang diperluas, dengan pelaporan \textit{false positive} dan
 \textit{false negative}; (3) uji adversarial dari varian loker nyata (nomor disamarkan, ejaan diubah, poster buram);
 (4) uji pengguna terbatas dengan instrumen SUS.
-\end{sorotbiru}
+\end{sorotkuning}
 
 \refstepcounter{section}
 
@@ -1645,13 +1641,13 @@ Bukti ketepatan deteksi pada skenario lowongan berbahaya dengan skor risiko ting
   \vspace{-0.15cm}
 \end{figure}
 
-\subsection*{\colorbox{yellow!40}{\textbf{F. Halaman Komunitas dan Riwayat Verifikasi}} \hfill {\scriptsize\color{verfinyellow!90!black}\textbf{[Menjawab Komentar Juri \#2 \& \#5: Intelijen Komunitas \& Audit]}}}
+\subsection*{\colorbox{yellow!40}{\textbf{F. Halaman Komunitas dan Riwayat Verifikasi}}}
 \phantomsection
 \addcontentsline{toc}{subsection}{F. Halaman Komunitas dan Riwayat Verifikasi}
 
 \begin{sorotkuning}
 Selain alur analisis utama, Verifin menyediakan halaman \textbf{Cari Loker} dan \textbf{Lapor Komunitas}
-(Gambar~\ref{fig:halaman-pendukung}). \textbf{[Revisi dari proposal]} Gambar pada proposal diganti dengan tangkapan layar
+(Gambar~\ref{fig:halaman-pendukung}). Gambar pada proposal diganti dengan tangkapan layar
 aplikasi yang berjalan; fitur \textit{voting} laporan dan \textit{community feed} pada proposal tidak diimplementasikan
 dan digantikan moderasi admin serta pencarian riwayat.
 \end{sorotkuning}
